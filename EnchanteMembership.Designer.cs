@@ -685,6 +685,7 @@
             this.LoginEmailAddText.Name = "LoginEmailAddText";
             this.LoginEmailAddText.Size = new System.Drawing.Size(497, 46);
             this.LoginEmailAddText.TabIndex = 26;
+            this.LoginEmailAddText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginEmailAddText_KeyDown);
             // 
             // LoginPassLbl
             // 
@@ -766,6 +767,7 @@
             this.LoginPassText.Size = new System.Drawing.Size(458, 46);
             this.LoginPassText.TabIndex = 25;
             this.LoginPassText.UseSystemPasswordChar = true;
+            this.LoginPassText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginPassText_KeyDown);
             // 
             // ShowHidePassBtn
             // 
@@ -818,6 +820,7 @@
             this.LoginPassReqBtn.Size = new System.Drawing.Size(36, 36);
             this.LoginPassReqBtn.TabIndex = 77;
             this.LoginPassReqBtn.UseVisualStyleBackColor = false;
+            this.LoginPassReqBtn.MouseHover += new System.EventHandler(this.LoginPassReqBtn_MouseHover);
             // 
             // MembershipPanel
             // 
@@ -4584,6 +4587,8 @@
             this.EnchanteServiceBtn.TabIndex = 2;
             this.EnchanteServiceBtn.Text = "SERVICE";
             this.EnchanteServiceBtn.UseVisualStyleBackColor = true;
+            this.EnchanteServiceBtn.Click += new System.EventHandler(this.EnchanteServiceBtn_Click);
+            this.EnchanteServiceBtn.MouseHover += new System.EventHandler(this.EnchanteServiceBtn_MouseHover);
             // 
             // EnchanteMemberBtn
             // 
@@ -4603,6 +4608,8 @@
             this.EnchanteMemberBtn.TabIndex = 3;
             this.EnchanteMemberBtn.Text = "MEMBERSHIP";
             this.EnchanteMemberBtn.UseVisualStyleBackColor = true;
+            this.EnchanteMemberBtn.Click += new System.EventHandler(this.EnchanteMemberBtn_Click);
+            this.EnchanteMemberBtn.MouseHover += new System.EventHandler(this.EnchanteMemberBtn_MouseHover);
             // 
             // EnchanteReviewBtn
             // 
@@ -4622,6 +4629,8 @@
             this.EnchanteReviewBtn.TabIndex = 4;
             this.EnchanteReviewBtn.Text = "REVIEWS";
             this.EnchanteReviewBtn.UseVisualStyleBackColor = true;
+            this.EnchanteReviewBtn.Click += new System.EventHandler(this.EnchanteReviewBtn_Click);
+            this.EnchanteReviewBtn.MouseHover += new System.EventHandler(this.EnchanteReviewBtn_MouseHover);
             // 
             // EnchanteTeamBtn
             // 
@@ -4641,6 +4650,8 @@
             this.EnchanteTeamBtn.TabIndex = 5;
             this.EnchanteTeamBtn.Text = "OUR TEAMS";
             this.EnchanteTeamBtn.UseVisualStyleBackColor = true;
+            this.EnchanteTeamBtn.Click += new System.EventHandler(this.EnchanteMemberBtn_Click);
+            this.EnchanteTeamBtn.MouseHover += new System.EventHandler(this.EnchanteTeamBtn_MouseHover);
             // 
             // EnchanteAbtUsBtn
             // 
@@ -4660,6 +4671,8 @@
             this.EnchanteAbtUsBtn.TabIndex = 6;
             this.EnchanteAbtUsBtn.Text = "ABOUT US";
             this.EnchanteAbtUsBtn.UseVisualStyleBackColor = true;
+            this.EnchanteAbtUsBtn.Click += new System.EventHandler(this.EnchanteAbtUsBtn_Click);
+            this.EnchanteAbtUsBtn.MouseHover += new System.EventHandler(this.EnchanteAbtUsBtn_MouseHover);
             // 
             // EnchanteHLoginBtn
             // 
@@ -4679,6 +4692,8 @@
             this.EnchanteHLoginBtn.TabIndex = 7;
             this.EnchanteHLoginBtn.Text = "LOGIN";
             this.EnchanteHLoginBtn.UseVisualStyleBackColor = true;
+            this.EnchanteHLoginBtn.Click += new System.EventHandler(this.EnchanteHLoginBtn_Click);
+            this.EnchanteHLoginBtn.MouseHover += new System.EventHandler(this.EnchanteHLoginBtn_MouseHover);
             // 
             // EnchanteMemberPage
             // 

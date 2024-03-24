@@ -262,25 +262,14 @@ namespace Enchante_Membership
 
             if (EnchanteLoginForm.Visible == false)
             {
-
-
                 HomeLocationAndColor();
-
-
                 EnchanteLoginForm.Visible = true;
                 return;
             }
             else
             {
-
-
-
                 HomeLocationAndColor();
-
-
-
                 EnchanteLoginForm.Visible = false;
-
             }
 
         }
