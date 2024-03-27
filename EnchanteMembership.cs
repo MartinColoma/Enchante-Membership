@@ -50,6 +50,7 @@ namespace Enchante_Membership
 
         private void EnchanteMembership_Load(object sender, EventArgs e)
         {
+            HomePanelReset();
 
         }
         #region ID Generator Methods

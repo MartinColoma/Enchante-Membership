@@ -425,7 +425,7 @@
             // 
             this.EnchanteMemParentCard.ContainerControl = this.EnchanteMemberParentContainer;
             this.EnchanteMemParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.EnchanteMemParentCard.SelectedCard = "LandingPage";
+            this.EnchanteMemParentCard.SelectedCard = "Member";
             // 
             // EnchanteMemberParentContainer
             // 
