@@ -503,14 +503,7 @@ namespace Enchante_Membership
         }
         private void ShowHidePassBtn_MouseHover(object sender, EventArgs e)
         {
-            if (LoginPassText.UseSystemPasswordChar == true)
-            {
-                iconToolTip.SetToolTip(ShowHidePassBtn, "Show Password");
-            }
-            else if (LoginPassText.UseSystemPasswordChar == false)
-            {
-                iconToolTip.SetToolTip(ShowHidePassBtn, "Hide Password");
-            }
+
         }
         private void LoginPassReqBtn_MouseHover(object sender, EventArgs e)
         {
