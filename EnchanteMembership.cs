@@ -28,13 +28,16 @@ namespace Enchante_Membership
         private ServiceCard Service; //Service Card
         //tool tip
         private System.Windows.Forms.ToolTip iconToolTip;
-        
+
         string membercategory;
+
+        //gender combo box
+        private string[] genders = { "Male", "Female", "Prefer Not to Say" };
 
         public EnchanteMembership()
         {
-            InitializeComponent();            
-            
+            InitializeComponent();
+
             //icon tool tip
             iconToolTip = new System.Windows.Forms.ToolTip();
             iconToolTip.IsBalloon = true;
@@ -46,6 +49,14 @@ namespace Enchante_Membership
             ParentPanelShow = new ParentCard(EnchanteHomePage, EnchanteMemberPage);
             Registration = new Registration(MembershipPlanPanel, RegularPlanPanel, PremiumPlanPanel, SVIPPlanPanel);
             Service = new ServiceCard(ServiceType, ServiceHairStyling, ServiceFaceSkin, ServiceNailCare, ServiceSpa, ServiceMassage);
+
+            //gender combobox
+            RegularGenderComboText.Items.AddRange(genders);
+            RegularGenderComboText.DropDownStyle = ComboBoxStyle.DropDownList;
+            SVIPGenderComboText.Items.AddRange(genders);
+            SVIPGenderComboText.DropDownStyle = ComboBoxStyle.DropDownList;
+            PremGenderComboText.Items.AddRange(genders);
+            PremGenderComboText.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void EnchanteMembership_Load(object sender, EventArgs e)

@@ -1248,10 +1248,10 @@
             // MembershipPanel
             // 
             this.MembershipPanel.AutoScroll = true;
-            this.MembershipPanel.Controls.Add(this.SVIPPlanPanel);
             this.MembershipPanel.Controls.Add(this.RegularPlanPanel);
             this.MembershipPanel.Controls.Add(this.MembershipPlanPanel);
             this.MembershipPanel.Controls.Add(this.PremiumPlanPanel);
+            this.MembershipPanel.Controls.Add(this.SVIPPlanPanel);
             this.MembershipPanel.Location = new System.Drawing.Point(258, 2051);
             this.MembershipPanel.Name = "MembershipPanel";
             this.MembershipPanel.Size = new System.Drawing.Size(1371, 807);
@@ -2526,6 +2526,7 @@
             this.PremPassReqBtn.Size = new System.Drawing.Size(26, 26);
             this.PremPassReqBtn.TabIndex = 76;
             this.PremPassReqBtn.UseVisualStyleBackColor = false;
+            this.PremPassReqBtn.MouseHover += new System.EventHandler(this.PremPassReqBtn_MouseHover);
             // 
             // PremCreateAccBtn
             // 
@@ -3831,6 +3832,7 @@
             this.SVIPPassReqBtn.Size = new System.Drawing.Size(26, 26);
             this.SVIPPassReqBtn.TabIndex = 76;
             this.SVIPPassReqBtn.UseVisualStyleBackColor = false;
+            this.SVIPPassReqBtn.MouseHover += new System.EventHandler(this.SVIPPassReqBtn_MouseHover);
             // 
             // SVIPCreateAccBtn
             // 
@@ -4453,6 +4455,7 @@
             this.RegularPassReqBtn.Size = new System.Drawing.Size(36, 36);
             this.RegularPassReqBtn.TabIndex = 76;
             this.RegularPassReqBtn.UseVisualStyleBackColor = false;
+            this.RegularPassReqBtn.MouseHover += new System.EventHandler(this.RegularPassReqBtn_MouseHover);
             // 
             // RegularCreateAccBtn
             // 
