@@ -208,5 +208,53 @@
   <ItemGroup>
     <None Include="Resources\Young man having facial mask in beauty parlour.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maria Santos - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maricel Santos - Spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Miguel Fernandez - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rafael Garcia  - Spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rhydel Estrada - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sarah Lim - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sofia Ramirez - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Andrea Villanueva - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Angela Cruz - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antonio Reyes - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carlos Gonzales - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jasmine Castro - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Juan Dela Cruz - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Katrina Reyes - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luis Cruz - Spa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

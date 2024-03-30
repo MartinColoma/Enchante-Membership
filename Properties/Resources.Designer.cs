@@ -73,6 +73,36 @@ namespace Enchante_Membership.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Andrea_Villanueva___NC {
+            get {
+                object obj = ResourceManager.GetObject("Andrea_Villanueva___NC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Angela_Cruz___HS {
+            get {
+                object obj = ResourceManager.GetObject("Angela_Cruz___HS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Antonio_Reyes___Massage {
+            get {
+                object obj = ResourceManager.GetObject("Antonio_Reyes___Massage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cabernetqween {
             get {
                 object obj = ResourceManager.GetObject("cabernetqween", resourceCulture);
@@ -83,9 +113,29 @@ namespace Enchante_Membership.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Carlos_Gonzales___NC {
+            get {
+                object obj = ResourceManager.GetObject("Carlos_Gonzales___NC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Das_Dark_Naturalist_Salon_Design_von_Comfortel_Check_more_at_https___mac {
             get {
                 object obj = ResourceManager.GetObject("Das_Dark_Naturalist_Salon_Design_von_Comfortel_Check_more_at_https___mac", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__1_ {
+            get {
+                object obj = ResourceManager.GetObject("download (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +173,79 @@ namespace Enchante_Membership.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Jasmine_Castro___Massage {
+            get {
+                object obj = ResourceManager.GetObject("Jasmine_Castro___Massage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Juan_Dela_Cruz___FS {
+            get {
+                object obj = ResourceManager.GetObject("Juan_Dela_Cruz___FS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Katrina_Reyes___FS {
+            get {
+                object obj = ResourceManager.GetObject("Katrina_Reyes___FS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lobby {
             get {
                 object obj = ResourceManager.GetObject("Lobby", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Luis_Cruz___Spa {
+            get {
+                object obj = ResourceManager.GetObject("Luis_Cruz___Spa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maria_Santos___HS {
+            get {
+                object obj = ResourceManager.GetObject("Maria_Santos___HS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maricel_Santos___Spa {
+            get {
+                object obj = ResourceManager.GetObject("Maricel_Santos___Spa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Miguel_Fernandez___FS {
+            get {
+                object obj = ResourceManager.GetObject("Miguel_Fernandez___FS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +266,46 @@ namespace Enchante_Membership.Properties {
         internal static System.Drawing.Bitmap outofstock {
             get {
                 object obj = ResourceManager.GetObject("outofstock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rafael_Garcia____Spa {
+            get {
+                object obj = ResourceManager.GetObject("Rafael_Garcia____Spa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rhydel_Estrada___HS {
+            get {
+                object obj = ResourceManager.GetObject("Rhydel_Estrada___HS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sarah_Lim___NC {
+            get {
+                object obj = ResourceManager.GetObject("Sarah_Lim___NC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sofia_Ramirez___Massage {
+            get {
+                object obj = ResourceManager.GetObject("Sofia_Ramirez___Massage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

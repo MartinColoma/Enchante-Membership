@@ -57,6 +57,9 @@ namespace Enchante_Membership
             SVIPGenderComboText.DropDownStyle = ComboBoxStyle.DropDownList;
             PremGenderComboText.Items.AddRange(genders);
             PremGenderComboText.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            // Initialize the timer
+            ScrollTimer.Start();
         }
 
         private void EnchanteMembership_Load(object sender, EventArgs e)
@@ -81,6 +84,11 @@ namespace Enchante_Membership
 
 
             }
+        }
+        private void ScrollTimer_Tick(object sender, EventArgs e)
+        {
+            // Update button colors based on scroll position
+            HomeUpdateButtonColors();
         }
         #region ID Generator Methods
         public class RegularClientIDGenerator
@@ -241,7 +249,46 @@ namespace Enchante_Membership
             //Reset Panel to Show Default
             HomePanelReset();
         }
+        private void EnchanteHomeScrollPanel_Scroll(object sender, ScrollEventArgs e)
+        {
 
+            HomeUpdateButtonColors();
+        }
+        private void HomeUpdateButtonColors()
+        {
+            int scrollPosition = EnchanteHomeScrollPanel.VerticalScroll.Value;
+
+            int homeThreshold = 887;
+            int serviceThreshold = 1774;
+            int membershipThreshold = 2661;
+            int teamThreshold = 3548;
+            int aboutThreshold = 4435;
+
+            // Home Button
+            EnchanteHomeBtn.ForeColor = scrollPosition < homeThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+            // Service Button
+            EnchanteServiceBtn.ForeColor = scrollPosition >= homeThreshold && scrollPosition < serviceThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+            // Membership Button
+            EnchanteMemberBtn.ForeColor = scrollPosition >= serviceThreshold && scrollPosition < membershipThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+            // Team Button
+            EnchanteTeamBtn.ForeColor = scrollPosition >= membershipThreshold && scrollPosition < teamThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+            // About Button
+            EnchanteAbtUsBtn.ForeColor = scrollPosition >= teamThreshold && scrollPosition < aboutThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+        }
         private void HomePanelReset()
         {
             ParentPanelShow.PanelShow(EnchanteHomePage);
@@ -312,6 +359,8 @@ namespace Enchante_Membership
             EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+
+
         }
 
         private void EnchanteServiceBtn_Click(object sender, EventArgs e)
@@ -334,6 +383,8 @@ namespace Enchante_Membership
             EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+
+
         }
 
         private void EnchanteMemberBtn_Click(object sender, EventArgs e)
@@ -573,7 +624,7 @@ namespace Enchante_Membership
                 //Test Member
                 LoginEmailAddErrorLbl.Visible = true;
                 LoginPassErrorLbl.Visible = false;
-                LoginEmailAddErrorLbl.Text = "EMAIL ADDRESS DOES NOT EXIST";
+                LoginEmailAddErrorLbl.Text = "Email Address Does Not\nMatch Any Existing Email";
 
                 return;
             }
@@ -767,18 +818,6 @@ namespace Enchante_Membership
 
         }
 
-        private void MemberSignOut_Click(object sender, EventArgs e)
-        {
-            LogoutChecker();
-        }
-
-
-
-        private void AdminSignOutBtn_Click(object sender, EventArgs e)
-        {
-            LogoutChecker();
-        }
-
         private void LogoutChecker()
         {
             DialogResult result = MessageBox.Show("Do you want to logout user?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -829,22 +868,26 @@ namespace Enchante_Membership
         private void SM_FBBtn_MouseHover(object sender, EventArgs e)
         {
             iconToolTip.SetToolTip(SM_FBBtn, "Facebook");
+            iconToolTip.SetToolTip(SM_FBBtn1, "Facebook");
 
         }
 
         private void SM_TwitterBtn_MouseHover(object sender, EventArgs e)
         {
             iconToolTip.SetToolTip(SM_TwitterBtn, "Twitter");
+            iconToolTip.SetToolTip(SM_TwitterBtn1, "Twitter");
         }
 
         private void SM_IGBtn_MouseHover(object sender, EventArgs e)
         {
             iconToolTip.SetToolTip(SM_IGBtn, "Instagram");
+            iconToolTip.SetToolTip(SM_IGBtn1, "Instagram");
 
         }
 
         private void SM_GmailBtn_MouseHover(object sender, EventArgs e)
         {
+            iconToolTip.SetToolTip(SM_GmailBtn, "Email Us Here");
             iconToolTip.SetToolTip(SM_GmailBtn, "Email Us Here");
         }
 
@@ -2204,5 +2247,26 @@ namespace Enchante_Membership
 
         }
         #endregion
+
+        #region Customer Member Dashboard Starts Here
+        private void MemberAccUserBtn_Click(object sender, EventArgs e)
+        {
+            if (MemberUserAccPanel.Visible == false)
+            {
+                MemberUserAccPanel.Visible = true;
+
+            }
+            else
+            {
+                MemberUserAccPanel.Visible = false;
+            }
+        }
+        private void MemberSignOut_Click(object sender, EventArgs e)
+        {
+            LogoutChecker();
+        }
+        #endregion
+
+
     }
 }
