@@ -425,7 +425,7 @@
             // 
             this.EnchanteMemParentCard.ContainerControl = this.EnchanteMemberParentContainer;
             this.EnchanteMemParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.EnchanteMemParentCard.SelectedCard = "Member";
+            this.EnchanteMemParentCard.SelectedCard = "LandingPage";
             // 
             // EnchanteMemberParentContainer
             // 
@@ -436,7 +436,7 @@
             this.EnchanteMemberParentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EnchanteMemberParentContainer.Location = new System.Drawing.Point(0, 0);
             this.EnchanteMemberParentContainer.Name = "EnchanteMemberParentContainer";
-            this.EnchanteMemberParentContainer.Size = new System.Drawing.Size(1904, 1041);
+            this.EnchanteMemberParentContainer.Size = new System.Drawing.Size(1370, 749);
             this.EnchanteMemberParentContainer.TabIndex = 0;
             // 
             // EnchanteMemberPage
@@ -449,7 +449,7 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.EnchanteMemberPage, new System.Drawing.Size(1904, 1041));
             this.EnchanteMemberPage.Name = "EnchanteMemberPage";
             this.EnchanteMemParentCard.SetPreferredSize(this.EnchanteMemberPage, new System.Drawing.Size(1904, 1041));
-            this.EnchanteMemberPage.Size = new System.Drawing.Size(1904, 1041);
+            this.EnchanteMemberPage.Size = new System.Drawing.Size(1370, 749);
             this.EnchanteMemberPage.TabIndex = 8;
             // 
             // MemberScrollPanel
@@ -462,7 +462,7 @@
             this.MemberScrollPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberScrollPanel.Location = new System.Drawing.Point(0, 150);
             this.MemberScrollPanel.Name = "MemberScrollPanel";
-            this.MemberScrollPanel.Size = new System.Drawing.Size(1904, 891);
+            this.MemberScrollPanel.Size = new System.Drawing.Size(1370, 599);
             this.MemberScrollPanel.TabIndex = 19;
             // 
             // MemberUserAccPanel
@@ -658,7 +658,7 @@
             this.MemberNavBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MemberNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.MemberNavBarPanel.Name = "MemberNavBarPanel";
-            this.MemberNavBarPanel.Size = new System.Drawing.Size(1904, 150);
+            this.MemberNavBarPanel.Size = new System.Drawing.Size(1370, 150);
             this.MemberNavBarPanel.TabIndex = 1;
             // 
             // MemberAccUserBtn
@@ -802,7 +802,7 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.EnchanteHomePage, new System.Drawing.Size(1904, 1041));
             this.EnchanteHomePage.Name = "EnchanteHomePage";
             this.EnchanteMemParentCard.SetPreferredSize(this.EnchanteHomePage, new System.Drawing.Size(1904, 1041));
-            this.EnchanteHomePage.Size = new System.Drawing.Size(1904, 1041);
+            this.EnchanteHomePage.Size = new System.Drawing.Size(1370, 749);
             this.EnchanteHomePage.TabIndex = 7;
             // 
             // EnchanteHomeNavBar
@@ -820,7 +820,7 @@
             this.EnchanteHomeNavBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.EnchanteHomeNavBar.Location = new System.Drawing.Point(0, 0);
             this.EnchanteHomeNavBar.Name = "EnchanteHomeNavBar";
-            this.EnchanteHomeNavBar.Size = new System.Drawing.Size(1904, 170);
+            this.EnchanteHomeNavBar.Size = new System.Drawing.Size(1370, 170);
             this.EnchanteHomeNavBar.TabIndex = 0;
             // 
             // EnchanteHLoginBtn
@@ -995,17 +995,17 @@
             this.EnchanteHomeScrollPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EnchanteHomeScrollPanel.Location = new System.Drawing.Point(0, 0);
             this.EnchanteHomeScrollPanel.Name = "EnchanteHomeScrollPanel";
-            this.EnchanteHomeScrollPanel.Size = new System.Drawing.Size(1904, 1041);
+            this.EnchanteHomeScrollPanel.Size = new System.Drawing.Size(1370, 749);
             this.EnchanteHomeScrollPanel.TabIndex = 18;
             // 
             // ServicePanel
             // 
+            this.ServicePanel.Controls.Add(this.ServiceType);
             this.ServicePanel.Controls.Add(this.ServiceMassage);
             this.ServicePanel.Controls.Add(this.ServiceSpa);
             this.ServicePanel.Controls.Add(this.ServiceNailCare);
             this.ServicePanel.Controls.Add(this.ServiceFaceSkin);
             this.ServicePanel.Controls.Add(this.ServiceHairStyling);
-            this.ServicePanel.Controls.Add(this.ServiceType);
             this.ServicePanel.Location = new System.Drawing.Point(221, 1250);
             this.ServicePanel.Name = "ServicePanel";
             this.ServicePanel.Size = new System.Drawing.Size(1444, 751);
@@ -1248,10 +1248,10 @@
             // MembershipPanel
             // 
             this.MembershipPanel.AutoScroll = true;
-            this.MembershipPanel.Controls.Add(this.PremiumPlanPanel);
-            this.MembershipPanel.Controls.Add(this.SVIPPlanPanel);
             this.MembershipPanel.Controls.Add(this.RegularPlanPanel);
             this.MembershipPanel.Controls.Add(this.MembershipPlanPanel);
+            this.MembershipPanel.Controls.Add(this.PremiumPlanPanel);
+            this.MembershipPanel.Controls.Add(this.SVIPPlanPanel);
             this.MembershipPanel.Location = new System.Drawing.Point(258, 2051);
             this.MembershipPanel.Name = "MembershipPanel";
             this.MembershipPanel.Size = new System.Drawing.Size(1371, 807);
@@ -1518,6 +1518,7 @@
             this.PremPayPPaymentBtn.TabIndex = 106;
             this.PremPayPPaymentBtn.Text = "Paypal";
             this.PremPayPPaymentBtn.UseVisualStyleBackColor = true;
+            this.PremPayPPaymentBtn.Click += new System.EventHandler(this.PremPayPPaymentBtn_Click);
             // 
             // PremCardCVCLbl
             // 
@@ -1573,6 +1574,7 @@
             this.PremPayMPaymentBtn.TabIndex = 106;
             this.PremPayMPaymentBtn.Text = "Paymaya";
             this.PremPayMPaymentBtn.UseVisualStyleBackColor = true;
+            this.PremPayMPaymentBtn.Click += new System.EventHandler(this.PremPayMPaymentBtn_Click);
             // 
             // PremCardCVCText
             // 
@@ -1627,6 +1629,7 @@
             this.PremGCPaymentBtn.TabIndex = 106;
             this.PremGCPaymentBtn.Text = "Gcash";
             this.PremGCPaymentBtn.UseVisualStyleBackColor = true;
+            this.PremGCPaymentBtn.Click += new System.EventHandler(this.PremGCPaymentBtn_Click);
             // 
             // PremCardCVCErrorLbl
             // 
@@ -1685,6 +1688,7 @@
             this.PremCCPaymentBtn.TabIndex = 106;
             this.PremCCPaymentBtn.Text = "Credit Card";
             this.PremCCPaymentBtn.UseVisualStyleBackColor = true;
+            this.PremCCPaymentBtn.Click += new System.EventHandler(this.PremCCPaymentBtn_Click);
             // 
             // PremCardExpireLbl
             // 
@@ -1817,6 +1821,7 @@
             this.PremBiyearlyPlanBtn.TabIndex = 86;
             this.PremBiyearlyPlanBtn.Text = "Php.\r\n999.00";
             this.PremBiyearlyPlanBtn.UseVisualStyleBackColor = true;
+            this.PremBiyearlyPlanBtn.Click += new System.EventHandler(this.PremBiyearlyPlanBtn_Click);
             // 
             // PremYearlyPlanPanel
             // 
@@ -1901,6 +1906,7 @@
             this.PremYearlyPlanBtn.TabIndex = 81;
             this.PremYearlyPlanBtn.Text = "Php.\r\n1299.00";
             this.PremYearlyPlanBtn.UseVisualStyleBackColor = true;
+            this.PremYearlyPlanBtn.Click += new System.EventHandler(this.PremYearlyPlanBtn_Click);
             // 
             // PremMonthlyPlanPanel
             // 
@@ -1972,6 +1978,7 @@
             this.PremMonthlyPlanBtn.TabIndex = 77;
             this.PremMonthlyPlanBtn.Text = "Php.\r\n1499.00";
             this.PremMonthlyPlanBtn.UseVisualStyleBackColor = true;
+            this.PremMonthlyPlanBtn.Click += new System.EventHandler(this.PremMonthlyPlanBtn_Click);
             // 
             // PremSelectPaymentLbl
             // 
@@ -2035,6 +2042,8 @@
             this.PremShowHideConfirmPassBtn.Size = new System.Drawing.Size(36, 37);
             this.PremShowHideConfirmPassBtn.TabIndex = 31;
             this.PremShowHideConfirmPassBtn.UseVisualStyleBackColor = false;
+            this.PremShowHideConfirmPassBtn.Click += new System.EventHandler(this.PremShowHideConfirmPassBtn_Click);
+            this.PremShowHideConfirmPassBtn.MouseHover += new System.EventHandler(this.PremShowHideConfirmPassBtn_MouseHover);
             // 
             // PremConfirmPassText
             // 
@@ -2198,6 +2207,8 @@
             this.PremShowHidePassBtn.Size = new System.Drawing.Size(36, 37);
             this.PremShowHidePassBtn.TabIndex = 31;
             this.PremShowHidePassBtn.UseVisualStyleBackColor = false;
+            this.PremShowHidePassBtn.Click += new System.EventHandler(this.PremShowHidePassBtn_Click);
+            this.PremShowHidePassBtn.MouseHover += new System.EventHandler(this.PremShowHidePassBtn_MouseHover);
             // 
             // PremPassText
             // 
@@ -2300,6 +2311,7 @@
             this.PremGenderComboText.Name = "PremGenderComboText";
             this.PremGenderComboText.Size = new System.Drawing.Size(261, 37);
             this.PremGenderComboText.TabIndex = 56;
+            this.PremGenderComboText.SelectedIndexChanged += new System.EventHandler(this.PremGenderComboText_SelectedIndexChanged);
             // 
             // PremGenderLbl
             // 
@@ -2329,6 +2341,7 @@
             this.PremBdayPicker.Name = "PremBdayPicker";
             this.PremBdayPicker.Size = new System.Drawing.Size(301, 37);
             this.PremBdayPicker.TabIndex = 53;
+            this.PremBdayPicker.ValueChanged += new System.EventHandler(this.PremBdayPicker_ValueChanged);
             // 
             // PremFooterStopperPanel
             // 
@@ -2492,6 +2505,7 @@
             this.PremMemberIDCopyBtn.Size = new System.Drawing.Size(36, 36);
             this.PremMemberIDCopyBtn.TabIndex = 120;
             this.PremMemberIDCopyBtn.UseVisualStyleBackColor = false;
+            this.PremMemberIDCopyBtn.Click += new System.EventHandler(this.PremMemberIDCopyBtn_Click);
             // 
             // PremPassReqBtn
             // 
@@ -2512,6 +2526,7 @@
             this.PremPassReqBtn.Size = new System.Drawing.Size(26, 26);
             this.PremPassReqBtn.TabIndex = 76;
             this.PremPassReqBtn.UseVisualStyleBackColor = false;
+            this.PremPassReqBtn.MouseHover += new System.EventHandler(this.PremPassReqBtn_MouseHover);
             // 
             // PremCreateAccBtn
             // 
@@ -2531,6 +2546,7 @@
             this.PremCreateAccBtn.TabIndex = 73;
             this.PremCreateAccBtn.Text = "CREATE ACCOUNT NOW";
             this.PremCreateAccBtn.UseVisualStyleBackColor = true;
+            this.PremCreateAccBtn.Click += new System.EventHandler(this.PremCreateAccBtn_Click);
             // 
             // PremiumExitBtn
             // 
@@ -2547,6 +2563,7 @@
             this.PremiumExitBtn.Size = new System.Drawing.Size(48, 48);
             this.PremiumExitBtn.TabIndex = 43;
             this.PremiumExitBtn.UseVisualStyleBackColor = false;
+            this.PremiumExitBtn.Click += new System.EventHandler(this.PremiumExitBtn_Click);
             // 
             // SVIPPlanPanel
             // 
@@ -2809,6 +2826,7 @@
             this.SVIPPayPPaymentBtn.TabIndex = 106;
             this.SVIPPayPPaymentBtn.Text = "Paypal";
             this.SVIPPayPPaymentBtn.UseVisualStyleBackColor = true;
+            this.SVIPPayPPaymentBtn.Click += new System.EventHandler(this.SVIPPayPPaymentBtn_Click);
             // 
             // SVIPCardCVCLbl
             // 
@@ -2864,6 +2882,7 @@
             this.SVIPPayMPaymentBtn.TabIndex = 106;
             this.SVIPPayMPaymentBtn.Text = "Paymaya";
             this.SVIPPayMPaymentBtn.UseVisualStyleBackColor = true;
+            this.SVIPPayMPaymentBtn.Click += new System.EventHandler(this.SVIPPayMPaymentBtn_Click);
             // 
             // SVIPCardCVCText
             // 
@@ -2918,6 +2937,7 @@
             this.SVIPGCPaymentBtn.TabIndex = 106;
             this.SVIPGCPaymentBtn.Text = "Gcash";
             this.SVIPGCPaymentBtn.UseVisualStyleBackColor = true;
+            this.SVIPGCPaymentBtn.Click += new System.EventHandler(this.SVIPGCPaymentBtn_Click);
             // 
             // SVIPCardCVCErrorLbl
             // 
@@ -2976,6 +2996,7 @@
             this.SVIPCCPaymentBtn.TabIndex = 106;
             this.SVIPCCPaymentBtn.Text = "Credit Card";
             this.SVIPCCPaymentBtn.UseVisualStyleBackColor = true;
+            this.SVIPCCPaymentBtn.Click += new System.EventHandler(this.SVIPCCPaymentBtn_Click);
             // 
             // SVIPCardExpireLbl
             // 
@@ -3108,6 +3129,7 @@
             this.SVIPBiyearlyPlanBtn.TabIndex = 86;
             this.SVIPBiyearlyPlanBtn.Text = "Php.\r\n2999.00";
             this.SVIPBiyearlyPlanBtn.UseVisualStyleBackColor = true;
+            this.SVIPBiyearlyPlanBtn.Click += new System.EventHandler(this.SVIPBiyearlyPlanBtn_Click);
             // 
             // SVIPYearlyPlanPanel
             // 
@@ -3192,6 +3214,7 @@
             this.SVIPYearlyPlanBtn.TabIndex = 81;
             this.SVIPYearlyPlanBtn.Text = "Php.\r\n3499.00";
             this.SVIPYearlyPlanBtn.UseVisualStyleBackColor = true;
+            this.SVIPYearlyPlanBtn.Click += new System.EventHandler(this.SVIPYearlyPlanBtn_Click);
             // 
             // SVIPMonthlyPlanPanel
             // 
@@ -3263,6 +3286,7 @@
             this.SVIPMonthlyPlanBtn.TabIndex = 77;
             this.SVIPMonthlyPlanBtn.Text = "Php.\r\n4999.00";
             this.SVIPMonthlyPlanBtn.UseVisualStyleBackColor = true;
+            this.SVIPMonthlyPlanBtn.Click += new System.EventHandler(this.SVIPMonthlyPlanBtn_Click);
             // 
             // SVIPSelectPaymentLbl
             // 
@@ -3326,6 +3350,7 @@
             this.SVIPShowHideConfirmPassBtn.Size = new System.Drawing.Size(36, 37);
             this.SVIPShowHideConfirmPassBtn.TabIndex = 31;
             this.SVIPShowHideConfirmPassBtn.UseVisualStyleBackColor = false;
+            this.SVIPShowHideConfirmPassBtn.Click += new System.EventHandler(this.SVIPShowHideConfirmPassBtn_Click);
             // 
             // SVIPConfirmPassText
             // 
@@ -3489,6 +3514,7 @@
             this.SVIPShowHidePassBtn.Size = new System.Drawing.Size(36, 37);
             this.SVIPShowHidePassBtn.TabIndex = 31;
             this.SVIPShowHidePassBtn.UseVisualStyleBackColor = false;
+            this.SVIPShowHidePassBtn.Click += new System.EventHandler(this.SVIPShowHidePassBtn_Click);
             // 
             // SVIPPassText
             // 
@@ -3591,6 +3617,7 @@
             this.SVIPGenderComboText.Name = "SVIPGenderComboText";
             this.SVIPGenderComboText.Size = new System.Drawing.Size(261, 37);
             this.SVIPGenderComboText.TabIndex = 56;
+            this.SVIPGenderComboText.SelectedIndexChanged += new System.EventHandler(this.SVIPGenderComboText_SelectedIndexChanged);
             // 
             // SVIPGenderLbl
             // 
@@ -3620,6 +3647,7 @@
             this.SVIPBdayPicker.Name = "SVIPBdayPicker";
             this.SVIPBdayPicker.Size = new System.Drawing.Size(301, 37);
             this.SVIPBdayPicker.TabIndex = 53;
+            this.SVIPBdayPicker.ValueChanged += new System.EventHandler(this.SVIPBdayPicker_ValueChanged);
             // 
             // SVIPFooterStopper
             // 
@@ -3783,6 +3811,7 @@
             this.SVIPMemberIDCopyBtn.Size = new System.Drawing.Size(36, 36);
             this.SVIPMemberIDCopyBtn.TabIndex = 120;
             this.SVIPMemberIDCopyBtn.UseVisualStyleBackColor = false;
+            this.SVIPMemberIDCopyBtn.Click += new System.EventHandler(this.SVIPBiyearlyPlanBtn_Click);
             // 
             // SVIPPassReqBtn
             // 
@@ -3803,6 +3832,7 @@
             this.SVIPPassReqBtn.Size = new System.Drawing.Size(26, 26);
             this.SVIPPassReqBtn.TabIndex = 76;
             this.SVIPPassReqBtn.UseVisualStyleBackColor = false;
+            this.SVIPPassReqBtn.MouseHover += new System.EventHandler(this.SVIPPassReqBtn_MouseHover);
             // 
             // SVIPCreateAccBtn
             // 
@@ -3822,6 +3852,7 @@
             this.SVIPCreateAccBtn.TabIndex = 73;
             this.SVIPCreateAccBtn.Text = "CREATE ACCOUNT NOW";
             this.SVIPCreateAccBtn.UseVisualStyleBackColor = true;
+            this.SVIPCreateAccBtn.Click += new System.EventHandler(this.SVIPCreateAccBtn_Click);
             // 
             // SVIPExitBtn
             // 
@@ -3838,6 +3869,7 @@
             this.SVIPExitBtn.Size = new System.Drawing.Size(48, 48);
             this.SVIPExitBtn.TabIndex = 43;
             this.SVIPExitBtn.UseVisualStyleBackColor = false;
+            this.SVIPExitBtn.Click += new System.EventHandler(this.SVIPExitBtn_Click);
             // 
             // RegularPlanPanel
             // 
@@ -3942,6 +3974,7 @@
             this.RegularConfirmShowHidePassBtn.Size = new System.Drawing.Size(36, 37);
             this.RegularConfirmShowHidePassBtn.TabIndex = 31;
             this.RegularConfirmShowHidePassBtn.UseVisualStyleBackColor = false;
+            this.RegularConfirmShowHidePassBtn.Click += new System.EventHandler(this.RegularConfirmShowHidePassBtn_Click);
             // 
             // RegularConfirmPassText
             // 
@@ -4105,6 +4138,7 @@
             this.RegularShowHidePassBtn.Size = new System.Drawing.Size(36, 37);
             this.RegularShowHidePassBtn.TabIndex = 31;
             this.RegularShowHidePassBtn.UseVisualStyleBackColor = false;
+            this.RegularShowHidePassBtn.Click += new System.EventHandler(this.RegularShowHidePassBtn_Click);
             // 
             // RegularPassText
             // 
@@ -4207,6 +4241,7 @@
             this.RegularGenderComboText.Name = "RegularGenderComboText";
             this.RegularGenderComboText.Size = new System.Drawing.Size(261, 37);
             this.RegularGenderComboText.TabIndex = 56;
+            this.RegularGenderComboText.SelectedIndexChanged += new System.EventHandler(this.RegularGenderComboText_SelectedIndexChanged);
             // 
             // RegularGenderLbl
             // 
@@ -4236,6 +4271,7 @@
             this.RegularBdayPicker.Name = "RegularBdayPicker";
             this.RegularBdayPicker.Size = new System.Drawing.Size(301, 37);
             this.RegularBdayPicker.TabIndex = 53;
+            this.RegularBdayPicker.ValueChanged += new System.EventHandler(this.RegularBdayPicker_ValueChanged);
             // 
             // RegularFooterStopper
             // 
@@ -4399,6 +4435,7 @@
             this.RegularMemberIDCopyBtn.Size = new System.Drawing.Size(36, 36);
             this.RegularMemberIDCopyBtn.TabIndex = 121;
             this.RegularMemberIDCopyBtn.UseVisualStyleBackColor = false;
+            this.RegularMemberIDCopyBtn.Click += new System.EventHandler(this.RegularMemberIDCopyBtn_Click);
             // 
             // RegularPassReqBtn
             // 
@@ -4418,6 +4455,7 @@
             this.RegularPassReqBtn.Size = new System.Drawing.Size(36, 36);
             this.RegularPassReqBtn.TabIndex = 76;
             this.RegularPassReqBtn.UseVisualStyleBackColor = false;
+            this.RegularPassReqBtn.MouseHover += new System.EventHandler(this.RegularPassReqBtn_MouseHover);
             // 
             // RegularCreateAccBtn
             // 
@@ -4437,6 +4475,7 @@
             this.RegularCreateAccBtn.TabIndex = 73;
             this.RegularCreateAccBtn.Text = "CREATE ACCOUNT NOW";
             this.RegularCreateAccBtn.UseVisualStyleBackColor = true;
+            this.RegularCreateAccBtn.Click += new System.EventHandler(this.RegularCreateAccBtn_Click);
             // 
             // RegularExitBtn
             // 
@@ -4453,6 +4492,7 @@
             this.RegularExitBtn.Size = new System.Drawing.Size(48, 48);
             this.RegularExitBtn.TabIndex = 43;
             this.RegularExitBtn.UseVisualStyleBackColor = false;
+            this.RegularExitBtn.Click += new System.EventHandler(this.RegularExitBtn_Click);
             // 
             // MembershipPlanPanel
             // 
@@ -4499,6 +4539,7 @@
             this.SVIPMemberCreateAccBtn.TabIndex = 8;
             this.SVIPMemberCreateAccBtn.Text = "GET SUPER VIP PLAN NOW";
             this.SVIPMemberCreateAccBtn.UseVisualStyleBackColor = true;
+            this.SVIPMemberCreateAccBtn.Click += new System.EventHandler(this.SVIPMemberCreateAccBtn_Click);
             // 
             // SVIPMemberAccLbl
             // 
@@ -4570,6 +4611,7 @@
             this.PMemberCreateAccBtn.TabIndex = 8;
             this.PMemberCreateAccBtn.Text = "GET PREMIUM PLAN NOW";
             this.PMemberCreateAccBtn.UseVisualStyleBackColor = true;
+            this.PMemberCreateAccBtn.Click += new System.EventHandler(this.PMemberCreateAccBtn_Click);
             // 
             // PMemberAccLbl
             // 
@@ -4643,6 +4685,7 @@
             this.RMemberCreateAccBtn.TabIndex = 8;
             this.RMemberCreateAccBtn.Text = "CREATE FREE ACCOUNT NOW";
             this.RMemberCreateAccBtn.UseVisualStyleBackColor = true;
+            this.RMemberCreateAccBtn.Click += new System.EventHandler(this.RMemberCreateAccBtn_Click);
             // 
             // RMemberAccLbl
             // 
@@ -4776,6 +4819,7 @@
             this.ShowHidePassBtn.Size = new System.Drawing.Size(36, 49);
             this.ShowHidePassBtn.TabIndex = 31;
             this.ShowHidePassBtn.UseVisualStyleBackColor = false;
+            this.ShowHidePassBtn.Click += new System.EventHandler(this.ShowHidePassBtn_Click);
             // 
             // LoginPassText
             // 
@@ -4920,7 +4964,7 @@
             this.EnchanteFooterBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
             this.EnchanteFooterBar.Location = new System.Drawing.Point(0, 3100);
             this.EnchanteFooterBar.Name = "EnchanteFooterBar";
-            this.EnchanteFooterBar.Size = new System.Drawing.Size(1887, 166);
+            this.EnchanteFooterBar.Size = new System.Drawing.Size(1779, 166);
             this.EnchanteFooterBar.TabIndex = 20;
             // 
             // SM_GmailBtn
@@ -5055,14 +5099,14 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.SecretPanel, new System.Drawing.Size(200, 100));
             this.SecretPanel.Name = "SecretPanel";
             this.EnchanteMemParentCard.SetPreferredSize(this.SecretPanel, new System.Drawing.Size(200, 100));
-            this.SecretPanel.Size = new System.Drawing.Size(1904, 1041);
+            this.SecretPanel.Size = new System.Drawing.Size(1370, 749);
             this.SecretPanel.TabIndex = 0;
             // 
             // EnchanteMembership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.EnchanteMemberParentContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EnchanteMembership";
