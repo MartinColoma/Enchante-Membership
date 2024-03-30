@@ -64,6 +64,24 @@ namespace Enchante_Membership
             HomePanelReset();
 
         }
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Prevent the form from closing.
+                e.Cancel = true;
+
+                DialogResult result = MessageBox.Show("Do you want to close the application?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.Dispose();
+
+                }
+
+
+            }
+        }
         #region ID Generator Methods
         public class RegularClientIDGenerator
         {
@@ -238,24 +256,7 @@ namespace Enchante_Membership
 
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
 
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                // Prevent the form from closing.
-                e.Cancel = true;
-
-                DialogResult result = MessageBox.Show("Do you want to close the application?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    this.Dispose();
-
-                }
-
-
-            }
-        }
 
         private void ScrollToCoordinates(int x, int y)
         {
@@ -561,8 +562,8 @@ namespace Enchante_Membership
                 LoginPassErrorLbl.Visible = true;
                 MessageBox.Show("Welcome back, Member.", "Login Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MemberHomePanelReset();
-                //MemberNameLbl.Text = "Member Tester";
-                //MemberIDNumLbl.Text = "MT-0000-0000";
+                MemberNameLbl.Text = "Member Tester";
+                MemberIDNumLbl.Text = "MT-0000-0000";
                 logincredclear();
 
                 return;
@@ -614,12 +615,30 @@ namespace Enchante_Membership
                 //db connection query
                 string email = LoginEmailAddText.Text;
                 string password = LoginPassText.Text;
-                string passchecker = HashHelper.HashString(password); // Assuming "enteredPassword" is supposed to be "LoginPassText"
+                string passchecker = HashHelper.HashString(password); 
                 string membertype;
 
                 try //user member login
                 {
                     connection.Open();
+
+                    string queryCheckEmail = "SELECT COUNT(*) FROM membershipaccount WHERE EmailAdd = @email";
+
+                    using (MySqlCommand cmdCheckEmail = new MySqlCommand(queryCheckEmail, connection))
+                    {
+                        cmdCheckEmail.Parameters.AddWithValue("@email", email);
+
+                        int emailCount = Convert.ToInt32(cmdCheckEmail.ExecuteScalar());
+
+                        if (emailCount == 0)
+                        {
+                            // Email does not exist in the database
+                            LoginEmailAddErrorLbl.Visible = true;
+                            LoginPassErrorLbl.Visible = false;
+                            LoginEmailAddErrorLbl.Text = "Email Address Does Not\nMatch Any Existing Email";
+                            return;
+                        }
+                    }
 
                     string queryApproved = "SELECT FirstName, LastName, MemberIDNumber, MembershipType, HashedPass FROM membershipaccount WHERE EmailAdd = @email";
 
@@ -722,7 +741,13 @@ namespace Enchante_Membership
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message, "Login Verifier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string errorMessage = "An error occurred: " + ex.Message + "\n\n" + ex.StackTrace;
+
+                    // Copy the error message to the clipboard
+                    Clipboard.SetText(errorMessage);
+
+                    // Show a message box indicating the error and informing the user that the error message has been copied to the clipboard
+                    MessageBox.Show($"An error occurred. {errorMessage}.", "Login Verification Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

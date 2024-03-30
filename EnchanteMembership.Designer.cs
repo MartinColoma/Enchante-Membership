@@ -66,6 +66,13 @@
             this.EnchanteHeaderLogo = new System.Windows.Forms.PictureBox();
             this.EnchanteHomeScrollPanel = new System.Windows.Forms.Panel();
             this.ServicePanel = new System.Windows.Forms.Panel();
+            this.ServiceType = new System.Windows.Forms.Panel();
+            this.ServiceHSBtn = new FontAwesome.Sharp.IconButton();
+            this.ServiceTagline = new System.Windows.Forms.Label();
+            this.ServiceFSBtn = new FontAwesome.Sharp.IconButton();
+            this.ServiceNCBtn = new FontAwesome.Sharp.IconButton();
+            this.ServiceSpaBtn = new FontAwesome.Sharp.IconButton();
+            this.ServiceMBtn = new FontAwesome.Sharp.IconButton();
             this.ServiceMassage = new System.Windows.Forms.Panel();
             this.ServiceMassageLbl = new System.Windows.Forms.Label();
             this.ServiceSpa = new System.Windows.Forms.Panel();
@@ -76,14 +83,69 @@
             this.ServiceFaceSkinLbl = new System.Windows.Forms.Label();
             this.ServiceHairStyling = new System.Windows.Forms.Panel();
             this.ServiceHairLbl = new System.Windows.Forms.Label();
-            this.ServiceType = new System.Windows.Forms.Panel();
-            this.ServiceHSBtn = new FontAwesome.Sharp.IconButton();
-            this.ServiceTagline = new System.Windows.Forms.Label();
-            this.ServiceFSBtn = new FontAwesome.Sharp.IconButton();
-            this.ServiceNCBtn = new FontAwesome.Sharp.IconButton();
-            this.ServiceSpaBtn = new FontAwesome.Sharp.IconButton();
-            this.ServiceMBtn = new FontAwesome.Sharp.IconButton();
             this.MembershipPanel = new System.Windows.Forms.Panel();
+            this.RegularPlanPanel = new System.Windows.Forms.Panel();
+            this.RegularMemberIDCopyLbl = new System.Windows.Forms.Label();
+            this.RegularMemberIDLbl = new System.Windows.Forms.Label();
+            this.RegularConfirmPassPanel = new System.Windows.Forms.Panel();
+            this.RegularConfirmShowHidePassBtn = new FontAwesome.Sharp.IconButton();
+            this.RegularConfirmPassText = new System.Windows.Forms.TextBox();
+            this.RegularConfirmPassErrorLbl = new System.Windows.Forms.Label();
+            this.RegularMemberIDText = new System.Windows.Forms.TextBox();
+            this.RegularConfirmPassLbl = new System.Windows.Forms.Label();
+            this.RegularLastNameErrorLbl = new System.Windows.Forms.Label();
+            this.RegularFirstNameErrorLbl = new System.Windows.Forms.Label();
+            this.RegularMobileNumErrorLbl = new System.Windows.Forms.Label();
+            this.RegularGenderErrorLbl = new System.Windows.Forms.Label();
+            this.RegularAgeErrorLbl = new System.Windows.Forms.Label();
+            this.RegularEmailErrorLbl = new System.Windows.Forms.Label();
+            this.RegularPassPanel = new System.Windows.Forms.Panel();
+            this.RegularShowHidePassBtn = new FontAwesome.Sharp.IconButton();
+            this.RegularPassText = new System.Windows.Forms.TextBox();
+            this.RegularPassErrorLbl = new System.Windows.Forms.Label();
+            this.RegularPassLbl = new System.Windows.Forms.Label();
+            this.RegularEmailText = new System.Windows.Forms.TextBox();
+            this.RegularEmailLbl = new System.Windows.Forms.Label();
+            this.RegularCreateAccountLbl = new System.Windows.Forms.Label();
+            this.RegularMobileNumText = new System.Windows.Forms.TextBox();
+            this.RegularMobileNumLbl = new System.Windows.Forms.Label();
+            this.RegularGenderComboText = new System.Windows.Forms.ComboBox();
+            this.RegularGenderLbl = new System.Windows.Forms.Label();
+            this.RegularBdayPicker = new System.Windows.Forms.DateTimePicker();
+            this.RegularFooterStopper = new System.Windows.Forms.Panel();
+            this.RegularFooterStopperLbl = new System.Windows.Forms.Label();
+            this.RegularAgeText = new System.Windows.Forms.TextBox();
+            this.RegularAgeLbl = new System.Windows.Forms.Label();
+            this.RegularBdayLbl = new System.Windows.Forms.Label();
+            this.RegularLastNameText = new System.Windows.Forms.TextBox();
+            this.RegularLastNameLbl = new System.Windows.Forms.Label();
+            this.RegularFirstNameText = new System.Windows.Forms.TextBox();
+            this.RegularFirstNameLbl = new System.Windows.Forms.Label();
+            this.RegularBasicInfoLbl = new System.Windows.Forms.Label();
+            this.RegularSelectedPlanLbl = new System.Windows.Forms.TextBox();
+            this.RegularSelectedLbl = new System.Windows.Forms.Label();
+            this.RegularAccLbl = new System.Windows.Forms.Label();
+            this.RegularMemberIDCopyBtn = new FontAwesome.Sharp.IconButton();
+            this.RegularPassReqBtn = new FontAwesome.Sharp.IconButton();
+            this.RegularCreateAccBtn = new FontAwesome.Sharp.IconButton();
+            this.RegularExitBtn = new FontAwesome.Sharp.IconButton();
+            this.MembershipPlanPanel = new System.Windows.Forms.Panel();
+            this.SVIPMemberPanel = new System.Windows.Forms.Panel();
+            this.SVIPMemberCreateAccBtn = new FontAwesome.Sharp.IconButton();
+            this.SVIPMemberAccLbl = new System.Windows.Forms.Label();
+            this.SVIPPMemberPriceText = new System.Windows.Forms.TextBox();
+            this.SVIPMemberText = new System.Windows.Forms.TextBox();
+            this.PMemberPanel = new System.Windows.Forms.Panel();
+            this.PMemberCreateAccBtn = new FontAwesome.Sharp.IconButton();
+            this.PMemberAccLbl = new System.Windows.Forms.Label();
+            this.PMemberPriceText = new System.Windows.Forms.TextBox();
+            this.PMemberText = new System.Windows.Forms.TextBox();
+            this.RMemberPanel = new System.Windows.Forms.Panel();
+            this.RMemberCreateAccBtn = new FontAwesome.Sharp.IconButton();
+            this.RMemberAccLbl = new System.Windows.Forms.Label();
+            this.RMemberPriceText = new System.Windows.Forms.TextBox();
+            this.RMemberText = new System.Windows.Forms.TextBox();
+            this.MemberTagline = new System.Windows.Forms.Label();
             this.PremiumPlanPanel = new System.Windows.Forms.Panel();
             this.PremPlanExpirationText = new System.Windows.Forms.TextBox();
             this.PremMemberIDCopyLbl = new System.Windows.Forms.Label();
@@ -272,68 +334,6 @@
             this.SVIPPassReqBtn = new FontAwesome.Sharp.IconButton();
             this.SVIPCreateAccBtn = new FontAwesome.Sharp.IconButton();
             this.SVIPExitBtn = new FontAwesome.Sharp.IconButton();
-            this.RegularPlanPanel = new System.Windows.Forms.Panel();
-            this.RegularMemberIDCopyLbl = new System.Windows.Forms.Label();
-            this.RegularMemberIDLbl = new System.Windows.Forms.Label();
-            this.RegularConfirmPassPanel = new System.Windows.Forms.Panel();
-            this.RegularConfirmShowHidePassBtn = new FontAwesome.Sharp.IconButton();
-            this.RegularConfirmPassText = new System.Windows.Forms.TextBox();
-            this.RegularConfirmPassErrorLbl = new System.Windows.Forms.Label();
-            this.RegularMemberIDText = new System.Windows.Forms.TextBox();
-            this.RegularConfirmPassLbl = new System.Windows.Forms.Label();
-            this.RegularLastNameErrorLbl = new System.Windows.Forms.Label();
-            this.RegularFirstNameErrorLbl = new System.Windows.Forms.Label();
-            this.RegularMobileNumErrorLbl = new System.Windows.Forms.Label();
-            this.RegularGenderErrorLbl = new System.Windows.Forms.Label();
-            this.RegularAgeErrorLbl = new System.Windows.Forms.Label();
-            this.RegularEmailErrorLbl = new System.Windows.Forms.Label();
-            this.RegularPassPanel = new System.Windows.Forms.Panel();
-            this.RegularShowHidePassBtn = new FontAwesome.Sharp.IconButton();
-            this.RegularPassText = new System.Windows.Forms.TextBox();
-            this.RegularPassErrorLbl = new System.Windows.Forms.Label();
-            this.RegularPassLbl = new System.Windows.Forms.Label();
-            this.RegularEmailText = new System.Windows.Forms.TextBox();
-            this.RegularEmailLbl = new System.Windows.Forms.Label();
-            this.RegularCreateAccountLbl = new System.Windows.Forms.Label();
-            this.RegularMobileNumText = new System.Windows.Forms.TextBox();
-            this.RegularMobileNumLbl = new System.Windows.Forms.Label();
-            this.RegularGenderComboText = new System.Windows.Forms.ComboBox();
-            this.RegularGenderLbl = new System.Windows.Forms.Label();
-            this.RegularBdayPicker = new System.Windows.Forms.DateTimePicker();
-            this.RegularFooterStopper = new System.Windows.Forms.Panel();
-            this.RegularFooterStopperLbl = new System.Windows.Forms.Label();
-            this.RegularAgeText = new System.Windows.Forms.TextBox();
-            this.RegularAgeLbl = new System.Windows.Forms.Label();
-            this.RegularBdayLbl = new System.Windows.Forms.Label();
-            this.RegularLastNameText = new System.Windows.Forms.TextBox();
-            this.RegularLastNameLbl = new System.Windows.Forms.Label();
-            this.RegularFirstNameText = new System.Windows.Forms.TextBox();
-            this.RegularFirstNameLbl = new System.Windows.Forms.Label();
-            this.RegularBasicInfoLbl = new System.Windows.Forms.Label();
-            this.RegularSelectedPlanLbl = new System.Windows.Forms.TextBox();
-            this.RegularSelectedLbl = new System.Windows.Forms.Label();
-            this.RegularAccLbl = new System.Windows.Forms.Label();
-            this.RegularMemberIDCopyBtn = new FontAwesome.Sharp.IconButton();
-            this.RegularPassReqBtn = new FontAwesome.Sharp.IconButton();
-            this.RegularCreateAccBtn = new FontAwesome.Sharp.IconButton();
-            this.RegularExitBtn = new FontAwesome.Sharp.IconButton();
-            this.MembershipPlanPanel = new System.Windows.Forms.Panel();
-            this.SVIPMemberPanel = new System.Windows.Forms.Panel();
-            this.SVIPMemberCreateAccBtn = new FontAwesome.Sharp.IconButton();
-            this.SVIPMemberAccLbl = new System.Windows.Forms.Label();
-            this.SVIPPMemberPriceText = new System.Windows.Forms.TextBox();
-            this.SVIPMemberText = new System.Windows.Forms.TextBox();
-            this.PMemberPanel = new System.Windows.Forms.Panel();
-            this.PMemberCreateAccBtn = new FontAwesome.Sharp.IconButton();
-            this.PMemberAccLbl = new System.Windows.Forms.Label();
-            this.PMemberPriceText = new System.Windows.Forms.TextBox();
-            this.PMemberText = new System.Windows.Forms.TextBox();
-            this.RMemberPanel = new System.Windows.Forms.Panel();
-            this.RMemberCreateAccBtn = new FontAwesome.Sharp.IconButton();
-            this.RMemberAccLbl = new System.Windows.Forms.Label();
-            this.RMemberPriceText = new System.Windows.Forms.TextBox();
-            this.RMemberText = new System.Windows.Forms.TextBox();
-            this.MemberTagline = new System.Windows.Forms.Label();
             this.EnchanteLoginForm = new System.Windows.Forms.Panel();
             this.LoginPassReqBtn = new FontAwesome.Sharp.IconButton();
             this.LoginRegisterHereLbl = new System.Windows.Forms.Label();
@@ -374,13 +374,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteHeaderLogo)).BeginInit();
             this.EnchanteHomeScrollPanel.SuspendLayout();
             this.ServicePanel.SuspendLayout();
+            this.ServiceType.SuspendLayout();
             this.ServiceMassage.SuspendLayout();
             this.ServiceSpa.SuspendLayout();
             this.ServiceNailCare.SuspendLayout();
             this.ServiceFaceSkin.SuspendLayout();
             this.ServiceHairStyling.SuspendLayout();
-            this.ServiceType.SuspendLayout();
             this.MembershipPanel.SuspendLayout();
+            this.RegularPlanPanel.SuspendLayout();
+            this.RegularConfirmPassPanel.SuspendLayout();
+            this.RegularPassPanel.SuspendLayout();
+            this.RegularFooterStopper.SuspendLayout();
+            this.MembershipPlanPanel.SuspendLayout();
+            this.SVIPMemberPanel.SuspendLayout();
+            this.PMemberPanel.SuspendLayout();
+            this.RMemberPanel.SuspendLayout();
             this.PremiumPlanPanel.SuspendLayout();
             this.PremCardInfoPanel.SuspendLayout();
             this.PremPayPPaymentPanel.SuspendLayout();
@@ -405,14 +413,6 @@
             this.SVIPConfirmPassPanel.SuspendLayout();
             this.SVIPPassPanel.SuspendLayout();
             this.SVIPFooterStopper.SuspendLayout();
-            this.RegularPlanPanel.SuspendLayout();
-            this.RegularConfirmPassPanel.SuspendLayout();
-            this.RegularPassPanel.SuspendLayout();
-            this.RegularFooterStopper.SuspendLayout();
-            this.MembershipPlanPanel.SuspendLayout();
-            this.SVIPMemberPanel.SuspendLayout();
-            this.PMemberPanel.SuspendLayout();
-            this.RMemberPanel.SuspendLayout();
             this.EnchanteLoginForm.SuspendLayout();
             this.LoginPassPanel.SuspendLayout();
             this.HomeFooterStopper.SuspendLayout();
@@ -425,7 +425,7 @@
             // 
             this.EnchanteMemParentCard.ContainerControl = this.EnchanteMemberParentContainer;
             this.EnchanteMemParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.EnchanteMemParentCard.SelectedCard = "LandingPage";
+            this.EnchanteMemParentCard.SelectedCard = "Member";
             // 
             // EnchanteMemberParentContainer
             // 
@@ -436,7 +436,7 @@
             this.EnchanteMemberParentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EnchanteMemberParentContainer.Location = new System.Drawing.Point(0, 0);
             this.EnchanteMemberParentContainer.Name = "EnchanteMemberParentContainer";
-            this.EnchanteMemberParentContainer.Size = new System.Drawing.Size(1370, 749);
+            this.EnchanteMemberParentContainer.Size = new System.Drawing.Size(1904, 1041);
             this.EnchanteMemberParentContainer.TabIndex = 0;
             // 
             // EnchanteMemberPage
@@ -449,7 +449,7 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.EnchanteMemberPage, new System.Drawing.Size(1904, 1041));
             this.EnchanteMemberPage.Name = "EnchanteMemberPage";
             this.EnchanteMemParentCard.SetPreferredSize(this.EnchanteMemberPage, new System.Drawing.Size(1904, 1041));
-            this.EnchanteMemberPage.Size = new System.Drawing.Size(1370, 749);
+            this.EnchanteMemberPage.Size = new System.Drawing.Size(1904, 1041);
             this.EnchanteMemberPage.TabIndex = 8;
             // 
             // MemberScrollPanel
@@ -462,7 +462,7 @@
             this.MemberScrollPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberScrollPanel.Location = new System.Drawing.Point(0, 150);
             this.MemberScrollPanel.Name = "MemberScrollPanel";
-            this.MemberScrollPanel.Size = new System.Drawing.Size(1370, 599);
+            this.MemberScrollPanel.Size = new System.Drawing.Size(1904, 891);
             this.MemberScrollPanel.TabIndex = 19;
             // 
             // MemberUserAccPanel
@@ -619,6 +619,7 @@
             // 
             // MemberFooterLogo
             // 
+            this.MemberFooterLogo.BackgroundImage = global::Enchante_Membership.Properties.Resources.Enchante_Logo_275x100;
             this.MemberFooterLogo.Location = new System.Drawing.Point(58, 29);
             this.MemberFooterLogo.Name = "MemberFooterLogo";
             this.MemberFooterLogo.Size = new System.Drawing.Size(275, 100);
@@ -658,7 +659,7 @@
             this.MemberNavBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MemberNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.MemberNavBarPanel.Name = "MemberNavBarPanel";
-            this.MemberNavBarPanel.Size = new System.Drawing.Size(1370, 150);
+            this.MemberNavBarPanel.Size = new System.Drawing.Size(1904, 150);
             this.MemberNavBarPanel.TabIndex = 1;
             // 
             // MemberAccUserBtn
@@ -781,6 +782,8 @@
             // 
             // EnchanteMemberHeaderLogo
             // 
+            this.EnchanteMemberHeaderLogo.BackgroundImage = global::Enchante_Membership.Properties.Resources.Enchante_Logo__200_x_200_px___1_;
+            this.EnchanteMemberHeaderLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EnchanteMemberHeaderLogo.Location = new System.Drawing.Point(81, 25);
             this.EnchanteMemberHeaderLogo.Name = "EnchanteMemberHeaderLogo";
             this.EnchanteMemberHeaderLogo.Size = new System.Drawing.Size(100, 100);
@@ -802,7 +805,7 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.EnchanteHomePage, new System.Drawing.Size(1904, 1041));
             this.EnchanteHomePage.Name = "EnchanteHomePage";
             this.EnchanteMemParentCard.SetPreferredSize(this.EnchanteHomePage, new System.Drawing.Size(1904, 1041));
-            this.EnchanteHomePage.Size = new System.Drawing.Size(1370, 749);
+            this.EnchanteHomePage.Size = new System.Drawing.Size(1904, 1041);
             this.EnchanteHomePage.TabIndex = 7;
             // 
             // EnchanteHomeNavBar
@@ -820,7 +823,7 @@
             this.EnchanteHomeNavBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.EnchanteHomeNavBar.Location = new System.Drawing.Point(0, 0);
             this.EnchanteHomeNavBar.Name = "EnchanteHomeNavBar";
-            this.EnchanteHomeNavBar.Size = new System.Drawing.Size(1370, 170);
+            this.EnchanteHomeNavBar.Size = new System.Drawing.Size(1904, 170);
             this.EnchanteHomeNavBar.TabIndex = 0;
             // 
             // EnchanteHLoginBtn
@@ -995,7 +998,7 @@
             this.EnchanteHomeScrollPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EnchanteHomeScrollPanel.Location = new System.Drawing.Point(0, 0);
             this.EnchanteHomeScrollPanel.Name = "EnchanteHomeScrollPanel";
-            this.EnchanteHomeScrollPanel.Size = new System.Drawing.Size(1370, 749);
+            this.EnchanteHomeScrollPanel.Size = new System.Drawing.Size(1904, 1041);
             this.EnchanteHomeScrollPanel.TabIndex = 18;
             // 
             // ServicePanel
@@ -1006,10 +1009,131 @@
             this.ServicePanel.Controls.Add(this.ServiceNailCare);
             this.ServicePanel.Controls.Add(this.ServiceFaceSkin);
             this.ServicePanel.Controls.Add(this.ServiceHairStyling);
-            this.ServicePanel.Location = new System.Drawing.Point(221, 1250);
+            this.ServicePanel.Location = new System.Drawing.Point(221, 10793);
             this.ServicePanel.Name = "ServicePanel";
             this.ServicePanel.Size = new System.Drawing.Size(1444, 751);
             this.ServicePanel.TabIndex = 23;
+            // 
+            // ServiceType
+            // 
+            this.ServiceType.Controls.Add(this.ServiceHSBtn);
+            this.ServiceType.Controls.Add(this.ServiceTagline);
+            this.ServiceType.Controls.Add(this.ServiceFSBtn);
+            this.ServiceType.Controls.Add(this.ServiceNCBtn);
+            this.ServiceType.Controls.Add(this.ServiceSpaBtn);
+            this.ServiceType.Controls.Add(this.ServiceMBtn);
+            this.ServiceType.Location = new System.Drawing.Point(0, 0);
+            this.ServiceType.Name = "ServiceType";
+            this.ServiceType.Size = new System.Drawing.Size(1444, 751);
+            this.ServiceType.TabIndex = 0;
+            // 
+            // ServiceHSBtn
+            // 
+            this.ServiceHSBtn.BackgroundImage = global::Enchante_Membership.Properties.Resources._30_People_Are_Sharing_Seemingly_Innocent_Questions_That_Broke_Their_Heart_A_;
+            this.ServiceHSBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ServiceHSBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceHSBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
+            this.ServiceHSBtn.FlatAppearance.BorderSize = 2;
+            this.ServiceHSBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceHSBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceHSBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceHSBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ServiceHSBtn.IconColor = System.Drawing.Color.Black;
+            this.ServiceHSBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceHSBtn.Location = new System.Drawing.Point(51, 250);
+            this.ServiceHSBtn.Name = "ServiceHSBtn";
+            this.ServiceHSBtn.Size = new System.Drawing.Size(250, 250);
+            this.ServiceHSBtn.TabIndex = 10;
+            this.ServiceHSBtn.Text = "Hair Styling";
+            this.ServiceHSBtn.UseVisualStyleBackColor = true;
+            // 
+            // ServiceTagline
+            // 
+            this.ServiceTagline.AutoSize = true;
+            this.ServiceTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.ServiceTagline.Location = new System.Drawing.Point(137, 10);
+            this.ServiceTagline.Name = "ServiceTagline";
+            this.ServiceTagline.Size = new System.Drawing.Size(1170, 69);
+            this.ServiceTagline.TabIndex = 9;
+            this.ServiceTagline.Text = "CHECK OUT OUR AVAILABLE SERVICES\r\n";
+            // 
+            // ServiceFSBtn
+            // 
+            this.ServiceFSBtn.BackgroundImage = global::Enchante_Membership.Properties.Resources.cabernetqween;
+            this.ServiceFSBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ServiceFSBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceFSBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
+            this.ServiceFSBtn.FlatAppearance.BorderSize = 2;
+            this.ServiceFSBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceFSBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceFSBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceFSBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ServiceFSBtn.IconColor = System.Drawing.Color.Black;
+            this.ServiceFSBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceFSBtn.Location = new System.Drawing.Point(328, 250);
+            this.ServiceFSBtn.Name = "ServiceFSBtn";
+            this.ServiceFSBtn.Size = new System.Drawing.Size(250, 250);
+            this.ServiceFSBtn.TabIndex = 12;
+            this.ServiceFSBtn.Text = "FACE && SKIN";
+            this.ServiceFSBtn.UseVisualStyleBackColor = true;
+            // 
+            // ServiceNCBtn
+            // 
+            this.ServiceNCBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ServiceNCBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceNCBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
+            this.ServiceNCBtn.FlatAppearance.BorderSize = 2;
+            this.ServiceNCBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceNCBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceNCBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceNCBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ServiceNCBtn.IconColor = System.Drawing.Color.Black;
+            this.ServiceNCBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceNCBtn.Location = new System.Drawing.Point(603, 250);
+            this.ServiceNCBtn.Name = "ServiceNCBtn";
+            this.ServiceNCBtn.Size = new System.Drawing.Size(250, 250);
+            this.ServiceNCBtn.TabIndex = 13;
+            this.ServiceNCBtn.Text = "NAIL CARE";
+            this.ServiceNCBtn.UseVisualStyleBackColor = true;
+            // 
+            // ServiceSpaBtn
+            // 
+            this.ServiceSpaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ServiceSpaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceSpaBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
+            this.ServiceSpaBtn.FlatAppearance.BorderSize = 2;
+            this.ServiceSpaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceSpaBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceSpaBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceSpaBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ServiceSpaBtn.IconColor = System.Drawing.Color.Black;
+            this.ServiceSpaBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceSpaBtn.Location = new System.Drawing.Point(875, 250);
+            this.ServiceSpaBtn.Name = "ServiceSpaBtn";
+            this.ServiceSpaBtn.Size = new System.Drawing.Size(250, 250);
+            this.ServiceSpaBtn.TabIndex = 14;
+            this.ServiceSpaBtn.Text = "SPA";
+            this.ServiceSpaBtn.UseVisualStyleBackColor = true;
+            // 
+            // ServiceMBtn
+            // 
+            this.ServiceMBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ServiceMBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceMBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
+            this.ServiceMBtn.FlatAppearance.BorderSize = 2;
+            this.ServiceMBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceMBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ServiceMBtn.IconColor = System.Drawing.Color.Black;
+            this.ServiceMBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceMBtn.Location = new System.Drawing.Point(1151, 250);
+            this.ServiceMBtn.Name = "ServiceMBtn";
+            this.ServiceMBtn.Size = new System.Drawing.Size(250, 250);
+            this.ServiceMBtn.TabIndex = 15;
+            this.ServiceMBtn.Text = "MASSAGE";
+            this.ServiceMBtn.UseVisualStyleBackColor = true;
             // 
             // ServiceMassage
             // 
@@ -1126,125 +1250,6 @@
             this.ServiceHairLbl.TabIndex = 3;
             this.ServiceHairLbl.Text = "Discover Your Own Hair Style\r\n";
             // 
-            // ServiceType
-            // 
-            this.ServiceType.Controls.Add(this.ServiceHSBtn);
-            this.ServiceType.Controls.Add(this.ServiceTagline);
-            this.ServiceType.Controls.Add(this.ServiceFSBtn);
-            this.ServiceType.Controls.Add(this.ServiceNCBtn);
-            this.ServiceType.Controls.Add(this.ServiceSpaBtn);
-            this.ServiceType.Controls.Add(this.ServiceMBtn);
-            this.ServiceType.Location = new System.Drawing.Point(0, 0);
-            this.ServiceType.Name = "ServiceType";
-            this.ServiceType.Size = new System.Drawing.Size(1444, 751);
-            this.ServiceType.TabIndex = 0;
-            // 
-            // ServiceHSBtn
-            // 
-            this.ServiceHSBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ServiceHSBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ServiceHSBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
-            this.ServiceHSBtn.FlatAppearance.BorderSize = 2;
-            this.ServiceHSBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ServiceHSBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.ServiceHSBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceHSBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ServiceHSBtn.IconColor = System.Drawing.Color.Black;
-            this.ServiceHSBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ServiceHSBtn.Location = new System.Drawing.Point(51, 250);
-            this.ServiceHSBtn.Name = "ServiceHSBtn";
-            this.ServiceHSBtn.Size = new System.Drawing.Size(250, 250);
-            this.ServiceHSBtn.TabIndex = 10;
-            this.ServiceHSBtn.Text = "Hair Styling";
-            this.ServiceHSBtn.UseVisualStyleBackColor = true;
-            // 
-            // ServiceTagline
-            // 
-            this.ServiceTagline.AutoSize = true;
-            this.ServiceTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.ServiceTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.ServiceTagline.Location = new System.Drawing.Point(137, 10);
-            this.ServiceTagline.Name = "ServiceTagline";
-            this.ServiceTagline.Size = new System.Drawing.Size(1170, 69);
-            this.ServiceTagline.TabIndex = 9;
-            this.ServiceTagline.Text = "CHECK OUT OUR AVAILABLE SERVICES\r\n";
-            // 
-            // ServiceFSBtn
-            // 
-            this.ServiceFSBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ServiceFSBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ServiceFSBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
-            this.ServiceFSBtn.FlatAppearance.BorderSize = 2;
-            this.ServiceFSBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ServiceFSBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.ServiceFSBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceFSBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ServiceFSBtn.IconColor = System.Drawing.Color.Black;
-            this.ServiceFSBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ServiceFSBtn.Location = new System.Drawing.Point(328, 250);
-            this.ServiceFSBtn.Name = "ServiceFSBtn";
-            this.ServiceFSBtn.Size = new System.Drawing.Size(250, 250);
-            this.ServiceFSBtn.TabIndex = 12;
-            this.ServiceFSBtn.Text = "FACE && SKIN";
-            this.ServiceFSBtn.UseVisualStyleBackColor = true;
-            // 
-            // ServiceNCBtn
-            // 
-            this.ServiceNCBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ServiceNCBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ServiceNCBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
-            this.ServiceNCBtn.FlatAppearance.BorderSize = 2;
-            this.ServiceNCBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ServiceNCBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.ServiceNCBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceNCBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ServiceNCBtn.IconColor = System.Drawing.Color.Black;
-            this.ServiceNCBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ServiceNCBtn.Location = new System.Drawing.Point(603, 250);
-            this.ServiceNCBtn.Name = "ServiceNCBtn";
-            this.ServiceNCBtn.Size = new System.Drawing.Size(250, 250);
-            this.ServiceNCBtn.TabIndex = 13;
-            this.ServiceNCBtn.Text = "NAIL CARE";
-            this.ServiceNCBtn.UseVisualStyleBackColor = true;
-            // 
-            // ServiceSpaBtn
-            // 
-            this.ServiceSpaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ServiceSpaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ServiceSpaBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
-            this.ServiceSpaBtn.FlatAppearance.BorderSize = 2;
-            this.ServiceSpaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ServiceSpaBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.ServiceSpaBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceSpaBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ServiceSpaBtn.IconColor = System.Drawing.Color.Black;
-            this.ServiceSpaBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ServiceSpaBtn.Location = new System.Drawing.Point(875, 250);
-            this.ServiceSpaBtn.Name = "ServiceSpaBtn";
-            this.ServiceSpaBtn.Size = new System.Drawing.Size(250, 250);
-            this.ServiceSpaBtn.TabIndex = 14;
-            this.ServiceSpaBtn.Text = "SPA";
-            this.ServiceSpaBtn.UseVisualStyleBackColor = true;
-            // 
-            // ServiceMBtn
-            // 
-            this.ServiceMBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ServiceMBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ServiceMBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
-            this.ServiceMBtn.FlatAppearance.BorderSize = 2;
-            this.ServiceMBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ServiceMBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.ServiceMBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceMBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ServiceMBtn.IconColor = System.Drawing.Color.Black;
-            this.ServiceMBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ServiceMBtn.Location = new System.Drawing.Point(1151, 250);
-            this.ServiceMBtn.Name = "ServiceMBtn";
-            this.ServiceMBtn.Size = new System.Drawing.Size(250, 250);
-            this.ServiceMBtn.TabIndex = 15;
-            this.ServiceMBtn.Text = "MASSAGE";
-            this.ServiceMBtn.UseVisualStyleBackColor = true;
-            // 
             // MembershipPanel
             // 
             this.MembershipPanel.AutoScroll = true;
@@ -1252,10 +1257,878 @@
             this.MembershipPanel.Controls.Add(this.MembershipPlanPanel);
             this.MembershipPanel.Controls.Add(this.PremiumPlanPanel);
             this.MembershipPanel.Controls.Add(this.SVIPPlanPanel);
-            this.MembershipPanel.Location = new System.Drawing.Point(258, 2051);
+            this.MembershipPanel.Location = new System.Drawing.Point(258, 11594);
             this.MembershipPanel.Name = "MembershipPanel";
             this.MembershipPanel.Size = new System.Drawing.Size(1371, 807);
             this.MembershipPanel.TabIndex = 22;
+            // 
+            // RegularPlanPanel
+            // 
+            this.RegularPlanPanel.AutoScroll = true;
+            this.RegularPlanPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularPlanPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RegularPlanPanel.Controls.Add(this.RegularMemberIDCopyLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularMemberIDLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularConfirmPassPanel);
+            this.RegularPlanPanel.Controls.Add(this.RegularConfirmPassErrorLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularMemberIDText);
+            this.RegularPlanPanel.Controls.Add(this.RegularConfirmPassLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularLastNameErrorLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularFirstNameErrorLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularMobileNumErrorLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularGenderErrorLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularAgeErrorLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularEmailErrorLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularPassPanel);
+            this.RegularPlanPanel.Controls.Add(this.RegularPassErrorLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularPassLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularEmailText);
+            this.RegularPlanPanel.Controls.Add(this.RegularEmailLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularCreateAccountLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularMobileNumText);
+            this.RegularPlanPanel.Controls.Add(this.RegularMobileNumLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularGenderComboText);
+            this.RegularPlanPanel.Controls.Add(this.RegularGenderLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularBdayPicker);
+            this.RegularPlanPanel.Controls.Add(this.RegularFooterStopper);
+            this.RegularPlanPanel.Controls.Add(this.RegularAgeText);
+            this.RegularPlanPanel.Controls.Add(this.RegularAgeLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularBdayLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularLastNameText);
+            this.RegularPlanPanel.Controls.Add(this.RegularLastNameLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularFirstNameText);
+            this.RegularPlanPanel.Controls.Add(this.RegularFirstNameLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularBasicInfoLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularSelectedPlanLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularSelectedLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularAccLbl);
+            this.RegularPlanPanel.Controls.Add(this.RegularMemberIDCopyBtn);
+            this.RegularPlanPanel.Controls.Add(this.RegularPassReqBtn);
+            this.RegularPlanPanel.Controls.Add(this.RegularCreateAccBtn);
+            this.RegularPlanPanel.Controls.Add(this.RegularExitBtn);
+            this.RegularPlanPanel.Location = new System.Drawing.Point(0, 0);
+            this.RegularPlanPanel.Name = "RegularPlanPanel";
+            this.RegularPlanPanel.Size = new System.Drawing.Size(1371, 807);
+            this.RegularPlanPanel.TabIndex = 1;
+            // 
+            // RegularMemberIDCopyLbl
+            // 
+            this.RegularMemberIDCopyLbl.AutoSize = true;
+            this.RegularMemberIDCopyLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularMemberIDCopyLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularMemberIDCopyLbl.Location = new System.Drawing.Point(349, 623);
+            this.RegularMemberIDCopyLbl.Name = "RegularMemberIDCopyLbl";
+            this.RegularMemberIDCopyLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularMemberIDCopyLbl.Size = new System.Drawing.Size(188, 14);
+            this.RegularMemberIDCopyLbl.TabIndex = 122;
+            this.RegularMemberIDCopyLbl.Text = "ID Number Copied Successfully";
+            this.RegularMemberIDCopyLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularMemberIDCopyLbl.Visible = false;
+            // 
+            // RegularMemberIDLbl
+            // 
+            this.RegularMemberIDLbl.AutoSize = true;
+            this.RegularMemberIDLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularMemberIDLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularMemberIDLbl.Location = new System.Drawing.Point(114, 611);
+            this.RegularMemberIDLbl.Name = "RegularMemberIDLbl";
+            this.RegularMemberIDLbl.Size = new System.Drawing.Size(240, 29);
+            this.RegularMemberIDLbl.TabIndex = 75;
+            this.RegularMemberIDLbl.Text = "Member ID Number:";
+            // 
+            // RegularConfirmPassPanel
+            // 
+            this.RegularConfirmPassPanel.Controls.Add(this.RegularConfirmShowHidePassBtn);
+            this.RegularConfirmPassPanel.Controls.Add(this.RegularConfirmPassText);
+            this.RegularConfirmPassPanel.Location = new System.Drawing.Point(686, 647);
+            this.RegularConfirmPassPanel.Name = "RegularConfirmPassPanel";
+            this.RegularConfirmPassPanel.Size = new System.Drawing.Size(565, 37);
+            this.RegularConfirmPassPanel.TabIndex = 69;
+            // 
+            // RegularConfirmShowHidePassBtn
+            // 
+            this.RegularConfirmShowHidePassBtn.AutoSize = true;
+            this.RegularConfirmShowHidePassBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RegularConfirmShowHidePassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegularConfirmShowHidePassBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RegularConfirmShowHidePassBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularConfirmShowHidePassBtn.FlatAppearance.BorderSize = 0;
+            this.RegularConfirmShowHidePassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegularConfirmShowHidePassBtn.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularConfirmShowHidePassBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularConfirmShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.RegularConfirmShowHidePassBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularConfirmShowHidePassBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RegularConfirmShowHidePassBtn.IconSize = 30;
+            this.RegularConfirmShowHidePassBtn.Location = new System.Drawing.Point(529, 0);
+            this.RegularConfirmShowHidePassBtn.Name = "RegularConfirmShowHidePassBtn";
+            this.RegularConfirmShowHidePassBtn.Size = new System.Drawing.Size(36, 37);
+            this.RegularConfirmShowHidePassBtn.TabIndex = 31;
+            this.RegularConfirmShowHidePassBtn.UseVisualStyleBackColor = false;
+            this.RegularConfirmShowHidePassBtn.Click += new System.EventHandler(this.RegularConfirmShowHidePassBtn_Click);
+            // 
+            // RegularConfirmPassText
+            // 
+            this.RegularConfirmPassText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularConfirmPassText.Dock = System.Windows.Forms.DockStyle.Left;
+            this.RegularConfirmPassText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularConfirmPassText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularConfirmPassText.Location = new System.Drawing.Point(0, 0);
+            this.RegularConfirmPassText.Margin = new System.Windows.Forms.Padding(50, 10, 10, 10);
+            this.RegularConfirmPassText.Name = "RegularConfirmPassText";
+            this.RegularConfirmPassText.Size = new System.Drawing.Size(524, 37);
+            this.RegularConfirmPassText.TabIndex = 25;
+            this.RegularConfirmPassText.UseSystemPasswordChar = true;
+            // 
+            // RegularConfirmPassErrorLbl
+            // 
+            this.RegularConfirmPassErrorLbl.AutoSize = true;
+            this.RegularConfirmPassErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularConfirmPassErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularConfirmPassErrorLbl.Location = new System.Drawing.Point(1053, 623);
+            this.RegularConfirmPassErrorLbl.Name = "RegularConfirmPassErrorLbl";
+            this.RegularConfirmPassErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularConfirmPassErrorLbl.Size = new System.Drawing.Size(184, 14);
+            this.RegularConfirmPassErrorLbl.TabIndex = 68;
+            this.RegularConfirmPassErrorLbl.Text = "PASSWORD DOES NOT MATCH";
+            this.RegularConfirmPassErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularConfirmPassErrorLbl.Visible = false;
+            // 
+            // RegularMemberIDText
+            // 
+            this.RegularMemberIDText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularMemberIDText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularMemberIDText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularMemberIDText.Location = new System.Drawing.Point(119, 647);
+            this.RegularMemberIDText.Name = "RegularMemberIDText";
+            this.RegularMemberIDText.ReadOnly = true;
+            this.RegularMemberIDText.Size = new System.Drawing.Size(550, 37);
+            this.RegularMemberIDText.TabIndex = 74;
+            // 
+            // RegularConfirmPassLbl
+            // 
+            this.RegularConfirmPassLbl.AutoSize = true;
+            this.RegularConfirmPassLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularConfirmPassLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularConfirmPassLbl.Location = new System.Drawing.Point(683, 615);
+            this.RegularConfirmPassLbl.Name = "RegularConfirmPassLbl";
+            this.RegularConfirmPassLbl.Size = new System.Drawing.Size(276, 29);
+            this.RegularConfirmPassLbl.TabIndex = 67;
+            this.RegularConfirmPassLbl.Text = "CONFIRM PASSWORD:";
+            // 
+            // RegularLastNameErrorLbl
+            // 
+            this.RegularLastNameErrorLbl.AutoSize = true;
+            this.RegularLastNameErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularLastNameErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularLastNameErrorLbl.Location = new System.Drawing.Point(1155, 281);
+            this.RegularLastNameErrorLbl.Name = "RegularLastNameErrorLbl";
+            this.RegularLastNameErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularLastNameErrorLbl.Size = new System.Drawing.Size(82, 14);
+            this.RegularLastNameErrorLbl.TabIndex = 72;
+            this.RegularLastNameErrorLbl.Text = "Missing Field";
+            this.RegularLastNameErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularLastNameErrorLbl.Visible = false;
+            // 
+            // RegularFirstNameErrorLbl
+            // 
+            this.RegularFirstNameErrorLbl.AutoSize = true;
+            this.RegularFirstNameErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularFirstNameErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularFirstNameErrorLbl.Location = new System.Drawing.Point(574, 281);
+            this.RegularFirstNameErrorLbl.Name = "RegularFirstNameErrorLbl";
+            this.RegularFirstNameErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularFirstNameErrorLbl.Size = new System.Drawing.Size(82, 14);
+            this.RegularFirstNameErrorLbl.TabIndex = 71;
+            this.RegularFirstNameErrorLbl.Text = "Missing Field";
+            this.RegularFirstNameErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularFirstNameErrorLbl.Visible = false;
+            // 
+            // RegularMobileNumErrorLbl
+            // 
+            this.RegularMobileNumErrorLbl.AutoSize = true;
+            this.RegularMobileNumErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularMobileNumErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularMobileNumErrorLbl.Location = new System.Drawing.Point(1155, 370);
+            this.RegularMobileNumErrorLbl.Name = "RegularMobileNumErrorLbl";
+            this.RegularMobileNumErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularMobileNumErrorLbl.Size = new System.Drawing.Size(82, 14);
+            this.RegularMobileNumErrorLbl.TabIndex = 70;
+            this.RegularMobileNumErrorLbl.Text = "Missing Field";
+            this.RegularMobileNumErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularMobileNumErrorLbl.Visible = false;
+            // 
+            // RegularGenderErrorLbl
+            // 
+            this.RegularGenderErrorLbl.AutoSize = true;
+            this.RegularGenderErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularGenderErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularGenderErrorLbl.Location = new System.Drawing.Point(837, 370);
+            this.RegularGenderErrorLbl.Name = "RegularGenderErrorLbl";
+            this.RegularGenderErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularGenderErrorLbl.Size = new System.Drawing.Size(82, 14);
+            this.RegularGenderErrorLbl.TabIndex = 69;
+            this.RegularGenderErrorLbl.Text = "Missing Field";
+            this.RegularGenderErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularGenderErrorLbl.Visible = false;
+            // 
+            // RegularAgeErrorLbl
+            // 
+            this.RegularAgeErrorLbl.AutoSize = true;
+            this.RegularAgeErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularAgeErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularAgeErrorLbl.Location = new System.Drawing.Point(481, 370);
+            this.RegularAgeErrorLbl.Name = "RegularAgeErrorLbl";
+            this.RegularAgeErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularAgeErrorLbl.Size = new System.Drawing.Size(195, 14);
+            this.RegularAgeErrorLbl.TabIndex = 68;
+            this.RegularAgeErrorLbl.Text = "Must be 18 years old and above";
+            this.RegularAgeErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularAgeErrorLbl.Visible = false;
+            // 
+            // RegularEmailErrorLbl
+            // 
+            this.RegularEmailErrorLbl.AutoSize = true;
+            this.RegularEmailErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularEmailErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularEmailErrorLbl.Location = new System.Drawing.Point(473, 536);
+            this.RegularEmailErrorLbl.Name = "RegularEmailErrorLbl";
+            this.RegularEmailErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularEmailErrorLbl.Size = new System.Drawing.Size(184, 14);
+            this.RegularEmailErrorLbl.TabIndex = 67;
+            this.RegularEmailErrorLbl.Text = "Email Address Does Not Exist";
+            this.RegularEmailErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularEmailErrorLbl.Visible = false;
+            // 
+            // RegularPassPanel
+            // 
+            this.RegularPassPanel.Controls.Add(this.RegularShowHidePassBtn);
+            this.RegularPassPanel.Controls.Add(this.RegularPassText);
+            this.RegularPassPanel.Location = new System.Drawing.Point(686, 561);
+            this.RegularPassPanel.Name = "RegularPassPanel";
+            this.RegularPassPanel.Size = new System.Drawing.Size(565, 37);
+            this.RegularPassPanel.TabIndex = 66;
+            // 
+            // RegularShowHidePassBtn
+            // 
+            this.RegularShowHidePassBtn.AutoSize = true;
+            this.RegularShowHidePassBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RegularShowHidePassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegularShowHidePassBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RegularShowHidePassBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularShowHidePassBtn.FlatAppearance.BorderSize = 0;
+            this.RegularShowHidePassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegularShowHidePassBtn.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularShowHidePassBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.RegularShowHidePassBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularShowHidePassBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RegularShowHidePassBtn.IconSize = 30;
+            this.RegularShowHidePassBtn.Location = new System.Drawing.Point(529, 0);
+            this.RegularShowHidePassBtn.Name = "RegularShowHidePassBtn";
+            this.RegularShowHidePassBtn.Size = new System.Drawing.Size(36, 37);
+            this.RegularShowHidePassBtn.TabIndex = 31;
+            this.RegularShowHidePassBtn.UseVisualStyleBackColor = false;
+            this.RegularShowHidePassBtn.Click += new System.EventHandler(this.RegularShowHidePassBtn_Click);
+            // 
+            // RegularPassText
+            // 
+            this.RegularPassText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularPassText.Dock = System.Windows.Forms.DockStyle.Left;
+            this.RegularPassText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularPassText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularPassText.Location = new System.Drawing.Point(0, 0);
+            this.RegularPassText.Margin = new System.Windows.Forms.Padding(50, 10, 10, 10);
+            this.RegularPassText.Name = "RegularPassText";
+            this.RegularPassText.Size = new System.Drawing.Size(524, 37);
+            this.RegularPassText.TabIndex = 25;
+            this.RegularPassText.UseSystemPasswordChar = true;
+            // 
+            // RegularPassErrorLbl
+            // 
+            this.RegularPassErrorLbl.AutoSize = true;
+            this.RegularPassErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularPassErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularPassErrorLbl.Location = new System.Drawing.Point(1092, 536);
+            this.RegularPassErrorLbl.Name = "RegularPassErrorLbl";
+            this.RegularPassErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RegularPassErrorLbl.Size = new System.Drawing.Size(145, 14);
+            this.RegularPassErrorLbl.TabIndex = 65;
+            this.RegularPassErrorLbl.Text = "INCORRECT PASSWORD";
+            this.RegularPassErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegularPassErrorLbl.Visible = false;
+            // 
+            // RegularPassLbl
+            // 
+            this.RegularPassLbl.AutoSize = true;
+            this.RegularPassLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularPassLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularPassLbl.Location = new System.Drawing.Point(683, 529);
+            this.RegularPassLbl.Name = "RegularPassLbl";
+            this.RegularPassLbl.Size = new System.Drawing.Size(155, 29);
+            this.RegularPassLbl.TabIndex = 64;
+            this.RegularPassLbl.Text = "PASSWORD:";
+            // 
+            // RegularEmailText
+            // 
+            this.RegularEmailText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularEmailText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularEmailText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularEmailText.Location = new System.Drawing.Point(121, 561);
+            this.RegularEmailText.Name = "RegularEmailText";
+            this.RegularEmailText.Size = new System.Drawing.Size(550, 37);
+            this.RegularEmailText.TabIndex = 61;
+            // 
+            // RegularEmailLbl
+            // 
+            this.RegularEmailLbl.AutoSize = true;
+            this.RegularEmailLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularEmailLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularEmailLbl.Location = new System.Drawing.Point(116, 529);
+            this.RegularEmailLbl.Name = "RegularEmailLbl";
+            this.RegularEmailLbl.Size = new System.Drawing.Size(194, 29);
+            this.RegularEmailLbl.TabIndex = 60;
+            this.RegularEmailLbl.Text = "Email Address:";
+            // 
+            // RegularCreateAccountLbl
+            // 
+            this.RegularCreateAccountLbl.AutoSize = true;
+            this.RegularCreateAccountLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularCreateAccountLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularCreateAccountLbl.Location = new System.Drawing.Point(115, 466);
+            this.RegularCreateAccountLbl.Name = "RegularCreateAccountLbl";
+            this.RegularCreateAccountLbl.Size = new System.Drawing.Size(368, 35);
+            this.RegularCreateAccountLbl.TabIndex = 59;
+            this.RegularCreateAccountLbl.Text = "2. Create Your Account";
+            // 
+            // RegularMobileNumText
+            // 
+            this.RegularMobileNumText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularMobileNumText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularMobileNumText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularMobileNumText.Location = new System.Drawing.Point(951, 396);
+            this.RegularMobileNumText.Name = "RegularMobileNumText";
+            this.RegularMobileNumText.Size = new System.Drawing.Size(300, 37);
+            this.RegularMobileNumText.TabIndex = 58;
+            // 
+            // RegularMobileNumLbl
+            // 
+            this.RegularMobileNumLbl.AutoSize = true;
+            this.RegularMobileNumLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularMobileNumLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularMobileNumLbl.Location = new System.Drawing.Point(946, 364);
+            this.RegularMobileNumLbl.Name = "RegularMobileNumLbl";
+            this.RegularMobileNumLbl.Size = new System.Drawing.Size(196, 29);
+            this.RegularMobileNumLbl.TabIndex = 57;
+            this.RegularMobileNumLbl.Text = "Mobile Number:";
+            // 
+            // RegularGenderComboText
+            // 
+            this.RegularGenderComboText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularGenderComboText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularGenderComboText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularGenderComboText.FormattingEnabled = true;
+            this.RegularGenderComboText.Location = new System.Drawing.Point(684, 396);
+            this.RegularGenderComboText.Name = "RegularGenderComboText";
+            this.RegularGenderComboText.Size = new System.Drawing.Size(261, 37);
+            this.RegularGenderComboText.TabIndex = 56;
+            this.RegularGenderComboText.SelectedIndexChanged += new System.EventHandler(this.RegularGenderComboText_SelectedIndexChanged);
+            // 
+            // RegularGenderLbl
+            // 
+            this.RegularGenderLbl.AutoSize = true;
+            this.RegularGenderLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularGenderLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularGenderLbl.Location = new System.Drawing.Point(681, 363);
+            this.RegularGenderLbl.Name = "RegularGenderLbl";
+            this.RegularGenderLbl.Size = new System.Drawing.Size(105, 29);
+            this.RegularGenderLbl.TabIndex = 54;
+            this.RegularGenderLbl.Text = "Gender:";
+            // 
+            // RegularBdayPicker
+            // 
+            this.RegularBdayPicker.CalendarFont = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegularBdayPicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularBdayPicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(222)))), ((int)(((byte)(141)))));
+            this.RegularBdayPicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(222)))), ((int)(((byte)(141)))));
+            this.RegularBdayPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.RegularBdayPicker.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(90)))), ((int)(((byte)(105)))));
+            this.RegularBdayPicker.CustomFormat = "MM-dd-yyyy";
+            this.RegularBdayPicker.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegularBdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.RegularBdayPicker.Location = new System.Drawing.Point(119, 395);
+            this.RegularBdayPicker.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.RegularBdayPicker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.RegularBdayPicker.Name = "RegularBdayPicker";
+            this.RegularBdayPicker.Size = new System.Drawing.Size(301, 37);
+            this.RegularBdayPicker.TabIndex = 53;
+            this.RegularBdayPicker.ValueChanged += new System.EventHandler(this.RegularBdayPicker_ValueChanged);
+            // 
+            // RegularFooterStopper
+            // 
+            this.RegularFooterStopper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularFooterStopper.Controls.Add(this.RegularFooterStopperLbl);
+            this.RegularFooterStopper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.RegularFooterStopper.Location = new System.Drawing.Point(290, 779);
+            this.RegularFooterStopper.Name = "RegularFooterStopper";
+            this.RegularFooterStopper.Size = new System.Drawing.Size(804, 26);
+            this.RegularFooterStopper.TabIndex = 52;
+            // 
+            // RegularFooterStopperLbl
+            // 
+            this.RegularFooterStopperLbl.AutoSize = true;
+            this.RegularFooterStopperLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularFooterStopperLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.RegularFooterStopperLbl.Location = new System.Drawing.Point(206, 29);
+            this.RegularFooterStopperLbl.Name = "RegularFooterStopperLbl";
+            this.RegularFooterStopperLbl.Size = new System.Drawing.Size(362, 51);
+            this.RegularFooterStopperLbl.TabIndex = 20;
+            this.RegularFooterStopperLbl.Text = "Footer Stopper";
+            this.RegularFooterStopperLbl.Visible = false;
+            // 
+            // RegularAgeText
+            // 
+            this.RegularAgeText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularAgeText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularAgeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularAgeText.Location = new System.Drawing.Point(426, 396);
+            this.RegularAgeText.Name = "RegularAgeText";
+            this.RegularAgeText.ReadOnly = true;
+            this.RegularAgeText.Size = new System.Drawing.Size(243, 37);
+            this.RegularAgeText.TabIndex = 51;
+            // 
+            // RegularAgeLbl
+            // 
+            this.RegularAgeLbl.AutoSize = true;
+            this.RegularAgeLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularAgeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularAgeLbl.Location = new System.Drawing.Point(421, 363);
+            this.RegularAgeLbl.Name = "RegularAgeLbl";
+            this.RegularAgeLbl.Size = new System.Drawing.Size(65, 29);
+            this.RegularAgeLbl.TabIndex = 50;
+            this.RegularAgeLbl.Text = "Age:";
+            // 
+            // RegularBdayLbl
+            // 
+            this.RegularBdayLbl.AutoSize = true;
+            this.RegularBdayLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularBdayLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularBdayLbl.Location = new System.Drawing.Point(116, 363);
+            this.RegularBdayLbl.Name = "RegularBdayLbl";
+            this.RegularBdayLbl.Size = new System.Drawing.Size(128, 29);
+            this.RegularBdayLbl.TabIndex = 48;
+            this.RegularBdayLbl.Text = "Birthday:";
+            // 
+            // RegularLastNameText
+            // 
+            this.RegularLastNameText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularLastNameText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularLastNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularLastNameText.Location = new System.Drawing.Point(684, 306);
+            this.RegularLastNameText.Name = "RegularLastNameText";
+            this.RegularLastNameText.Size = new System.Drawing.Size(567, 37);
+            this.RegularLastNameText.TabIndex = 47;
+            // 
+            // RegularLastNameLbl
+            // 
+            this.RegularLastNameLbl.AutoSize = true;
+            this.RegularLastNameLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularLastNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularLastNameLbl.Location = new System.Drawing.Point(679, 274);
+            this.RegularLastNameLbl.Name = "RegularLastNameLbl";
+            this.RegularLastNameLbl.Size = new System.Drawing.Size(152, 29);
+            this.RegularLastNameLbl.TabIndex = 46;
+            this.RegularLastNameLbl.Text = "Last Name:";
+            // 
+            // RegularFirstNameText
+            // 
+            this.RegularFirstNameText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularFirstNameText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularFirstNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularFirstNameText.Location = new System.Drawing.Point(120, 306);
+            this.RegularFirstNameText.Name = "RegularFirstNameText";
+            this.RegularFirstNameText.Size = new System.Drawing.Size(550, 37);
+            this.RegularFirstNameText.TabIndex = 45;
+            // 
+            // RegularFirstNameLbl
+            // 
+            this.RegularFirstNameLbl.AutoSize = true;
+            this.RegularFirstNameLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularFirstNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularFirstNameLbl.Location = new System.Drawing.Point(115, 274);
+            this.RegularFirstNameLbl.Name = "RegularFirstNameLbl";
+            this.RegularFirstNameLbl.Size = new System.Drawing.Size(157, 29);
+            this.RegularFirstNameLbl.TabIndex = 44;
+            this.RegularFirstNameLbl.Text = "First Name:";
+            // 
+            // RegularBasicInfoLbl
+            // 
+            this.RegularBasicInfoLbl.AutoSize = true;
+            this.RegularBasicInfoLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularBasicInfoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularBasicInfoLbl.Location = new System.Drawing.Point(114, 211);
+            this.RegularBasicInfoLbl.Name = "RegularBasicInfoLbl";
+            this.RegularBasicInfoLbl.Size = new System.Drawing.Size(305, 35);
+            this.RegularBasicInfoLbl.TabIndex = 10;
+            this.RegularBasicInfoLbl.Text = "1. Basic Information";
+            // 
+            // RegularSelectedPlanLbl
+            // 
+            this.RegularSelectedPlanLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RegularSelectedPlanLbl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RegularSelectedPlanLbl.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularSelectedPlanLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularSelectedPlanLbl.Location = new System.Drawing.Point(306, 135);
+            this.RegularSelectedPlanLbl.Name = "RegularSelectedPlanLbl";
+            this.RegularSelectedPlanLbl.ReadOnly = true;
+            this.RegularSelectedPlanLbl.Size = new System.Drawing.Size(234, 27);
+            this.RegularSelectedPlanLbl.TabIndex = 9;
+            this.RegularSelectedPlanLbl.Text = "Regular Plan";
+            // 
+            // RegularSelectedLbl
+            // 
+            this.RegularSelectedLbl.AutoSize = true;
+            this.RegularSelectedLbl.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularSelectedLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularSelectedLbl.Location = new System.Drawing.Point(124, 135);
+            this.RegularSelectedLbl.Name = "RegularSelectedLbl";
+            this.RegularSelectedLbl.Size = new System.Drawing.Size(176, 26);
+            this.RegularSelectedLbl.TabIndex = 8;
+            this.RegularSelectedLbl.Text = "Selected Plan:";
+            // 
+            // RegularAccLbl
+            // 
+            this.RegularAccLbl.AutoSize = true;
+            this.RegularAccLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularAccLbl.Location = new System.Drawing.Point(112, 63);
+            this.RegularAccLbl.Name = "RegularAccLbl";
+            this.RegularAccLbl.Size = new System.Drawing.Size(1035, 51);
+            this.RegularAccLbl.TabIndex = 7;
+            this.RegularAccLbl.Text = "You\'re almost there! Complete your account.";
+            // 
+            // RegularMemberIDCopyBtn
+            // 
+            this.RegularMemberIDCopyBtn.AutoSize = true;
+            this.RegularMemberIDCopyBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RegularMemberIDCopyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegularMemberIDCopyBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularMemberIDCopyBtn.FlatAppearance.BorderSize = 0;
+            this.RegularMemberIDCopyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegularMemberIDCopyBtn.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularMemberIDCopyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularMemberIDCopyBtn.IconChar = FontAwesome.Sharp.IconChar.Copy;
+            this.RegularMemberIDCopyBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularMemberIDCopyBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RegularMemberIDCopyBtn.IconSize = 30;
+            this.RegularMemberIDCopyBtn.Location = new System.Drawing.Point(633, 609);
+            this.RegularMemberIDCopyBtn.Name = "RegularMemberIDCopyBtn";
+            this.RegularMemberIDCopyBtn.Size = new System.Drawing.Size(36, 36);
+            this.RegularMemberIDCopyBtn.TabIndex = 121;
+            this.RegularMemberIDCopyBtn.UseVisualStyleBackColor = false;
+            this.RegularMemberIDCopyBtn.Click += new System.EventHandler(this.RegularMemberIDCopyBtn_Click);
+            // 
+            // RegularPassReqBtn
+            // 
+            this.RegularPassReqBtn.AutoSize = true;
+            this.RegularPassReqBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RegularPassReqBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularPassReqBtn.FlatAppearance.BorderSize = 0;
+            this.RegularPassReqBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegularPassReqBtn.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularPassReqBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularPassReqBtn.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.RegularPassReqBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularPassReqBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RegularPassReqBtn.IconSize = 20;
+            this.RegularPassReqBtn.Location = new System.Drawing.Point(837, 523);
+            this.RegularPassReqBtn.Name = "RegularPassReqBtn";
+            this.RegularPassReqBtn.Size = new System.Drawing.Size(36, 36);
+            this.RegularPassReqBtn.TabIndex = 76;
+            this.RegularPassReqBtn.UseVisualStyleBackColor = false;
+            this.RegularPassReqBtn.MouseHover += new System.EventHandler(this.RegularPassReqBtn_MouseHover);
+            // 
+            // RegularCreateAccBtn
+            // 
+            this.RegularCreateAccBtn.AutoSize = true;
+            this.RegularCreateAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegularCreateAccBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RegularCreateAccBtn.FlatAppearance.BorderSize = 3;
+            this.RegularCreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegularCreateAccBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RegularCreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularCreateAccBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.RegularCreateAccBtn.IconColor = System.Drawing.Color.Black;
+            this.RegularCreateAccBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RegularCreateAccBtn.Location = new System.Drawing.Point(511, 713);
+            this.RegularCreateAccBtn.Name = "RegularCreateAccBtn";
+            this.RegularCreateAccBtn.Size = new System.Drawing.Size(346, 60);
+            this.RegularCreateAccBtn.TabIndex = 73;
+            this.RegularCreateAccBtn.Text = "CREATE ACCOUNT NOW";
+            this.RegularCreateAccBtn.UseVisualStyleBackColor = true;
+            this.RegularCreateAccBtn.Click += new System.EventHandler(this.RegularCreateAccBtn_Click);
+            // 
+            // RegularExitBtn
+            // 
+            this.RegularExitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RegularExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegularExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.RegularExitBtn.FlatAppearance.BorderSize = 0;
+            this.RegularExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegularExitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.RegularExitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RegularExitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RegularExitBtn.Location = new System.Drawing.Point(1257, 28);
+            this.RegularExitBtn.Name = "RegularExitBtn";
+            this.RegularExitBtn.Size = new System.Drawing.Size(48, 48);
+            this.RegularExitBtn.TabIndex = 43;
+            this.RegularExitBtn.UseVisualStyleBackColor = false;
+            this.RegularExitBtn.Click += new System.EventHandler(this.RegularExitBtn_Click);
+            // 
+            // MembershipPlanPanel
+            // 
+            this.MembershipPlanPanel.AutoScroll = true;
+            this.MembershipPlanPanel.Controls.Add(this.SVIPMemberPanel);
+            this.MembershipPlanPanel.Controls.Add(this.PMemberPanel);
+            this.MembershipPlanPanel.Controls.Add(this.RMemberPanel);
+            this.MembershipPlanPanel.Controls.Add(this.MemberTagline);
+            this.MembershipPlanPanel.Location = new System.Drawing.Point(0, 0);
+            this.MembershipPlanPanel.Name = "MembershipPlanPanel";
+            this.MembershipPlanPanel.Size = new System.Drawing.Size(1371, 807);
+            this.MembershipPlanPanel.TabIndex = 0;
+            // 
+            // SVIPMemberPanel
+            // 
+            this.SVIPMemberPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SVIPMemberPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.SVIPMemberPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SVIPMemberPanel.Controls.Add(this.SVIPMemberCreateAccBtn);
+            this.SVIPMemberPanel.Controls.Add(this.SVIPMemberAccLbl);
+            this.SVIPMemberPanel.Controls.Add(this.SVIPPMemberPriceText);
+            this.SVIPMemberPanel.Controls.Add(this.SVIPMemberText);
+            this.SVIPMemberPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.SVIPMemberPanel.Location = new System.Drawing.Point(925, 118);
+            this.SVIPMemberPanel.Name = "SVIPMemberPanel";
+            this.SVIPMemberPanel.Size = new System.Drawing.Size(410, 594);
+            this.SVIPMemberPanel.TabIndex = 18;
+            // 
+            // SVIPMemberCreateAccBtn
+            // 
+            this.SVIPMemberCreateAccBtn.AutoSize = true;
+            this.SVIPMemberCreateAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SVIPMemberCreateAccBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SVIPMemberCreateAccBtn.FlatAppearance.BorderSize = 3;
+            this.SVIPMemberCreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SVIPMemberCreateAccBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.SVIPMemberCreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.SVIPMemberCreateAccBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SVIPMemberCreateAccBtn.IconColor = System.Drawing.Color.Black;
+            this.SVIPMemberCreateAccBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SVIPMemberCreateAccBtn.Location = new System.Drawing.Point(54, 471);
+            this.SVIPMemberCreateAccBtn.Name = "SVIPMemberCreateAccBtn";
+            this.SVIPMemberCreateAccBtn.Size = new System.Drawing.Size(285, 60);
+            this.SVIPMemberCreateAccBtn.TabIndex = 8;
+            this.SVIPMemberCreateAccBtn.Text = "GET SUPER VIP PLAN NOW";
+            this.SVIPMemberCreateAccBtn.UseVisualStyleBackColor = true;
+            this.SVIPMemberCreateAccBtn.Click += new System.EventHandler(this.SVIPMemberCreateAccBtn_Click);
+            // 
+            // SVIPMemberAccLbl
+            // 
+            this.SVIPMemberAccLbl.AutoSize = true;
+            this.SVIPMemberAccLbl.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.SVIPMemberAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.SVIPMemberAccLbl.Location = new System.Drawing.Point(35, 162);
+            this.SVIPMemberAccLbl.Name = "SVIPMemberAccLbl";
+            this.SVIPMemberAccLbl.Size = new System.Drawing.Size(338, 240);
+            this.SVIPMemberAccLbl.TabIndex = 2;
+            this.SVIPMemberAccLbl.Text = resources.GetString("SVIPMemberAccLbl.Text");
+            // 
+            // SVIPPMemberPriceText
+            // 
+            this.SVIPPMemberPriceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.SVIPPMemberPriceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SVIPPMemberPriceText.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.SVIPPMemberPriceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.SVIPPMemberPriceText.Location = new System.Drawing.Point(39, 107);
+            this.SVIPPMemberPriceText.Name = "SVIPPMemberPriceText";
+            this.SVIPPMemberPriceText.ReadOnly = true;
+            this.SVIPPMemberPriceText.Size = new System.Drawing.Size(287, 22);
+            this.SVIPPMemberPriceText.TabIndex = 1;
+            this.SVIPPMemberPriceText.Text = "PHP. 4999.00 / MONTH";
+            // 
+            // SVIPMemberText
+            // 
+            this.SVIPMemberText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.SVIPMemberText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SVIPMemberText.Font = new System.Drawing.Font("TechnicBold", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.SVIPMemberText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.SVIPMemberText.Location = new System.Drawing.Point(39, 53);
+            this.SVIPMemberText.Name = "SVIPMemberText";
+            this.SVIPMemberText.ReadOnly = true;
+            this.SVIPMemberText.Size = new System.Drawing.Size(287, 48);
+            this.SVIPMemberText.TabIndex = 0;
+            this.SVIPMemberText.Text = "SUPER VIP";
+            // 
+            // PMemberPanel
+            // 
+            this.PMemberPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PMemberPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.PMemberPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PMemberPanel.Controls.Add(this.PMemberCreateAccBtn);
+            this.PMemberPanel.Controls.Add(this.PMemberAccLbl);
+            this.PMemberPanel.Controls.Add(this.PMemberPriceText);
+            this.PMemberPanel.Controls.Add(this.PMemberText);
+            this.PMemberPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.PMemberPanel.Location = new System.Drawing.Point(485, 118);
+            this.PMemberPanel.Name = "PMemberPanel";
+            this.PMemberPanel.Size = new System.Drawing.Size(410, 594);
+            this.PMemberPanel.TabIndex = 18;
+            // 
+            // PMemberCreateAccBtn
+            // 
+            this.PMemberCreateAccBtn.AutoSize = true;
+            this.PMemberCreateAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PMemberCreateAccBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.PMemberCreateAccBtn.FlatAppearance.BorderSize = 3;
+            this.PMemberCreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PMemberCreateAccBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.PMemberCreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.PMemberCreateAccBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.PMemberCreateAccBtn.IconColor = System.Drawing.Color.Black;
+            this.PMemberCreateAccBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.PMemberCreateAccBtn.Location = new System.Drawing.Point(55, 471);
+            this.PMemberCreateAccBtn.Name = "PMemberCreateAccBtn";
+            this.PMemberCreateAccBtn.Size = new System.Drawing.Size(285, 60);
+            this.PMemberCreateAccBtn.TabIndex = 8;
+            this.PMemberCreateAccBtn.Text = "GET PREMIUM PLAN NOW";
+            this.PMemberCreateAccBtn.UseVisualStyleBackColor = true;
+            this.PMemberCreateAccBtn.Click += new System.EventHandler(this.PMemberCreateAccBtn_Click);
+            // 
+            // PMemberAccLbl
+            // 
+            this.PMemberAccLbl.AutoSize = true;
+            this.PMemberAccLbl.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.PMemberAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.PMemberAccLbl.Location = new System.Drawing.Point(39, 162);
+            this.PMemberAccLbl.Name = "PMemberAccLbl";
+            this.PMemberAccLbl.Size = new System.Drawing.Size(332, 180);
+            this.PMemberAccLbl.TabIndex = 2;
+            this.PMemberAccLbl.Text = "* BOOK YOUR SALON APPOINTMENT\r\nCONVENIENTLY\r\n* SELECTED HOT PROMO DISCOUNTS\r\n* BI" +
+    "RTHDAY TREATMENT DISCOUNT\r\n* SELECT YOUR OWN STYLIST\r\n* MAX OF 10 GUESTS PER \r\nA" +
+    "PPOINTMENT\r\n* CANCEL ANY TIME\r\n\r\n";
+            // 
+            // PMemberPriceText
+            // 
+            this.PMemberPriceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.PMemberPriceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PMemberPriceText.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.PMemberPriceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.PMemberPriceText.Location = new System.Drawing.Point(54, 107);
+            this.PMemberPriceText.Name = "PMemberPriceText";
+            this.PMemberPriceText.ReadOnly = true;
+            this.PMemberPriceText.Size = new System.Drawing.Size(287, 22);
+            this.PMemberPriceText.TabIndex = 1;
+            this.PMemberPriceText.Text = "PHP. 1499.00 / MONTH";
+            // 
+            // PMemberText
+            // 
+            this.PMemberText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.PMemberText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PMemberText.Font = new System.Drawing.Font("TechnicBold", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.PMemberText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.PMemberText.Location = new System.Drawing.Point(54, 53);
+            this.PMemberText.Name = "PMemberText";
+            this.PMemberText.ReadOnly = true;
+            this.PMemberText.Size = new System.Drawing.Size(287, 48);
+            this.PMemberText.TabIndex = 0;
+            this.PMemberText.Text = "PREMIUM";
+            // 
+            // RMemberPanel
+            // 
+            this.RMemberPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.RMemberPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RMemberPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RMemberPanel.Controls.Add(this.RMemberCreateAccBtn);
+            this.RMemberPanel.Controls.Add(this.RMemberAccLbl);
+            this.RMemberPanel.Controls.Add(this.RMemberPriceText);
+            this.RMemberPanel.Controls.Add(this.RMemberText);
+            this.RMemberPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.RMemberPanel.Location = new System.Drawing.Point(36, 118);
+            this.RMemberPanel.Name = "RMemberPanel";
+            this.RMemberPanel.Size = new System.Drawing.Size(410, 594);
+            this.RMemberPanel.TabIndex = 17;
+            // 
+            // RMemberCreateAccBtn
+            // 
+            this.RMemberCreateAccBtn.AutoSize = true;
+            this.RMemberCreateAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RMemberCreateAccBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.RMemberCreateAccBtn.FlatAppearance.BorderSize = 3;
+            this.RMemberCreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RMemberCreateAccBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RMemberCreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RMemberCreateAccBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.RMemberCreateAccBtn.IconColor = System.Drawing.Color.Black;
+            this.RMemberCreateAccBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RMemberCreateAccBtn.Location = new System.Drawing.Point(48, 471);
+            this.RMemberCreateAccBtn.Name = "RMemberCreateAccBtn";
+            this.RMemberCreateAccBtn.Size = new System.Drawing.Size(312, 60);
+            this.RMemberCreateAccBtn.TabIndex = 8;
+            this.RMemberCreateAccBtn.Text = "CREATE FREE ACCOUNT NOW";
+            this.RMemberCreateAccBtn.UseVisualStyleBackColor = true;
+            this.RMemberCreateAccBtn.Click += new System.EventHandler(this.RMemberCreateAccBtn_Click);
+            // 
+            // RMemberAccLbl
+            // 
+            this.RMemberAccLbl.AutoSize = true;
+            this.RMemberAccLbl.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RMemberAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RMemberAccLbl.Location = new System.Drawing.Point(48, 162);
+            this.RMemberAccLbl.Name = "RMemberAccLbl";
+            this.RMemberAccLbl.Size = new System.Drawing.Size(313, 140);
+            this.RMemberAccLbl.TabIndex = 2;
+            this.RMemberAccLbl.Text = "* FREE ACCOUNT CREATION\r\n* BOOK YOUR SALON APPOINMENT\r\nCONVENIENTLY\r\n* MAX OF THR" +
+    "EE (3) GUESTS PER \r\nAPPOINTMENT\r\n* APPOINTMENT CANCELLATION\r\nCHARGES MAY OCCUR\r\n" +
+    "";
+            // 
+            // RMemberPriceText
+            // 
+            this.RMemberPriceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RMemberPriceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RMemberPriceText.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RMemberPriceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RMemberPriceText.Location = new System.Drawing.Point(54, 107);
+            this.RMemberPriceText.Name = "RMemberPriceText";
+            this.RMemberPriceText.ReadOnly = true;
+            this.RMemberPriceText.Size = new System.Drawing.Size(287, 22);
+            this.RMemberPriceText.TabIndex = 1;
+            this.RMemberPriceText.Text = "FREE ACCOUNT";
+            // 
+            // RMemberText
+            // 
+            this.RMemberText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.RMemberText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RMemberText.Font = new System.Drawing.Font("TechnicBold", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.RMemberText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.RMemberText.Location = new System.Drawing.Point(54, 53);
+            this.RMemberText.Name = "RMemberText";
+            this.RMemberText.ReadOnly = true;
+            this.RMemberText.Size = new System.Drawing.Size(287, 48);
+            this.RMemberText.TabIndex = 0;
+            this.RMemberText.Text = "REGULAR";
+            // 
+            // MemberTagline
+            // 
+            this.MemberTagline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MemberTagline.AutoSize = true;
+            this.MemberTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemberTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemberTagline.Location = new System.Drawing.Point(62, 23);
+            this.MemberTagline.Name = "MemberTagline";
+            this.MemberTagline.Size = new System.Drawing.Size(1247, 69);
+            this.MemberTagline.TabIndex = 16;
+            this.MemberTagline.Text = "CHOOSE YOUR SALON MEMBERSHIP PLAN";
             // 
             // PremiumPlanPanel
             // 
@@ -3871,874 +4744,6 @@
             this.SVIPExitBtn.UseVisualStyleBackColor = false;
             this.SVIPExitBtn.Click += new System.EventHandler(this.SVIPExitBtn_Click);
             // 
-            // RegularPlanPanel
-            // 
-            this.RegularPlanPanel.AutoScroll = true;
-            this.RegularPlanPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularPlanPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RegularPlanPanel.Controls.Add(this.RegularMemberIDCopyLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularMemberIDLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularConfirmPassPanel);
-            this.RegularPlanPanel.Controls.Add(this.RegularConfirmPassErrorLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularMemberIDText);
-            this.RegularPlanPanel.Controls.Add(this.RegularConfirmPassLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularLastNameErrorLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularFirstNameErrorLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularMobileNumErrorLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularGenderErrorLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularAgeErrorLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularEmailErrorLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularPassPanel);
-            this.RegularPlanPanel.Controls.Add(this.RegularPassErrorLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularPassLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularEmailText);
-            this.RegularPlanPanel.Controls.Add(this.RegularEmailLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularCreateAccountLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularMobileNumText);
-            this.RegularPlanPanel.Controls.Add(this.RegularMobileNumLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularGenderComboText);
-            this.RegularPlanPanel.Controls.Add(this.RegularGenderLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularBdayPicker);
-            this.RegularPlanPanel.Controls.Add(this.RegularFooterStopper);
-            this.RegularPlanPanel.Controls.Add(this.RegularAgeText);
-            this.RegularPlanPanel.Controls.Add(this.RegularAgeLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularBdayLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularLastNameText);
-            this.RegularPlanPanel.Controls.Add(this.RegularLastNameLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularFirstNameText);
-            this.RegularPlanPanel.Controls.Add(this.RegularFirstNameLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularBasicInfoLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularSelectedPlanLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularSelectedLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularAccLbl);
-            this.RegularPlanPanel.Controls.Add(this.RegularMemberIDCopyBtn);
-            this.RegularPlanPanel.Controls.Add(this.RegularPassReqBtn);
-            this.RegularPlanPanel.Controls.Add(this.RegularCreateAccBtn);
-            this.RegularPlanPanel.Controls.Add(this.RegularExitBtn);
-            this.RegularPlanPanel.Location = new System.Drawing.Point(0, 0);
-            this.RegularPlanPanel.Name = "RegularPlanPanel";
-            this.RegularPlanPanel.Size = new System.Drawing.Size(1371, 807);
-            this.RegularPlanPanel.TabIndex = 1;
-            // 
-            // RegularMemberIDCopyLbl
-            // 
-            this.RegularMemberIDCopyLbl.AutoSize = true;
-            this.RegularMemberIDCopyLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularMemberIDCopyLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularMemberIDCopyLbl.Location = new System.Drawing.Point(349, 623);
-            this.RegularMemberIDCopyLbl.Name = "RegularMemberIDCopyLbl";
-            this.RegularMemberIDCopyLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularMemberIDCopyLbl.Size = new System.Drawing.Size(188, 14);
-            this.RegularMemberIDCopyLbl.TabIndex = 122;
-            this.RegularMemberIDCopyLbl.Text = "ID Number Copied Successfully";
-            this.RegularMemberIDCopyLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularMemberIDCopyLbl.Visible = false;
-            // 
-            // RegularMemberIDLbl
-            // 
-            this.RegularMemberIDLbl.AutoSize = true;
-            this.RegularMemberIDLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularMemberIDLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularMemberIDLbl.Location = new System.Drawing.Point(114, 611);
-            this.RegularMemberIDLbl.Name = "RegularMemberIDLbl";
-            this.RegularMemberIDLbl.Size = new System.Drawing.Size(240, 29);
-            this.RegularMemberIDLbl.TabIndex = 75;
-            this.RegularMemberIDLbl.Text = "Member ID Number:";
-            // 
-            // RegularConfirmPassPanel
-            // 
-            this.RegularConfirmPassPanel.Controls.Add(this.RegularConfirmShowHidePassBtn);
-            this.RegularConfirmPassPanel.Controls.Add(this.RegularConfirmPassText);
-            this.RegularConfirmPassPanel.Location = new System.Drawing.Point(686, 647);
-            this.RegularConfirmPassPanel.Name = "RegularConfirmPassPanel";
-            this.RegularConfirmPassPanel.Size = new System.Drawing.Size(565, 37);
-            this.RegularConfirmPassPanel.TabIndex = 69;
-            // 
-            // RegularConfirmShowHidePassBtn
-            // 
-            this.RegularConfirmShowHidePassBtn.AutoSize = true;
-            this.RegularConfirmShowHidePassBtn.BackColor = System.Drawing.Color.Transparent;
-            this.RegularConfirmShowHidePassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegularConfirmShowHidePassBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RegularConfirmShowHidePassBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularConfirmShowHidePassBtn.FlatAppearance.BorderSize = 0;
-            this.RegularConfirmShowHidePassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegularConfirmShowHidePassBtn.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularConfirmShowHidePassBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularConfirmShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.RegularConfirmShowHidePassBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularConfirmShowHidePassBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RegularConfirmShowHidePassBtn.IconSize = 30;
-            this.RegularConfirmShowHidePassBtn.Location = new System.Drawing.Point(529, 0);
-            this.RegularConfirmShowHidePassBtn.Name = "RegularConfirmShowHidePassBtn";
-            this.RegularConfirmShowHidePassBtn.Size = new System.Drawing.Size(36, 37);
-            this.RegularConfirmShowHidePassBtn.TabIndex = 31;
-            this.RegularConfirmShowHidePassBtn.UseVisualStyleBackColor = false;
-            this.RegularConfirmShowHidePassBtn.Click += new System.EventHandler(this.RegularConfirmShowHidePassBtn_Click);
-            // 
-            // RegularConfirmPassText
-            // 
-            this.RegularConfirmPassText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularConfirmPassText.Dock = System.Windows.Forms.DockStyle.Left;
-            this.RegularConfirmPassText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularConfirmPassText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularConfirmPassText.Location = new System.Drawing.Point(0, 0);
-            this.RegularConfirmPassText.Margin = new System.Windows.Forms.Padding(50, 10, 10, 10);
-            this.RegularConfirmPassText.Name = "RegularConfirmPassText";
-            this.RegularConfirmPassText.Size = new System.Drawing.Size(524, 37);
-            this.RegularConfirmPassText.TabIndex = 25;
-            this.RegularConfirmPassText.UseSystemPasswordChar = true;
-            // 
-            // RegularConfirmPassErrorLbl
-            // 
-            this.RegularConfirmPassErrorLbl.AutoSize = true;
-            this.RegularConfirmPassErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularConfirmPassErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularConfirmPassErrorLbl.Location = new System.Drawing.Point(1053, 623);
-            this.RegularConfirmPassErrorLbl.Name = "RegularConfirmPassErrorLbl";
-            this.RegularConfirmPassErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularConfirmPassErrorLbl.Size = new System.Drawing.Size(184, 14);
-            this.RegularConfirmPassErrorLbl.TabIndex = 68;
-            this.RegularConfirmPassErrorLbl.Text = "PASSWORD DOES NOT MATCH";
-            this.RegularConfirmPassErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularConfirmPassErrorLbl.Visible = false;
-            // 
-            // RegularMemberIDText
-            // 
-            this.RegularMemberIDText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularMemberIDText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularMemberIDText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularMemberIDText.Location = new System.Drawing.Point(119, 647);
-            this.RegularMemberIDText.Name = "RegularMemberIDText";
-            this.RegularMemberIDText.ReadOnly = true;
-            this.RegularMemberIDText.Size = new System.Drawing.Size(550, 37);
-            this.RegularMemberIDText.TabIndex = 74;
-            // 
-            // RegularConfirmPassLbl
-            // 
-            this.RegularConfirmPassLbl.AutoSize = true;
-            this.RegularConfirmPassLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularConfirmPassLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularConfirmPassLbl.Location = new System.Drawing.Point(683, 615);
-            this.RegularConfirmPassLbl.Name = "RegularConfirmPassLbl";
-            this.RegularConfirmPassLbl.Size = new System.Drawing.Size(276, 29);
-            this.RegularConfirmPassLbl.TabIndex = 67;
-            this.RegularConfirmPassLbl.Text = "CONFIRM PASSWORD:";
-            // 
-            // RegularLastNameErrorLbl
-            // 
-            this.RegularLastNameErrorLbl.AutoSize = true;
-            this.RegularLastNameErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularLastNameErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularLastNameErrorLbl.Location = new System.Drawing.Point(1155, 281);
-            this.RegularLastNameErrorLbl.Name = "RegularLastNameErrorLbl";
-            this.RegularLastNameErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularLastNameErrorLbl.Size = new System.Drawing.Size(82, 14);
-            this.RegularLastNameErrorLbl.TabIndex = 72;
-            this.RegularLastNameErrorLbl.Text = "Missing Field";
-            this.RegularLastNameErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularLastNameErrorLbl.Visible = false;
-            // 
-            // RegularFirstNameErrorLbl
-            // 
-            this.RegularFirstNameErrorLbl.AutoSize = true;
-            this.RegularFirstNameErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularFirstNameErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularFirstNameErrorLbl.Location = new System.Drawing.Point(574, 281);
-            this.RegularFirstNameErrorLbl.Name = "RegularFirstNameErrorLbl";
-            this.RegularFirstNameErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularFirstNameErrorLbl.Size = new System.Drawing.Size(82, 14);
-            this.RegularFirstNameErrorLbl.TabIndex = 71;
-            this.RegularFirstNameErrorLbl.Text = "Missing Field";
-            this.RegularFirstNameErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularFirstNameErrorLbl.Visible = false;
-            // 
-            // RegularMobileNumErrorLbl
-            // 
-            this.RegularMobileNumErrorLbl.AutoSize = true;
-            this.RegularMobileNumErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularMobileNumErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularMobileNumErrorLbl.Location = new System.Drawing.Point(1155, 370);
-            this.RegularMobileNumErrorLbl.Name = "RegularMobileNumErrorLbl";
-            this.RegularMobileNumErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularMobileNumErrorLbl.Size = new System.Drawing.Size(82, 14);
-            this.RegularMobileNumErrorLbl.TabIndex = 70;
-            this.RegularMobileNumErrorLbl.Text = "Missing Field";
-            this.RegularMobileNumErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularMobileNumErrorLbl.Visible = false;
-            // 
-            // RegularGenderErrorLbl
-            // 
-            this.RegularGenderErrorLbl.AutoSize = true;
-            this.RegularGenderErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularGenderErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularGenderErrorLbl.Location = new System.Drawing.Point(837, 370);
-            this.RegularGenderErrorLbl.Name = "RegularGenderErrorLbl";
-            this.RegularGenderErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularGenderErrorLbl.Size = new System.Drawing.Size(82, 14);
-            this.RegularGenderErrorLbl.TabIndex = 69;
-            this.RegularGenderErrorLbl.Text = "Missing Field";
-            this.RegularGenderErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularGenderErrorLbl.Visible = false;
-            // 
-            // RegularAgeErrorLbl
-            // 
-            this.RegularAgeErrorLbl.AutoSize = true;
-            this.RegularAgeErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularAgeErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularAgeErrorLbl.Location = new System.Drawing.Point(481, 370);
-            this.RegularAgeErrorLbl.Name = "RegularAgeErrorLbl";
-            this.RegularAgeErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularAgeErrorLbl.Size = new System.Drawing.Size(195, 14);
-            this.RegularAgeErrorLbl.TabIndex = 68;
-            this.RegularAgeErrorLbl.Text = "Must be 18 years old and above";
-            this.RegularAgeErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularAgeErrorLbl.Visible = false;
-            // 
-            // RegularEmailErrorLbl
-            // 
-            this.RegularEmailErrorLbl.AutoSize = true;
-            this.RegularEmailErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularEmailErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularEmailErrorLbl.Location = new System.Drawing.Point(473, 536);
-            this.RegularEmailErrorLbl.Name = "RegularEmailErrorLbl";
-            this.RegularEmailErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularEmailErrorLbl.Size = new System.Drawing.Size(184, 14);
-            this.RegularEmailErrorLbl.TabIndex = 67;
-            this.RegularEmailErrorLbl.Text = "Email Address Does Not Exist";
-            this.RegularEmailErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularEmailErrorLbl.Visible = false;
-            // 
-            // RegularPassPanel
-            // 
-            this.RegularPassPanel.Controls.Add(this.RegularShowHidePassBtn);
-            this.RegularPassPanel.Controls.Add(this.RegularPassText);
-            this.RegularPassPanel.Location = new System.Drawing.Point(686, 561);
-            this.RegularPassPanel.Name = "RegularPassPanel";
-            this.RegularPassPanel.Size = new System.Drawing.Size(565, 37);
-            this.RegularPassPanel.TabIndex = 66;
-            // 
-            // RegularShowHidePassBtn
-            // 
-            this.RegularShowHidePassBtn.AutoSize = true;
-            this.RegularShowHidePassBtn.BackColor = System.Drawing.Color.Transparent;
-            this.RegularShowHidePassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegularShowHidePassBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RegularShowHidePassBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularShowHidePassBtn.FlatAppearance.BorderSize = 0;
-            this.RegularShowHidePassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegularShowHidePassBtn.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularShowHidePassBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.RegularShowHidePassBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularShowHidePassBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RegularShowHidePassBtn.IconSize = 30;
-            this.RegularShowHidePassBtn.Location = new System.Drawing.Point(529, 0);
-            this.RegularShowHidePassBtn.Name = "RegularShowHidePassBtn";
-            this.RegularShowHidePassBtn.Size = new System.Drawing.Size(36, 37);
-            this.RegularShowHidePassBtn.TabIndex = 31;
-            this.RegularShowHidePassBtn.UseVisualStyleBackColor = false;
-            this.RegularShowHidePassBtn.Click += new System.EventHandler(this.RegularShowHidePassBtn_Click);
-            // 
-            // RegularPassText
-            // 
-            this.RegularPassText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularPassText.Dock = System.Windows.Forms.DockStyle.Left;
-            this.RegularPassText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularPassText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularPassText.Location = new System.Drawing.Point(0, 0);
-            this.RegularPassText.Margin = new System.Windows.Forms.Padding(50, 10, 10, 10);
-            this.RegularPassText.Name = "RegularPassText";
-            this.RegularPassText.Size = new System.Drawing.Size(524, 37);
-            this.RegularPassText.TabIndex = 25;
-            this.RegularPassText.UseSystemPasswordChar = true;
-            // 
-            // RegularPassErrorLbl
-            // 
-            this.RegularPassErrorLbl.AutoSize = true;
-            this.RegularPassErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularPassErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularPassErrorLbl.Location = new System.Drawing.Point(1092, 536);
-            this.RegularPassErrorLbl.Name = "RegularPassErrorLbl";
-            this.RegularPassErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegularPassErrorLbl.Size = new System.Drawing.Size(145, 14);
-            this.RegularPassErrorLbl.TabIndex = 65;
-            this.RegularPassErrorLbl.Text = "INCORRECT PASSWORD";
-            this.RegularPassErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegularPassErrorLbl.Visible = false;
-            // 
-            // RegularPassLbl
-            // 
-            this.RegularPassLbl.AutoSize = true;
-            this.RegularPassLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularPassLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularPassLbl.Location = new System.Drawing.Point(683, 529);
-            this.RegularPassLbl.Name = "RegularPassLbl";
-            this.RegularPassLbl.Size = new System.Drawing.Size(155, 29);
-            this.RegularPassLbl.TabIndex = 64;
-            this.RegularPassLbl.Text = "PASSWORD:";
-            // 
-            // RegularEmailText
-            // 
-            this.RegularEmailText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularEmailText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularEmailText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularEmailText.Location = new System.Drawing.Point(121, 561);
-            this.RegularEmailText.Name = "RegularEmailText";
-            this.RegularEmailText.Size = new System.Drawing.Size(550, 37);
-            this.RegularEmailText.TabIndex = 61;
-            // 
-            // RegularEmailLbl
-            // 
-            this.RegularEmailLbl.AutoSize = true;
-            this.RegularEmailLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularEmailLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularEmailLbl.Location = new System.Drawing.Point(116, 529);
-            this.RegularEmailLbl.Name = "RegularEmailLbl";
-            this.RegularEmailLbl.Size = new System.Drawing.Size(194, 29);
-            this.RegularEmailLbl.TabIndex = 60;
-            this.RegularEmailLbl.Text = "Email Address:";
-            // 
-            // RegularCreateAccountLbl
-            // 
-            this.RegularCreateAccountLbl.AutoSize = true;
-            this.RegularCreateAccountLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularCreateAccountLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularCreateAccountLbl.Location = new System.Drawing.Point(115, 466);
-            this.RegularCreateAccountLbl.Name = "RegularCreateAccountLbl";
-            this.RegularCreateAccountLbl.Size = new System.Drawing.Size(368, 35);
-            this.RegularCreateAccountLbl.TabIndex = 59;
-            this.RegularCreateAccountLbl.Text = "2. Create Your Account";
-            // 
-            // RegularMobileNumText
-            // 
-            this.RegularMobileNumText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularMobileNumText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularMobileNumText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularMobileNumText.Location = new System.Drawing.Point(951, 396);
-            this.RegularMobileNumText.Name = "RegularMobileNumText";
-            this.RegularMobileNumText.Size = new System.Drawing.Size(300, 37);
-            this.RegularMobileNumText.TabIndex = 58;
-            // 
-            // RegularMobileNumLbl
-            // 
-            this.RegularMobileNumLbl.AutoSize = true;
-            this.RegularMobileNumLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularMobileNumLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularMobileNumLbl.Location = new System.Drawing.Point(946, 364);
-            this.RegularMobileNumLbl.Name = "RegularMobileNumLbl";
-            this.RegularMobileNumLbl.Size = new System.Drawing.Size(196, 29);
-            this.RegularMobileNumLbl.TabIndex = 57;
-            this.RegularMobileNumLbl.Text = "Mobile Number:";
-            // 
-            // RegularGenderComboText
-            // 
-            this.RegularGenderComboText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularGenderComboText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularGenderComboText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularGenderComboText.FormattingEnabled = true;
-            this.RegularGenderComboText.Location = new System.Drawing.Point(684, 396);
-            this.RegularGenderComboText.Name = "RegularGenderComboText";
-            this.RegularGenderComboText.Size = new System.Drawing.Size(261, 37);
-            this.RegularGenderComboText.TabIndex = 56;
-            this.RegularGenderComboText.SelectedIndexChanged += new System.EventHandler(this.RegularGenderComboText_SelectedIndexChanged);
-            // 
-            // RegularGenderLbl
-            // 
-            this.RegularGenderLbl.AutoSize = true;
-            this.RegularGenderLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularGenderLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularGenderLbl.Location = new System.Drawing.Point(681, 363);
-            this.RegularGenderLbl.Name = "RegularGenderLbl";
-            this.RegularGenderLbl.Size = new System.Drawing.Size(105, 29);
-            this.RegularGenderLbl.TabIndex = 54;
-            this.RegularGenderLbl.Text = "Gender:";
-            // 
-            // RegularBdayPicker
-            // 
-            this.RegularBdayPicker.CalendarFont = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegularBdayPicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularBdayPicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(222)))), ((int)(((byte)(141)))));
-            this.RegularBdayPicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(222)))), ((int)(((byte)(141)))));
-            this.RegularBdayPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.RegularBdayPicker.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(90)))), ((int)(((byte)(105)))));
-            this.RegularBdayPicker.CustomFormat = "MM-dd-yyyy";
-            this.RegularBdayPicker.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegularBdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.RegularBdayPicker.Location = new System.Drawing.Point(119, 395);
-            this.RegularBdayPicker.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.RegularBdayPicker.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.RegularBdayPicker.Name = "RegularBdayPicker";
-            this.RegularBdayPicker.Size = new System.Drawing.Size(301, 37);
-            this.RegularBdayPicker.TabIndex = 53;
-            this.RegularBdayPicker.ValueChanged += new System.EventHandler(this.RegularBdayPicker_ValueChanged);
-            // 
-            // RegularFooterStopper
-            // 
-            this.RegularFooterStopper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularFooterStopper.Controls.Add(this.RegularFooterStopperLbl);
-            this.RegularFooterStopper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.RegularFooterStopper.Location = new System.Drawing.Point(290, 779);
-            this.RegularFooterStopper.Name = "RegularFooterStopper";
-            this.RegularFooterStopper.Size = new System.Drawing.Size(804, 26);
-            this.RegularFooterStopper.TabIndex = 52;
-            // 
-            // RegularFooterStopperLbl
-            // 
-            this.RegularFooterStopperLbl.AutoSize = true;
-            this.RegularFooterStopperLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularFooterStopperLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.RegularFooterStopperLbl.Location = new System.Drawing.Point(206, 29);
-            this.RegularFooterStopperLbl.Name = "RegularFooterStopperLbl";
-            this.RegularFooterStopperLbl.Size = new System.Drawing.Size(362, 51);
-            this.RegularFooterStopperLbl.TabIndex = 20;
-            this.RegularFooterStopperLbl.Text = "Footer Stopper";
-            this.RegularFooterStopperLbl.Visible = false;
-            // 
-            // RegularAgeText
-            // 
-            this.RegularAgeText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularAgeText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularAgeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularAgeText.Location = new System.Drawing.Point(426, 396);
-            this.RegularAgeText.Name = "RegularAgeText";
-            this.RegularAgeText.ReadOnly = true;
-            this.RegularAgeText.Size = new System.Drawing.Size(243, 37);
-            this.RegularAgeText.TabIndex = 51;
-            // 
-            // RegularAgeLbl
-            // 
-            this.RegularAgeLbl.AutoSize = true;
-            this.RegularAgeLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularAgeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularAgeLbl.Location = new System.Drawing.Point(421, 363);
-            this.RegularAgeLbl.Name = "RegularAgeLbl";
-            this.RegularAgeLbl.Size = new System.Drawing.Size(65, 29);
-            this.RegularAgeLbl.TabIndex = 50;
-            this.RegularAgeLbl.Text = "Age:";
-            // 
-            // RegularBdayLbl
-            // 
-            this.RegularBdayLbl.AutoSize = true;
-            this.RegularBdayLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularBdayLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularBdayLbl.Location = new System.Drawing.Point(116, 363);
-            this.RegularBdayLbl.Name = "RegularBdayLbl";
-            this.RegularBdayLbl.Size = new System.Drawing.Size(128, 29);
-            this.RegularBdayLbl.TabIndex = 48;
-            this.RegularBdayLbl.Text = "Birthday:";
-            // 
-            // RegularLastNameText
-            // 
-            this.RegularLastNameText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularLastNameText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularLastNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularLastNameText.Location = new System.Drawing.Point(684, 306);
-            this.RegularLastNameText.Name = "RegularLastNameText";
-            this.RegularLastNameText.Size = new System.Drawing.Size(567, 37);
-            this.RegularLastNameText.TabIndex = 47;
-            // 
-            // RegularLastNameLbl
-            // 
-            this.RegularLastNameLbl.AutoSize = true;
-            this.RegularLastNameLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularLastNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularLastNameLbl.Location = new System.Drawing.Point(679, 274);
-            this.RegularLastNameLbl.Name = "RegularLastNameLbl";
-            this.RegularLastNameLbl.Size = new System.Drawing.Size(152, 29);
-            this.RegularLastNameLbl.TabIndex = 46;
-            this.RegularLastNameLbl.Text = "Last Name:";
-            // 
-            // RegularFirstNameText
-            // 
-            this.RegularFirstNameText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularFirstNameText.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularFirstNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularFirstNameText.Location = new System.Drawing.Point(120, 306);
-            this.RegularFirstNameText.Name = "RegularFirstNameText";
-            this.RegularFirstNameText.Size = new System.Drawing.Size(550, 37);
-            this.RegularFirstNameText.TabIndex = 45;
-            // 
-            // RegularFirstNameLbl
-            // 
-            this.RegularFirstNameLbl.AutoSize = true;
-            this.RegularFirstNameLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularFirstNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularFirstNameLbl.Location = new System.Drawing.Point(115, 274);
-            this.RegularFirstNameLbl.Name = "RegularFirstNameLbl";
-            this.RegularFirstNameLbl.Size = new System.Drawing.Size(157, 29);
-            this.RegularFirstNameLbl.TabIndex = 44;
-            this.RegularFirstNameLbl.Text = "First Name:";
-            // 
-            // RegularBasicInfoLbl
-            // 
-            this.RegularBasicInfoLbl.AutoSize = true;
-            this.RegularBasicInfoLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularBasicInfoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularBasicInfoLbl.Location = new System.Drawing.Point(114, 211);
-            this.RegularBasicInfoLbl.Name = "RegularBasicInfoLbl";
-            this.RegularBasicInfoLbl.Size = new System.Drawing.Size(305, 35);
-            this.RegularBasicInfoLbl.TabIndex = 10;
-            this.RegularBasicInfoLbl.Text = "1. Basic Information";
-            // 
-            // RegularSelectedPlanLbl
-            // 
-            this.RegularSelectedPlanLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RegularSelectedPlanLbl.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RegularSelectedPlanLbl.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularSelectedPlanLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularSelectedPlanLbl.Location = new System.Drawing.Point(306, 135);
-            this.RegularSelectedPlanLbl.Name = "RegularSelectedPlanLbl";
-            this.RegularSelectedPlanLbl.ReadOnly = true;
-            this.RegularSelectedPlanLbl.Size = new System.Drawing.Size(234, 27);
-            this.RegularSelectedPlanLbl.TabIndex = 9;
-            this.RegularSelectedPlanLbl.Text = "Regular Plan";
-            // 
-            // RegularSelectedLbl
-            // 
-            this.RegularSelectedLbl.AutoSize = true;
-            this.RegularSelectedLbl.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularSelectedLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularSelectedLbl.Location = new System.Drawing.Point(124, 135);
-            this.RegularSelectedLbl.Name = "RegularSelectedLbl";
-            this.RegularSelectedLbl.Size = new System.Drawing.Size(176, 26);
-            this.RegularSelectedLbl.TabIndex = 8;
-            this.RegularSelectedLbl.Text = "Selected Plan:";
-            // 
-            // RegularAccLbl
-            // 
-            this.RegularAccLbl.AutoSize = true;
-            this.RegularAccLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularAccLbl.Location = new System.Drawing.Point(112, 63);
-            this.RegularAccLbl.Name = "RegularAccLbl";
-            this.RegularAccLbl.Size = new System.Drawing.Size(1035, 51);
-            this.RegularAccLbl.TabIndex = 7;
-            this.RegularAccLbl.Text = "You\'re almost there! Complete your account.";
-            // 
-            // RegularMemberIDCopyBtn
-            // 
-            this.RegularMemberIDCopyBtn.AutoSize = true;
-            this.RegularMemberIDCopyBtn.BackColor = System.Drawing.Color.Transparent;
-            this.RegularMemberIDCopyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegularMemberIDCopyBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularMemberIDCopyBtn.FlatAppearance.BorderSize = 0;
-            this.RegularMemberIDCopyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegularMemberIDCopyBtn.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularMemberIDCopyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularMemberIDCopyBtn.IconChar = FontAwesome.Sharp.IconChar.Copy;
-            this.RegularMemberIDCopyBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularMemberIDCopyBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RegularMemberIDCopyBtn.IconSize = 30;
-            this.RegularMemberIDCopyBtn.Location = new System.Drawing.Point(633, 609);
-            this.RegularMemberIDCopyBtn.Name = "RegularMemberIDCopyBtn";
-            this.RegularMemberIDCopyBtn.Size = new System.Drawing.Size(36, 36);
-            this.RegularMemberIDCopyBtn.TabIndex = 121;
-            this.RegularMemberIDCopyBtn.UseVisualStyleBackColor = false;
-            this.RegularMemberIDCopyBtn.Click += new System.EventHandler(this.RegularMemberIDCopyBtn_Click);
-            // 
-            // RegularPassReqBtn
-            // 
-            this.RegularPassReqBtn.AutoSize = true;
-            this.RegularPassReqBtn.BackColor = System.Drawing.Color.Transparent;
-            this.RegularPassReqBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularPassReqBtn.FlatAppearance.BorderSize = 0;
-            this.RegularPassReqBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegularPassReqBtn.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularPassReqBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularPassReqBtn.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.RegularPassReqBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularPassReqBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RegularPassReqBtn.IconSize = 20;
-            this.RegularPassReqBtn.Location = new System.Drawing.Point(837, 523);
-            this.RegularPassReqBtn.Name = "RegularPassReqBtn";
-            this.RegularPassReqBtn.Size = new System.Drawing.Size(36, 36);
-            this.RegularPassReqBtn.TabIndex = 76;
-            this.RegularPassReqBtn.UseVisualStyleBackColor = false;
-            this.RegularPassReqBtn.MouseHover += new System.EventHandler(this.RegularPassReqBtn_MouseHover);
-            // 
-            // RegularCreateAccBtn
-            // 
-            this.RegularCreateAccBtn.AutoSize = true;
-            this.RegularCreateAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegularCreateAccBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RegularCreateAccBtn.FlatAppearance.BorderSize = 3;
-            this.RegularCreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegularCreateAccBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RegularCreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularCreateAccBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.RegularCreateAccBtn.IconColor = System.Drawing.Color.Black;
-            this.RegularCreateAccBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RegularCreateAccBtn.Location = new System.Drawing.Point(511, 713);
-            this.RegularCreateAccBtn.Name = "RegularCreateAccBtn";
-            this.RegularCreateAccBtn.Size = new System.Drawing.Size(346, 60);
-            this.RegularCreateAccBtn.TabIndex = 73;
-            this.RegularCreateAccBtn.Text = "CREATE ACCOUNT NOW";
-            this.RegularCreateAccBtn.UseVisualStyleBackColor = true;
-            this.RegularCreateAccBtn.Click += new System.EventHandler(this.RegularCreateAccBtn_Click);
-            // 
-            // RegularExitBtn
-            // 
-            this.RegularExitBtn.BackColor = System.Drawing.Color.Transparent;
-            this.RegularExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegularExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.RegularExitBtn.FlatAppearance.BorderSize = 0;
-            this.RegularExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegularExitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            this.RegularExitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RegularExitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RegularExitBtn.Location = new System.Drawing.Point(1257, 28);
-            this.RegularExitBtn.Name = "RegularExitBtn";
-            this.RegularExitBtn.Size = new System.Drawing.Size(48, 48);
-            this.RegularExitBtn.TabIndex = 43;
-            this.RegularExitBtn.UseVisualStyleBackColor = false;
-            this.RegularExitBtn.Click += new System.EventHandler(this.RegularExitBtn_Click);
-            // 
-            // MembershipPlanPanel
-            // 
-            this.MembershipPlanPanel.AutoScroll = true;
-            this.MembershipPlanPanel.Controls.Add(this.SVIPMemberPanel);
-            this.MembershipPlanPanel.Controls.Add(this.PMemberPanel);
-            this.MembershipPlanPanel.Controls.Add(this.RMemberPanel);
-            this.MembershipPlanPanel.Controls.Add(this.MemberTagline);
-            this.MembershipPlanPanel.Location = new System.Drawing.Point(0, 0);
-            this.MembershipPlanPanel.Name = "MembershipPlanPanel";
-            this.MembershipPlanPanel.Size = new System.Drawing.Size(1371, 807);
-            this.MembershipPlanPanel.TabIndex = 0;
-            // 
-            // SVIPMemberPanel
-            // 
-            this.SVIPMemberPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SVIPMemberPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.SVIPMemberPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SVIPMemberPanel.Controls.Add(this.SVIPMemberCreateAccBtn);
-            this.SVIPMemberPanel.Controls.Add(this.SVIPMemberAccLbl);
-            this.SVIPMemberPanel.Controls.Add(this.SVIPPMemberPriceText);
-            this.SVIPMemberPanel.Controls.Add(this.SVIPMemberText);
-            this.SVIPMemberPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.SVIPMemberPanel.Location = new System.Drawing.Point(925, 118);
-            this.SVIPMemberPanel.Name = "SVIPMemberPanel";
-            this.SVIPMemberPanel.Size = new System.Drawing.Size(410, 594);
-            this.SVIPMemberPanel.TabIndex = 18;
-            // 
-            // SVIPMemberCreateAccBtn
-            // 
-            this.SVIPMemberCreateAccBtn.AutoSize = true;
-            this.SVIPMemberCreateAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SVIPMemberCreateAccBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SVIPMemberCreateAccBtn.FlatAppearance.BorderSize = 3;
-            this.SVIPMemberCreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SVIPMemberCreateAccBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.SVIPMemberCreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.SVIPMemberCreateAccBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SVIPMemberCreateAccBtn.IconColor = System.Drawing.Color.Black;
-            this.SVIPMemberCreateAccBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SVIPMemberCreateAccBtn.Location = new System.Drawing.Point(54, 471);
-            this.SVIPMemberCreateAccBtn.Name = "SVIPMemberCreateAccBtn";
-            this.SVIPMemberCreateAccBtn.Size = new System.Drawing.Size(285, 60);
-            this.SVIPMemberCreateAccBtn.TabIndex = 8;
-            this.SVIPMemberCreateAccBtn.Text = "GET SUPER VIP PLAN NOW";
-            this.SVIPMemberCreateAccBtn.UseVisualStyleBackColor = true;
-            this.SVIPMemberCreateAccBtn.Click += new System.EventHandler(this.SVIPMemberCreateAccBtn_Click);
-            // 
-            // SVIPMemberAccLbl
-            // 
-            this.SVIPMemberAccLbl.AutoSize = true;
-            this.SVIPMemberAccLbl.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.SVIPMemberAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.SVIPMemberAccLbl.Location = new System.Drawing.Point(35, 162);
-            this.SVIPMemberAccLbl.Name = "SVIPMemberAccLbl";
-            this.SVIPMemberAccLbl.Size = new System.Drawing.Size(338, 240);
-            this.SVIPMemberAccLbl.TabIndex = 2;
-            this.SVIPMemberAccLbl.Text = resources.GetString("SVIPMemberAccLbl.Text");
-            // 
-            // SVIPPMemberPriceText
-            // 
-            this.SVIPPMemberPriceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.SVIPPMemberPriceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SVIPPMemberPriceText.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.SVIPPMemberPriceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.SVIPPMemberPriceText.Location = new System.Drawing.Point(39, 107);
-            this.SVIPPMemberPriceText.Name = "SVIPPMemberPriceText";
-            this.SVIPPMemberPriceText.ReadOnly = true;
-            this.SVIPPMemberPriceText.Size = new System.Drawing.Size(287, 22);
-            this.SVIPPMemberPriceText.TabIndex = 1;
-            this.SVIPPMemberPriceText.Text = "PHP. 4999.00 / MONTH";
-            // 
-            // SVIPMemberText
-            // 
-            this.SVIPMemberText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.SVIPMemberText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SVIPMemberText.Font = new System.Drawing.Font("TechnicBold", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.SVIPMemberText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.SVIPMemberText.Location = new System.Drawing.Point(39, 53);
-            this.SVIPMemberText.Name = "SVIPMemberText";
-            this.SVIPMemberText.ReadOnly = true;
-            this.SVIPMemberText.Size = new System.Drawing.Size(287, 48);
-            this.SVIPMemberText.TabIndex = 0;
-            this.SVIPMemberText.Text = "SUPER VIP";
-            // 
-            // PMemberPanel
-            // 
-            this.PMemberPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PMemberPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.PMemberPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PMemberPanel.Controls.Add(this.PMemberCreateAccBtn);
-            this.PMemberPanel.Controls.Add(this.PMemberAccLbl);
-            this.PMemberPanel.Controls.Add(this.PMemberPriceText);
-            this.PMemberPanel.Controls.Add(this.PMemberText);
-            this.PMemberPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.PMemberPanel.Location = new System.Drawing.Point(485, 118);
-            this.PMemberPanel.Name = "PMemberPanel";
-            this.PMemberPanel.Size = new System.Drawing.Size(410, 594);
-            this.PMemberPanel.TabIndex = 18;
-            // 
-            // PMemberCreateAccBtn
-            // 
-            this.PMemberCreateAccBtn.AutoSize = true;
-            this.PMemberCreateAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PMemberCreateAccBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.PMemberCreateAccBtn.FlatAppearance.BorderSize = 3;
-            this.PMemberCreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PMemberCreateAccBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.PMemberCreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.PMemberCreateAccBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.PMemberCreateAccBtn.IconColor = System.Drawing.Color.Black;
-            this.PMemberCreateAccBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.PMemberCreateAccBtn.Location = new System.Drawing.Point(55, 471);
-            this.PMemberCreateAccBtn.Name = "PMemberCreateAccBtn";
-            this.PMemberCreateAccBtn.Size = new System.Drawing.Size(285, 60);
-            this.PMemberCreateAccBtn.TabIndex = 8;
-            this.PMemberCreateAccBtn.Text = "GET PREMIUM PLAN NOW";
-            this.PMemberCreateAccBtn.UseVisualStyleBackColor = true;
-            this.PMemberCreateAccBtn.Click += new System.EventHandler(this.PMemberCreateAccBtn_Click);
-            // 
-            // PMemberAccLbl
-            // 
-            this.PMemberAccLbl.AutoSize = true;
-            this.PMemberAccLbl.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.PMemberAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.PMemberAccLbl.Location = new System.Drawing.Point(39, 162);
-            this.PMemberAccLbl.Name = "PMemberAccLbl";
-            this.PMemberAccLbl.Size = new System.Drawing.Size(332, 180);
-            this.PMemberAccLbl.TabIndex = 2;
-            this.PMemberAccLbl.Text = "* BOOK YOUR SALON APPOINTMENT\r\nCONVENIENTLY\r\n* SELECTED HOT PROMO DISCOUNTS\r\n* BI" +
-    "RTHDAY TREATMENT DISCOUNT\r\n* SELECT YOUR OWN STYLIST\r\n* MAX OF 10 GUESTS PER \r\nA" +
-    "PPOINTMENT\r\n* CANCEL ANY TIME\r\n\r\n";
-            // 
-            // PMemberPriceText
-            // 
-            this.PMemberPriceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.PMemberPriceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PMemberPriceText.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.PMemberPriceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.PMemberPriceText.Location = new System.Drawing.Point(54, 107);
-            this.PMemberPriceText.Name = "PMemberPriceText";
-            this.PMemberPriceText.ReadOnly = true;
-            this.PMemberPriceText.Size = new System.Drawing.Size(287, 22);
-            this.PMemberPriceText.TabIndex = 1;
-            this.PMemberPriceText.Text = "PHP. 1499.00 / MONTH";
-            // 
-            // PMemberText
-            // 
-            this.PMemberText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.PMemberText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PMemberText.Font = new System.Drawing.Font("TechnicBold", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.PMemberText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.PMemberText.Location = new System.Drawing.Point(54, 53);
-            this.PMemberText.Name = "PMemberText";
-            this.PMemberText.ReadOnly = true;
-            this.PMemberText.Size = new System.Drawing.Size(287, 48);
-            this.PMemberText.TabIndex = 0;
-            this.PMemberText.Text = "PREMIUM";
-            // 
-            // RMemberPanel
-            // 
-            this.RMemberPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.RMemberPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RMemberPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RMemberPanel.Controls.Add(this.RMemberCreateAccBtn);
-            this.RMemberPanel.Controls.Add(this.RMemberAccLbl);
-            this.RMemberPanel.Controls.Add(this.RMemberPriceText);
-            this.RMemberPanel.Controls.Add(this.RMemberText);
-            this.RMemberPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.RMemberPanel.Location = new System.Drawing.Point(36, 118);
-            this.RMemberPanel.Name = "RMemberPanel";
-            this.RMemberPanel.Size = new System.Drawing.Size(410, 594);
-            this.RMemberPanel.TabIndex = 17;
-            // 
-            // RMemberCreateAccBtn
-            // 
-            this.RMemberCreateAccBtn.AutoSize = true;
-            this.RMemberCreateAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RMemberCreateAccBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.RMemberCreateAccBtn.FlatAppearance.BorderSize = 3;
-            this.RMemberCreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RMemberCreateAccBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RMemberCreateAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RMemberCreateAccBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.RMemberCreateAccBtn.IconColor = System.Drawing.Color.Black;
-            this.RMemberCreateAccBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RMemberCreateAccBtn.Location = new System.Drawing.Point(48, 471);
-            this.RMemberCreateAccBtn.Name = "RMemberCreateAccBtn";
-            this.RMemberCreateAccBtn.Size = new System.Drawing.Size(312, 60);
-            this.RMemberCreateAccBtn.TabIndex = 8;
-            this.RMemberCreateAccBtn.Text = "CREATE FREE ACCOUNT NOW";
-            this.RMemberCreateAccBtn.UseVisualStyleBackColor = true;
-            this.RMemberCreateAccBtn.Click += new System.EventHandler(this.RMemberCreateAccBtn_Click);
-            // 
-            // RMemberAccLbl
-            // 
-            this.RMemberAccLbl.AutoSize = true;
-            this.RMemberAccLbl.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RMemberAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RMemberAccLbl.Location = new System.Drawing.Point(48, 162);
-            this.RMemberAccLbl.Name = "RMemberAccLbl";
-            this.RMemberAccLbl.Size = new System.Drawing.Size(313, 140);
-            this.RMemberAccLbl.TabIndex = 2;
-            this.RMemberAccLbl.Text = "* FREE ACCOUNT CREATION\r\n* BOOK YOUR SALON APPOINMENT\r\nCONVENIENTLY\r\n* MAX OF THR" +
-    "EE (3) GUESTS PER \r\nAPPOINTMENT\r\n* APPOINTMENT CANCELLATION\r\nCHARGES MAY OCCUR\r\n" +
-    "";
-            // 
-            // RMemberPriceText
-            // 
-            this.RMemberPriceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RMemberPriceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RMemberPriceText.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RMemberPriceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RMemberPriceText.Location = new System.Drawing.Point(54, 107);
-            this.RMemberPriceText.Name = "RMemberPriceText";
-            this.RMemberPriceText.ReadOnly = true;
-            this.RMemberPriceText.Size = new System.Drawing.Size(287, 22);
-            this.RMemberPriceText.TabIndex = 1;
-            this.RMemberPriceText.Text = "FREE ACCOUNT";
-            // 
-            // RMemberText
-            // 
-            this.RMemberText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.RMemberText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RMemberText.Font = new System.Drawing.Font("TechnicBold", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RMemberText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RMemberText.Location = new System.Drawing.Point(54, 53);
-            this.RMemberText.Name = "RMemberText";
-            this.RMemberText.ReadOnly = true;
-            this.RMemberText.Size = new System.Drawing.Size(287, 48);
-            this.RMemberText.TabIndex = 0;
-            this.RMemberText.Text = "REGULAR";
-            // 
-            // MemberTagline
-            // 
-            this.MemberTagline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MemberTagline.AutoSize = true;
-            this.MemberTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.MemberTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemberTagline.Location = new System.Drawing.Point(62, 23);
-            this.MemberTagline.Name = "MemberTagline";
-            this.MemberTagline.Size = new System.Drawing.Size(1247, 69);
-            this.MemberTagline.TabIndex = 16;
-            this.MemberTagline.Text = "CHOOSE YOUR SALON MEMBERSHIP PLAN";
-            // 
             // EnchanteLoginForm
             // 
             this.EnchanteLoginForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
@@ -4752,7 +4757,7 @@
             this.EnchanteLoginForm.Controls.Add(this.LoginEmailAddText);
             this.EnchanteLoginForm.Controls.Add(this.LoginEmailAddLbl);
             this.EnchanteLoginForm.Controls.Add(this.LoginWCLbl);
-            this.EnchanteLoginForm.Location = new System.Drawing.Point(1154, 303);
+            this.EnchanteLoginForm.Location = new System.Drawing.Point(1166, 9888);
             this.EnchanteLoginForm.Name = "EnchanteLoginForm";
             this.EnchanteLoginForm.Size = new System.Drawing.Size(625, 625);
             this.EnchanteLoginForm.TabIndex = 21;
@@ -4934,7 +4939,7 @@
             this.HomeFooterStopper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.HomeFooterStopper.Controls.Add(this.HomeFooterStopperLbl);
             this.HomeFooterStopper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.HomeFooterStopper.Location = new System.Drawing.Point(572, 3000);
+            this.HomeFooterStopper.Location = new System.Drawing.Point(572, 12543);
             this.HomeFooterStopper.Name = "HomeFooterStopper";
             this.HomeFooterStopper.Size = new System.Drawing.Size(804, 100);
             this.HomeFooterStopper.TabIndex = 20;
@@ -4962,9 +4967,9 @@
             this.EnchanteFooterBar.Controls.Add(this.SM_FBBtn);
             this.EnchanteFooterBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.EnchanteFooterBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.EnchanteFooterBar.Location = new System.Drawing.Point(0, 3100);
+            this.EnchanteFooterBar.Location = new System.Drawing.Point(0, 12643);
             this.EnchanteFooterBar.Name = "EnchanteFooterBar";
-            this.EnchanteFooterBar.Size = new System.Drawing.Size(1779, 166);
+            this.EnchanteFooterBar.Size = new System.Drawing.Size(1887, 166);
             this.EnchanteFooterBar.TabIndex = 20;
             // 
             // SM_GmailBtn
@@ -5023,6 +5028,7 @@
             // 
             // EnchanteFooterLogo
             // 
+            this.EnchanteFooterLogo.BackgroundImage = global::Enchante_Membership.Properties.Resources.Enchante_Logo_275x100;
             this.EnchanteFooterLogo.Location = new System.Drawing.Point(58, 29);
             this.EnchanteFooterLogo.Name = "EnchanteFooterLogo";
             this.EnchanteFooterLogo.Size = new System.Drawing.Size(275, 100);
@@ -5056,7 +5062,7 @@
             this.EnchanteTagline.AutoSize = true;
             this.EnchanteTagline.Font = new System.Drawing.Font("TechnicBold", 80.24999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.EnchanteTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.EnchanteTagline.Location = new System.Drawing.Point(84, 437);
+            this.EnchanteTagline.Location = new System.Drawing.Point(96, 10022);
             this.EnchanteTagline.Name = "EnchanteTagline";
             this.EnchanteTagline.Size = new System.Drawing.Size(884, 232);
             this.EnchanteTagline.TabIndex = 3;
@@ -5075,7 +5081,7 @@
             this.EnchanteAppointBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.EnchanteAppointBtn.IconColor = System.Drawing.Color.Black;
             this.EnchanteAppointBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteAppointBtn.Location = new System.Drawing.Point(461, 696);
+            this.EnchanteAppointBtn.Location = new System.Drawing.Point(473, 10281);
             this.EnchanteAppointBtn.Name = "EnchanteAppointBtn";
             this.EnchanteAppointBtn.Size = new System.Drawing.Size(442, 77);
             this.EnchanteAppointBtn.TabIndex = 0;
@@ -5085,7 +5091,8 @@
             // 
             // EDP1
             // 
-            this.EDP1.Location = new System.Drawing.Point(1154, 303);
+            this.EDP1.Image = global::Enchante_Membership.Properties.Resources.Lobby;
+            this.EDP1.Location = new System.Drawing.Point(1166, 9888);
             this.EDP1.Name = "EDP1";
             this.EDP1.Size = new System.Drawing.Size(625, 625);
             this.EDP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -5099,14 +5106,14 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.SecretPanel, new System.Drawing.Size(200, 100));
             this.SecretPanel.Name = "SecretPanel";
             this.EnchanteMemParentCard.SetPreferredSize(this.SecretPanel, new System.Drawing.Size(200, 100));
-            this.SecretPanel.Size = new System.Drawing.Size(1370, 749);
+            this.SecretPanel.Size = new System.Drawing.Size(1904, 1041);
             this.SecretPanel.TabIndex = 0;
             // 
             // EnchanteMembership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.EnchanteMemberParentContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EnchanteMembership";
@@ -5135,6 +5142,8 @@
             this.EnchanteHomeScrollPanel.ResumeLayout(false);
             this.EnchanteHomeScrollPanel.PerformLayout();
             this.ServicePanel.ResumeLayout(false);
+            this.ServiceType.ResumeLayout(false);
+            this.ServiceType.PerformLayout();
             this.ServiceMassage.ResumeLayout(false);
             this.ServiceMassage.PerformLayout();
             this.ServiceSpa.ResumeLayout(false);
@@ -5145,9 +5154,23 @@
             this.ServiceFaceSkin.PerformLayout();
             this.ServiceHairStyling.ResumeLayout(false);
             this.ServiceHairStyling.PerformLayout();
-            this.ServiceType.ResumeLayout(false);
-            this.ServiceType.PerformLayout();
             this.MembershipPanel.ResumeLayout(false);
+            this.RegularPlanPanel.ResumeLayout(false);
+            this.RegularPlanPanel.PerformLayout();
+            this.RegularConfirmPassPanel.ResumeLayout(false);
+            this.RegularConfirmPassPanel.PerformLayout();
+            this.RegularPassPanel.ResumeLayout(false);
+            this.RegularPassPanel.PerformLayout();
+            this.RegularFooterStopper.ResumeLayout(false);
+            this.RegularFooterStopper.PerformLayout();
+            this.MembershipPlanPanel.ResumeLayout(false);
+            this.MembershipPlanPanel.PerformLayout();
+            this.SVIPMemberPanel.ResumeLayout(false);
+            this.SVIPMemberPanel.PerformLayout();
+            this.PMemberPanel.ResumeLayout(false);
+            this.PMemberPanel.PerformLayout();
+            this.RMemberPanel.ResumeLayout(false);
+            this.RMemberPanel.PerformLayout();
             this.PremiumPlanPanel.ResumeLayout(false);
             this.PremiumPlanPanel.PerformLayout();
             this.PremCardInfoPanel.ResumeLayout(false);
@@ -5196,22 +5219,6 @@
             this.SVIPPassPanel.PerformLayout();
             this.SVIPFooterStopper.ResumeLayout(false);
             this.SVIPFooterStopper.PerformLayout();
-            this.RegularPlanPanel.ResumeLayout(false);
-            this.RegularPlanPanel.PerformLayout();
-            this.RegularConfirmPassPanel.ResumeLayout(false);
-            this.RegularConfirmPassPanel.PerformLayout();
-            this.RegularPassPanel.ResumeLayout(false);
-            this.RegularPassPanel.PerformLayout();
-            this.RegularFooterStopper.ResumeLayout(false);
-            this.RegularFooterStopper.PerformLayout();
-            this.MembershipPlanPanel.ResumeLayout(false);
-            this.MembershipPlanPanel.PerformLayout();
-            this.SVIPMemberPanel.ResumeLayout(false);
-            this.SVIPMemberPanel.PerformLayout();
-            this.PMemberPanel.ResumeLayout(false);
-            this.PMemberPanel.PerformLayout();
-            this.RMemberPanel.ResumeLayout(false);
-            this.RMemberPanel.PerformLayout();
             this.EnchanteLoginForm.ResumeLayout(false);
             this.EnchanteLoginForm.PerformLayout();
             this.LoginPassPanel.ResumeLayout(false);
