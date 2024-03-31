@@ -251,7 +251,6 @@ namespace Enchante_Membership
         }
         private void EnchanteHomeScrollPanel_Scroll(object sender, ScrollEventArgs e)
         {
-
             HomeUpdateButtonColors();
         }
         private void HomeUpdateButtonColors()
@@ -440,12 +439,9 @@ namespace Enchante_Membership
 
         private void TeamLocationAndColor()
         {
-            //Reset Panel to Show Default
-            HomePanelReset();
-
             ////location scroll
-            //int serviceSectionY = 1800;
-            //ScrollToCoordinates(0, serviceSectionY);
+            int serviceSectionY = 2800;
+            ScrollToCoordinates(0, serviceSectionY);
 
             //Change color once clicked
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
@@ -463,12 +459,9 @@ namespace Enchante_Membership
 
         private void AboutUsLocatonAndColor()
         {
-            //Reset Panel to Show Default
-            HomePanelReset();
-
-            ////location scroll
-            //int serviceSectionY = 1800;
-            //ScrollToCoordinates(0, serviceSectionY);
+            //location scroll
+            int serviceSectionY = 3800;
+            ScrollToCoordinates(0, serviceSectionY);
 
             //Change color once clicked
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
@@ -2267,6 +2260,240 @@ namespace Enchante_Membership
         }
         #endregion
 
+        #region Staff Team 
 
+
+
+        #endregion
+
+
+        private void TeamHS1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Angela Cruz\n";
+            message += "A junior hair stylist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamHS1, message);
+            TeamHS1.Text = "Angela Cruz";
+        }
+
+        private void TeamHS2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Maria Santos\n";
+            message += "An assistant hair stylist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamHS2, message);
+            TeamHS2.Text = "Maria Santos";
+        }
+
+        private void TeamHS3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Rhydel Estrada\n";
+            message += "A senior hair stylist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamHS3, message);
+            TeamHS3.Text = "Rhydel Estrada";
+        }
+
+        private void TeamFS1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Juan Dela Cruz\n";
+            message += "A senior aesthetician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamFS1, message);
+            TeamFS1.Text = "Juan Dela Cruz";
+        }
+
+        private void TeamFS2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Katrina Reyes\n";
+            message += "A nurse aesthetician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamFS2, message);
+            TeamFS2.Text = "Katrina Reyes";
+        }
+
+        private void TeamFS3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Miguel Fernandez\n";
+            message += "A junior aesthetician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamFS3, message);
+            TeamFS3.Text = "Miguel Fernandez";
+        }
+
+        private void TeamNC1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Carlos Gonzales\n";
+            message += "An assistant nail technician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamNC1, message);
+            TeamNC1.Text = "Carlos Gonzales";
+        }
+
+        private void TeamNC2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Andrea Villanueva\n";
+            message += "An junior nail technician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamNC2, message);
+            TeamNC2.Text = "Andrea Villanueva";
+        }
+
+        private void TeamNC3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Sarah Lim\n";
+            message += "A senior nail technician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamNC3, message);
+            TeamNC3.Text = "Sarah Lim";
+        }
+
+        private void TeamSPA1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Luis Cruz\n";
+            message += "A senior spa therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamSPA1, message);
+            TeamSPA1.Text = "Luis Cruz";
+        }
+
+        private void TeamSPA2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Maricel Santos\n";
+            message += "An assistant spa therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamSPA2, message);
+            TeamSPA2.Text = "Maricel Santos";
+        }
+
+        private void TeamSPA3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Rafael Garcia\n";
+            message += "A junior spa therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamSPA3, message);
+            TeamSPA3.Text = "Rafael Garcia";
+        }
+
+        private void TeamMSG1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Antonio Reyes\n";
+            message += "A junior massage therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamMSG1, message);
+            TeamMSG1.Text = "Antonio Reyes";
+        }
+
+        private void TeamMSG2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Jasmine Castro\n";
+            message += "An assistant massage therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamMSG2, message);
+            TeamMSG2.Text = "Jasmine Castro";
+        }
+
+        private void TeamMSG3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Sofia Ramirez\n";
+            message += "A senior massage therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamMSG3, message);
+            TeamMSG3.Text = "Sofia Ramirez";
+        }
+
+        private void TeamHS1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamHS2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamHS3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamFS1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamFS2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamFS3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamNC1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamNC2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamNC3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamSPA1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamSPA2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamSPA3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamMSG1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamMSG2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamMSG3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void StaffNameClear()
+        {
+            TeamHS1.Text = "";
+            TeamHS2.Text = "";
+            TeamHS3.Text = "";
+            TeamFS1.Text = "";
+            TeamFS2.Text = "";
+            TeamFS3.Text = "";
+            TeamNC1.Text = "";
+            TeamNC2.Text = "";
+            TeamNC3.Text = "";
+            TeamSPA1.Text = "";
+            TeamSPA2.Text = "";
+            TeamSPA3.Text = "";
+            TeamMSG1.Text = "";
+            TeamMSG2.Text = "";
+            TeamMSG3.Text = "";
+        }
     }
 }

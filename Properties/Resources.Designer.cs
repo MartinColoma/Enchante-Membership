@@ -63,6 +63,16 @@ namespace Enchante_Membership.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _30_People_Are_Sharing_Seemingly_Innocent_Questions_That_Broke_Their_Heart_A_ {
             get {
                 object obj = ResourceManager.GetObject("30 People Are Sharing Seemingly Innocent Questions That Broke Their Heart A ", resourceCulture);
