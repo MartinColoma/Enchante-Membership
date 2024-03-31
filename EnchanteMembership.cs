@@ -34,6 +34,11 @@ namespace Enchante_Membership
         //gender combo box
         private string[] genders = { "Male", "Female", "Prefer Not to Say" };
 
+        private Timer timer;
+        private int currentIndex = 0;
+        private Image[] images = { Properties.Resources.Enchante_Bldg,  Properties.Resources.Hair, 
+                                    Properties.Resources.Olga_Collection, Properties.Resources.download,
+                                    Properties.Resources.Green___Gold_Collection___Salon_Equipment_Centre}; // Replace with your resource names
         public EnchanteMembership()
         {
             InitializeComponent();
@@ -60,6 +65,8 @@ namespace Enchante_Membership
 
             // Initialize the timer
             ScrollTimer.Start();
+            PictureSlideTimer.Start();
+
         }
 
         private void EnchanteMembership_Load(object sender, EventArgs e)
@@ -87,7 +94,6 @@ namespace Enchante_Membership
         }
         private void ScrollTimer_Tick(object sender, EventArgs e)
         {
-            // Update button colors based on scroll position
             HomeUpdateButtonColors();
         }
         #region ID Generator Methods
@@ -287,6 +293,8 @@ namespace Enchante_Membership
             EnchanteAbtUsBtn.ForeColor = scrollPosition >= teamThreshold && scrollPosition < aboutThreshold ?
                 System.Drawing.Color.FromArgb(177, 183, 97) :
                 System.Drawing.Color.FromArgb(229, 229, 221);
+
+
         }
         private void HomePanelReset()
         {
@@ -355,10 +363,10 @@ namespace Enchante_Membership
             //Change back to original
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
 
+            PictureSlideTimer.Stop();
 
         }
 
@@ -379,10 +387,10 @@ namespace Enchante_Membership
             //Change back to original
             EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
 
+            PictureSlideTimer.Stop();
 
         }
 
@@ -405,32 +413,9 @@ namespace Enchante_Membership
             //Change back to original
             EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-        }
-        private void EnchanteReviewBtn_Click(object sender, EventArgs e)
-        {
-            ReviewLocationAndColor();
-        }
-
-        private void ReviewLocationAndColor()
-        {
-            //Reset Panel to Show Default
-            HomePanelReset();
-
-            ////location scroll
-            //int serviceSectionY = 1800;
-            //ScrollToCoordinates(0, serviceSectionY);
-
-            //Change color once clicked
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            //Change back to original
-            EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            PictureSlideTimer.Stop();
         }
         private void EnchanteTeamBtn_Click(object sender, EventArgs e)
         {
@@ -449,12 +434,13 @@ namespace Enchante_Membership
             EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            PictureSlideTimer.Stop();
         }
         private void EnchanteAbtUsBtn_Click(object sender, EventArgs e)
         {
             AboutUsLocatonAndColor();
+
         }
 
         private void AboutUsLocatonAndColor()
@@ -469,8 +455,8 @@ namespace Enchante_Membership
             EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            PictureSlideTimer.Stop();
         }
         private void EnchanteHomeBtn_MouseHover(object sender, EventArgs e)
         {
@@ -486,11 +472,6 @@ namespace Enchante_Membership
         private void EnchanteMemberBtn_MouseHover(object sender, EventArgs e)
         {
             iconToolTip.SetToolTip(EnchanteMemberBtn, "Membership");
-        }
-
-        private void EnchanteReviewBtn_MouseHover(object sender, EventArgs e)
-        {
-            iconToolTip.SetToolTip(EnchanteReviewBtn, "Reviews");
         }
 
         private void EnchanteTeamBtn_MouseHover(object sender, EventArgs e)
@@ -603,7 +584,7 @@ namespace Enchante_Membership
             {
                 //Test Member
                 LoginEmailAddErrorLbl.Visible = false;
-                LoginPassErrorLbl.Visible = true;
+                LoginPassErrorLbl.Visible = false;
                 MessageBox.Show("Welcome back, Member.", "Login Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MemberHomePanelReset();
                 MemberNameLbl.Text = "Member Tester";
@@ -861,26 +842,22 @@ namespace Enchante_Membership
         private void SM_FBBtn_MouseHover(object sender, EventArgs e)
         {
             iconToolTip.SetToolTip(SM_FBBtn, "Facebook");
-            iconToolTip.SetToolTip(SM_FBBtn1, "Facebook");
 
         }
 
         private void SM_TwitterBtn_MouseHover(object sender, EventArgs e)
         {
             iconToolTip.SetToolTip(SM_TwitterBtn, "Twitter");
-            iconToolTip.SetToolTip(SM_TwitterBtn1, "Twitter");
         }
 
         private void SM_IGBtn_MouseHover(object sender, EventArgs e)
         {
             iconToolTip.SetToolTip(SM_IGBtn, "Instagram");
-            iconToolTip.SetToolTip(SM_IGBtn1, "Instagram");
 
         }
 
         private void SM_GmailBtn_MouseHover(object sender, EventArgs e)
         {
-            iconToolTip.SetToolTip(SM_GmailBtn, "Email Us Here");
             iconToolTip.SetToolTip(SM_GmailBtn, "Email Us Here");
         }
 
@@ -2261,12 +2238,6 @@ namespace Enchante_Membership
         #endregion
 
         #region Staff Team 
-
-
-
-        #endregion
-
-
         private void TeamHS1_MouseHover(object sender, EventArgs e)
         {
             string message = "Angela Cruz\n";
@@ -2494,6 +2465,34 @@ namespace Enchante_Membership
             TeamMSG1.Text = "";
             TeamMSG2.Text = "";
             TeamMSG3.Text = "";
+        }
+
+
+
+        #endregion
+
+        #region About US
+
+
+
+        #endregion
+
+        private void PictureSlideTimer_Tick(object sender, EventArgs e)
+        {
+
+            DisplayNextImage();
+
+        }
+
+        private void DisplayNextImage()
+        {
+            // Load the next image
+            Image image = images[currentIndex];
+            AbtUsPictureBox.Image = image;
+            EDP1.Image = image;
+
+            // Increment the index, looping back to the beginning if necessary
+            currentIndex = (currentIndex + 1) % images.Length;
         }
     }
 }

@@ -120,35 +120,14 @@
   <metadata name="EnchanteMemParentCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="HomeServiceCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>207, 17</value>
-  </metadata>
-  <metadata name="HomeMembershipCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>356, 17</value>
-  </metadata>
-  <data name="SVIPMemberAccLbl.Text" xml:space="preserve">
-    <value>* BOOK YOUR SALON APPOINMENT
-CONVENIENTLY
-* SELECTED HOT PROMO DISCOUNTS
-* BIRTHDAY TREATMENT DISCOUNT
-* SELECT YOUR OWN STYLIST
-* NO WAITING TIME
-* NO LIMITS ON NUMBER OF GUESTS 
-PER APPOINTMENT
-* ENJOY A PRIVATE ROOM ALL FOR 
-YOURSELF (WITH FREE FOODS AND 
-DRINKS)
-* CANCEL ANY TIME
-</value>
+  <data name="AbtUsOurGoalEssay.Text" xml:space="preserve">
+    <value>At Enchante Group of Salons, our goal is straightforward yet profound: to inspire confidence and radiance in every individual who walks through our doors. We strive to create a welcoming haven where beauty meets expertise, providing top-notch services tailored to your unique preferences. Whether it's a fresh haircut, a soothing massage, or a rejuvenating facial, our aim is to exceed your expectations and leave you feeling empowered and enchanted. Join us on this journey to embrace your true beauty and discover the magic within at Enchante Group of Salons.</value>
+  </data>
+  <data name="AbtUsEssay.Text" xml:space="preserve">
+    <value>Welcome to Enchante Group of Salons, where beauty meets expertise in a harmonious blend. Our journey began with a simple vision: to redefine beauty standards and empower individuals through confidence. With a team of passionate stylists and therapists, we've crafted a sanctuary where every client is celebrated for their unique essence. From luxurious hair treatments to rejuvenating spa experiences, each visit promises personalized care tailored to your desires. Step into our world, where every appointment is an opportunity to indulge in self-care and emerge feeling enchanted. Join us at Enchante Group of Salons, where beauty is not just a look, but a feeling.</value>
   </data>
   <metadata name="HomeServiceCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>207, 17</value>
-  </metadata>
-  <metadata name="HomeMembershipCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>356, 17</value>
-  </metadata>
-  <metadata name="ScrollTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>535, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ServiceSpaBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1283,6 +1262,30 @@ DRINKS)
         QLHs9JRH9yAAp4MK4haqJh5y7sxVzNVcEqfcmdwoA6cPMo2CWVLBAFjTHgot7J//2Q==
 </value>
   </data>
+  <metadata name="HomeMembershipCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>356, 17</value>
+  </metadata>
+  <data name="SVIPMemberAccLbl.Text" xml:space="preserve">
+    <value>* BOOK YOUR SALON APPOINMENT
+CONVENIENTLY
+* SELECTED HOT PROMO DISCOUNTS
+* BIRTHDAY TREATMENT DISCOUNT
+* SELECT YOUR OWN STYLIST
+* NO WAITING TIME
+* NO LIMITS ON NUMBER OF GUESTS 
+PER APPOINTMENT
+* ENJOY A PRIVATE ROOM ALL FOR 
+YOURSELF (WITH FREE FOODS AND 
+DRINKS)
+* CANCEL ANY TIME
+</value>
+  </data>
+  <metadata name="ScrollTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>535, 17</value>
+  </metadata>
+  <metadata name="PictureSlideTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>648, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>62</value>
   </metadata>

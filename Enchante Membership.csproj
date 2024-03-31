@@ -259,5 +259,26 @@
   <ItemGroup>
     <None Include="Resources\1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Bldg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Olga Collection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green manicure nail table with gold frame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green &amp; Gold Collection _ Salon Equipment Centre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo %28200 x 200 px%29 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo %28200 x 200 px%29 Green.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

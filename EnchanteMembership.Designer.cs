@@ -39,11 +39,13 @@
             this.MemberNameLbl = new System.Windows.Forms.Label();
             this.MemberScrollFooterStopperPanel = new System.Windows.Forms.Panel();
             this.MemberScrollFooterStopperLbl = new System.Windows.Forms.Label();
-            this.MemberFooter = new System.Windows.Forms.Panel();
             this.MemberNavBarPanel = new System.Windows.Forms.Panel();
             this.EnchanteHomePage = new System.Windows.Forms.Panel();
             this.EnchanteHomeNavBar = new System.Windows.Forms.Panel();
             this.EnchanteHomeScrollPanel = new System.Windows.Forms.Panel();
+            this.AbtUsTagline = new System.Windows.Forms.Label();
+            this.TeamTagline = new System.Windows.Forms.Label();
+            this.TeamPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ServicePanel = new System.Windows.Forms.Panel();
             this.ServiceFaceSkin = new System.Windows.Forms.Panel();
             this.ServiceFaceSkinLbl = new System.Windows.Forms.Label();
@@ -292,14 +294,10 @@
             this.HomeServiceCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.HomeMembershipCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.ScrollTimer = new System.Windows.Forms.Timer(this.components);
-            this.TeamPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.TeamTagline = new System.Windows.Forms.Label();
+            this.PictureSlideTimer = new System.Windows.Forms.Timer(this.components);
+            this.AbtUsEssay = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.MemberSignOut = new FontAwesome.Sharp.IconButton();
-            this.SM_EmailBtn1 = new FontAwesome.Sharp.IconButton();
-            this.SM_IGBtn1 = new FontAwesome.Sharp.IconButton();
-            this.SM_TwitterBtn1 = new FontAwesome.Sharp.IconButton();
-            this.MemberFooterLogo = new System.Windows.Forms.PictureBox();
-            this.SM_FBBtn1 = new FontAwesome.Sharp.IconButton();
             this.MemberAccUserBtn = new FontAwesome.Sharp.IconButton();
             this.MemberSubAccUserBtn = new FontAwesome.Sharp.IconButton();
             this.MemberReviewBtn = new FontAwesome.Sharp.IconButton();
@@ -310,11 +308,11 @@
             this.EnchanteHLoginBtn = new FontAwesome.Sharp.IconButton();
             this.EnchanteAbtUsBtn = new FontAwesome.Sharp.IconButton();
             this.EnchanteTeamBtn = new FontAwesome.Sharp.IconButton();
-            this.EnchanteReviewBtn = new FontAwesome.Sharp.IconButton();
             this.EnchanteMemberBtn = new FontAwesome.Sharp.IconButton();
             this.EnchanteServiceBtn = new FontAwesome.Sharp.IconButton();
             this.EnchanteHomeBtn = new FontAwesome.Sharp.IconButton();
             this.EnchanteHeaderLogo = new System.Windows.Forms.PictureBox();
+            this.AbtUsPictureBox = new System.Windows.Forms.PictureBox();
             this.TeamHS1 = new FontAwesome.Sharp.IconButton();
             this.TeamHS2 = new FontAwesome.Sharp.IconButton();
             this.TeamHS3 = new FontAwesome.Sharp.IconButton();
@@ -380,17 +378,27 @@
             this.SM_FBBtn = new FontAwesome.Sharp.IconButton();
             this.EnchanteAppointBtn = new FontAwesome.Sharp.IconButton();
             this.EDP1 = new System.Windows.Forms.PictureBox();
+            this.EnchanteFooterAllRightsReserved = new System.Windows.Forms.Label();
+            this.EnchanteFooterSalonHrs = new System.Windows.Forms.Label();
+            this.EnchanteFooterSalonTimeOpen = new System.Windows.Forms.Label();
+            this.EnchanteFooterAddress = new System.Windows.Forms.Label();
+            this.EnchanteFooterVisitLbl = new System.Windows.Forms.Label();
+            this.EnchanteFooterTelNumEmailAdd = new System.Windows.Forms.Label();
+            this.EnchanteFooterBookLbl = new System.Windows.Forms.Label();
+            this.EnchanteFooterCreateAcc = new System.Windows.Forms.Label();
+            this.AbtUsOurGoalEssay = new System.Windows.Forms.Label();
+            this.AbtUsOurGoalLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemParentCard)).BeginInit();
             this.EnchanteMemberParentContainer.SuspendLayout();
             this.EnchanteMemberPage.SuspendLayout();
             this.MemberScrollPanel.SuspendLayout();
             this.MemberUserAccPanel.SuspendLayout();
             this.MemberScrollFooterStopperPanel.SuspendLayout();
-            this.MemberFooter.SuspendLayout();
             this.MemberNavBarPanel.SuspendLayout();
             this.EnchanteHomePage.SuspendLayout();
             this.EnchanteHomeNavBar.SuspendLayout();
             this.EnchanteHomeScrollPanel.SuspendLayout();
+            this.TeamPanel.SuspendLayout();
             this.ServicePanel.SuspendLayout();
             this.ServiceFaceSkin.SuspendLayout();
             this.ServiceNailCare.SuspendLayout();
@@ -437,10 +445,9 @@
             this.EnchanteFooterBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeServiceCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeMembershipCard)).BeginInit();
-            this.TeamPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberFooterLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemberHeaderLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteHeaderLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbtUsPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteFooterLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EDP1)).BeginInit();
             this.SuspendLayout();
@@ -482,7 +489,6 @@
             this.MemberScrollPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.MemberScrollPanel.Controls.Add(this.MemberUserAccPanel);
             this.MemberScrollPanel.Controls.Add(this.MemberScrollFooterStopperPanel);
-            this.MemberScrollPanel.Controls.Add(this.MemberFooter);
             this.MemberScrollPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberScrollPanel.Location = new System.Drawing.Point(0, 150);
             this.MemberScrollPanel.Name = "MemberScrollPanel";
@@ -496,9 +502,9 @@
             this.MemberUserAccPanel.Controls.Add(this.MemberIDNumLbl);
             this.MemberUserAccPanel.Controls.Add(this.MemberNameLbl);
             this.MemberUserAccPanel.Controls.Add(this.MemberSignOut);
-            this.MemberUserAccPanel.Location = new System.Drawing.Point(1445, 1287);
+            this.MemberUserAccPanel.Location = new System.Drawing.Point(1502, 18);
             this.MemberUserAccPanel.Name = "MemberUserAccPanel";
-            this.MemberUserAccPanel.Size = new System.Drawing.Size(445, 397);
+            this.MemberUserAccPanel.Size = new System.Drawing.Size(353, 397);
             this.MemberUserAccPanel.TabIndex = 2;
             this.MemberUserAccPanel.Visible = false;
             // 
@@ -531,9 +537,9 @@
             this.MemberScrollFooterStopperPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.MemberScrollFooterStopperPanel.Controls.Add(this.MemberScrollFooterStopperLbl);
             this.MemberScrollFooterStopperPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemberScrollFooterStopperPanel.Location = new System.Drawing.Point(541, 2271);
+            this.MemberScrollFooterStopperPanel.Location = new System.Drawing.Point(620, 797);
             this.MemberScrollFooterStopperPanel.Name = "MemberScrollFooterStopperPanel";
-            this.MemberScrollFooterStopperPanel.Size = new System.Drawing.Size(804, 133);
+            this.MemberScrollFooterStopperPanel.Size = new System.Drawing.Size(804, 43);
             this.MemberScrollFooterStopperPanel.TabIndex = 20;
             // 
             // MemberScrollFooterStopperLbl
@@ -547,22 +553,6 @@
             this.MemberScrollFooterStopperLbl.TabIndex = 20;
             this.MemberScrollFooterStopperLbl.Text = "Footer Stopper";
             this.MemberScrollFooterStopperLbl.Visible = false;
-            // 
-            // MemberFooter
-            // 
-            this.MemberFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.MemberFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MemberFooter.Controls.Add(this.SM_EmailBtn1);
-            this.MemberFooter.Controls.Add(this.SM_IGBtn1);
-            this.MemberFooter.Controls.Add(this.SM_TwitterBtn1);
-            this.MemberFooter.Controls.Add(this.MemberFooterLogo);
-            this.MemberFooter.Controls.Add(this.SM_FBBtn1);
-            this.MemberFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.MemberFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemberFooter.Location = new System.Drawing.Point(0, 2404);
-            this.MemberFooter.Name = "MemberFooter";
-            this.MemberFooter.Size = new System.Drawing.Size(1890, 166);
-            this.MemberFooter.TabIndex = 20;
             // 
             // MemberNavBarPanel
             // 
@@ -605,7 +595,6 @@
             this.EnchanteHomeNavBar.Controls.Add(this.EnchanteHLoginBtn);
             this.EnchanteHomeNavBar.Controls.Add(this.EnchanteAbtUsBtn);
             this.EnchanteHomeNavBar.Controls.Add(this.EnchanteTeamBtn);
-            this.EnchanteHomeNavBar.Controls.Add(this.EnchanteReviewBtn);
             this.EnchanteHomeNavBar.Controls.Add(this.EnchanteMemberBtn);
             this.EnchanteHomeNavBar.Controls.Add(this.EnchanteServiceBtn);
             this.EnchanteHomeNavBar.Controls.Add(this.EnchanteHomeBtn);
@@ -620,6 +609,11 @@
             // 
             this.EnchanteHomeScrollPanel.AutoScroll = true;
             this.EnchanteHomeScrollPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.EnchanteHomeScrollPanel.Controls.Add(this.AbtUsOurGoalLbl);
+            this.EnchanteHomeScrollPanel.Controls.Add(this.AbtUsOurGoalEssay);
+            this.EnchanteHomeScrollPanel.Controls.Add(this.AbtUsEssay);
+            this.EnchanteHomeScrollPanel.Controls.Add(this.AbtUsPictureBox);
+            this.EnchanteHomeScrollPanel.Controls.Add(this.AbtUsTagline);
             this.EnchanteHomeScrollPanel.Controls.Add(this.TeamTagline);
             this.EnchanteHomeScrollPanel.Controls.Add(this.TeamPanel);
             this.EnchanteHomeScrollPanel.Controls.Add(this.ServicePanel);
@@ -637,6 +631,56 @@
             this.EnchanteHomeScrollPanel.TabIndex = 18;
             this.EnchanteHomeScrollPanel.Scroll += new System.Windows.Forms.ScrollEventHandler(this.EnchanteHomeScrollPanel_Scroll);
             this.EnchanteHomeScrollPanel.Click += new System.EventHandler(this.EnchanteHeaderLogo_Click);
+            // 
+            // AbtUsTagline
+            // 
+            this.AbtUsTagline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AbtUsTagline.AutoSize = true;
+            this.AbtUsTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.AbtUsTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.AbtUsTagline.Location = new System.Drawing.Point(900, 4002);
+            this.AbtUsTagline.Name = "AbtUsTagline";
+            this.AbtUsTagline.Size = new System.Drawing.Size(789, 69);
+            this.AbtUsTagline.TabIndex = 26;
+            this.AbtUsTagline.Text = "ABOUT ENCHANTÉ SALON";
+            // 
+            // TeamTagline
+            // 
+            this.TeamTagline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TeamTagline.AutoSize = true;
+            this.TeamTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.TeamTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.TeamTagline.Location = new System.Drawing.Point(363, 3083);
+            this.TeamTagline.Name = "TeamTagline";
+            this.TeamTagline.Size = new System.Drawing.Size(1161, 69);
+            this.TeamTagline.TabIndex = 17;
+            this.TeamTagline.Text = "MEET OUR ENCHANTÉ SKILLED STAFF";
+            // 
+            // TeamPanel
+            // 
+            this.TeamPanel.AutoScroll = true;
+            this.TeamPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TeamPanel.Controls.Add(this.TeamHS1);
+            this.TeamPanel.Controls.Add(this.TeamHS2);
+            this.TeamPanel.Controls.Add(this.TeamHS3);
+            this.TeamPanel.Controls.Add(this.TeamFS1);
+            this.TeamPanel.Controls.Add(this.TeamFS2);
+            this.TeamPanel.Controls.Add(this.TeamFS3);
+            this.TeamPanel.Controls.Add(this.TeamNC1);
+            this.TeamPanel.Controls.Add(this.TeamNC2);
+            this.TeamPanel.Controls.Add(this.TeamNC3);
+            this.TeamPanel.Controls.Add(this.TeamSPA1);
+            this.TeamPanel.Controls.Add(this.TeamSPA2);
+            this.TeamPanel.Controls.Add(this.TeamSPA3);
+            this.TeamPanel.Controls.Add(this.TeamMSG1);
+            this.TeamPanel.Controls.Add(this.TeamMSG2);
+            this.TeamPanel.Controls.Add(this.TeamMSG3);
+            this.TeamPanel.Location = new System.Drawing.Point(291, 3194);
+            this.TeamPanel.Name = "TeamPanel";
+            this.TeamPanel.Size = new System.Drawing.Size(1304, 533);
+            this.TeamPanel.TabIndex = 25;
             // 
             // ServicePanel
             // 
@@ -3735,7 +3779,7 @@
             this.HomeFooterStopper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.HomeFooterStopper.Controls.Add(this.HomeFooterStopperLbl);
             this.HomeFooterStopper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.HomeFooterStopper.Location = new System.Drawing.Point(541, 5004);
+            this.HomeFooterStopper.Location = new System.Drawing.Point(541, 4788);
             this.HomeFooterStopper.Name = "HomeFooterStopper";
             this.HomeFooterStopper.Size = new System.Drawing.Size(804, 100);
             this.HomeFooterStopper.TabIndex = 20;
@@ -3754,18 +3798,28 @@
             // 
             // EnchanteFooterBar
             // 
-            this.EnchanteFooterBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.EnchanteFooterBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.EnchanteFooterBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterCreateAcc);
+            this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterTelNumEmailAdd);
+            this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterBookLbl);
+            this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterAddress);
+            this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterVisitLbl);
+            this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterSalonTimeOpen);
+            this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterSalonHrs);
+            this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterAllRightsReserved);
+            this.EnchanteFooterBar.Controls.Add(this.label3);
             this.EnchanteFooterBar.Controls.Add(this.SM_GmailBtn);
             this.EnchanteFooterBar.Controls.Add(this.SM_IGBtn);
             this.EnchanteFooterBar.Controls.Add(this.SM_TwitterBtn);
             this.EnchanteFooterBar.Controls.Add(this.EnchanteFooterLogo);
             this.EnchanteFooterBar.Controls.Add(this.SM_FBBtn);
             this.EnchanteFooterBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.EnchanteFooterBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnchanteFooterBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.EnchanteFooterBar.Location = new System.Drawing.Point(0, 5104);
+            this.EnchanteFooterBar.Location = new System.Drawing.Point(0, 4888);
             this.EnchanteFooterBar.Name = "EnchanteFooterBar";
-            this.EnchanteFooterBar.Size = new System.Drawing.Size(1887, 166);
+            this.EnchanteFooterBar.Size = new System.Drawing.Size(1887, 244);
             this.EnchanteFooterBar.TabIndex = 20;
             // 
             // EnchanteTagline
@@ -3774,13 +3828,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EnchanteTagline.AutoSize = true;
-            this.EnchanteTagline.Font = new System.Drawing.Font("TechnicBold", 80.24999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteTagline.Font = new System.Drawing.Font("TechnicBold", 65F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.EnchanteTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
             this.EnchanteTagline.Location = new System.Drawing.Point(99, 422);
             this.EnchanteTagline.Name = "EnchanteTagline";
-            this.EnchanteTagline.Size = new System.Drawing.Size(884, 232);
+            this.EnchanteTagline.Size = new System.Drawing.Size(981, 188);
             this.EnchanteTagline.TabIndex = 3;
-            this.EnchanteTagline.Text = "ILALABAS NAMIN\r\nANG GANDA MO";
+            this.EnchanteTagline.Text = "EMPOWERING BEAUTY\r\nINSPIRING CONFIDENCE";
             // 
             // SecretPanel
             // 
@@ -3808,42 +3862,33 @@
             // 
             this.ScrollTimer.Tick += new System.EventHandler(this.ScrollTimer_Tick);
             // 
-            // TeamPanel
+            // PictureSlideTimer
             // 
-            this.TeamPanel.AutoScroll = true;
-            this.TeamPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TeamPanel.Controls.Add(this.TeamHS1);
-            this.TeamPanel.Controls.Add(this.TeamHS2);
-            this.TeamPanel.Controls.Add(this.TeamHS3);
-            this.TeamPanel.Controls.Add(this.TeamFS1);
-            this.TeamPanel.Controls.Add(this.TeamFS2);
-            this.TeamPanel.Controls.Add(this.TeamFS3);
-            this.TeamPanel.Controls.Add(this.TeamNC1);
-            this.TeamPanel.Controls.Add(this.TeamNC2);
-            this.TeamPanel.Controls.Add(this.TeamNC3);
-            this.TeamPanel.Controls.Add(this.TeamSPA1);
-            this.TeamPanel.Controls.Add(this.TeamSPA2);
-            this.TeamPanel.Controls.Add(this.TeamSPA3);
-            this.TeamPanel.Controls.Add(this.TeamMSG1);
-            this.TeamPanel.Controls.Add(this.TeamMSG2);
-            this.TeamPanel.Controls.Add(this.TeamMSG3);
-            this.TeamPanel.Location = new System.Drawing.Point(291, 3194);
-            this.TeamPanel.Name = "TeamPanel";
-            this.TeamPanel.Size = new System.Drawing.Size(1304, 533);
-            this.TeamPanel.TabIndex = 25;
+            this.PictureSlideTimer.Interval = 3000;
+            this.PictureSlideTimer.Tick += new System.EventHandler(this.PictureSlideTimer_Tick);
             // 
-            // TeamTagline
+            // AbtUsEssay
             // 
-            this.TeamTagline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TeamTagline.AutoSize = true;
-            this.TeamTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.TeamTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.TeamTagline.Location = new System.Drawing.Point(363, 3083);
-            this.TeamTagline.Name = "TeamTagline";
-            this.TeamTagline.Size = new System.Drawing.Size(1161, 69);
-            this.TeamTagline.TabIndex = 17;
-            this.TeamTagline.Text = "MEET OUR ENCHANTÉ SKILLED STAFF";
+            this.AbtUsEssay.AutoEllipsis = true;
+            this.AbtUsEssay.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AbtUsEssay.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AbtUsEssay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.AbtUsEssay.Location = new System.Drawing.Point(908, 4083);
+            this.AbtUsEssay.Name = "AbtUsEssay";
+            this.AbtUsEssay.Size = new System.Drawing.Size(781, 238);
+            this.AbtUsEssay.TabIndex = 28;
+            this.AbtUsEssay.Text = resources.GetString("AbtUsEssay.Text");
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("TechnicBold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.label3.Location = new System.Drawing.Point(1369, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 24);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Follow Us On:";
             // 
             // MemberSignOut
             // 
@@ -3859,105 +3904,15 @@
             this.MemberSignOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MemberSignOut.IconSize = 32;
             this.MemberSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MemberSignOut.Location = new System.Drawing.Point(27, 311);
+            this.MemberSignOut.Location = new System.Drawing.Point(14, 314);
             this.MemberSignOut.Name = "MemberSignOut";
-            this.MemberSignOut.Size = new System.Drawing.Size(401, 60);
+            this.MemberSignOut.Size = new System.Drawing.Size(321, 60);
             this.MemberSignOut.TabIndex = 7;
             this.MemberSignOut.Text = "LOGOUT";
             this.MemberSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.MemberSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.MemberSignOut.UseVisualStyleBackColor = true;
             this.MemberSignOut.Click += new System.EventHandler(this.MemberSignOut_Click);
-            // 
-            // SM_EmailBtn1
-            // 
-            this.SM_EmailBtn1.AutoSize = true;
-            this.SM_EmailBtn1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SM_EmailBtn1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SM_EmailBtn1.FlatAppearance.BorderSize = 3;
-            this.SM_EmailBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SM_EmailBtn1.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.SM_EmailBtn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.SM_EmailBtn1.IconChar = FontAwesome.Sharp.IconChar.Envelope;
-            this.SM_EmailBtn1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SM_EmailBtn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SM_EmailBtn1.Location = new System.Drawing.Point(548, 51);
-            this.SM_EmailBtn1.Name = "SM_EmailBtn1";
-            this.SM_EmailBtn1.Size = new System.Drawing.Size(60, 60);
-            this.SM_EmailBtn1.TabIndex = 12;
-            this.SM_EmailBtn1.UseVisualStyleBackColor = true;
-            this.SM_EmailBtn1.Click += new System.EventHandler(this.SM_GmailBtn_Click);
-            this.SM_EmailBtn1.MouseHover += new System.EventHandler(this.SM_GmailBtn_MouseHover);
-            // 
-            // SM_IGBtn1
-            // 
-            this.SM_IGBtn1.AutoSize = true;
-            this.SM_IGBtn1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SM_IGBtn1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SM_IGBtn1.FlatAppearance.BorderSize = 3;
-            this.SM_IGBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SM_IGBtn1.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.SM_IGBtn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.SM_IGBtn1.IconChar = FontAwesome.Sharp.IconChar.Instagram;
-            this.SM_IGBtn1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SM_IGBtn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SM_IGBtn1.Location = new System.Drawing.Point(482, 51);
-            this.SM_IGBtn1.Name = "SM_IGBtn1";
-            this.SM_IGBtn1.Size = new System.Drawing.Size(60, 60);
-            this.SM_IGBtn1.TabIndex = 11;
-            this.SM_IGBtn1.UseVisualStyleBackColor = true;
-            this.SM_IGBtn1.Click += new System.EventHandler(this.SM_IGBtn_Click);
-            this.SM_IGBtn1.MouseHover += new System.EventHandler(this.SM_IGBtn_MouseHover);
-            // 
-            // SM_TwitterBtn1
-            // 
-            this.SM_TwitterBtn1.AutoSize = true;
-            this.SM_TwitterBtn1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SM_TwitterBtn1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SM_TwitterBtn1.FlatAppearance.BorderSize = 3;
-            this.SM_TwitterBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SM_TwitterBtn1.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.SM_TwitterBtn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.SM_TwitterBtn1.IconChar = FontAwesome.Sharp.IconChar.Twitter;
-            this.SM_TwitterBtn1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SM_TwitterBtn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SM_TwitterBtn1.Location = new System.Drawing.Point(416, 51);
-            this.SM_TwitterBtn1.Name = "SM_TwitterBtn1";
-            this.SM_TwitterBtn1.Size = new System.Drawing.Size(60, 60);
-            this.SM_TwitterBtn1.TabIndex = 10;
-            this.SM_TwitterBtn1.UseVisualStyleBackColor = true;
-            this.SM_TwitterBtn1.Click += new System.EventHandler(this.SM_TwitterBtn_Click);
-            this.SM_TwitterBtn1.MouseHover += new System.EventHandler(this.SM_TwitterBtn_MouseHover);
-            // 
-            // MemberFooterLogo
-            // 
-            this.MemberFooterLogo.BackgroundImage = global::Enchante_Membership.Properties.Resources.Enchante_Logo_275x100;
-            this.MemberFooterLogo.Location = new System.Drawing.Point(58, 29);
-            this.MemberFooterLogo.Name = "MemberFooterLogo";
-            this.MemberFooterLogo.Size = new System.Drawing.Size(275, 100);
-            this.MemberFooterLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.MemberFooterLogo.TabIndex = 9;
-            this.MemberFooterLogo.TabStop = false;
-            // 
-            // SM_FBBtn1
-            // 
-            this.SM_FBBtn1.AutoSize = true;
-            this.SM_FBBtn1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SM_FBBtn1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SM_FBBtn1.FlatAppearance.BorderSize = 3;
-            this.SM_FBBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SM_FBBtn1.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.SM_FBBtn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.SM_FBBtn1.IconChar = FontAwesome.Sharp.IconChar.Facebook;
-            this.SM_FBBtn1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.SM_FBBtn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SM_FBBtn1.Location = new System.Drawing.Point(350, 51);
-            this.SM_FBBtn1.Name = "SM_FBBtn1";
-            this.SM_FBBtn1.Size = new System.Drawing.Size(60, 60);
-            this.SM_FBBtn1.TabIndex = 8;
-            this.SM_FBBtn1.UseVisualStyleBackColor = true;
-            this.SM_FBBtn1.Click += new System.EventHandler(this.SM_FBBtn_Click);
-            this.SM_FBBtn1.MouseHover += new System.EventHandler(this.SM_FBBtn_MouseHover);
             // 
             // MemberAccUserBtn
             // 
@@ -4122,7 +4077,7 @@
             this.EnchanteAbtUsBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.EnchanteAbtUsBtn.IconColor = System.Drawing.Color.Black;
             this.EnchanteAbtUsBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteAbtUsBtn.Location = new System.Drawing.Point(1408, 58);
+            this.EnchanteAbtUsBtn.Location = new System.Drawing.Point(1419, 58);
             this.EnchanteAbtUsBtn.Name = "EnchanteAbtUsBtn";
             this.EnchanteAbtUsBtn.Size = new System.Drawing.Size(149, 54);
             this.EnchanteAbtUsBtn.TabIndex = 6;
@@ -4143,7 +4098,7 @@
             this.EnchanteTeamBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.EnchanteTeamBtn.IconColor = System.Drawing.Color.Black;
             this.EnchanteTeamBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteTeamBtn.Location = new System.Drawing.Point(1234, 58);
+            this.EnchanteTeamBtn.Location = new System.Drawing.Point(1245, 58);
             this.EnchanteTeamBtn.Name = "EnchanteTeamBtn";
             this.EnchanteTeamBtn.Size = new System.Drawing.Size(168, 54);
             this.EnchanteTeamBtn.TabIndex = 5;
@@ -4151,28 +4106,6 @@
             this.EnchanteTeamBtn.UseVisualStyleBackColor = true;
             this.EnchanteTeamBtn.Click += new System.EventHandler(this.EnchanteTeamBtn_Click);
             this.EnchanteTeamBtn.MouseHover += new System.EventHandler(this.EnchanteTeamBtn_MouseHover);
-            // 
-            // EnchanteReviewBtn
-            // 
-            this.EnchanteReviewBtn.AutoSize = true;
-            this.EnchanteReviewBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.EnchanteReviewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EnchanteReviewBtn.FlatAppearance.BorderSize = 0;
-            this.EnchanteReviewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EnchanteReviewBtn.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.EnchanteReviewBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.EnchanteReviewBtn.IconColor = System.Drawing.Color.Black;
-            this.EnchanteReviewBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteReviewBtn.Location = new System.Drawing.Point(504, 60);
-            this.EnchanteReviewBtn.Name = "EnchanteReviewBtn";
-            this.EnchanteReviewBtn.Size = new System.Drawing.Size(132, 54);
-            this.EnchanteReviewBtn.TabIndex = 4;
-            this.EnchanteReviewBtn.Text = "REVIEWS";
-            this.EnchanteReviewBtn.UseVisualStyleBackColor = true;
-            this.EnchanteReviewBtn.Visible = false;
-            this.EnchanteReviewBtn.Click += new System.EventHandler(this.EnchanteReviewBtn_Click);
-            this.EnchanteReviewBtn.MouseHover += new System.EventHandler(this.EnchanteReviewBtn_MouseHover);
             // 
             // EnchanteMemberBtn
             // 
@@ -4186,7 +4119,7 @@
             this.EnchanteMemberBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.EnchanteMemberBtn.IconColor = System.Drawing.Color.Black;
             this.EnchanteMemberBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteMemberBtn.Location = new System.Drawing.Point(1058, 58);
+            this.EnchanteMemberBtn.Location = new System.Drawing.Point(1069, 58);
             this.EnchanteMemberBtn.Name = "EnchanteMemberBtn";
             this.EnchanteMemberBtn.Size = new System.Drawing.Size(181, 54);
             this.EnchanteMemberBtn.TabIndex = 3;
@@ -4207,7 +4140,7 @@
             this.EnchanteServiceBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.EnchanteServiceBtn.IconColor = System.Drawing.Color.Black;
             this.EnchanteServiceBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteServiceBtn.Location = new System.Drawing.Point(924, 58);
+            this.EnchanteServiceBtn.Location = new System.Drawing.Point(935, 58);
             this.EnchanteServiceBtn.Name = "EnchanteServiceBtn";
             this.EnchanteServiceBtn.Size = new System.Drawing.Size(128, 54);
             this.EnchanteServiceBtn.TabIndex = 2;
@@ -4228,7 +4161,7 @@
             this.EnchanteHomeBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.EnchanteHomeBtn.IconColor = System.Drawing.Color.Black;
             this.EnchanteHomeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteHomeBtn.Location = new System.Drawing.Point(826, 58);
+            this.EnchanteHomeBtn.Location = new System.Drawing.Point(837, 58);
             this.EnchanteHomeBtn.Name = "EnchanteHomeBtn";
             this.EnchanteHomeBtn.Size = new System.Drawing.Size(92, 54);
             this.EnchanteHomeBtn.TabIndex = 1;
@@ -4247,6 +4180,16 @@
             this.EnchanteHeaderLogo.TabIndex = 0;
             this.EnchanteHeaderLogo.TabStop = false;
             // 
+            // AbtUsPictureBox
+            // 
+            this.AbtUsPictureBox.Image = global::Enchante_Membership.Properties.Resources.Lobby;
+            this.AbtUsPictureBox.Location = new System.Drawing.Point(198, 4002);
+            this.AbtUsPictureBox.Name = "AbtUsPictureBox";
+            this.AbtUsPictureBox.Size = new System.Drawing.Size(625, 625);
+            this.AbtUsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AbtUsPictureBox.TabIndex = 27;
+            this.AbtUsPictureBox.TabStop = false;
+            // 
             // TeamHS1
             // 
             this.TeamHS1.BackgroundImage = global::Enchante_Membership.Properties.Resources.Angela_Cruz___HS;
@@ -4264,7 +4207,6 @@
             this.TeamHS1.Name = "TeamHS1";
             this.TeamHS1.Size = new System.Drawing.Size(250, 250);
             this.TeamHS1.TabIndex = 11;
-            this.TeamHS1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamHS1.UseVisualStyleBackColor = true;
             this.TeamHS1.MouseLeave += new System.EventHandler(this.TeamHS1_MouseLeave);
             this.TeamHS1.MouseHover += new System.EventHandler(this.TeamHS1_MouseHover);
@@ -4286,7 +4228,6 @@
             this.TeamHS2.Name = "TeamHS2";
             this.TeamHS2.Size = new System.Drawing.Size(250, 250);
             this.TeamHS2.TabIndex = 13;
-            this.TeamHS2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamHS2.UseVisualStyleBackColor = true;
             this.TeamHS2.MouseLeave += new System.EventHandler(this.TeamHS2_MouseLeave);
             this.TeamHS2.MouseHover += new System.EventHandler(this.TeamHS2_MouseHover);
@@ -4308,7 +4249,6 @@
             this.TeamHS3.Name = "TeamHS3";
             this.TeamHS3.Size = new System.Drawing.Size(250, 250);
             this.TeamHS3.TabIndex = 14;
-            this.TeamHS3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamHS3.UseVisualStyleBackColor = true;
             this.TeamHS3.MouseLeave += new System.EventHandler(this.TeamHS3_MouseLeave);
             this.TeamHS3.MouseHover += new System.EventHandler(this.TeamHS3_MouseHover);
@@ -4330,7 +4270,6 @@
             this.TeamFS1.Name = "TeamFS1";
             this.TeamFS1.Size = new System.Drawing.Size(250, 250);
             this.TeamFS1.TabIndex = 15;
-            this.TeamFS1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamFS1.UseVisualStyleBackColor = true;
             this.TeamFS1.MouseLeave += new System.EventHandler(this.TeamFS1_MouseLeave);
             this.TeamFS1.MouseHover += new System.EventHandler(this.TeamFS1_MouseHover);
@@ -4352,7 +4291,6 @@
             this.TeamFS2.Name = "TeamFS2";
             this.TeamFS2.Size = new System.Drawing.Size(250, 250);
             this.TeamFS2.TabIndex = 12;
-            this.TeamFS2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamFS2.UseVisualStyleBackColor = true;
             this.TeamFS2.MouseLeave += new System.EventHandler(this.TeamFS2_MouseLeave);
             this.TeamFS2.MouseHover += new System.EventHandler(this.TeamFS2_MouseHover);
@@ -4374,7 +4312,6 @@
             this.TeamFS3.Name = "TeamFS3";
             this.TeamFS3.Size = new System.Drawing.Size(250, 250);
             this.TeamFS3.TabIndex = 16;
-            this.TeamFS3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamFS3.UseVisualStyleBackColor = true;
             this.TeamFS3.MouseLeave += new System.EventHandler(this.TeamFS3_MouseLeave);
             this.TeamFS3.MouseHover += new System.EventHandler(this.TeamFS3_MouseHover);
@@ -4396,7 +4333,6 @@
             this.TeamNC1.Name = "TeamNC1";
             this.TeamNC1.Size = new System.Drawing.Size(250, 250);
             this.TeamNC1.TabIndex = 17;
-            this.TeamNC1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamNC1.UseVisualStyleBackColor = true;
             this.TeamNC1.MouseLeave += new System.EventHandler(this.TeamNC1_MouseLeave);
             this.TeamNC1.MouseHover += new System.EventHandler(this.TeamNC1_MouseHover);
@@ -4418,7 +4354,6 @@
             this.TeamNC2.Name = "TeamNC2";
             this.TeamNC2.Size = new System.Drawing.Size(250, 250);
             this.TeamNC2.TabIndex = 18;
-            this.TeamNC2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamNC2.UseVisualStyleBackColor = true;
             this.TeamNC2.MouseLeave += new System.EventHandler(this.TeamNC2_MouseLeave);
             this.TeamNC2.MouseHover += new System.EventHandler(this.TeamNC2_MouseHover);
@@ -4440,7 +4375,6 @@
             this.TeamNC3.Name = "TeamNC3";
             this.TeamNC3.Size = new System.Drawing.Size(250, 250);
             this.TeamNC3.TabIndex = 19;
-            this.TeamNC3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamNC3.UseVisualStyleBackColor = true;
             this.TeamNC3.MouseLeave += new System.EventHandler(this.TeamNC3_MouseLeave);
             this.TeamNC3.MouseHover += new System.EventHandler(this.TeamNC3_MouseHover);
@@ -4462,7 +4396,6 @@
             this.TeamSPA1.Name = "TeamSPA1";
             this.TeamSPA1.Size = new System.Drawing.Size(250, 250);
             this.TeamSPA1.TabIndex = 20;
-            this.TeamSPA1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamSPA1.UseVisualStyleBackColor = true;
             this.TeamSPA1.MouseLeave += new System.EventHandler(this.TeamSPA1_MouseLeave);
             this.TeamSPA1.MouseHover += new System.EventHandler(this.TeamSPA1_MouseHover);
@@ -4484,7 +4417,6 @@
             this.TeamSPA2.Name = "TeamSPA2";
             this.TeamSPA2.Size = new System.Drawing.Size(250, 250);
             this.TeamSPA2.TabIndex = 21;
-            this.TeamSPA2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamSPA2.UseVisualStyleBackColor = true;
             this.TeamSPA2.MouseLeave += new System.EventHandler(this.TeamSPA2_MouseLeave);
             this.TeamSPA2.MouseHover += new System.EventHandler(this.TeamSPA2_MouseHover);
@@ -4506,7 +4438,6 @@
             this.TeamSPA3.Name = "TeamSPA3";
             this.TeamSPA3.Size = new System.Drawing.Size(250, 250);
             this.TeamSPA3.TabIndex = 22;
-            this.TeamSPA3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamSPA3.UseVisualStyleBackColor = true;
             this.TeamSPA3.MouseLeave += new System.EventHandler(this.TeamSPA3_MouseLeave);
             this.TeamSPA3.MouseHover += new System.EventHandler(this.TeamSPA3_MouseHover);
@@ -4528,7 +4459,6 @@
             this.TeamMSG1.Name = "TeamMSG1";
             this.TeamMSG1.Size = new System.Drawing.Size(250, 250);
             this.TeamMSG1.TabIndex = 23;
-            this.TeamMSG1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamMSG1.UseVisualStyleBackColor = true;
             this.TeamMSG1.MouseLeave += new System.EventHandler(this.TeamMSG1_MouseLeave);
             this.TeamMSG1.MouseHover += new System.EventHandler(this.TeamMSG1_MouseHover);
@@ -4550,7 +4480,6 @@
             this.TeamMSG2.Name = "TeamMSG2";
             this.TeamMSG2.Size = new System.Drawing.Size(250, 250);
             this.TeamMSG2.TabIndex = 24;
-            this.TeamMSG2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamMSG2.UseVisualStyleBackColor = true;
             this.TeamMSG2.MouseLeave += new System.EventHandler(this.TeamMSG2_MouseLeave);
             this.TeamMSG2.MouseHover += new System.EventHandler(this.TeamMSG2_MouseHover);
@@ -4572,7 +4501,6 @@
             this.TeamMSG3.Name = "TeamMSG3";
             this.TeamMSG3.Size = new System.Drawing.Size(250, 250);
             this.TeamMSG3.TabIndex = 25;
-            this.TeamMSG3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TeamMSG3.UseVisualStyleBackColor = true;
             this.TeamMSG3.MouseLeave += new System.EventHandler(this.TeamMSG3_MouseLeave);
             this.TeamMSG3.MouseHover += new System.EventHandler(this.TeamMSG3_MouseHover);
@@ -5473,15 +5401,15 @@
             // 
             this.SM_GmailBtn.AutoSize = true;
             this.SM_GmailBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SM_GmailBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SM_GmailBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.SM_GmailBtn.FlatAppearance.BorderSize = 3;
             this.SM_GmailBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SM_GmailBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.SM_GmailBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.SM_GmailBtn.IconChar = FontAwesome.Sharp.IconChar.Envelope;
-            this.SM_GmailBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SM_GmailBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.SM_GmailBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SM_GmailBtn.Location = new System.Drawing.Point(548, 51);
+            this.SM_GmailBtn.Location = new System.Drawing.Point(1571, 61);
             this.SM_GmailBtn.Name = "SM_GmailBtn";
             this.SM_GmailBtn.Size = new System.Drawing.Size(60, 60);
             this.SM_GmailBtn.TabIndex = 12;
@@ -5493,15 +5421,15 @@
             // 
             this.SM_IGBtn.AutoSize = true;
             this.SM_IGBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SM_IGBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SM_IGBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.SM_IGBtn.FlatAppearance.BorderSize = 3;
             this.SM_IGBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SM_IGBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.SM_IGBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.SM_IGBtn.IconChar = FontAwesome.Sharp.IconChar.Instagram;
-            this.SM_IGBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SM_IGBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.SM_IGBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SM_IGBtn.Location = new System.Drawing.Point(482, 51);
+            this.SM_IGBtn.Location = new System.Drawing.Point(1505, 61);
             this.SM_IGBtn.Name = "SM_IGBtn";
             this.SM_IGBtn.Size = new System.Drawing.Size(60, 60);
             this.SM_IGBtn.TabIndex = 11;
@@ -5513,15 +5441,15 @@
             // 
             this.SM_TwitterBtn.AutoSize = true;
             this.SM_TwitterBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SM_TwitterBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SM_TwitterBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.SM_TwitterBtn.FlatAppearance.BorderSize = 3;
             this.SM_TwitterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SM_TwitterBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.SM_TwitterBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.SM_TwitterBtn.IconChar = FontAwesome.Sharp.IconChar.Twitter;
-            this.SM_TwitterBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SM_TwitterBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.SM_TwitterBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SM_TwitterBtn.Location = new System.Drawing.Point(416, 51);
+            this.SM_TwitterBtn.Location = new System.Drawing.Point(1439, 61);
             this.SM_TwitterBtn.Name = "SM_TwitterBtn";
             this.SM_TwitterBtn.Size = new System.Drawing.Size(60, 60);
             this.SM_TwitterBtn.TabIndex = 10;
@@ -5531,10 +5459,11 @@
             // 
             // EnchanteFooterLogo
             // 
-            this.EnchanteFooterLogo.BackgroundImage = global::Enchante_Membership.Properties.Resources.Enchante_Logo_275x100;
-            this.EnchanteFooterLogo.Location = new System.Drawing.Point(58, 29);
+            this.EnchanteFooterLogo.BackgroundImage = global::Enchante_Membership.Properties.Resources.Enchante_Logo__200_x_200_px__Green;
+            this.EnchanteFooterLogo.Image = global::Enchante_Membership.Properties.Resources.Enchante_Logo__200_x_200_px__Green;
+            this.EnchanteFooterLogo.Location = new System.Drawing.Point(254, 11);
             this.EnchanteFooterLogo.Name = "EnchanteFooterLogo";
-            this.EnchanteFooterLogo.Size = new System.Drawing.Size(275, 100);
+            this.EnchanteFooterLogo.Size = new System.Drawing.Size(200, 200);
             this.EnchanteFooterLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.EnchanteFooterLogo.TabIndex = 9;
             this.EnchanteFooterLogo.TabStop = false;
@@ -5544,15 +5473,15 @@
             // 
             this.SM_FBBtn.AutoSize = true;
             this.SM_FBBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SM_FBBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SM_FBBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.SM_FBBtn.FlatAppearance.BorderSize = 3;
             this.SM_FBBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SM_FBBtn.Font = new System.Drawing.Font("TechnicBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.SM_FBBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.SM_FBBtn.IconChar = FontAwesome.Sharp.IconChar.Facebook;
-            this.SM_FBBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.SM_FBBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.SM_FBBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SM_FBBtn.Location = new System.Drawing.Point(350, 51);
+            this.SM_FBBtn.Location = new System.Drawing.Point(1373, 61);
             this.SM_FBBtn.Name = "SM_FBBtn";
             this.SM_FBBtn.Size = new System.Drawing.Size(60, 60);
             this.SM_FBBtn.TabIndex = 8;
@@ -5573,7 +5502,7 @@
             this.EnchanteAppointBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.EnchanteAppointBtn.IconColor = System.Drawing.Color.Black;
             this.EnchanteAppointBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteAppointBtn.Location = new System.Drawing.Point(541, 681);
+            this.EnchanteAppointBtn.Location = new System.Drawing.Point(115, 653);
             this.EnchanteAppointBtn.Name = "EnchanteAppointBtn";
             this.EnchanteAppointBtn.Size = new System.Drawing.Size(442, 77);
             this.EnchanteAppointBtn.TabIndex = 0;
@@ -5590,6 +5519,121 @@
             this.EDP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EDP1.TabIndex = 24;
             this.EDP1.TabStop = false;
+            // 
+            // EnchanteFooterAllRightsReserved
+            // 
+            this.EnchanteFooterAllRightsReserved.AutoSize = true;
+            this.EnchanteFooterAllRightsReserved.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteFooterAllRightsReserved.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.EnchanteFooterAllRightsReserved.Location = new System.Drawing.Point(689, 191);
+            this.EnchanteFooterAllRightsReserved.Name = "EnchanteFooterAllRightsReserved";
+            this.EnchanteFooterAllRightsReserved.Size = new System.Drawing.Size(498, 20);
+            this.EnchanteFooterAllRightsReserved.TabIndex = 30;
+            this.EnchanteFooterAllRightsReserved.Text = "©2024 Enchanté Group of Salons. All Rights Reserved.";
+            // 
+            // EnchanteFooterSalonHrs
+            // 
+            this.EnchanteFooterSalonHrs.AutoSize = true;
+            this.EnchanteFooterSalonHrs.Font = new System.Drawing.Font("TechnicBold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteFooterSalonHrs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.EnchanteFooterSalonHrs.Location = new System.Drawing.Point(1130, 34);
+            this.EnchanteFooterSalonHrs.Name = "EnchanteFooterSalonHrs";
+            this.EnchanteFooterSalonHrs.Size = new System.Drawing.Size(135, 24);
+            this.EnchanteFooterSalonHrs.TabIndex = 31;
+            this.EnchanteFooterSalonHrs.Text = "Salon Hours";
+            // 
+            // EnchanteFooterSalonTimeOpen
+            // 
+            this.EnchanteFooterSalonTimeOpen.AutoSize = true;
+            this.EnchanteFooterSalonTimeOpen.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteFooterSalonTimeOpen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.EnchanteFooterSalonTimeOpen.Location = new System.Drawing.Point(1130, 71);
+            this.EnchanteFooterSalonTimeOpen.Name = "EnchanteFooterSalonTimeOpen";
+            this.EnchanteFooterSalonTimeOpen.Size = new System.Drawing.Size(152, 40);
+            this.EnchanteFooterSalonTimeOpen.TabIndex = 32;
+            this.EnchanteFooterSalonTimeOpen.Text = "OPEN EVERYDAY\r\n8am - 5pm\r\n";
+            // 
+            // EnchanteFooterAddress
+            // 
+            this.EnchanteFooterAddress.AutoSize = true;
+            this.EnchanteFooterAddress.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteFooterAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.EnchanteFooterAddress.Location = new System.Drawing.Point(808, 71);
+            this.EnchanteFooterAddress.Name = "EnchanteFooterAddress";
+            this.EnchanteFooterAddress.Size = new System.Drawing.Size(239, 80);
+            this.EnchanteFooterAddress.TabIndex = 34;
+            this.EnchanteFooterAddress.Text = "69th flr. Enchanté Bldg. \r\nOrtigas Ave. Ext. \r\nManggahan, Pasig City \r\n1611 Phili" +
+    "ppines\r\n";
+            // 
+            // EnchanteFooterVisitLbl
+            // 
+            this.EnchanteFooterVisitLbl.AutoSize = true;
+            this.EnchanteFooterVisitLbl.Font = new System.Drawing.Font("TechnicBold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteFooterVisitLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.EnchanteFooterVisitLbl.Location = new System.Drawing.Point(808, 34);
+            this.EnchanteFooterVisitLbl.Name = "EnchanteFooterVisitLbl";
+            this.EnchanteFooterVisitLbl.Size = new System.Drawing.Size(199, 24);
+            this.EnchanteFooterVisitLbl.TabIndex = 33;
+            this.EnchanteFooterVisitLbl.Text = "Visit our Salon at";
+            // 
+            // EnchanteFooterTelNumEmailAdd
+            // 
+            this.EnchanteFooterTelNumEmailAdd.AutoSize = true;
+            this.EnchanteFooterTelNumEmailAdd.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteFooterTelNumEmailAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.EnchanteFooterTelNumEmailAdd.Location = new System.Drawing.Point(495, 71);
+            this.EnchanteFooterTelNumEmailAdd.Name = "EnchanteFooterTelNumEmailAdd";
+            this.EnchanteFooterTelNumEmailAdd.Size = new System.Drawing.Size(273, 40);
+            this.EnchanteFooterTelNumEmailAdd.TabIndex = 36;
+            this.EnchanteFooterTelNumEmailAdd.Text = "Tel. No.: (1101) 111-1010\r\nenchantesalon2024@gmail.com";
+            // 
+            // EnchanteFooterBookLbl
+            // 
+            this.EnchanteFooterBookLbl.AutoSize = true;
+            this.EnchanteFooterBookLbl.Font = new System.Drawing.Font("TechnicBold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteFooterBookLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.EnchanteFooterBookLbl.Location = new System.Drawing.Point(495, 34);
+            this.EnchanteFooterBookLbl.Name = "EnchanteFooterBookLbl";
+            this.EnchanteFooterBookLbl.Size = new System.Drawing.Size(220, 24);
+            this.EnchanteFooterBookLbl.TabIndex = 35;
+            this.EnchanteFooterBookLbl.Text = "Book an Appointment";
+            this.EnchanteFooterBookLbl.Click += new System.EventHandler(this.LoginRegisterHereLbl_Click);
+            // 
+            // EnchanteFooterCreateAcc
+            // 
+            this.EnchanteFooterCreateAcc.AutoSize = true;
+            this.EnchanteFooterCreateAcc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EnchanteFooterCreateAcc.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.EnchanteFooterCreateAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.EnchanteFooterCreateAcc.Location = new System.Drawing.Point(493, 111);
+            this.EnchanteFooterCreateAcc.Name = "EnchanteFooterCreateAcc";
+            this.EnchanteFooterCreateAcc.Size = new System.Drawing.Size(248, 40);
+            this.EnchanteFooterCreateAcc.TabIndex = 37;
+            this.EnchanteFooterCreateAcc.Text = "Or click here to create an \r\naccount and book online.";
+            this.EnchanteFooterCreateAcc.Click += new System.EventHandler(this.LoginRegisterHereLbl_Click);
+            // 
+            // AbtUsOurGoalEssay
+            // 
+            this.AbtUsOurGoalEssay.AutoEllipsis = true;
+            this.AbtUsOurGoalEssay.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AbtUsOurGoalEssay.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AbtUsOurGoalEssay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.AbtUsOurGoalEssay.Location = new System.Drawing.Point(908, 4378);
+            this.AbtUsOurGoalEssay.Name = "AbtUsOurGoalEssay";
+            this.AbtUsOurGoalEssay.Size = new System.Drawing.Size(781, 238);
+            this.AbtUsOurGoalEssay.TabIndex = 29;
+            this.AbtUsOurGoalEssay.Text = resources.GetString("AbtUsOurGoalEssay.Text");
+            // 
+            // AbtUsOurGoalLbl
+            // 
+            this.AbtUsOurGoalLbl.AutoSize = true;
+            this.AbtUsOurGoalLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.AbtUsOurGoalLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.AbtUsOurGoalLbl.Location = new System.Drawing.Point(901, 4333);
+            this.AbtUsOurGoalLbl.Name = "AbtUsOurGoalLbl";
+            this.AbtUsOurGoalLbl.Size = new System.Drawing.Size(150, 35);
+            this.AbtUsOurGoalLbl.TabIndex = 36;
+            this.AbtUsOurGoalLbl.Text = "Our Goal";
             // 
             // EnchanteMembership
             // 
@@ -5611,8 +5655,6 @@
             this.MemberUserAccPanel.PerformLayout();
             this.MemberScrollFooterStopperPanel.ResumeLayout(false);
             this.MemberScrollFooterStopperPanel.PerformLayout();
-            this.MemberFooter.ResumeLayout(false);
-            this.MemberFooter.PerformLayout();
             this.MemberNavBarPanel.ResumeLayout(false);
             this.MemberNavBarPanel.PerformLayout();
             this.EnchanteHomePage.ResumeLayout(false);
@@ -5620,6 +5662,7 @@
             this.EnchanteHomeNavBar.PerformLayout();
             this.EnchanteHomeScrollPanel.ResumeLayout(false);
             this.EnchanteHomeScrollPanel.PerformLayout();
+            this.TeamPanel.ResumeLayout(false);
             this.ServicePanel.ResumeLayout(false);
             this.ServiceFaceSkin.ResumeLayout(false);
             this.ServiceFaceSkin.PerformLayout();
@@ -5708,10 +5751,9 @@
             this.EnchanteFooterBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeServiceCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeMembershipCard)).EndInit();
-            this.TeamPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MemberFooterLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemberHeaderLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteHeaderLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbtUsPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteFooterLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EDP1)).EndInit();
             this.ResumeLayout(false);
@@ -5729,12 +5771,6 @@
         private FontAwesome.Sharp.IconButton MemberSignOut;
         private System.Windows.Forms.Panel MemberScrollFooterStopperPanel;
         private System.Windows.Forms.Label MemberScrollFooterStopperLbl;
-        private System.Windows.Forms.Panel MemberFooter;
-        private FontAwesome.Sharp.IconButton SM_EmailBtn1;
-        private FontAwesome.Sharp.IconButton SM_IGBtn1;
-        private FontAwesome.Sharp.IconButton SM_TwitterBtn1;
-        private System.Windows.Forms.PictureBox MemberFooterLogo;
-        private FontAwesome.Sharp.IconButton SM_FBBtn1;
         private System.Windows.Forms.Panel MemberNavBarPanel;
         private FontAwesome.Sharp.IconButton MemberAccUserBtn;
         private FontAwesome.Sharp.IconButton MemberSubAccUserBtn;
@@ -5748,7 +5784,6 @@
         private FontAwesome.Sharp.IconButton EnchanteHLoginBtn;
         private FontAwesome.Sharp.IconButton EnchanteAbtUsBtn;
         private FontAwesome.Sharp.IconButton EnchanteTeamBtn;
-        private FontAwesome.Sharp.IconButton EnchanteReviewBtn;
         private FontAwesome.Sharp.IconButton EnchanteMemberBtn;
         private FontAwesome.Sharp.IconButton EnchanteServiceBtn;
         private FontAwesome.Sharp.IconButton EnchanteHomeBtn;
@@ -6069,6 +6104,21 @@
         private FontAwesome.Sharp.IconButton TeamMSG1;
         private FontAwesome.Sharp.IconButton TeamMSG2;
         private FontAwesome.Sharp.IconButton TeamMSG3;
+        private System.Windows.Forms.PictureBox AbtUsPictureBox;
+        private System.Windows.Forms.Label AbtUsTagline;
+        private System.Windows.Forms.Timer PictureSlideTimer;
+        private System.Windows.Forms.Label AbtUsEssay;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label EnchanteFooterAllRightsReserved;
+        private System.Windows.Forms.Label EnchanteFooterSalonTimeOpen;
+        private System.Windows.Forms.Label EnchanteFooterSalonHrs;
+        private System.Windows.Forms.Label EnchanteFooterTelNumEmailAdd;
+        private System.Windows.Forms.Label EnchanteFooterBookLbl;
+        private System.Windows.Forms.Label EnchanteFooterAddress;
+        private System.Windows.Forms.Label EnchanteFooterVisitLbl;
+        private System.Windows.Forms.Label EnchanteFooterCreateAcc;
+        private System.Windows.Forms.Label AbtUsOurGoalLbl;
+        private System.Windows.Forms.Label AbtUsOurGoalEssay;
     }
 }
 
