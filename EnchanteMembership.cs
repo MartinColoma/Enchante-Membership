@@ -34,6 +34,11 @@ namespace Enchante_Membership
         //gender combo box
         private string[] genders = { "Male", "Female", "Prefer Not to Say" };
 
+        private Timer timer;
+        private int currentIndex = 0;
+        private Image[] images = { Properties.Resources.Enchante_Bldg,  Properties.Resources.Hair, 
+                                    Properties.Resources.Olga_Collection, Properties.Resources.download,
+                                    Properties.Resources.Green___Gold_Collection___Salon_Equipment_Centre}; // Replace with your resource names
         public EnchanteMembership()
         {
             InitializeComponent();
@@ -57,12 +62,39 @@ namespace Enchante_Membership
             SVIPGenderComboText.DropDownStyle = ComboBoxStyle.DropDownList;
             PremGenderComboText.Items.AddRange(genders);
             PremGenderComboText.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            // Initialize the timer
+            ScrollTimer.Start();
+            PictureSlideTimer.Start();
+
         }
 
         private void EnchanteMembership_Load(object sender, EventArgs e)
         {
             HomePanelReset();
 
+        }
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Prevent the form from closing.
+                e.Cancel = true;
+
+                DialogResult result = MessageBox.Show("Do you want to close the application?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.Dispose();
+
+                }
+
+
+            }
+        }
+        private void ScrollTimer_Tick(object sender, EventArgs e)
+        {
+            HomeUpdateButtonColors();
         }
         #region ID Generator Methods
         public class RegularClientIDGenerator
@@ -223,7 +255,47 @@ namespace Enchante_Membership
             //Reset Panel to Show Default
             HomePanelReset();
         }
+        private void EnchanteHomeScrollPanel_Scroll(object sender, ScrollEventArgs e)
+        {
+            HomeUpdateButtonColors();
+        }
+        private void HomeUpdateButtonColors()
+        {
+            int scrollPosition = EnchanteHomeScrollPanel.VerticalScroll.Value;
 
+            int homeThreshold = 887;
+            int serviceThreshold = 1774;
+            int membershipThreshold = 2661;
+            int teamThreshold = 3548;
+            int aboutThreshold = 4435;
+
+            // Home Button
+            EnchanteHomeBtn.ForeColor = scrollPosition < homeThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+            // Service Button
+            EnchanteServiceBtn.ForeColor = scrollPosition >= homeThreshold && scrollPosition < serviceThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+            // Membership Button
+            EnchanteMemberBtn.ForeColor = scrollPosition >= serviceThreshold && scrollPosition < membershipThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+            // Team Button
+            EnchanteTeamBtn.ForeColor = scrollPosition >= membershipThreshold && scrollPosition < teamThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+            // About Button
+            EnchanteAbtUsBtn.ForeColor = scrollPosition >= teamThreshold && scrollPosition < aboutThreshold ?
+                System.Drawing.Color.FromArgb(177, 183, 97) :
+                System.Drawing.Color.FromArgb(229, 229, 221);
+
+
+        }
         private void HomePanelReset()
         {
             ParentPanelShow.PanelShow(EnchanteHomePage);
@@ -238,24 +310,7 @@ namespace Enchante_Membership
 
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
 
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                // Prevent the form from closing.
-                e.Cancel = true;
-
-                DialogResult result = MessageBox.Show("Do you want to close the application?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    this.Dispose();
-
-                }
-
-
-            }
-        }
 
         private void ScrollToCoordinates(int x, int y)
         {
@@ -308,9 +363,11 @@ namespace Enchante_Membership
             //Change back to original
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+
+            PictureSlideTimer.Stop();
+
         }
 
         private void EnchanteServiceBtn_Click(object sender, EventArgs e)
@@ -330,9 +387,11 @@ namespace Enchante_Membership
             //Change back to original
             EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+
+            PictureSlideTimer.Stop();
+
         }
 
         private void EnchanteMemberBtn_Click(object sender, EventArgs e)
@@ -354,32 +413,9 @@ namespace Enchante_Membership
             //Change back to original
             EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-        }
-        private void EnchanteReviewBtn_Click(object sender, EventArgs e)
-        {
-            ReviewLocationAndColor();
-        }
-
-        private void ReviewLocationAndColor()
-        {
-            //Reset Panel to Show Default
-            HomePanelReset();
-
-            ////location scroll
-            //int serviceSectionY = 1800;
-            //ScrollToCoordinates(0, serviceSectionY);
-
-            //Change color once clicked
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            //Change back to original
-            EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            PictureSlideTimer.Stop();
         }
         private void EnchanteTeamBtn_Click(object sender, EventArgs e)
         {
@@ -388,12 +424,9 @@ namespace Enchante_Membership
 
         private void TeamLocationAndColor()
         {
-            //Reset Panel to Show Default
-            HomePanelReset();
-
             ////location scroll
-            //int serviceSectionY = 1800;
-            //ScrollToCoordinates(0, serviceSectionY);
+            int serviceSectionY = 2800;
+            ScrollToCoordinates(0, serviceSectionY);
 
             //Change color once clicked
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
@@ -401,22 +434,20 @@ namespace Enchante_Membership
             EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            PictureSlideTimer.Stop();
         }
         private void EnchanteAbtUsBtn_Click(object sender, EventArgs e)
         {
             AboutUsLocatonAndColor();
+
         }
 
         private void AboutUsLocatonAndColor()
         {
-            //Reset Panel to Show Default
-            HomePanelReset();
-
-            ////location scroll
-            //int serviceSectionY = 1800;
-            //ScrollToCoordinates(0, serviceSectionY);
+            //location scroll
+            int serviceSectionY = 3800;
+            ScrollToCoordinates(0, serviceSectionY);
 
             //Change color once clicked
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
@@ -424,8 +455,8 @@ namespace Enchante_Membership
             EnchanteHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            EnchanteReviewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            PictureSlideTimer.Stop();
         }
         private void EnchanteHomeBtn_MouseHover(object sender, EventArgs e)
         {
@@ -441,11 +472,6 @@ namespace Enchante_Membership
         private void EnchanteMemberBtn_MouseHover(object sender, EventArgs e)
         {
             iconToolTip.SetToolTip(EnchanteMemberBtn, "Membership");
-        }
-
-        private void EnchanteReviewBtn_MouseHover(object sender, EventArgs e)
-        {
-            iconToolTip.SetToolTip(EnchanteReviewBtn, "Reviews");
         }
 
         private void EnchanteTeamBtn_MouseHover(object sender, EventArgs e)
@@ -558,11 +584,11 @@ namespace Enchante_Membership
             {
                 //Test Member
                 LoginEmailAddErrorLbl.Visible = false;
-                LoginPassErrorLbl.Visible = true;
+                LoginPassErrorLbl.Visible = false;
                 MessageBox.Show("Welcome back, Member.", "Login Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MemberHomePanelReset();
-                //MemberNameLbl.Text = "Member Tester";
-                //MemberIDNumLbl.Text = "MT-0000-0000";
+                MemberNameLbl.Text = "Member Tester";
+                MemberIDNumLbl.Text = "MT-0000-0000";
                 logincredclear();
 
                 return;
@@ -572,7 +598,7 @@ namespace Enchante_Membership
                 //Test Member
                 LoginEmailAddErrorLbl.Visible = true;
                 LoginPassErrorLbl.Visible = false;
-                LoginEmailAddErrorLbl.Text = "EMAIL ADDRESS DOES NOT EXIST";
+                LoginEmailAddErrorLbl.Text = "Email Address Does Not\nMatch Any Existing Email";
 
                 return;
             }
@@ -614,12 +640,30 @@ namespace Enchante_Membership
                 //db connection query
                 string email = LoginEmailAddText.Text;
                 string password = LoginPassText.Text;
-                string passchecker = HashHelper.HashString(password); // Assuming "enteredPassword" is supposed to be "LoginPassText"
+                string passchecker = HashHelper.HashString(password); 
                 string membertype;
 
                 try //user member login
                 {
                     connection.Open();
+
+                    string queryCheckEmail = "SELECT COUNT(*) FROM membershipaccount WHERE EmailAdd = @email";
+
+                    using (MySqlCommand cmdCheckEmail = new MySqlCommand(queryCheckEmail, connection))
+                    {
+                        cmdCheckEmail.Parameters.AddWithValue("@email", email);
+
+                        int emailCount = Convert.ToInt32(cmdCheckEmail.ExecuteScalar());
+
+                        if (emailCount == 0)
+                        {
+                            // Email does not exist in the database
+                            LoginEmailAddErrorLbl.Visible = true;
+                            LoginPassErrorLbl.Visible = false;
+                            LoginEmailAddErrorLbl.Text = "Email Address Does Not\nMatch Any Existing Email";
+                            return;
+                        }
+                    }
 
                     string queryApproved = "SELECT FirstName, LastName, MemberIDNumber, MembershipType, HashedPass FROM membershipaccount WHERE EmailAdd = @email";
 
@@ -722,7 +766,13 @@ namespace Enchante_Membership
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message, "Login Verifier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string errorMessage = "An error occurred: " + ex.Message + "\n\n" + ex.StackTrace;
+
+                    // Copy the error message to the clipboard
+                    Clipboard.SetText(errorMessage);
+
+                    // Show a message box indicating the error and informing the user that the error message has been copied to the clipboard
+                    MessageBox.Show($"An error occurred. {errorMessage}.", "Login Verification Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -740,18 +790,6 @@ namespace Enchante_Membership
             LoginPassErrorLbl.Visible = false;
             LoginPassText.UseSystemPasswordChar = true;
 
-        }
-
-        private void MemberSignOut_Click(object sender, EventArgs e)
-        {
-            LogoutChecker();
-        }
-
-
-
-        private void AdminSignOutBtn_Click(object sender, EventArgs e)
-        {
-            LogoutChecker();
         }
 
         private void LogoutChecker()
@@ -2179,5 +2217,282 @@ namespace Enchante_Membership
 
         }
         #endregion
+
+        #region Customer Member Dashboard Starts Here
+        private void MemberAccUserBtn_Click(object sender, EventArgs e)
+        {
+            if (MemberUserAccPanel.Visible == false)
+            {
+                MemberUserAccPanel.Visible = true;
+
+            }
+            else
+            {
+                MemberUserAccPanel.Visible = false;
+            }
+        }
+        private void MemberSignOut_Click(object sender, EventArgs e)
+        {
+            LogoutChecker();
+        }
+        #endregion
+
+        #region Staff Team 
+        private void TeamHS1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Angela Cruz\n";
+            message += "A junior hair stylist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamHS1, message);
+            TeamHS1.Text = "Angela Cruz";
+        }
+
+        private void TeamHS2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Maria Santos\n";
+            message += "An assistant hair stylist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamHS2, message);
+            TeamHS2.Text = "Maria Santos";
+        }
+
+        private void TeamHS3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Rhydel Estrada\n";
+            message += "A senior hair stylist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamHS3, message);
+            TeamHS3.Text = "Rhydel Estrada";
+        }
+
+        private void TeamFS1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Juan Dela Cruz\n";
+            message += "A senior aesthetician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamFS1, message);
+            TeamFS1.Text = "Juan Dela Cruz";
+        }
+
+        private void TeamFS2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Katrina Reyes\n";
+            message += "A nurse aesthetician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamFS2, message);
+            TeamFS2.Text = "Katrina Reyes";
+        }
+
+        private void TeamFS3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Miguel Fernandez\n";
+            message += "A junior aesthetician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamFS3, message);
+            TeamFS3.Text = "Miguel Fernandez";
+        }
+
+        private void TeamNC1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Carlos Gonzales\n";
+            message += "An assistant nail technician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamNC1, message);
+            TeamNC1.Text = "Carlos Gonzales";
+        }
+
+        private void TeamNC2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Andrea Villanueva\n";
+            message += "An junior nail technician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamNC2, message);
+            TeamNC2.Text = "Andrea Villanueva";
+        }
+
+        private void TeamNC3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Sarah Lim\n";
+            message += "A senior nail technician in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamNC3, message);
+            TeamNC3.Text = "Sarah Lim";
+        }
+
+        private void TeamSPA1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Luis Cruz\n";
+            message += "A senior spa therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamSPA1, message);
+            TeamSPA1.Text = "Luis Cruz";
+        }
+
+        private void TeamSPA2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Maricel Santos\n";
+            message += "An assistant spa therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamSPA2, message);
+            TeamSPA2.Text = "Maricel Santos";
+        }
+
+        private void TeamSPA3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Rafael Garcia\n";
+            message += "A junior spa therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamSPA3, message);
+            TeamSPA3.Text = "Rafael Garcia";
+        }
+
+        private void TeamMSG1_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Antonio Reyes\n";
+            message += "A junior massage therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamMSG1, message);
+            TeamMSG1.Text = "Antonio Reyes";
+        }
+
+        private void TeamMSG2_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Jasmine Castro\n";
+            message += "An assistant massage therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamMSG2, message);
+            TeamMSG2.Text = "Jasmine Castro";
+        }
+
+        private void TeamMSG3_MouseHover(object sender, EventArgs e)
+        {
+            string message = "Sofia Ramirez\n";
+            message += "A senior massage therapist in ENCHANTÉ Salon\n";
+
+            iconToolTip.SetToolTip(TeamMSG3, message);
+            TeamMSG3.Text = "Sofia Ramirez";
+        }
+
+        private void TeamHS1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamHS2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamHS3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamFS1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamFS2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamFS3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamNC1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamNC2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamNC3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamSPA1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamSPA2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamSPA3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamMSG1_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamMSG2_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void TeamMSG3_MouseLeave(object sender, EventArgs e)
+        {
+            StaffNameClear();
+        }
+
+        private void StaffNameClear()
+        {
+            TeamHS1.Text = "";
+            TeamHS2.Text = "";
+            TeamHS3.Text = "";
+            TeamFS1.Text = "";
+            TeamFS2.Text = "";
+            TeamFS3.Text = "";
+            TeamNC1.Text = "";
+            TeamNC2.Text = "";
+            TeamNC3.Text = "";
+            TeamSPA1.Text = "";
+            TeamSPA2.Text = "";
+            TeamSPA3.Text = "";
+            TeamMSG1.Text = "";
+            TeamMSG2.Text = "";
+            TeamMSG3.Text = "";
+        }
+
+
+
+        #endregion
+
+        #region About US
+
+
+
+        #endregion
+
+        private void PictureSlideTimer_Tick(object sender, EventArgs e)
+        {
+
+            DisplayNextImage();
+
+        }
+
+        private void DisplayNextImage()
+        {
+            // Load the next image
+            Image image = images[currentIndex];
+            AbtUsPictureBox.Image = image;
+            EDP1.Image = image;
+
+            // Increment the index, looping back to the beginning if necessary
+            currentIndex = (currentIndex + 1) % images.Length;
+        }
     }
 }

@@ -160,5 +160,125 @@
   <ItemGroup>
     <None Include="Resources\Enchante Logo 275x100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lobby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30 People Are Sharing Seemingly Innocent Questions That Broke Their Heart A .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabernetqween.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Das Dark Naturalist Salon Design von Comfortel Check more at https___mac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo %28200 x 200 px%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30 People Are Sharing Seemingly Innocent Questions That Broke Their Heart A 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabernetqween1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Das Dark Naturalist Salon Design von Comfortel Check more at https___mac1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo %28200 x 200 px%29 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo 275x1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guia-para-personalizar-tu-masaje.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lobby1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nail Tech Career.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outofstock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Young man having facial mask in beauty parlour.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maria Santos - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maricel Santos - Spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Miguel Fernandez - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rafael Garcia  - Spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rhydel Estrada - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sarah Lim - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sofia Ramirez - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Andrea Villanueva - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Angela Cruz - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antonio Reyes - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carlos Gonzales - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jasmine Castro - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Juan Dela Cruz - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Katrina Reyes - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luis Cruz - Spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Bldg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Olga Collection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green manicure nail table with gold frame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green &amp; Gold Collection _ Salon Equipment Centre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo %28200 x 200 px%29 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo %28200 x 200 px%29 Green.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
