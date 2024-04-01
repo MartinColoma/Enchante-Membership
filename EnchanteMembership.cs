@@ -4040,12 +4040,11 @@ namespace EnchanteMembership
             string timePrintedFile = currentDate.ToString("hh-mm-ss");
             string transactNum = RecApptTransNumText.Text;
             string clientName = MemberAccInfoPersonalNameText.Text;
-            string apptNote = "This form will serves as your proof appointment with Enchanté Salon. " +
+            string apptNote = "This form will serves as your proof of appointment with Enchanté Salon. " +
                                 "Kindly present this form and one (1) Valid ID in our frontdesk and our " +
-                                "receptionist shall attend to your needs.";
+                                "receptionist shall attend to your needs right away.";
             string total = ServiceTotalPrice.Text.ToString();
-            string apptDate = RecApptBookingDatePicker.Value.ToString();
-            string apptTime = RecApptBookingTimeComboBox.Text;
+
 
             // Increment the file name
 
@@ -4129,8 +4128,8 @@ namespace EnchanteMembership
 
                     doc.Add(new LineSeparator()); // Dotted line
 
-                    PdfPTable columnHeaderTable = new PdfPTable(4);
-                    columnHeaderTable.SetWidths(new float[] { 30f, 40f, 20f, 20f }); // Column widths
+                    PdfPTable columnHeaderTable = new PdfPTable(5);
+                    columnHeaderTable.SetWidths(new float[] { 30f, 40f, 10f, 20f, 20f }); // Column widths
                     columnHeaderTable.DefaultCell.Border = PdfPCell.NO_BORDER;
                     columnHeaderTable.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
                     columnHeaderTable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -4139,6 +4138,8 @@ namespace EnchanteMembership
                     columnHeaderTable.AddCell(new Phrase("Services", boldfont));
                     columnHeaderTable.AddCell(new Phrase("Qty.", boldfont));
                     columnHeaderTable.AddCell(new Phrase("Total Price", boldfont));
+                    columnHeaderTable.AddCell(new Phrase("Time", boldfont));
+
                     doc.Add(columnHeaderTable);
 
                     doc.Add(new LineSeparator()); // Dotted line
@@ -4156,10 +4157,11 @@ namespace EnchanteMembership
 
                             string staffID = row.Cells["RecApptStaffSelected"].Value?.ToString();
                             string itemTotalcost = row.Cells["RecApptServicePrice"].Value?.ToString();
+                            string selectedTime = row.Cells["RecApptTimeSelected"].Value?.ToString();
 
                             // Add cells to the item table
-                            PdfPTable serviceTable = new PdfPTable(4);
-                            serviceTable.SetWidths(new float[] { 30f, 40f, 20f, 20f }); // Column widths
+                            PdfPTable serviceTable = new PdfPTable(5);
+                            serviceTable.SetWidths(new float[] { 30f, 40f, 10f, 20f, 20f }); // Column widths
                             serviceTable.DefaultCell.Border = PdfPCell.NO_BORDER;
                             serviceTable.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
                             serviceTable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -4168,6 +4170,8 @@ namespace EnchanteMembership
                             serviceTable.AddCell(new Phrase(serviceName, font));
                             serviceTable.AddCell(new Phrase("1", font));
                             serviceTable.AddCell(new Phrase(itemTotalcost, font));
+                            serviceTable.AddCell(new Phrase(selectedTime, font));
+
                             doc.Add(serviceTable);
 
                         }
@@ -4193,9 +4197,8 @@ namespace EnchanteMembership
                     amount.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
                     amount.DefaultCell.HorizontalAlignment = Element.ALIGN_LEFT; // Align cell content justified
                     amount.AddCell(new Phrase($"Appointment Date: ", font));
-                    amount.AddCell(new Phrase($"{apptDate}", font));
-                    amount.AddCell(new Phrase($"Appointment Time:", font));
-                    amount.AddCell(new Phrase($"{apptTime}", font));
+                    amount.AddCell(new Phrase($"{datetoday}", font));
+
                     amount.AddCell(new Phrase($"Amount to be Paid: ", font));
                     amount.AddCell(new Phrase($"{total}", font));
                     amount.AddCell(new Phrase($"Total # of Service(s):", font));
