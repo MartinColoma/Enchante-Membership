@@ -1,9 +1,13 @@
-﻿using MySql.Data.MySqlClient;
+﻿using iTextSharp.text.pdf.draw;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
@@ -26,6 +30,8 @@ namespace Enchante_Membership
         private ParentCard ParentPanelShow;
         private Registration Registration; //Membership Type Card
         private ServiceCard Service; //Service Card
+        private MemberAccountParentCard Member;
+
         //tool tip
         private System.Windows.Forms.ToolTip iconToolTip;
 
@@ -36,9 +42,17 @@ namespace Enchante_Membership
 
         private Timer timer;
         private int currentIndex = 0;
-        private Image[] images = { Properties.Resources.Enchante_Bldg,  Properties.Resources.Hair, 
+        private System.Drawing.Image[] images = { Properties.Resources.Enchante_Bldg,  Properties.Resources.Hair, 
                                     Properties.Resources.Olga_Collection, Properties.Resources.download,
                                     Properties.Resources.Green___Gold_Collection___Salon_Equipment_Centre}; // Replace with your resource names
+
+        public string filterstaffbyservicecategory;
+        public bool haschosenacategory = false;
+        public bool servicecategorychanged;
+        public string selectedStaffID;
+        //private bool IsPrefferredTimeSchedComboBoxModified = false;
+        public string membertype;
+
         public EnchanteMembership()
         {
             InitializeComponent();
@@ -54,6 +68,7 @@ namespace Enchante_Membership
             ParentPanelShow = new ParentCard(EnchanteHomePage, EnchanteMemberPage);
             Registration = new Registration(MembershipPlanPanel, RegularPlanPanel, PremiumPlanPanel, SVIPPlanPanel);
             Service = new ServiceCard(ServiceType, ServiceHairStyling, ServiceFaceSkin, ServiceNailCare, ServiceSpa, ServiceMassage);
+            Member = new MemberAccountParentCard(MemAccInfoPanel, MemAccApptPanel, MemAccHomePanel, MemAccReviewPanel, MemAccBillingPanel);
 
             //gender combobox
             RegularGenderComboText.Items.AddRange(genders);
@@ -307,6 +322,7 @@ namespace Enchante_Membership
         private void MemberHomePanelReset()
         {
             ParentPanelShow.PanelShow(EnchanteMemberPage);
+            Member.PanelShow(MemAccHomePanel);
 
         }
 
@@ -665,7 +681,8 @@ namespace Enchante_Membership
                         }
                     }
 
-                    string queryApproved = "SELECT FirstName, LastName, MemberIDNumber, MembershipType, HashedPass FROM membershipaccount WHERE EmailAdd = @email";
+                    string queryApproved = "SELECT FirstName, LastName, MemberIDNumber, MembershipType, HashedPass, AccountCreated, EmailAdd, CPNumber, Birthday, Age, MembershipType " +
+                                            "FROM membershipaccount WHERE EmailAdd = @email";
 
                     using (MySqlCommand cmdApproved = new MySqlCommand(queryApproved, connection))
                     {
@@ -675,9 +692,20 @@ namespace Enchante_Membership
                         {
                             if (readerApproved.Read())
                             {
+                                //personal info
                                 string name = readerApproved["FirstName"].ToString();
                                 string lastname = readerApproved["LastName"].ToString();
+                                string CPNum = readerApproved["CPNumber"].ToString();
+                                string bday = readerApproved["Birthday"].ToString();
+                                string age = readerApproved["Age"].ToString();
+                                string type = readerApproved["MembershipType"].ToString();
+
+                                //account settings
+                                string memberEmail = readerApproved["EmailAdd"].ToString();
                                 string ID = readerApproved["MemberIDNumber"].ToString();
+                                string accountCreated = readerApproved["AccountCreated"].ToString();
+
+
                                 membertype = readerApproved["MembershipType"].ToString();
 
                                 if (membertype == "Regular")
@@ -692,8 +720,22 @@ namespace Enchante_Membership
                                     {
                                         MessageBox.Show($"Welcome back, Regular Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         MemberSubAccUserBtn.Visible = false;
-                                        MemberNameLbl.Text = name + " " + lastname;
+                                        MemberNameLbl.Text = $"{name} {lastname}";
                                         MemberIDNumLbl.Text = ID;
+
+                                        //personal info
+                                        MemberAccInfoPersonalNameText.Text = $"{name} {lastname}";
+                                        MemberAccInfoPersonalCPNumText.Text = CPNum;
+                                        MemberAccInfoPersonalBdayText.Text = bday;
+                                        MemberAccInfoPersonalAgeText.Text = age;
+
+                                        //account settings
+                                        MemberAccInfoPersonalEAddText.Text = memberEmail;
+                                        MemberAccInfoPersonalPassText.Text = password;
+                                        MemberAccInfoPersonalIDNumText.Text = ID;
+                                        MemberAccInfoPersonalCreatedText.Text = accountCreated;
+                                        MemberAccInfoPersonalTypeText.Text = type;
+
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -719,6 +761,21 @@ namespace Enchante_Membership
                                         MessageBox.Show($"Welcome back, Premium Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         MemberNameLbl.Text = name + " " + lastname;
                                         MemberIDNumLbl.Text = ID;
+
+
+                                        //personal info
+                                        MemberAccInfoPersonalNameText.Text = $"{name} {lastname}";
+                                        MemberAccInfoPersonalCPNumText.Text = CPNum;
+                                        MemberAccInfoPersonalBdayText.Text = bday;
+                                        MemberAccInfoPersonalAgeText.Text = age;
+
+                                        //account settings
+                                        MemberAccInfoPersonalEAddText.Text = memberEmail;
+                                        MemberAccInfoPersonalPassText.Text = password;
+                                        MemberAccInfoPersonalIDNumText.Text = ID;
+                                        MemberAccInfoPersonalCreatedText.Text = accountCreated;
+                                        MemberAccInfoPersonalTypeText.Text = type;
+
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -744,6 +801,22 @@ namespace Enchante_Membership
                                         MessageBox.Show($"Welcome back, SVIP Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         MemberNameLbl.Text = name + " " + lastname;
                                         MemberIDNumLbl.Text = ID;
+
+
+                                        //personal info
+                                        MemberAccInfoPersonalNameText.Text = $"{name} {lastname}";
+                                        MemberAccInfoPersonalCPNumText.Text = CPNum;
+                                        MemberAccInfoPersonalBdayText.Text = bday;
+                                        MemberAccInfoPersonalAgeText.Text = age;
+
+                                        //account settings
+                                        MemberAccInfoPersonalEAddText.Text = memberEmail;
+                                        MemberAccInfoPersonalPassText.Text = password;
+                                        MemberAccInfoPersonalIDNumText.Text = ID;
+                                        MemberAccInfoPersonalCreatedText.Text = accountCreated;
+                                        MemberAccInfoPersonalTypeText.Text = type;
+
+
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -799,11 +872,11 @@ namespace Enchante_Membership
             {
                 EnchanteLoginForm.Visible = false;
                 ParentPanelShow.PanelShow(EnchanteHomePage);
-                membercategory = "";
 
 
                 MemberUserAccPanel.Visible = false;
-
+                RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(533, 885);
+                RecApptAnyStaffLbl.Location = new System.Drawing.Point(590, 885);
             }
         }
 
@@ -2234,7 +2307,55 @@ namespace Enchante_Membership
         private void MemberSignOut_Click(object sender, EventArgs e)
         {
             LogoutChecker();
+            MemApptTransactionClear();
+            //// Check if positions have been set already during logout
+            //if (MemberAccInfoPersonalTypeText.Text == "Regular" && RecApptAnyStaffToggleSwitch.Visible)
+            //{
+            //    // No need to set positions again if already visible
+            //    return;
+            //}
+            //else if (MemberAccInfoPersonalTypeText.Text == "PREMIUM" && RecApptAnyStaffToggleSwitch.Visible)
+            //{
+            //    // No need to set positions again if already visible
+            //    return;
+            //}
+            //else if (MemberAccInfoPersonalTypeText.Text == "SVIP" && RecApptAnyStaffToggleSwitch.Visible)
+            //{
+            //    // No need to set positions again if already visible
+            //    return;
+            //}
+
+            //// Your existing code for setting positions during logout
+            //if (MemberAccInfoPersonalTypeText.Text == "Regular")
+            //{
+            //    RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(749, 885);
+            //    RecApptAnyStaffLbl.Location = new System.Drawing.Point(806, 885);
+            //    RecApptAnyStaffToggleSwitch.Visible = true;
+            //    RecApptAnyStaffLbl.Visible = true;
+            //    RecApptPreferredStaffLbl.Visible = false;
+            //    RecApptPreferredStaffToggleSwitch.Visible = false;
+            //}
+            //else if (MemberAccInfoPersonalTypeText.Text == "PREMIUM")
+            //{
+            //    RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(533, 885);
+            //    RecApptAnyStaffLbl.Location = new System.Drawing.Point(590, 885);
+            //    RecApptAnyStaffToggleSwitch.Visible = true;
+            //    RecApptAnyStaffLbl.Visible = true;
+            //    RecApptPreferredStaffLbl.Visible = true;
+            //    RecApptPreferredStaffToggleSwitch.Visible = true;
+            //}
+            //else if (MemberAccInfoPersonalTypeText.Text == "SVIP")
+            //{
+            //    RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(533, 885);
+            //    RecApptAnyStaffLbl.Location = new System.Drawing.Point(590, 885);
+            //    RecApptAnyStaffToggleSwitch.Visible = true;
+            //    RecApptAnyStaffLbl.Visible = true;
+            //    RecApptPreferredStaffLbl.Visible = true;
+            //    RecApptPreferredStaffToggleSwitch.Visible = true;
+            //}
         }
+
+
         #endregion
 
         #region Staff Team 
@@ -2472,11 +2593,6 @@ namespace Enchante_Membership
         #endregion
 
         #region About US
-
-
-
-        #endregion
-
         private void PictureSlideTimer_Tick(object sender, EventArgs e)
         {
 
@@ -2487,12 +2603,1632 @@ namespace Enchante_Membership
         private void DisplayNextImage()
         {
             // Load the next image
-            Image image = images[currentIndex];
+            System.Drawing.Image image = images[currentIndex];
             AbtUsPictureBox.Image = image;
             EDP1.Image = image;
 
             // Increment the index, looping back to the beginning if necessary
             currentIndex = (currentIndex + 1) % images.Length;
+        }
+
+
+        #endregion
+
+        #region Member Panel Starts Here
+
+        #endregion
+
+        private void MemberNameLbl_Click(object sender, EventArgs e)
+        {
+            Member.PanelShow(MemAccInfoPanel);
+            MemberUserAccPanel.Visible = false;
+            MemberAccInfoPersonalPassText.PasswordChar = '*';
+        }
+
+        private void MemberHomeBtn_Click(object sender, EventArgs e)
+        {
+            Member.PanelShow(MemAccHomePanel);
+            
+        }
+        private bool positionsSetForRegularBtn = false;
+        private bool positionsSetForPremiumBtn = false;
+        private bool positionsSetForSVIPBtn = false;
+        private void MemberAppointBtn_Click(object sender, EventArgs e)
+        {
+            Member.PanelShow(MemAccApptPanel);
+            MemApptTransactionClear();
+            LoadBookingTimes();
+            RecApptBookingDatePicker.MinDate = DateTime.Today;
+            isappointment = true;
+
+            
+
+            if (MemberAccInfoPersonalTypeText.Text == "Regular")
+            {
+                RecApptTransNumText.Text = TransactionNumberGenerator.RegAppointGenerateTransNumberDefault();
+
+                // Check if positions have been set already
+                if (!positionsSetForRegularBtn)
+                {
+                    RecApptAnyStaffToggleSwitch.Visible = true;
+                    RecApptAnyStaffLbl.Visible = true;
+                    RecApptPreferredStaffLbl.Visible = false;
+                    RecApptPreferredStaffToggleSwitch.Visible = false;
+                    RecApptAnyStaffLbl.Visible = false;
+                    RecApptAnyStaffToggleSwitch.Visible = false;
+                    RecApptAnyStaffLblRegular.Visible = true;
+                    RecApptAnyStaffToggleSwitchRegular.Visible = true;
+
+                    positionsSetForRegularBtn = true;
+                }
+            }
+            else if (MemberAccInfoPersonalTypeText.Text == "PREMIUM")
+            {
+                RecApptTransNumText.Text = TransactionNumberGenerator.PremAppointGenerateTransNumberDefault();
+
+                // Check if positions have been set already
+                if (!positionsSetForPremiumBtn)
+                {
+                    RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(533, 885);
+                    RecApptAnyStaffLbl.Location = new System.Drawing.Point(590, 885);
+                    RecApptAnyStaffToggleSwitch.Visible = true;
+                    RecApptAnyStaffLbl.Visible = true;
+                    RecApptPreferredStaffLbl.Visible = true;
+                    RecApptPreferredStaffToggleSwitch.Visible = true;
+                    RecApptAnyStaffLbl.Visible = true;
+                    RecApptAnyStaffToggleSwitch.Visible = true;
+                    RecApptAnyStaffLblRegular.Visible = false;
+                    RecApptAnyStaffToggleSwitchRegular.Visible = false;
+                    // Set the flag to indicate positions have been set
+                    positionsSetForPremiumBtn = true;
+                }
+            }
+            else if (MemberAccInfoPersonalTypeText.Text == "SVIP")
+            {
+                RecApptTransNumText.Text = TransactionNumberGenerator.SVIPAppointGenerateTransNumberDefault();
+
+                // Check if positions have been set already
+                if (!positionsSetForSVIPBtn)
+                {
+                    RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(533, 885);
+                    RecApptAnyStaffLbl.Location = new System.Drawing.Point(590, 885);
+                    RecApptAnyStaffToggleSwitch.Visible = true;
+                    RecApptAnyStaffLbl.Visible = true;
+                    RecApptPreferredStaffLbl.Visible = true;
+                    RecApptPreferredStaffToggleSwitch.Visible = true;
+                    RecApptAnyStaffLbl.Visible = true;
+                    RecApptAnyStaffToggleSwitch.Visible = true;
+                    RecApptAnyStaffLblRegular.Visible = false;
+                    RecApptAnyStaffToggleSwitchRegular.Visible = false;
+
+                    // Set the flag to indicate positions have been set
+                    positionsSetForSVIPBtn = true;
+                }
+            }
+        }
+        private void ToggleBtnLocatory()
+        {
+            // Define boolean flags to track if positions have been set
+            
+        }
+        #region Receptionsit Walk-in Appointment
+
+        //ApptMember
+        private void RecApptPanelExitBtn_Click(object sender, EventArgs e)
+        {
+            Member.PanelShow(MemAccHomePanel);
+        }
+
+        //ApptMember
+        string[] bookingTimes = new string[]
+        {
+            "Select a booking time", "08:00 am", "08:30 am", "09:00 am",
+            "09:30 am", "10:00 am", "10:30 am", "11:00 am", "11:30 am",
+            "01:00 pm", "01:30 pm", "02:00 pm", "02:30 pm", "03:00 pm",
+        };
+
+        //ApptMember
+        private void RecApptCatHSBtn_Click(object sender, EventArgs e)
+        {
+            filterstaffbyservicecategory = "Hair Styling";
+            haschosenacategory = true;
+            if (RecApptPreferredStaffToggleSwitch.Checked == true)
+            {
+                RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                LoadAppointmentPreferredStaffComboBox();
+            }
+            LoadBookingTimes();
+            RecApptHairStyle();
+        }
+
+        //ApptMember
+        private void RecApptCatFSBtn_Click(object sender, EventArgs e)
+        {
+            filterstaffbyservicecategory = "Face & Skin";
+            haschosenacategory = true;
+            if (RecApptPreferredStaffToggleSwitch.Checked == true)
+            {
+                RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                LoadAppointmentPreferredStaffComboBox();
+            }
+            LoadBookingTimes();
+            RecApptFace();
+        }
+
+        //ApptMember
+        private void RecApptCatNCBtn_Click(object sender, EventArgs e)
+        {
+            filterstaffbyservicecategory = "Nail Care";
+            haschosenacategory = true;
+            if (RecApptPreferredStaffToggleSwitch.Checked == true)
+            {
+                RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                LoadAppointmentPreferredStaffComboBox();
+            }
+            LoadBookingTimes();
+            RecApptNail();
+        }
+
+        //ApptMember
+        private void RecApptCatSpaBtn_Click(object sender, EventArgs e)
+        {
+            filterstaffbyservicecategory = "Spa";
+            haschosenacategory = true;
+            if (RecApptPreferredStaffToggleSwitch.Checked == true)
+            {
+                RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                LoadAppointmentPreferredStaffComboBox();
+            }
+            LoadBookingTimes();
+            RecApptSpa();
+        }
+
+        //ApptMember
+        private void RecApptCatMassBtn_Click(object sender, EventArgs e)
+        {
+            filterstaffbyservicecategory = "Massage";
+            haschosenacategory = true;
+            if (RecApptPreferredStaffToggleSwitch.Checked == true)
+            {
+                RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                LoadAppointmentPreferredStaffComboBox();
+            }
+            LoadBookingTimes();
+            RecApptMassage();
+        }
+
+        //ApptMember
+        private void RecApptHairStyle()
+        {
+            if (RecApptCatHSRB.Checked == false)
+            {
+                RecApptCatHSRB.Visible = true;
+                RecApptCatHSRB.Checked = true;
+                RecApptLoadServiceTypeComboBox("Hair Styling");
+
+                RecApptCatFSRB.Visible = false;
+                RecApptCatNCRB.Visible = false;
+                RecApptCatSpaRB.Visible = false;
+                RecApptCatMassRB.Visible = false;
+                RecApptCatFSRB.Checked = false;
+                RecApptCatNCRB.Checked = false;
+                RecApptCatSpaRB.Checked = false;
+                RecApptCatMassRB.Checked = false;
+                return;
+            }
+            else if (RecApptCatHSRB.Checked == true)
+            {
+                RecApptCatHSRB.Visible = true;
+                RecApptCatHSRB.Checked = true;
+                RecApptLoadServiceTypeComboBox("Hair Styling");
+
+                RecApptCatFSRB.Visible = false;
+                RecApptCatNCRB.Visible = false;
+                RecApptCatSpaRB.Visible = false;
+                RecApptCatMassRB.Visible = false;
+                RecApptCatFSRB.Checked = false;
+                RecApptCatNCRB.Checked = false;
+                RecApptCatSpaRB.Checked = false;
+                RecApptCatMassRB.Checked = false;
+            }
+        }
+        //ApptMember
+        private void RecApptFace()
+        {
+            if (RecApptCatFSRB.Checked == false)
+            {
+                RecApptCatFSRB.Visible = true;
+                RecApptCatFSRB.Checked = true;
+                RecApptLoadServiceTypeComboBox("Face & Skin");
+
+                RecApptCatHSRB.Visible = false;
+                RecApptCatNCRB.Visible = false;
+                RecApptCatSpaRB.Visible = false;
+                RecApptCatMassRB.Visible = false;
+                RecApptCatHSRB.Checked = false;
+                RecApptCatNCRB.Checked = false;
+                RecApptCatSpaRB.Checked = false;
+                RecApptCatMassRB.Checked = false;
+                return;
+            }
+            else if (RecApptCatFSRB.Checked == true)
+            {
+                RecApptCatFSRB.Visible = true;
+                RecApptCatFSRB.Checked = true;
+            }
+        }
+        //ApptMember
+        private void RecApptNail()
+        {
+            if (RecApptCatNCRB.Checked == false)
+            {
+                RecApptCatNCRB.Visible = true;
+                RecApptCatNCRB.Checked = true;
+                RecApptLoadServiceTypeComboBox("Nail Care");
+
+                RecApptCatHSRB.Visible = false;
+                RecApptCatFSRB.Visible = false;
+                RecApptCatSpaRB.Visible = false;
+                RecApptCatMassRB.Visible = false;
+                RecApptCatHSRB.Checked = false;
+                RecApptCatFSRB.Checked = false;
+                RecApptCatSpaRB.Checked = false;
+                RecApptCatMassRB.Checked = false;
+                return;
+            }
+            else if (RecApptCatNCRB.Checked == true)
+            {
+                RecApptCatNCRB.Visible = true;
+                RecApptCatNCRB.Checked = true;
+            }
+        }
+        //ApptMember
+        private void RecApptSpa()
+        {
+            if (RecApptCatSpaRB.Checked == false)
+            {
+                RecApptCatSpaRB.Visible = true;
+                RecApptCatSpaRB.Checked = true;
+                RecApptLoadServiceTypeComboBox("Spa");
+
+                RecApptCatHSRB.Visible = false;
+                RecApptCatFSRB.Visible = false;
+                RecApptCatNCRB.Visible = false;
+                RecApptCatMassRB.Visible = false;
+                RecApptCatHSRB.Checked = false;
+                RecApptCatFSRB.Checked = false;
+                RecApptCatNCRB.Checked = false;
+                RecApptCatMassRB.Checked = false;
+                return;
+            }
+            else if (RecApptCatSpaRB.Checked == true)
+            {
+                RecApptCatSpaRB.Visible = true;
+                RecApptCatSpaRB.Checked = true;
+            }
+        }
+        //ApptMember
+        private void RecApptMassage()
+        {
+            if (RecApptCatMassRB.Checked == false)
+            {
+                RecApptCatMassRB.Visible = true;
+                RecApptCatMassRB.Checked = true;
+                RecApptLoadServiceTypeComboBox("Massage");
+
+                RecApptCatHSRB.Visible = false;
+                RecApptCatFSRB.Visible = false;
+                RecApptCatNCRB.Visible = false;
+                RecApptCatSpaRB.Visible = false;
+                RecApptCatHSRB.Checked = false;
+                RecApptCatFSRB.Checked = false;
+                RecApptCatNCRB.Checked = false;
+                RecApptCatSpaRB.Checked = false;
+                return;
+            }
+            else if (RecApptCatMassRB.Checked == true)
+            {
+                RecApptCatMassRB.Visible = true;
+                RecApptCatMassRB.Checked = true;
+            }
+        }
+
+        //ApptMember
+        public void RecApptLoadHairStyleType()
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+                {
+                    connection.Open();
+
+                    // Filter and sort the data by FoodType
+                    string sql = "SELECT * FROM `services` WHERE Category = 'Hair Styling' ORDER BY Category";
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable);
+
+                        RecApptServiceTypeDGV.Columns.Clear();
+
+
+                        RecApptServiceTypeDGV.DataSource = dataTable;
+
+                        RecApptServiceTypeDGV.Columns[0].Visible = false; //service category
+                        RecApptServiceTypeDGV.Columns[1].Visible = false; // service type
+                        RecApptServiceTypeDGV.Columns[2].Visible = false; // service ID
+                        RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        RecApptServiceTypeDGV.ClearSelection();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error occurred: " + e.Message, "Cashier Burger Item List");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public void RecApptFaceSkinType()
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+                {
+                    connection.Open();
+
+                    // Filter and sort the data by FoodType
+                    string sql = "SELECT * FROM `services` WHERE Category = 'Face & Skin' ORDER BY Category";
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable);
+
+                        RecApptServiceTypeDGV.Columns.Clear();
+
+
+                        RecApptServiceTypeDGV.DataSource = dataTable;
+
+                        RecApptServiceTypeDGV.Columns[0].Visible = false;
+                        RecApptServiceTypeDGV.Columns[1].Visible = false;
+                        RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        RecApptServiceTypeDGV.ClearSelection();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error occurred: " + e.Message, "Cashier Burger Item List");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        //ApptMember
+        public void RecApptNailCareType()
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+                {
+                    connection.Open();
+
+                    // Filter and sort the data by FoodType
+                    string sql = "SELECT * FROM `services` WHERE Category = 'Nail Care' ORDER BY Category";
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable);
+
+                        RecApptServiceTypeDGV.Columns.Clear();
+
+
+                        RecApptServiceTypeDGV.DataSource = dataTable;
+
+                        RecApptServiceTypeDGV.Columns[0].Visible = false;
+                        RecApptServiceTypeDGV.Columns[1].Visible = false;
+                        RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        RecApptServiceTypeDGV.ClearSelection();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error occurred: " + e.Message, "Cashier Burger Item List");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        //ApptMember
+        public void RecApptSpaType()
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+                {
+                    connection.Open();
+
+                    // Filter and sort the data by FoodType
+                    string sql = "SELECT * FROM `services` WHERE Category = 'Spa' ORDER BY Category";
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable);
+
+                        RecApptServiceTypeDGV.Columns.Clear();
+
+
+                        RecApptServiceTypeDGV.DataSource = dataTable;
+
+                        RecApptServiceTypeDGV.Columns[0].Visible = false;
+                        RecApptServiceTypeDGV.Columns[1].Visible = false;
+                        RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        RecApptServiceTypeDGV.ClearSelection();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error occurred: " + e.Message, "Cashier Burger Item List");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        //ApptMember
+        public void RecApptMassageType()
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+                {
+                    connection.Open();
+
+                    // Filter and sort the data by FoodType
+                    string sql = "SELECT * FROM `services` WHERE Category = 'Massage' ORDER BY Category";
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable);
+
+                        RecApptServiceTypeDGV.Columns.Clear();
+
+
+                        RecApptServiceTypeDGV.DataSource = dataTable;
+
+                        RecApptServiceTypeDGV.Columns[0].Visible = false;
+                        RecApptServiceTypeDGV.Columns[1].Visible = false;
+                        RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        RecApptServiceTypeDGV.ClearSelection();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error occurred: " + e.Message, "Cashier Burger Item List");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        //ApptMember
+        private void RecApptLoadServiceTypeComboBox(string selectedCategory)
+        {
+            // Filter and add the relevant service types based on the selected category
+            switch (selectedCategory)
+            {
+                case "Hair Styling":
+                    RecApptLoadHairStyleType();
+                    break;
+                case "Nail Care":
+                    RecApptNailCareType();
+                    break;
+                case "Face & Skin":
+                    RecApptFaceSkinType();
+                    break;
+                case "Massage":
+                    RecApptMassageType();
+                    break;
+                case "Spa":
+                    RecApptSpaType();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        //ApptMember
+        
+
+        private void RecApptServiceTypeDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RecApptAddService();
+        }
+
+        //ApptMember
+        private void RecApptSelectServiceAndStaffBtn_Click(object sender, EventArgs e)
+        {
+            RecApptAddService();
+        }
+
+        //ApptMember
+        private void RecApptAnyStaffToggleSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            //if (MemberAccInfoPersonalTypeText.Text == "Regular")
+            //{
+
+            //    if (haschosenacategory == false)
+            //    {
+            //        ShowNoServiceCategoryChosenWarningMessage();
+            //        RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitch_CheckedChanged;
+            //        RecApptAnyStaffToggleSwitch.Checked = false;
+            //        RecApptAttendingStaffLbl.Visible = false;
+            //        RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+            //        RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitch_CheckedChanged;
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        if (RecApptAnyStaffToggleSwitch.Checked)
+            //        {
+            //            RecApptPreferredStaffToggleSwitch.Checked = false;
+            //            RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
+            //            RecApptAttendingStaffLbl.Visible = false;
+            //            RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+            //            selectedStaffID = "Anyone";
+            //            RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+            //            RecApptPreferredStaffLbl.Visible = false;
+            //            RecApptPreferredStaffToggleSwitch.Visible = false;
+            //        }
+            //    }
+
+            //    return;
+            //}
+            //else
+            if (MemberAccInfoPersonalTypeText.Text == "PREMIUM")
+            {
+                if (haschosenacategory == false)
+                {
+                    ShowNoServiceCategoryChosenWarningMessage();
+                    RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitch_CheckedChanged;
+                    RecApptAnyStaffToggleSwitch.Checked = false;
+                    RecApptAttendingStaffLbl.Visible = false;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                    RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitch_CheckedChanged;
+                    return;
+                }
+                else
+                {
+                    if (RecApptAnyStaffToggleSwitch.Checked)
+                    {
+                        RecApptPreferredStaffToggleSwitch.Checked = false;
+                        RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
+                        RecApptAttendingStaffLbl.Visible = false;
+                        RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                        selectedStaffID = "Anyone";
+                        RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                        RecApptPreferredStaffLbl.Visible = true;
+                        RecApptPreferredStaffToggleSwitch.Visible = true;
+                    }
+                }
+                return;
+            }
+            else if (MemberAccInfoPersonalTypeText.Text == "SVIP")
+            {
+                if (haschosenacategory == false)
+                {
+                    ShowNoServiceCategoryChosenWarningMessage();
+                    RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitch_CheckedChanged;
+                    RecApptAnyStaffToggleSwitch.Checked = false;
+                    RecApptAttendingStaffLbl.Visible = false;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                    RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitch_CheckedChanged;
+                    return;
+                }
+                else
+                {
+                    if (RecApptAnyStaffToggleSwitch.Checked)
+                    {
+                        RecApptPreferredStaffToggleSwitch.Checked = false;
+                        RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
+                        RecApptAttendingStaffLbl.Visible = false;
+                        RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                        selectedStaffID = "Anyone";
+                        RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                    }
+                }
+                return;
+
+            }
+        }
+        private void RecApptAnyStaffToggleSwitchRegular_CheckedChanged(object sender, EventArgs e)
+        {
+            
+
+                if (haschosenacategory == false)
+                {
+                    ShowNoServiceCategoryChosenWarningMessage();
+                    RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
+                    RecApptAnyStaffToggleSwitch.Checked = false;
+                    RecApptAttendingStaffLbl.Visible = false;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                    RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
+                    return;
+                }
+                else
+                {
+                    if (RecApptAnyStaffToggleSwitchRegular.Checked)
+                    {
+                        RecApptPreferredStaffToggleSwitch.Checked = false;
+                        RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
+                        RecApptAttendingStaffLbl.Visible = false;
+                        RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                        selectedStaffID = "Anyone";
+                        RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                    }
+                }
+
+                return;
+            
+
+        }
+        //ApptMember
+        private void RecApptPreferredStaffToggleSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (haschosenacategory == false)
+            {
+                ShowNoServiceCategoryChosenWarningMessage();
+                RecApptPreferredStaffToggleSwitch.CheckedChanged -= RecApptPreferredStaffToggleSwitch_CheckedChanged;
+                RecApptPreferredStaffToggleSwitch.Checked = false;
+                RecApptAttendingStaffLbl.Visible = false;
+                RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                RecApptPreferredStaffToggleSwitch.CheckedChanged += RecApptPreferredStaffToggleSwitch_CheckedChanged;
+                return;
+            }
+            else
+            {
+                if (RecApptPreferredStaffToggleSwitch.Checked && RecApptAvailableAttendingStaffSelectedComboBox.SelectedText != "Select a Preferred Staff")
+                {
+                    RecApptAnyStaffToggleSwitch.Checked = false;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Enabled = true;
+                    RecApptAttendingStaffLbl.Visible = true;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Visible = true;
+                    LoadAppointmentPreferredStaffComboBox();
+                }
+                else
+                {
+                    selectedStaffID = "Anyone";
+                    RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
+                    RecApptAttendingStaffLbl.Visible = false;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                }
+            }
+        }
+
+        private void RecApptAttendingStaffSelectedComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void RecApptAddService()
+        {
+
+
+            if (RecApptServiceTypeDGV.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a service.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (string.IsNullOrEmpty(selectedStaffID))
+            {
+                MessageBox.Show("Please select a prefered staff or toggle anyone ", "No Selected Staff ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (RecApptBookingTimeComboBox.SelectedIndex == 0 || RecApptBookingTimeComboBox.SelectedItem == null || RecApptBookingTimeComboBox.SelectedItem.ToString() == "Cutoff Time")
+            {
+                MessageBox.Show("Please select a booking time", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            DataGridViewRow selectedRow = RecApptServiceTypeDGV.SelectedRows[0];
+
+            string SelectedCategory = selectedRow.Cells[0].Value.ToString();
+            string ServiceID = selectedRow.Cells[2].Value.ToString();
+            string ServiceName = selectedRow.Cells[3].Value.ToString();
+            string ServicePrice = selectedRow.Cells[6].Value.ToString();
+            string ServiceTime = RecApptBookingTimeComboBox.SelectedItem.ToString();
+            string serviceID = selectedRow.Cells[2]?.Value?.ToString(); // Use null-conditional operator to avoid NullReferenceException
+
+
+            if (RecApptServiceTypeDGV.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a service.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (selectedRow == null)
+            {
+                MessageBox.Show("Selected row is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(serviceID))
+            {
+                MessageBox.Show("Service ID is null or empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (RecApptAvailableAttendingStaffSelectedComboBox.SelectedItem?.ToString() == "Select a Preferred Staff") // 4942
+            {
+                MessageBox.Show("Please select a preferred staff or toggle anyone.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            foreach (DataGridViewRow row in RecApptSelectedServiceDGV.Rows)
+            {
+                string existingServiceID = row.Cells["RecApptServiceID"]?.Value?.ToString(); // Use null-conditional operator
+
+                if (serviceID == existingServiceID)
+                {
+                    MessageBox.Show("This service is already selected.", "Duplicate Service", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+
+
+
+            DialogResult result = MessageBox.Show("Are you sure you want to add this service?", "Confirm Service Selection", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Add the row
+                DataGridViewRow NewSelectedServiceRow = RecApptSelectedServiceDGV.Rows[RecApptSelectedServiceDGV.Rows.Add()];
+
+                string appointmentDate = RecApptBookingDatePicker.Value.ToString("MM-dd-yyyy dddd");
+                string serviceCategory = SelectedCategory;
+                int latestprioritynumber = GetLargestPriorityNum(appointmentDate, serviceCategory);
+
+                NewSelectedServiceRow.Cells["RecApptServicePrice"].Value = ServicePrice;
+                NewSelectedServiceRow.Cells["RecApptServiceCategory"].Value = SelectedCategory;
+                NewSelectedServiceRow.Cells["RecApptSelectedService"].Value = ServiceName;
+                NewSelectedServiceRow.Cells["RecApptServiceID"].Value = ServiceID;
+                NewSelectedServiceRow.Cells["RecApptTimeSelected"].Value = ServiceTime;
+                NewSelectedServiceRow.Cells["RecApptPriorityNumber"].Value = latestprioritynumber;
+                NewSelectedServiceRow.Cells["RecApptStaffSelected"].Value = selectedStaffID;
+                QueTypeIdentifier(NewSelectedServiceRow.Cells["RecApptQueType"]);
+
+                RecApptServiceTypeDGV.ClearSelection();
+
+            }
+        }
+        //ApptMember
+        private void RecApptDeleteSelectedServiceAndStaffBtn_Click(object sender, EventArgs e)
+        {
+            if (RecApptSelectedServiceDGV.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    DataGridViewRow selectedRow = RecApptSelectedServiceDGV.SelectedRows[0];
+                    RecApptSelectedServiceDGV.Rows.Remove(selectedRow);
+                }
+            }
+        }
+
+
+        //ApptMember
+        private void RecApptBookTransactBtn_Click(object sender, EventArgs e)
+        {
+            DateTime selectedDate = RecApptBookingDatePicker.Value.Date;
+            DateTime currentDate = DateTime.Today;
+            if (RecApptBookingTimeComboBox.SelectedItem == null || RecApptBookingTimeComboBox.SelectedIndex == 0)
+            {
+                MessageBox.Show("Please select a booking time.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (RecApptSelectedServiceDGV != null && RecApptSelectedServiceDGV.Rows.Count == 0)
+            {
+                MessageBox.Show("Select a service first to proceed on booking a transaction.", "Ooooops!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            else
+            {
+                RecApptServiceHistoryDB(RecApptSelectedServiceDGV); //service history db
+                ReceptionistAppointmentDB(); //appointment transaction db
+                RecApptTransactNumRefresh();
+                MemApptTransactionClear();            }
+        }
+
+        //ApptMember
+        private void RecApptServiceHistoryDB(DataGridView RecApptSelectedServiceDGV)
+        {
+            DateTime pickedDate = RecApptBookingDatePicker.Value;
+            string transactionNum = RecApptTransNumText.Text;
+            string transactionType = "Walk-in Appointment Transaction";
+            string serviceStatus = "Pending";
+
+            //booked values
+            string bookedDate = pickedDate.ToString("MM-dd-yyyy dddd"); //bookedDate
+
+            //basic info
+            string CustomerName = MemberAccInfoPersonalNameText.Text; //client name
+
+            if (RecApptSelectedServiceDGV.Rows.Count > 0)
+            {
+                try
+                {
+                    using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+                    {
+                        connection.Open();
+
+                        foreach (DataGridViewRow row in RecApptSelectedServiceDGV.Rows)
+                        {
+                            if (row.Cells["RecApptSelectedService"].Value != null)
+                            {
+                                string serviceName = row.Cells["RecApptSelectedService"].Value.ToString();
+                                string serviceCat = row.Cells["RecApptServiceCategory"].Value.ToString();
+                                string serviceID = row.Cells["RecApptServiceID"].Value.ToString();
+                                decimal servicePrice = Convert.ToDecimal(row.Cells["RecApptServicePrice"].Value);
+                                string selectedStaff = row.Cells["RecApptStaffSelected"].Value.ToString();
+                                string quepriorityNumber = row.Cells["RecApptPriorityNumber"].Value.ToString();
+                                string queType = row.Cells["RecApptQueType"].Value.ToString();
+                                string bookedTime = row.Cells["RecApptTimeSelected"].Value.ToString();
+
+                                string insertQuery = "INSERT INTO servicehistory (TransactionNumber, TransactionType, ServiceStatus, AppointmentDate, AppointmentTime, ClientName, " +
+                                                     "ServiceCategory, ServiceID, SelectedService, ServicePrice, PreferredStaff, PriorityNumber," +
+                                                     "QueType" +
+                                                     ") VALUES (@Transact, @TransactType, @status, @appointDate, @appointTime, @name, @serviceCat, @ID, @serviceName, @servicePrice, " +
+                                                     "@preferredstaff, @queprioritynumber, @quetype)";
+
+                                MySqlCommand cmd = new MySqlCommand(insertQuery, connection);
+                                cmd.Parameters.AddWithValue("@Transact", transactionNum);
+                                cmd.Parameters.AddWithValue("@TransactType", transactionType);
+                                cmd.Parameters.AddWithValue("@status", serviceStatus);
+                                cmd.Parameters.AddWithValue("@appointDate", bookedDate);
+                                cmd.Parameters.AddWithValue("@appointTime", bookedTime);
+                                cmd.Parameters.AddWithValue("@name", CustomerName);
+                                cmd.Parameters.AddWithValue("@serviceCat", serviceCat);
+                                cmd.Parameters.AddWithValue("@ID", serviceID);
+                                cmd.Parameters.AddWithValue("@serviceName", serviceName);
+                                cmd.Parameters.AddWithValue("@servicePrice", servicePrice);
+                                cmd.Parameters.AddWithValue("@preferredstaff", selectedStaff);
+                                cmd.Parameters.AddWithValue("@queprioritynumber", quepriorityNumber);
+                                cmd.Parameters.AddWithValue("@quetype", queType);
+
+                                cmd.ExecuteNonQuery();
+
+                                if (selectedStaff != "Anyone")
+                                {
+                                    string insertScheduleQuery = "INSERT INTO staffappointmentschedule (EmployeeID, AppointmentDate, AppointmentTime,TransactionNumber,ServiceName,ServiceCategory,ServiceID) VALUES (@EmployeeID, @AppointmentDate, @AppointmentTime, @Transact, " +
+                                                                 "@serviceName, @serviceCat, @ID )";
+                                    MySqlCommand insertScheduleCommand = new MySqlCommand(insertScheduleQuery, connection);
+                                    insertScheduleCommand.Parameters.AddWithValue("@EmployeeID", selectedStaff);
+                                    insertScheduleCommand.Parameters.AddWithValue("@AppointmentDate", bookedDate);
+                                    insertScheduleCommand.Parameters.AddWithValue("@AppointmentTime", bookedTime);
+                                    insertScheduleCommand.Parameters.AddWithValue("@Transact", transactionNum);
+                                    insertScheduleCommand.Parameters.AddWithValue("@serviceName", serviceName);
+                                    insertScheduleCommand.Parameters.AddWithValue("@serviceCat", serviceCat);
+                                    insertScheduleCommand.Parameters.AddWithValue("@ID", serviceID);
+                                    insertScheduleCommand.ExecuteNonQuery();
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Receptionist Service failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No items to insert into the database.", "Service");
+            }
+
+        }
+
+        //ApptMember
+        private void ReceptionistAppointmentDB()
+        {
+            DateTime appointmentdate = RecApptBookingDatePicker.Value;
+            string transactionNum = RecApptTransNumText.Text;
+            DateTime currentDate = DateTime.Today;
+            string serviceStatus = "Pending";
+            string transactType = "Walk-in Appointment";
+            string appointmentStatus = "Unconfirmed";
+
+            //basic info
+            string CustomerName = MemberAccInfoPersonalNameText.Text; //client name
+            string CustomerMobileNumber = MemberAccInfoPersonalCPNumText.Text; //client cp num
+
+            //booked values
+            string appointmentbookedDate = appointmentdate.ToString("MM-dd-yyyy dddd"); //bookedDate
+            string appointmentbookedTime = RecApptBookingTimeComboBox.SelectedItem?.ToString(); //bookedTime
+            string bookedDate = currentDate.ToString("MM-dd-yyyy dddd"); //bookedDate
+            string bookedTime = currentDate.ToString("hh:mm tt"); //bookedTime
+            string bookedBy = MemberAccInfoPersonalNameText.Text; //booked by
+
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+                {
+                    connection.Open();
+                    string insertQuery = "INSERT INTO appointment (TransactionNumber, TransactionType, ServiceStatus, AppointmentDate, AppointmentTime, AppointmentStatus, " +
+                                        "ClientName, ClientCPNum, ServiceDuration, BookedBy, BookedDate, BookedTime)" +
+                                        "VALUES (@Transact, @TransactType, @status, @appointDate, @appointTime, @appointStatus, @clientName, @clientCP, @duration, @bookedBy, @bookedDate, @bookedTime)";
+
+                    MySqlCommand cmd = new MySqlCommand(insertQuery, connection);
+                    cmd.Parameters.AddWithValue("@Transact", transactionNum);
+                    cmd.Parameters.AddWithValue("@TransactType", transactType);
+                    cmd.Parameters.AddWithValue("@status", serviceStatus);
+                    cmd.Parameters.AddWithValue("@appointDate", appointmentbookedDate);
+                    cmd.Parameters.AddWithValue("@appointTime", appointmentbookedTime);
+                    cmd.Parameters.AddWithValue("@appointStatus", appointmentStatus);
+                    cmd.Parameters.AddWithValue("@clientName", CustomerName);
+                    cmd.Parameters.AddWithValue("@clientCP", CustomerMobileNumber);
+                    cmd.Parameters.AddWithValue("@duration", "00:00:00");
+                    cmd.Parameters.AddWithValue("@bookedBy", bookedBy);
+                    cmd.Parameters.AddWithValue("@bookedDate", bookedDate);
+                    cmd.Parameters.AddWithValue("@bookedTime", bookedTime);
+
+
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Service successfully booked.", "Hooray!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Member.PanelShow(MemAccHomePanel);
+                //RecWalkinServiceHistoryDB();
+            }
+            catch (MySqlException ex)
+            {
+                // Handle MySQL database exception
+                MessageBox.Show("An error occurred: " + ex.Message, "Manager booked transaction failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Make sure to close the connection
+                connection.Close();
+            }
+        }
+
+        //ApptMember
+        private int GetLargestPriorityNum(string appointmentDate, string serviceCategory)
+        {
+            using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+            {
+                connection.Open();
+
+                using (MySqlCommand command = connection.CreateCommand())
+                {
+                    string query = "SELECT MAX(CAST(PriorityNumber AS UNSIGNED)) FROM servicehistory WHERE AppointmentDate = @AppointmentDate AND ServiceCategory = @ServiceCategory";
+                    command.CommandText = query;
+
+                    command.Parameters.AddWithValue("@AppointmentDate", appointmentDate);
+                    command.Parameters.AddWithValue("@ServiceCategory", serviceCategory);
+
+                    object result = command.ExecuteScalar();
+                    int latestprioritynumber = result != DBNull.Value ? Convert.ToInt32(result) : 0;
+
+                    if (latestprioritynumber > 0)
+                    {
+                        latestprioritynumber++;
+                    }
+                    else
+                    {
+                        latestprioritynumber = 1;
+                    }
+
+                    return latestprioritynumber;
+                }
+            }
+        }
+
+
+        //ApptMember
+        private void RecApptTransactNumRefresh()
+        {
+            if (MemberAccInfoPersonalTypeText.Text == "Regular")
+            {
+                RecApptTransNumText.Text = TransactionNumberGenerator.RegAppointGenerateTransNumberInc();
+                return;
+            }
+            else if (MemberAccInfoPersonalTypeText.Text == "PREMIUM")
+            {
+                RecApptTransNumText.Text = TransactionNumberGenerator.PremAppointGenerateTransNumberInc();
+                return;
+            }
+            else if (MemberAccInfoPersonalTypeText.Text == "SVIP")
+            {
+                RecApptTransNumText.Text = TransactionNumberGenerator.SVIPAppointGenerateTransNumberInc();
+                return;
+            }
+        }
+        public class TransactionNumberGenerator
+        {
+            private static int transactNumber = 1; // Starting order number
+
+            public static string RegAppointGenerateTransNumberDefault()
+            {
+                string datePart = DateTime.Now.ToString("MMddhhmm");
+
+                string orderPart = transactNumber.ToString("D3");
+
+                string ordersessionNumber = $"R-A-{datePart}-{orderPart}";
+
+                return ordersessionNumber;
+            }
+            //ApptMember
+            public static string RegAppointGenerateTransNumberInc()
+            {
+                string datePart = DateTime.Now.ToString("MMddhhmm");
+
+                // Use only the order number
+                string orderPart = transactNumber.ToString("D3");
+
+                // Increment the order number for the next order
+                transactNumber++;
+                string ordersessionNumber = $"R-A-{datePart}-{orderPart}";
+
+                return ordersessionNumber;
+            }
+            public static string PremAppointGenerateTransNumberDefault()
+            {
+                string datePart = DateTime.Now.ToString("MMddhhmm");
+
+                string orderPart = transactNumber.ToString("D3");
+
+                string ordersessionNumber = $"PREM-A-{datePart}-{orderPart}";
+
+                return ordersessionNumber;
+            }
+            //ApptMember
+            public static string PremAppointGenerateTransNumberInc()
+            {
+                string datePart = DateTime.Now.ToString("MMddhhmm");
+
+                // Use only the order number
+                string orderPart = transactNumber.ToString("D3");
+
+                // Increment the order number for the next order
+                transactNumber++;
+                string ordersessionNumber = $"PREM-A-{datePart}-{orderPart}";
+
+                return ordersessionNumber;
+            }
+            public static string SVIPAppointGenerateTransNumberDefault()
+            {
+                string datePart = DateTime.Now.ToString("MMddhhmm");
+
+                string orderPart = transactNumber.ToString("D3");
+
+                string ordersessionNumber = $"SVIP-A-{datePart}-{orderPart}";
+
+                return ordersessionNumber;
+            }
+            //ApptMember
+            public static string SVIPAppointGenerateTransNumberInc()
+            {
+                string datePart = DateTime.Now.ToString("MMddhhmm");
+
+                // Use only the order number
+                string orderPart = transactNumber.ToString("D3");
+
+                // Increment the order number for the next order
+                transactNumber++;
+                string ordersessionNumber = $"SVIP-A-{datePart}-{orderPart}";
+
+                return ordersessionNumber;
+            }
+        }
+        //ApptMember
+        private void RecApptTransactionClear()
+        {
+            RecApptCatHSRB.Checked = false;
+            RecApptCatFSRB.Checked = false;
+            RecApptCatNCRB.Checked = false;
+            RecApptCatSpaRB.Checked = false;
+            RecApptCatMassRB.Checked = false;
+            RecApptSelectedServiceDGV.Rows.Clear();
+            RecApptBookingTimeComboBox.Items.Clear();
+            RecApptBookingDatePicker.Value = DateTime.Today;
+            RecApptPreferredStaffToggleSwitch.Checked = false;
+            RecApptAnyStaffToggleSwitch.Checked = false;
+            isappointment = false;
+        }
+
+        //ApptMember
+        private void RecApptBookingDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            LoadBookingTimes();
+        }
+
+        //ApptMember
+        private void LoadBookingTimes()
+        {
+            DateTime selectedDate = RecApptBookingDatePicker.Value.Date;
+            string selectedDateString = selectedDate.ToString("MM-dd-yyyy dddd");
+            string serviceCategory = filterstaffbyservicecategory;
+
+            // Retrieve matching appointment times based on selected date and service category
+            List<string> matchingTimes = RetrieveMatchingAppointmentTimes(selectedDateString, serviceCategory);
+
+            // Clear existing items in the ComboBox
+            RecApptBookingTimeComboBox.Items.Clear();
+
+            // Check if the selected date is today and if it's past 3 PM
+            if (selectedDate == DateTime.Today && DateTime.Now.TimeOfDay > new TimeSpan(15, 0, 0))
+            {
+                // Add "Cutoff Time" to ComboBox and disable it
+                RecApptBookingTimeComboBox.Items.Add("Cutoff Time");
+                RecApptBookingTimeComboBox.SelectedIndex = 0;
+                RecApptBookingTimeComboBox.Enabled = false;
+            }
+            else
+            {
+                // Add regular booking times for the selected date and service category
+                foreach (string time in bookingTimes)
+                {
+                    // Add the time to the ComboBox
+                    RecApptBookingTimeComboBox.Items.Add(time);
+                    RecApptBookingTimeComboBox.SelectedIndex = 0;
+
+                }
+
+                // Remove booked times beyond the limit
+                Dictionary<string, int> timeCount = new Dictionary<string, int>();
+                foreach (string time in matchingTimes)
+                {
+                    if (!timeCount.ContainsKey(time))
+                    {
+                        timeCount[time] = 0;
+                    }
+                    timeCount[time]++;
+                }
+
+                foreach (var pair in timeCount)
+                {
+                    if (pair.Value >= 3)
+                    {
+                        RecApptBookingTimeComboBox.Items.Remove(pair.Key);
+                    }
+                }
+
+                RecApptBookingTimeComboBox.Enabled = true;
+            }
+        }
+
+        //ApptMember
+        private List<string> RetrieveMatchingAppointmentTimes(string selectedDate, string serviceCategory)
+        {
+            List<string> matchingTimes = new List<string>();
+
+            string query = "SELECT AppointmentTime FROM servicehistory WHERE AppointmentDate = @SelectedDate AND ServiceCategory = @ServiceCategory AND (QueType = 'AnyonePriority' OR QueType = 'PreferredPriority')";
+
+            using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+            {
+                connection.Open();
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@SelectedDate", selectedDate);
+                    command.Parameters.AddWithValue("@ServiceCategory", serviceCategory);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string appointmentTime = reader.GetString("AppointmentTime");
+                            matchingTimes.Add(appointmentTime);
+                        }
+                    }
+                }
+            }
+            return matchingTimes;
+        }
+        //ApptMember
+
+        public void LoadAppointmentPreferredStaffComboBox()
+        {
+            using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+            {
+                string bookedtime = RecApptBookingTimeComboBox.SelectedItem.ToString();
+                string appointmentDate = RecApptBookingDatePicker.Value.ToString("MM-dd-yyyy dddd");
+
+                connection.Open();
+
+                string query = "SELECT EmployeeID, Gender, LastName, FirstName FROM systemusers WHERE EmployeeCategory = @FilterValue";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@FilterValue", filterstaffbyservicecategory);
+
+                List<string> employeeIDs = new List<string>();
+                List<string> genders = new List<string>();
+                List<string> lastNames = new List<string>();
+                List<string> firstNames = new List<string>();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string employeeID = reader.GetString("EmployeeID");
+                        string gender = reader.GetString("Gender");
+                        string lastName = reader.GetString("LastName");
+                        string firstName = reader.GetString("FirstName");
+
+                        employeeIDs.Add(employeeID);
+                        genders.Add(gender);
+                        lastNames.Add(lastName);
+                        firstNames.Add(firstName);
+                    }
+                }
+
+                RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
+                RecApptAvailableAttendingStaffSelectedComboBox.Items.Add("Select a Preferred Staff");
+
+                for (int i = 0; i < employeeIDs.Count; i++)
+                {
+                    string employeeID = employeeIDs[i];
+                    string gender = genders[i];
+                    string lastName = lastNames[i];
+                    string firstName = firstNames[i];
+
+                    string comboBoxItem = $"{employeeID}-{gender}-{lastName}, {firstName}";
+
+                    string scheduleQuery = "SELECT 1 FROM staffappointmentschedule WHERE EmployeeID = @EmployeeID AND AppointmentDate = @AppointmentDate AND AppointmentTime = @AppointmentTime LIMIT 1";
+                    MySqlCommand scheduleCommand = new MySqlCommand(scheduleQuery, connection);
+                    scheduleCommand.Parameters.AddWithValue("@EmployeeID", employeeID);
+                    scheduleCommand.Parameters.AddWithValue("@AppointmentDate", appointmentDate);
+                    scheduleCommand.Parameters.AddWithValue("@AppointmentTime", bookedtime);
+                    object result = scheduleCommand.ExecuteScalar();
+
+                    if (result == null)
+                    {
+                        RecApptAvailableAttendingStaffSelectedComboBox.Items.Add(comboBoxItem);
+                    }
+                }
+            }
+
+            RecApptAvailableAttendingStaffSelectedComboBox.SelectedIndex = 0;
+        }
+
+        public bool isappointment;
+        public void QueTypeIdentifier(DataGridViewCell QueType)
+        {
+
+
+            if (isappointment == true && RecApptAnyStaffToggleSwitch.Checked)
+            {
+                QueType.Value = "AnyonePriority";
+            }
+            else if (isappointment == true && RecApptPreferredStaffToggleSwitch.Checked)
+            {
+                QueType.Value = "PreferredPriority";
+            }
+            else if (selectedStaffID == "Anyone")
+            {
+                QueType.Value = "GeneralQue";
+            }
+            else
+            {
+                QueType.Value = "Preferred";
+            }
+        }
+        private void ShowNoServiceCategoryChosenWarningMessage()
+        {
+            RecApptNoServiceCategoryChosenWarningLbl.Visible = true;
+            AnimateShakeEffect(RecApptNoServiceCategoryChosenWarningLbl);
+
+            Timer timer = new Timer();
+            timer.Interval = 1500; // 1 seconds
+            timer.Tick += (s, e) =>
+            {
+                RecApptNoServiceCategoryChosenWarningLbl.Visible = false;
+
+                timer.Stop();
+            };
+            timer.Start();
+        }
+        //ApptMember
+        private void AnimateShakeEffect(System.Windows.Forms.Control control)
+        {
+            int originalX = control.Location.X;
+            Random rand = new Random();
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 30; // 
+            timer.Tick += (s, e) =>
+            {
+                int newX = originalX + rand.Next(-4, 4);
+                control.Location = new System.Drawing.Point(newX, control.Location.Y);
+            };
+            timer.Start();
+        }
+        private bool IsCardNameValid(string name)
+        {
+            foreach (char c in name)
+            {
+                if (!char.IsLetter(c) && c != ' ')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool IsNumeric(string input)
+        {
+            foreach (char c in input)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        #endregion
+
+        
+        private byte[] GetImageBytesFromResource(string resourceName)
+        {
+            try
+            {
+                using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+                {
+                    if (stream != null)
+                    {
+                        using (MemoryStream memoryStream = new MemoryStream())
+                        {
+                            stream.CopyTo(memoryStream);
+                            return memoryStream.ToArray();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Resource stream for '{resourceName}' is null.", "Member Appointment Form Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Member Appointment Form Receipt Generator Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+        private void MemApptFormGenerator()
+        {
+            DateTime currentDate = RecDateTimePicker.Value;
+            string datetoday = currentDate.ToString("MM-dd-yyyy dddd");
+            string timePrinted = currentDate.ToString("hh:mm tt");
+            string timePrintedFile = currentDate.ToString("hh-mm-ss");
+            string transactNum = RecApptTransNumText.Text;
+            string clientName = MemberAccInfoPersonalNameText.Text;
+            string legal = "Thank you for trusting Enchanté Salon for your beauty needs." +
+                " This receipt will serve as your sales invoice of any services done in Enchanté Salon." +
+                " Any concerns about your services please ask and show this receipt in the frontdesk of Enchanté Salon.";
+            // Increment the file name
+
+            // Generate a unique filename for the PDF
+            string fileName = $"Enchanté-Receipt-{transactNum}-{timePrintedFile}.pdf";
+
+            // Create a SaveFileDialog to choose the save location
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF Files|*.pdf";
+            saveFileDialog.FileName = fileName;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+
+                // Create a new document with custom page size (8.5"x4.25" in landscape mode)
+                Document doc = new Document(new iTextSharp.text.Rectangle(Utilities.MillimetersToPoints(133f), Utilities.MillimetersToPoints(203f)));
+
+                try
+                {
+                    // Create a PdfWriter instance
+                    PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
+
+                    // Open the document for writing
+                    doc.Open();
+
+                    //string imagePath = "C:\\Users\\Pepper\\source\\repos\\Enchante\\Resources\\Enchante Logo (200 x 200 px) (1).png"; // Replace with the path to your logo image
+                    // Load the image from project resources
+                    //if (File.Exists(imagePath))
+                    //{
+                    //    //iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(imagePath);
+                    //}
+
+                    // Load the image from project resources
+                    byte[] imageBytes = GetImageBytesFromResource("EnchanteMembership.Resources.Enchante Logo (200 x 200 px) (1).png");
+
+                    if (imageBytes != null)
+                    {
+                        iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(imageBytes);
+                        logo.ScaleAbsolute(50f, 50f);
+                        logo.Alignment = Element.ALIGN_CENTER;
+                        doc.Add(logo);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error loading image from resources.", "Appointment Form Image Loading Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    };
+
+                    iTextSharp.text.Font headerFont = FontFactory.GetFont("Courier", 16, iTextSharp.text.Font.BOLD);
+                    iTextSharp.text.Font boldfont = FontFactory.GetFont("Courier", 10, iTextSharp.text.Font.BOLD);
+                    iTextSharp.text.Font font = FontFactory.GetFont("Courier", 10, iTextSharp.text.Font.NORMAL);
+                    iTextSharp.text.Font italic = FontFactory.GetFont("Courier", 10, iTextSharp.text.Font.ITALIC);
+
+                    // Create a centered alignment for text
+                    iTextSharp.text.Paragraph centerAligned = new Paragraph();
+                    centerAligned.Alignment = Element.ALIGN_CENTER;
+
+                    // Add centered content to the centerAligned Paragraph
+                    centerAligned.Add(new Chunk("Enchanté Salon", headerFont));
+                    centerAligned.Add(new Chunk("\n69th flr. Enchanté Bldg. Ortigas Extension Ave. \nManggahan, Pasig City 1611 Philippines", font));
+                    centerAligned.Add(new Chunk("\nTel. No.: (1101) 111-1010", font));
+                    centerAligned.Add(new Chunk($"\nDate: {datetoday} Time: {timePrinted}", font));
+
+                    // Add the centered content to the document
+                    doc.Add(centerAligned);
+                    doc.Add(new Chunk("\n")); // New line
+
+                    doc.Add(new Paragraph($"Transaction No.: {transactNum}", font));
+                    //doc.Add(new Paragraph($"Order Date: {today}", font));
+                    doc.Add(new Chunk("\n")); // New line
+
+                    doc.Add(new LineSeparator()); // Dotted line
+
+                    PdfPTable columnHeaderTable = new PdfPTable(4);
+                    columnHeaderTable.SetWidths(new float[] { 10f, 10f, 5f, 5f }); // Column widths
+                    columnHeaderTable.DefaultCell.Border = PdfPCell.NO_BORDER;
+                    columnHeaderTable.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
+                    columnHeaderTable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                    columnHeaderTable.AddCell(new Phrase("Attending\nStaff ID", boldfont));
+                    columnHeaderTable.AddCell(new Phrase("Service(s)", boldfont));
+                    columnHeaderTable.AddCell(new Phrase("Qty.", boldfont));
+                    columnHeaderTable.AddCell(new Phrase("Total Price", boldfont));
+                    doc.Add(columnHeaderTable);
+
+                    doc.Add(new LineSeparator()); // Dotted line
+                    // Iterate through the rows of your 
+
+                    foreach (DataGridViewRow row in RecApptSelectedServiceDGV.Rows)
+                    {
+                        try
+                        {
+                            string serviceName = row.Cells["RecApptSelectedService"].Value?.ToString();
+                            if (string.IsNullOrEmpty(serviceName))
+                            {
+                                continue; // Skip empty rows
+                            }
+
+                            string staffID = row.Cells["RecApptStaffSelected"].Value?.ToString();
+                            string itemTotalcost = row.Cells["RecApptServicePrice"].Value?.ToString();
+
+                            // Add cells to the item table
+                            PdfPTable serviceTable = new PdfPTable(4);
+                            serviceTable.SetWidths(new float[] { 5f, 5f, 3f, 3f }); // Column widths
+                            serviceTable.DefaultCell.Border = PdfPCell.NO_BORDER;
+                            serviceTable.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
+                            serviceTable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                            serviceTable.AddCell(new Phrase(staffID, font));
+                            serviceTable.AddCell(new Phrase(serviceName, font));
+                            serviceTable.AddCell(new Phrase("1", font));
+                            serviceTable.AddCell(new Phrase(itemTotalcost, font));
+                            doc.Add(serviceTable);
+
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle or log any exceptions that occur while processing DataGridView data
+                            MessageBox.Show("An error occurred: " + ex.Message, "Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    doc.Add(new Chunk("\n")); // New line
+                    doc.Add(new LineSeparator()); // Dotted line
+                    doc.Add(new Chunk("\n")); // New line
+
+
+
+
+
+                    // Add the "Served To" section
+                    doc.Add(new Chunk("\n")); // New line
+                    doc.Add(new Paragraph($"Served To: {clientName}", italic));
+                    doc.Add(new Paragraph("Address:_______________________________", italic));
+                    doc.Add(new Paragraph("TIN No.:_______________________________", italic));
+
+                    // Add the legal string with center alignment
+                    Paragraph paragraph_footer = new Paragraph($"\n\n{legal}", italic);
+                    paragraph_footer.Alignment = Element.ALIGN_CENTER;
+                    doc.Add(paragraph_footer);
+                }
+                catch (DocumentException de)
+                {
+                    MessageBox.Show("An error occurred: " + de.Message, "Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (IOException ioe)
+                {
+                    MessageBox.Show("An error occurred: " + ioe.Message, "Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    // Close the document
+                    doc.Close();
+                }
+
+                //MessageBox.Show($"Receipt saved as {filePath}", "Receipt Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void RecApptAvailableAttendingStaffSelectedComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RecApptAvailableAttendingStaffSelectedComboBox.SelectedItem != null)
+            {
+                string selectedValue = RecApptAvailableAttendingStaffSelectedComboBox.SelectedItem.ToString();
+                selectedStaffID = selectedValue.Substring(0, 11);
+            }
+        }
+
+        private void MemApptTransactionClear()
+        {
+            RecApptCatHSRB.Visible = false;
+            RecApptCatHSRB.Checked = false;
+            RecApptCatFSRB.Visible = false;
+            RecApptCatNCRB.Visible = false;
+            RecApptCatSpaRB.Visible = false;
+            RecApptCatMassRB.Visible = false;
+            RecApptCatFSRB.Checked = false;
+            RecApptCatNCRB.Checked = false;
+            RecApptCatSpaRB.Checked = false;
+            RecApptCatMassRB.Checked = false;
+
+            RecApptSelectedServiceDGV.Rows.Clear();
+            RecApptBookingTimeComboBox.Items.Clear();
+            RecApptBookingDatePicker.Value = DateTime.Today;
+            RecApptPreferredStaffToggleSwitch.Checked = false;
+            RecApptAnyStaffToggleSwitch.Checked = false;
+            isappointment = false;
+
+            RecApptAnyStaffToggleSwitch.Checked = false;
+            RecApptPreferredStaffToggleSwitch.Checked = false;
+            RecApptAnyStaffToggleSwitchRegular.Checked = false;
+            RecApptAttendingStaffLbl.Visible = false;
+            RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+        }
+
+        private void TestPrint_Click(object sender, EventArgs e)
+        {
+            MemApptFormGenerator();
         }
     }
 }
