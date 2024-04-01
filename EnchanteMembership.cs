@@ -54,6 +54,8 @@ namespace EnchanteMembership
         public string selectedStaffID;
         //private bool IsPrefferredTimeSchedComboBoxModified = false;
         public string membertype;
+        public bool isprem = false;
+        public bool issvip = false;
 
         public EnchanteMembership()
         {
@@ -3916,8 +3918,7 @@ namespace EnchanteMembership
             RecApptAvailableAttendingStaffSelectedComboBox.SelectedIndex = 0;
         }
 
-        public bool isprem;
-        public bool issvip;
+        
         public void QueTypeIdentifier(DataGridViewCell QueType)
         {
 
@@ -3925,26 +3926,32 @@ namespace EnchanteMembership
             if (isprem == true && RecApptAnyStaffToggleSwitch.Checked)
             {
                 QueType.Value = "AnyonePriority";
+                return;
             }
             else if (isprem == true && RecApptPreferredStaffToggleSwitch.Checked)
             {
                 QueType.Value = "PreferredPriority";
+                return;
             }
-            else if (issvip == true && RecApptPreferredStaffToggleSwitch.Checked)
+            else if (issvip == true && RecApptAnyStaffToggleSwitch.Checked)
             {
                 QueType.Value = "AnyoneSPriority";
+                return;
             }
             else if (issvip == true && RecApptPreferredStaffToggleSwitch.Checked)
             {
                 QueType.Value = "PreferredSPriority";
+                return;
             }
             else if (selectedStaffID == "Anyone")
             {
                 QueType.Value = "GeneralQue";
+                return;
             }
             else
             {
                 QueType.Value = "Preferred";
+                return;
             }
         }
         private void ShowNoServiceCategoryChosenWarningMessage()

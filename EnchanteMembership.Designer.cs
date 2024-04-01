@@ -63,14 +63,6 @@
             this.RecApptDeleteSelectedServiceAndStaffBtn = new Guna.UI2.WinForms.Guna2Button();
             this.RecApptStaffSelectLbl = new System.Windows.Forms.Label();
             this.RecApptSelectedServiceDGV = new System.Windows.Forms.DataGridView();
-            this.RecApptSelectedService = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptServicePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptServiceCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptServiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptStaffSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptPriorityNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptTimeSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptQueType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RecApptNoServiceCategoryChosenWarningLbl = new System.Windows.Forms.Label();
             this.RecApptAnyStaffLbl = new System.Windows.Forms.Label();
             this.RecApptAnyStaffToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -481,6 +473,14 @@
             this.PictureSlideTimer = new System.Windows.Forms.Timer(this.components);
             this.MemberAccParentCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.DateTimePickerTimer = new System.Windows.Forms.Timer(this.components);
+            this.RecApptSelectedService = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptServicePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptServiceCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptServiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptStaffSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptPriorityNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptTimeSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptQueType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemParentCard)).BeginInit();
             this.EnchanteMemberParentContainer.SuspendLayout();
             this.EnchanteMemberPage.SuspendLayout();
@@ -1076,60 +1076,6 @@
             this.RecApptSelectedServiceDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.RecApptSelectedServiceDGV.Size = new System.Drawing.Size(669, 452);
             this.RecApptSelectedServiceDGV.TabIndex = 162;
-            // 
-            // RecApptSelectedService
-            // 
-            this.RecApptSelectedService.HeaderText = "Selected Service";
-            this.RecApptSelectedService.Name = "RecApptSelectedService";
-            this.RecApptSelectedService.ReadOnly = true;
-            // 
-            // RecApptServicePrice
-            // 
-            this.RecApptServicePrice.HeaderText = "Service Price";
-            this.RecApptServicePrice.Name = "RecApptServicePrice";
-            this.RecApptServicePrice.ReadOnly = true;
-            // 
-            // RecApptServiceCategory
-            // 
-            this.RecApptServiceCategory.HeaderText = "Service Category";
-            this.RecApptServiceCategory.Name = "RecApptServiceCategory";
-            this.RecApptServiceCategory.ReadOnly = true;
-            this.RecApptServiceCategory.Visible = false;
-            // 
-            // RecApptServiceID
-            // 
-            this.RecApptServiceID.HeaderText = "Service ID";
-            this.RecApptServiceID.Name = "RecApptServiceID";
-            this.RecApptServiceID.ReadOnly = true;
-            this.RecApptServiceID.Visible = false;
-            // 
-            // RecApptStaffSelected
-            // 
-            this.RecApptStaffSelected.HeaderText = "Staff Selected";
-            this.RecApptStaffSelected.Name = "RecApptStaffSelected";
-            this.RecApptStaffSelected.ReadOnly = true;
-            this.RecApptStaffSelected.Visible = false;
-            // 
-            // RecApptPriorityNumber
-            // 
-            this.RecApptPriorityNumber.HeaderText = "Priority Number";
-            this.RecApptPriorityNumber.Name = "RecApptPriorityNumber";
-            this.RecApptPriorityNumber.ReadOnly = true;
-            this.RecApptPriorityNumber.Visible = false;
-            // 
-            // RecApptTimeSelected
-            // 
-            this.RecApptTimeSelected.HeaderText = "Time Selected";
-            this.RecApptTimeSelected.Name = "RecApptTimeSelected";
-            this.RecApptTimeSelected.ReadOnly = true;
-            this.RecApptTimeSelected.Visible = false;
-            // 
-            // RecApptQueType
-            // 
-            this.RecApptQueType.HeaderText = "Que Type";
-            this.RecApptQueType.Name = "RecApptQueType";
-            this.RecApptQueType.ReadOnly = true;
-            this.RecApptQueType.Visible = false;
             // 
             // RecApptNoServiceCategoryChosenWarningLbl
             // 
@@ -6981,13 +6927,13 @@
             // 
             this.HomeServiceCard.ContainerControl = this.ServicePanel;
             this.HomeServiceCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.HomeServiceCard.SelectedCard = "Card6";
+            this.HomeServiceCard.SelectedCard = "Card4";
             // 
             // HomeMembershipCard
             // 
             this.HomeMembershipCard.ContainerControl = this.MembershipPanel;
             this.HomeMembershipCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.HomeMembershipCard.SelectedCard = "Type";
+            this.HomeMembershipCard.SelectedCard = "SVIP";
             // 
             // ScrollTimer
             // 
@@ -7002,13 +6948,67 @@
             // 
             this.MemberAccParentCard.ContainerControl = this.MemberParentContainer;
             this.MemberAccParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.MemberAccParentCard.SelectedCard = "Home";
+            this.MemberAccParentCard.SelectedCard = "Appt";
             // 
             // DateTimePickerTimer
             // 
             this.DateTimePickerTimer.Enabled = true;
             this.DateTimePickerTimer.Interval = 1000;
             this.DateTimePickerTimer.Tick += new System.EventHandler(this.DateTimePickerTimer_Tick);
+            // 
+            // RecApptSelectedService
+            // 
+            this.RecApptSelectedService.HeaderText = "Selected Service";
+            this.RecApptSelectedService.Name = "RecApptSelectedService";
+            this.RecApptSelectedService.ReadOnly = true;
+            // 
+            // RecApptServicePrice
+            // 
+            this.RecApptServicePrice.HeaderText = "Service Price";
+            this.RecApptServicePrice.Name = "RecApptServicePrice";
+            this.RecApptServicePrice.ReadOnly = true;
+            // 
+            // RecApptServiceCategory
+            // 
+            this.RecApptServiceCategory.HeaderText = "Service Category";
+            this.RecApptServiceCategory.Name = "RecApptServiceCategory";
+            this.RecApptServiceCategory.ReadOnly = true;
+            this.RecApptServiceCategory.Visible = false;
+            // 
+            // RecApptServiceID
+            // 
+            this.RecApptServiceID.HeaderText = "Service ID";
+            this.RecApptServiceID.Name = "RecApptServiceID";
+            this.RecApptServiceID.ReadOnly = true;
+            this.RecApptServiceID.Visible = false;
+            // 
+            // RecApptStaffSelected
+            // 
+            this.RecApptStaffSelected.HeaderText = "Staff Selected";
+            this.RecApptStaffSelected.Name = "RecApptStaffSelected";
+            this.RecApptStaffSelected.ReadOnly = true;
+            this.RecApptStaffSelected.Visible = false;
+            // 
+            // RecApptPriorityNumber
+            // 
+            this.RecApptPriorityNumber.HeaderText = "Priority Number";
+            this.RecApptPriorityNumber.Name = "RecApptPriorityNumber";
+            this.RecApptPriorityNumber.ReadOnly = true;
+            this.RecApptPriorityNumber.Visible = false;
+            // 
+            // RecApptTimeSelected
+            // 
+            this.RecApptTimeSelected.HeaderText = "Time Selected";
+            this.RecApptTimeSelected.Name = "RecApptTimeSelected";
+            this.RecApptTimeSelected.ReadOnly = true;
+            this.RecApptTimeSelected.Visible = false;
+            // 
+            // RecApptQueType
+            // 
+            this.RecApptQueType.HeaderText = "Que Type";
+            this.RecApptQueType.Name = "RecApptQueType";
+            this.RecApptQueType.ReadOnly = true;
+            this.RecApptQueType.Visible = false;
             // 
             // EnchanteMembership
             // 
@@ -7598,6 +7598,9 @@
         private Guna.UI2.WinForms.Guna2ToggleSwitch RecApptAnyStaffToggleSwitchRegular;
         private System.Windows.Forms.DateTimePicker RecDateTimePicker;
         private Guna.UI2.WinForms.Guna2Button TestPrint;
+        private System.Windows.Forms.Label ServiceTotalPrice;
+        private System.Windows.Forms.Timer DateTimePickerTimer;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptSelectedService;
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptServicePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptServiceCategory;
@@ -7606,9 +7609,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptPriorityNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptTimeSelected;
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptQueType;
-        private System.Windows.Forms.Label ServiceTotalPrice;
-        private System.Windows.Forms.Timer DateTimePickerTimer;
-        private System.Windows.Forms.Label label1;
     }
 }
 
