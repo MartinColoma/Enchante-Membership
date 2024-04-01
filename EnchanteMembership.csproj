@@ -6,12 +6,27 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9166385A-57B5-40AC-9E8B-ED8E9780E6CC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Enchante_Membership</RootNamespace>
-    <AssemblyName>Enchante Membership</AssemblyName>
+    <RootNamespace>EnchanteMembership</RootNamespace>
+    <AssemblyName>EnchanteMembership</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -180,7 +195,7 @@
     <None Include="Resources\Das Dark Naturalist Salon Design von Comfortel Check more at https___mac.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Enchante Logo %28200 x 200 px%29 %281%29.png" />
+    <EmbeddedResource Include="Resources\Enchante Logo %28200 x 200 px%29 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\30 People Are Sharing Seemingly Innocent Questions That Broke Their Heart A 1.jpg" />
@@ -285,7 +300,25 @@
     <None Include="Resources\Enchante Logo %28200 x 200 px%29 %281%292.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Enchante Logo %28200 x 200 px%29 Green.png" />
+    <EmbeddedResource Include="Resources\Enchante Logo %28200 x 200 px%29 Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Enchante Logo %28200 x 200 px%29 Green without text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo 275x100 Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

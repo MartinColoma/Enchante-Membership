@@ -1,4 +1,4 @@
-﻿namespace Enchante_Membership
+﻿namespace EnchanteMembership
 {
     partial class EnchanteMembership
     {
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnchanteMembership));
             this.EnchanteMemParentCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.EnchanteMemberParentContainer = new System.Windows.Forms.Panel();
@@ -46,6 +46,7 @@
             this.MemberScrollFooterStopperLbl = new System.Windows.Forms.Label();
             this.MemberParentContainer = new System.Windows.Forms.Panel();
             this.MemAccApptPanel = new System.Windows.Forms.Panel();
+            this.TestPrint = new Guna.UI2.WinForms.Guna2Button();
             this.RecApptAnyStaffLblRegular = new System.Windows.Forms.Label();
             this.RecApptAnyStaffToggleSwitchRegular = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.RecApptAvailableAttendingStaffSelectedComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -60,6 +61,14 @@
             this.RecApptDeleteSelectedServiceAndStaffBtn = new Guna.UI2.WinForms.Guna2Button();
             this.RecApptStaffSelectLbl = new System.Windows.Forms.Label();
             this.RecApptSelectedServiceDGV = new System.Windows.Forms.DataGridView();
+            this.RecApptSelectedService = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptServicePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptServiceCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptServiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptStaffSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptPriorityNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptTimeSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecApptQueType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RecApptNoServiceCategoryChosenWarningLbl = new System.Windows.Forms.Label();
             this.RecApptAnyStaffLbl = new System.Windows.Forms.Label();
             this.RecApptAnyStaffToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -469,15 +478,9 @@
             this.ScrollTimer = new System.Windows.Forms.Timer(this.components);
             this.PictureSlideTimer = new System.Windows.Forms.Timer(this.components);
             this.MemberAccParentCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
-            this.TestPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.RecApptSelectedService = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptServicePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptServiceCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptServiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptStaffSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptPriorityNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptTimeSelected = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RecApptQueType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceTotalPrice = new System.Windows.Forms.Label();
+            this.DateTimePickerTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemParentCard)).BeginInit();
             this.EnchanteMemberParentContainer.SuspendLayout();
             this.EnchanteMemberPage.SuspendLayout();
@@ -606,12 +609,13 @@
             this.MemberUserAccPanel.AutoScroll = true;
             this.MemberUserAccPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.MemberUserAccPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MemberUserAccPanel.Controls.Add(this.label1);
             this.MemberUserAccPanel.Controls.Add(this.MemberIDNumLbl);
             this.MemberUserAccPanel.Controls.Add(this.MemberNameLbl);
             this.MemberUserAccPanel.Controls.Add(this.MemberSignOut);
             this.MemberUserAccPanel.Location = new System.Drawing.Point(1502, 18);
             this.MemberUserAccPanel.Name = "MemberUserAccPanel";
-            this.MemberUserAccPanel.Size = new System.Drawing.Size(353, 182);
+            this.MemberUserAccPanel.Size = new System.Drawing.Size(353, 179);
             this.MemberUserAccPanel.TabIndex = 2;
             this.MemberUserAccPanel.Visible = false;
             // 
@@ -657,7 +661,7 @@
             this.MemberSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.MemberSignOut.Location = new System.Drawing.Point(14, 115);
             this.MemberSignOut.Name = "MemberSignOut";
-            this.MemberSignOut.Size = new System.Drawing.Size(321, 60);
+            this.MemberSignOut.Size = new System.Drawing.Size(321, 39);
             this.MemberSignOut.TabIndex = 7;
             this.MemberSignOut.Text = "LOGOUT";
             this.MemberSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -705,6 +709,7 @@
             this.MemAccApptPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.MemAccApptPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MemberAccParentCard.SetCardName(this.MemAccApptPanel, "Appt");
+            this.MemAccApptPanel.Controls.Add(this.ServiceTotalPrice);
             this.MemAccApptPanel.Controls.Add(this.TestPrint);
             this.MemAccApptPanel.Controls.Add(this.RecApptAnyStaffLblRegular);
             this.MemAccApptPanel.Controls.Add(this.RecApptAnyStaffToggleSwitchRegular);
@@ -748,12 +753,32 @@
             this.MemAccApptPanel.Size = new System.Drawing.Size(1673, 718);
             this.MemAccApptPanel.TabIndex = 30;
             // 
+            // TestPrint
+            // 
+            this.TestPrint.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.TestPrint.BorderRadius = 20;
+            this.TestPrint.BorderThickness = 2;
+            this.TestPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.TestPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.TestPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.TestPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.TestPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.TestPrint.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.TestPrint.Location = new System.Drawing.Point(1249, 1609);
+            this.TestPrint.Name = "TestPrint";
+            this.TestPrint.Size = new System.Drawing.Size(100, 47);
+            this.TestPrint.TabIndex = 198;
+            this.TestPrint.Text = "print pdf";
+            this.TestPrint.Visible = false;
+            this.TestPrint.Click += new System.EventHandler(this.TestPrint_Click);
+            // 
             // RecApptAnyStaffLblRegular
             // 
             this.RecApptAnyStaffLblRegular.AutoSize = true;
             this.RecApptAnyStaffLblRegular.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptAnyStaffLblRegular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptAnyStaffLblRegular.Location = new System.Drawing.Point(802, 907);
+            this.RecApptAnyStaffLblRegular.Location = new System.Drawing.Point(790, 922);
             this.RecApptAnyStaffLblRegular.Name = "RecApptAnyStaffLblRegular";
             this.RecApptAnyStaffLblRegular.Size = new System.Drawing.Size(99, 29);
             this.RecApptAnyStaffLblRegular.TabIndex = 195;
@@ -765,7 +790,7 @@
             this.RecApptAnyStaffToggleSwitchRegular.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RecApptAnyStaffToggleSwitchRegular.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.RecApptAnyStaffToggleSwitchRegular.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RecApptAnyStaffToggleSwitchRegular.Location = new System.Drawing.Point(745, 907);
+            this.RecApptAnyStaffToggleSwitchRegular.Location = new System.Drawing.Point(733, 922);
             this.RecApptAnyStaffToggleSwitchRegular.Name = "RecApptAnyStaffToggleSwitchRegular";
             this.RecApptAnyStaffToggleSwitchRegular.Size = new System.Drawing.Size(51, 31);
             this.RecApptAnyStaffToggleSwitchRegular.TabIndex = 194;
@@ -790,7 +815,7 @@
             this.RecApptAvailableAttendingStaffSelectedComboBox.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecApptAvailableAttendingStaffSelectedComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.RecApptAvailableAttendingStaffSelectedComboBox.ItemHeight = 30;
-            this.RecApptAvailableAttendingStaffSelectedComboBox.Location = new System.Drawing.Point(635, 939);
+            this.RecApptAvailableAttendingStaffSelectedComboBox.Location = new System.Drawing.Point(623, 954);
             this.RecApptAvailableAttendingStaffSelectedComboBox.Name = "RecApptAvailableAttendingStaffSelectedComboBox";
             this.RecApptAvailableAttendingStaffSelectedComboBox.Size = new System.Drawing.Size(633, 36);
             this.RecApptAvailableAttendingStaffSelectedComboBox.TabIndex = 193;
@@ -802,7 +827,7 @@
             this.RecApptBookingTimeLbl.AutoSize = true;
             this.RecApptBookingTimeLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptBookingTimeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptBookingTimeLbl.Location = new System.Drawing.Point(910, 681);
+            this.RecApptBookingTimeLbl.Location = new System.Drawing.Point(898, 696);
             this.RecApptBookingTimeLbl.Name = "RecApptBookingTimeLbl";
             this.RecApptBookingTimeLbl.Size = new System.Drawing.Size(177, 29);
             this.RecApptBookingTimeLbl.TabIndex = 192;
@@ -820,7 +845,7 @@
             this.RecApptSearchServiceTypeText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
             this.RecApptSearchServiceTypeText.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecApptSearchServiceTypeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptSearchServiceTypeText.Location = new System.Drawing.Point(130, 1081);
+            this.RecApptSearchServiceTypeText.Location = new System.Drawing.Point(118, 1096);
             this.RecApptSearchServiceTypeText.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.RecApptSearchServiceTypeText.Name = "RecApptSearchServiceTypeText";
             this.RecApptSearchServiceTypeText.PasswordChar = '\0';
@@ -829,6 +854,7 @@
             this.RecApptSearchServiceTypeText.SelectedText = "";
             this.RecApptSearchServiceTypeText.Size = new System.Drawing.Size(666, 30);
             this.RecApptSearchServiceTypeText.TabIndex = 190;
+            this.RecApptSearchServiceTypeText.TextChanged += new System.EventHandler(this.RecApptSearchServiceTypeText_TextChanged);
             // 
             // RecApptBookingTimeComboBox
             // 
@@ -860,7 +886,7 @@
             "02:00 pm",
             "02:30 pm",
             "03:00 pm"});
-            this.RecApptBookingTimeComboBox.Location = new System.Drawing.Point(898, 713);
+            this.RecApptBookingTimeComboBox.Location = new System.Drawing.Point(886, 728);
             this.RecApptBookingTimeComboBox.Name = "RecApptBookingTimeComboBox";
             this.RecApptBookingTimeComboBox.Size = new System.Drawing.Size(247, 36);
             this.RecApptBookingTimeComboBox.TabIndex = 188;
@@ -870,7 +896,7 @@
             this.RecApptBookingDateLbl.AutoSize = true;
             this.RecApptBookingDateLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptBookingDateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptBookingDateLbl.Location = new System.Drawing.Point(511, 681);
+            this.RecApptBookingDateLbl.Location = new System.Drawing.Point(499, 696);
             this.RecApptBookingDateLbl.Name = "RecApptBookingDateLbl";
             this.RecApptBookingDateLbl.Size = new System.Drawing.Size(183, 29);
             this.RecApptBookingDateLbl.TabIndex = 185;
@@ -888,7 +914,7 @@
             this.RecApptBookingDatePicker.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecApptBookingDatePicker.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.RecApptBookingDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.RecApptBookingDatePicker.Location = new System.Drawing.Point(510, 713);
+            this.RecApptBookingDatePicker.Location = new System.Drawing.Point(498, 728);
             this.RecApptBookingDatePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.RecApptBookingDatePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.RecApptBookingDatePicker.Name = "RecApptBookingDatePicker";
@@ -902,7 +928,7 @@
             this.RecApptPrefDateTime.AutoSize = true;
             this.RecApptPrefDateTime.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptPrefDateTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptPrefDateTime.Location = new System.Drawing.Point(124, 610);
+            this.RecApptPrefDateTime.Location = new System.Drawing.Point(112, 625);
             this.RecApptPrefDateTime.Name = "RecApptPrefDateTime";
             this.RecApptPrefDateTime.Size = new System.Drawing.Size(393, 35);
             this.RecApptPrefDateTime.TabIndex = 183;
@@ -923,12 +949,13 @@
             this.RecApptBookTransactBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.RecApptBookTransactBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.RecApptBookTransactBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptBookTransactBtn.Location = new System.Drawing.Point(648, 1728);
+            this.RecApptBookTransactBtn.Location = new System.Drawing.Point(636, 1743);
             this.RecApptBookTransactBtn.Name = "RecApptBookTransactBtn";
             this.RecApptBookTransactBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.RecApptBookTransactBtn.Size = new System.Drawing.Size(359, 65);
             this.RecApptBookTransactBtn.TabIndex = 175;
             this.RecApptBookTransactBtn.Text = "BOOK APPOINTMENT SERVICES";
+            this.RecApptBookTransactBtn.Click += new System.EventHandler(this.RecApptBookTransactBtn_Click);
             // 
             // RecApptSelectServiceAndStaffBtn
             // 
@@ -942,7 +969,7 @@
             this.RecApptSelectServiceAndStaffBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.RecApptSelectServiceAndStaffBtn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecApptSelectServiceAndStaffBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptSelectServiceAndStaffBtn.Location = new System.Drawing.Point(725, 1594);
+            this.RecApptSelectServiceAndStaffBtn.Location = new System.Drawing.Point(713, 1609);
             this.RecApptSelectServiceAndStaffBtn.Name = "RecApptSelectServiceAndStaffBtn";
             this.RecApptSelectServiceAndStaffBtn.Size = new System.Drawing.Size(100, 47);
             this.RecApptSelectServiceAndStaffBtn.TabIndex = 170;
@@ -961,7 +988,7 @@
             this.RecApptDeleteSelectedServiceAndStaffBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.RecApptDeleteSelectedServiceAndStaffBtn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecApptDeleteSelectedServiceAndStaffBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptDeleteSelectedServiceAndStaffBtn.Location = new System.Drawing.Point(1429, 1594);
+            this.RecApptDeleteSelectedServiceAndStaffBtn.Location = new System.Drawing.Point(1417, 1609);
             this.RecApptDeleteSelectedServiceAndStaffBtn.Name = "RecApptDeleteSelectedServiceAndStaffBtn";
             this.RecApptDeleteSelectedServiceAndStaffBtn.Size = new System.Drawing.Size(100, 47);
             this.RecApptDeleteSelectedServiceAndStaffBtn.TabIndex = 169;
@@ -973,7 +1000,7 @@
             this.RecApptStaffSelectLbl.AutoSize = true;
             this.RecApptStaffSelectLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptStaffSelectLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptStaffSelectLbl.Location = new System.Drawing.Point(127, 791);
+            this.RecApptStaffSelectLbl.Location = new System.Drawing.Point(115, 806);
             this.RecApptStaffSelectLbl.Name = "RecApptStaffSelectLbl";
             this.RecApptStaffSelectLbl.Size = new System.Drawing.Size(292, 35);
             this.RecApptStaffSelectLbl.TabIndex = 163;
@@ -988,14 +1015,14 @@
             this.RecApptSelectedServiceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RecApptSelectedServiceDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.RecApptSelectedServiceDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecApptSelectedServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecApptSelectedServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.RecApptSelectedServiceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RecApptSelectedServiceDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RecApptSelectedService,
@@ -1007,16 +1034,16 @@
             this.RecApptTimeSelected,
             this.RecApptQueType});
             this.RecApptSelectedServiceDGV.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecApptSelectedServiceDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecApptSelectedServiceDGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.RecApptSelectedServiceDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            this.RecApptSelectedServiceDGV.Location = new System.Drawing.Point(860, 1136);
+            this.RecApptSelectedServiceDGV.Location = new System.Drawing.Point(848, 1151);
             this.RecApptSelectedServiceDGV.Name = "RecApptSelectedServiceDGV";
             this.RecApptSelectedServiceDGV.ReadOnly = true;
             this.RecApptSelectedServiceDGV.RowHeadersVisible = false;
@@ -1025,12 +1052,66 @@
             this.RecApptSelectedServiceDGV.Size = new System.Drawing.Size(669, 452);
             this.RecApptSelectedServiceDGV.TabIndex = 162;
             // 
+            // RecApptSelectedService
+            // 
+            this.RecApptSelectedService.HeaderText = "Selected Service";
+            this.RecApptSelectedService.Name = "RecApptSelectedService";
+            this.RecApptSelectedService.ReadOnly = true;
+            // 
+            // RecApptServicePrice
+            // 
+            this.RecApptServicePrice.HeaderText = "Service Price";
+            this.RecApptServicePrice.Name = "RecApptServicePrice";
+            this.RecApptServicePrice.ReadOnly = true;
+            // 
+            // RecApptServiceCategory
+            // 
+            this.RecApptServiceCategory.HeaderText = "Service Category";
+            this.RecApptServiceCategory.Name = "RecApptServiceCategory";
+            this.RecApptServiceCategory.ReadOnly = true;
+            this.RecApptServiceCategory.Visible = false;
+            // 
+            // RecApptServiceID
+            // 
+            this.RecApptServiceID.HeaderText = "Service ID";
+            this.RecApptServiceID.Name = "RecApptServiceID";
+            this.RecApptServiceID.ReadOnly = true;
+            this.RecApptServiceID.Visible = false;
+            // 
+            // RecApptStaffSelected
+            // 
+            this.RecApptStaffSelected.HeaderText = "Staff Selected";
+            this.RecApptStaffSelected.Name = "RecApptStaffSelected";
+            this.RecApptStaffSelected.ReadOnly = true;
+            this.RecApptStaffSelected.Visible = false;
+            // 
+            // RecApptPriorityNumber
+            // 
+            this.RecApptPriorityNumber.HeaderText = "Priority Number";
+            this.RecApptPriorityNumber.Name = "RecApptPriorityNumber";
+            this.RecApptPriorityNumber.ReadOnly = true;
+            this.RecApptPriorityNumber.Visible = false;
+            // 
+            // RecApptTimeSelected
+            // 
+            this.RecApptTimeSelected.HeaderText = "Time Selected";
+            this.RecApptTimeSelected.Name = "RecApptTimeSelected";
+            this.RecApptTimeSelected.ReadOnly = true;
+            this.RecApptTimeSelected.Visible = false;
+            // 
+            // RecApptQueType
+            // 
+            this.RecApptQueType.HeaderText = "Que Type";
+            this.RecApptQueType.Name = "RecApptQueType";
+            this.RecApptQueType.ReadOnly = true;
+            this.RecApptQueType.Visible = false;
+            // 
             // RecApptNoServiceCategoryChosenWarningLbl
             // 
             this.RecApptNoServiceCategoryChosenWarningLbl.AutoSize = true;
             this.RecApptNoServiceCategoryChosenWarningLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptNoServiceCategoryChosenWarningLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptNoServiceCategoryChosenWarningLbl.Location = new System.Drawing.Point(645, 843);
+            this.RecApptNoServiceCategoryChosenWarningLbl.Location = new System.Drawing.Point(633, 858);
             this.RecApptNoServiceCategoryChosenWarningLbl.Name = "RecApptNoServiceCategoryChosenWarningLbl";
             this.RecApptNoServiceCategoryChosenWarningLbl.Size = new System.Drawing.Size(365, 29);
             this.RecApptNoServiceCategoryChosenWarningLbl.TabIndex = 161;
@@ -1042,7 +1123,7 @@
             this.RecApptAnyStaffLbl.AutoSize = true;
             this.RecApptAnyStaffLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptAnyStaffLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptAnyStaffLbl.Location = new System.Drawing.Point(590, 885);
+            this.RecApptAnyStaffLbl.Location = new System.Drawing.Point(578, 900);
             this.RecApptAnyStaffLbl.Name = "RecApptAnyStaffLbl";
             this.RecApptAnyStaffLbl.Size = new System.Drawing.Size(99, 29);
             this.RecApptAnyStaffLbl.TabIndex = 159;
@@ -1054,7 +1135,7 @@
             this.RecApptAnyStaffToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RecApptAnyStaffToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.RecApptAnyStaffToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(533, 885);
+            this.RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(521, 900);
             this.RecApptAnyStaffToggleSwitch.Name = "RecApptAnyStaffToggleSwitch";
             this.RecApptAnyStaffToggleSwitch.Size = new System.Drawing.Size(51, 31);
             this.RecApptAnyStaffToggleSwitch.TabIndex = 158;
@@ -1070,7 +1151,7 @@
             this.RecApptPreferredStaffToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RecApptPreferredStaffToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.RecApptPreferredStaffToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RecApptPreferredStaffToggleSwitch.Location = new System.Drawing.Point(849, 885);
+            this.RecApptPreferredStaffToggleSwitch.Location = new System.Drawing.Point(837, 900);
             this.RecApptPreferredStaffToggleSwitch.Name = "RecApptPreferredStaffToggleSwitch";
             this.RecApptPreferredStaffToggleSwitch.Size = new System.Drawing.Size(52, 31);
             this.RecApptPreferredStaffToggleSwitch.TabIndex = 157;
@@ -1085,7 +1166,7 @@
             this.RecApptPreferredStaffLbl.AutoSize = true;
             this.RecApptPreferredStaffLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptPreferredStaffLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptPreferredStaffLbl.Location = new System.Drawing.Point(907, 886);
+            this.RecApptPreferredStaffLbl.Location = new System.Drawing.Point(895, 901);
             this.RecApptPreferredStaffLbl.Name = "RecApptPreferredStaffLbl";
             this.RecApptPreferredStaffLbl.Size = new System.Drawing.Size(215, 29);
             this.RecApptPreferredStaffLbl.TabIndex = 143;
@@ -1100,26 +1181,26 @@
             this.RecApptServiceTypeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RecApptServiceTypeDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.RecApptServiceTypeDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecApptServiceTypeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecApptServiceTypeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.RecApptServiceTypeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RecApptServiceTypeDGV.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecApptServiceTypeDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecApptServiceTypeDGV.DefaultCellStyle = dataGridViewCellStyle8;
             this.RecApptServiceTypeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            this.RecApptServiceTypeDGV.Location = new System.Drawing.Point(126, 1136);
+            this.RecApptServiceTypeDGV.Location = new System.Drawing.Point(114, 1151);
             this.RecApptServiceTypeDGV.Name = "RecApptServiceTypeDGV";
             this.RecApptServiceTypeDGV.ReadOnly = true;
             this.RecApptServiceTypeDGV.RowHeadersVisible = false;
@@ -1134,7 +1215,7 @@
             this.RecApptServiceTypeLbl.AutoSize = true;
             this.RecApptServiceTypeLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptServiceTypeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptServiceTypeLbl.Location = new System.Drawing.Point(127, 1001);
+            this.RecApptServiceTypeLbl.Location = new System.Drawing.Point(115, 1016);
             this.RecApptServiceTypeLbl.Name = "RecApptServiceTypeLbl";
             this.RecApptServiceTypeLbl.Size = new System.Drawing.Size(388, 35);
             this.RecApptServiceTypeLbl.TabIndex = 124;
@@ -1144,7 +1225,7 @@
             // 
             this.RecApptCatMassagePanel.Controls.Add(this.RecApptCatMassRB);
             this.RecApptCatMassagePanel.Controls.Add(this.RecApptCatMassBtn);
-            this.RecApptCatMassagePanel.Location = new System.Drawing.Point(1250, 307);
+            this.RecApptCatMassagePanel.Location = new System.Drawing.Point(1298, 322);
             this.RecApptCatMassagePanel.Name = "RecApptCatMassagePanel";
             this.RecApptCatMassagePanel.Size = new System.Drawing.Size(250, 250);
             this.RecApptCatMassagePanel.TabIndex = 117;
@@ -1183,7 +1264,7 @@
             // 
             this.RecApptCatSpaPanel.Controls.Add(this.RecApptCatSpaRB);
             this.RecApptCatSpaPanel.Controls.Add(this.RecApptCatSpaBtn);
-            this.RecApptCatSpaPanel.Location = new System.Drawing.Point(976, 307);
+            this.RecApptCatSpaPanel.Location = new System.Drawing.Point(1000, 322);
             this.RecApptCatSpaPanel.Name = "RecApptCatSpaPanel";
             this.RecApptCatSpaPanel.Size = new System.Drawing.Size(250, 250);
             this.RecApptCatSpaPanel.TabIndex = 116;
@@ -1222,7 +1303,7 @@
             // 
             this.RecApptCatNCPanel.Controls.Add(this.RecApptCatNCRB);
             this.RecApptCatNCPanel.Controls.Add(this.RecApptCatNCBtn);
-            this.RecApptCatNCPanel.Location = new System.Drawing.Point(702, 307);
+            this.RecApptCatNCPanel.Location = new System.Drawing.Point(702, 322);
             this.RecApptCatNCPanel.Name = "RecApptCatNCPanel";
             this.RecApptCatNCPanel.Size = new System.Drawing.Size(250, 250);
             this.RecApptCatNCPanel.TabIndex = 110;
@@ -1261,7 +1342,7 @@
             // 
             this.RecApptCatFSPanel.Controls.Add(this.RecApptCatFSRB);
             this.RecApptCatFSPanel.Controls.Add(this.RecApptCatFSBtn);
-            this.RecApptCatFSPanel.Location = new System.Drawing.Point(428, 307);
+            this.RecApptCatFSPanel.Location = new System.Drawing.Point(404, 322);
             this.RecApptCatFSPanel.Name = "RecApptCatFSPanel";
             this.RecApptCatFSPanel.Size = new System.Drawing.Size(250, 250);
             this.RecApptCatFSPanel.TabIndex = 109;
@@ -1300,7 +1381,7 @@
             // 
             this.RecApptCatHSPanel.Controls.Add(this.RecApptCatHSRB);
             this.RecApptCatHSPanel.Controls.Add(this.RecApptCatHSBtn);
-            this.RecApptCatHSPanel.Location = new System.Drawing.Point(154, 307);
+            this.RecApptCatHSPanel.Location = new System.Drawing.Point(106, 322);
             this.RecApptCatHSPanel.Name = "RecApptCatHSPanel";
             this.RecApptCatHSPanel.Size = new System.Drawing.Size(250, 250);
             this.RecApptCatHSPanel.TabIndex = 108;
@@ -1340,7 +1421,7 @@
             this.RecApptAttendingStaffLbl.AutoSize = true;
             this.RecApptAttendingStaffLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptAttendingStaffLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptAttendingStaffLbl.Location = new System.Drawing.Point(387, 939);
+            this.RecApptAttendingStaffLbl.Location = new System.Drawing.Point(375, 954);
             this.RecApptAttendingStaffLbl.Name = "RecApptAttendingStaffLbl";
             this.RecApptAttendingStaffLbl.Size = new System.Drawing.Size(224, 29);
             this.RecApptAttendingStaffLbl.TabIndex = 60;
@@ -1352,9 +1433,9 @@
             this.RecApptFooterStopperPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
             this.RecApptFooterStopperPanel.Controls.Add(this.RecApptFooterStopperLbl);
             this.RecApptFooterStopperPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.RecApptFooterStopperPanel.Location = new System.Drawing.Point(405, 1842);
+            this.RecApptFooterStopperPanel.Location = new System.Drawing.Point(393, 1857);
             this.RecApptFooterStopperPanel.Name = "RecApptFooterStopperPanel";
-            this.RecApptFooterStopperPanel.Size = new System.Drawing.Size(804, 116);
+            this.RecApptFooterStopperPanel.Size = new System.Drawing.Size(804, 63);
             this.RecApptFooterStopperPanel.TabIndex = 52;
             // 
             // RecApptFooterStopperLbl
@@ -1374,7 +1455,7 @@
             this.RecApptServiceCategoryLbl.AutoSize = true;
             this.RecApptServiceCategoryLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptServiceCategoryLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptServiceCategoryLbl.Location = new System.Drawing.Point(107, 230);
+            this.RecApptServiceCategoryLbl.Location = new System.Drawing.Point(95, 245);
             this.RecApptServiceCategoryLbl.Name = "RecApptServiceCategoryLbl";
             this.RecApptServiceCategoryLbl.Size = new System.Drawing.Size(446, 35);
             this.RecApptServiceCategoryLbl.TabIndex = 10;
@@ -1386,7 +1467,7 @@
             this.RecApptTransNumText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RecApptTransNumText.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptTransNumText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptTransNumText.Location = new System.Drawing.Point(342, 148);
+            this.RecApptTransNumText.Location = new System.Drawing.Point(330, 163);
             this.RecApptTransNumText.Name = "RecApptTransNumText";
             this.RecApptTransNumText.ReadOnly = true;
             this.RecApptTransNumText.Size = new System.Drawing.Size(281, 27);
@@ -1398,7 +1479,7 @@
             this.RecApptTransNumLbl.AutoSize = true;
             this.RecApptTransNumLbl.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptTransNumLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptTransNumLbl.Location = new System.Drawing.Point(108, 149);
+            this.RecApptTransNumLbl.Location = new System.Drawing.Point(96, 164);
             this.RecApptTransNumLbl.Name = "RecApptTransNumLbl";
             this.RecApptTransNumLbl.Size = new System.Drawing.Size(239, 26);
             this.RecApptTransNumLbl.TabIndex = 8;
@@ -1409,7 +1490,7 @@
             this.RecApptLbl.AutoSize = true;
             this.RecApptLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.RecApptLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.RecApptLbl.Location = new System.Drawing.Point(104, 77);
+            this.RecApptLbl.Location = new System.Drawing.Point(92, 92);
             this.RecApptLbl.Name = "RecApptLbl";
             this.RecApptLbl.Size = new System.Drawing.Size(442, 51);
             this.RecApptLbl.TabIndex = 7;
@@ -1428,11 +1509,12 @@
             this.RecApptSearchServiceTypeBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.RecApptSearchServiceTypeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.RecApptSearchServiceTypeBtn.IconSize = 40;
-            this.RecApptSearchServiceTypeBtn.Location = new System.Drawing.Point(792, 1073);
+            this.RecApptSearchServiceTypeBtn.Location = new System.Drawing.Point(780, 1088);
             this.RecApptSearchServiceTypeBtn.Name = "RecApptSearchServiceTypeBtn";
             this.RecApptSearchServiceTypeBtn.Size = new System.Drawing.Size(46, 46);
             this.RecApptSearchServiceTypeBtn.TabIndex = 133;
             this.RecApptSearchServiceTypeBtn.UseVisualStyleBackColor = false;
+            this.RecApptSearchServiceTypeBtn.Click += new System.EventHandler(this.RecApptSearchServiceTypeBtn_Click);
             // 
             // RecApptPanelExitBtn
             // 
@@ -1443,7 +1525,7 @@
             this.RecApptPanelExitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.RecApptPanelExitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.RecApptPanelExitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RecApptPanelExitBtn.Location = new System.Drawing.Point(1603, 3);
+            this.RecApptPanelExitBtn.Location = new System.Drawing.Point(1591, 18);
             this.RecApptPanelExitBtn.Name = "RecApptPanelExitBtn";
             this.RecApptPanelExitBtn.Size = new System.Drawing.Size(48, 48);
             this.RecApptPanelExitBtn.TabIndex = 43;
@@ -1487,7 +1569,7 @@
             this.MemAccHomeLbl.AutoSize = true;
             this.MemAccHomeLbl.Font = new System.Drawing.Font("TechnicBold", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.MemAccHomeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemAccHomeLbl.Location = new System.Drawing.Point(589, 336);
+            this.MemAccHomeLbl.Location = new System.Drawing.Point(68, 46);
             this.MemAccHomeLbl.Name = "MemAccHomeLbl";
             this.MemAccHomeLbl.Size = new System.Drawing.Size(131, 47);
             this.MemAccHomeLbl.TabIndex = 9;
@@ -1972,7 +2054,7 @@
             // 
             // EnchanteMemberHeaderLogo
             // 
-            this.EnchanteMemberHeaderLogo.BackgroundImage = global::Enchante_Membership.Properties.Resources.Enchante_Logo__200_x_200_px___1_;
+            this.EnchanteMemberHeaderLogo.BackgroundImage = global::EnchanteMembership.Properties.Resources.Enchante_Logo__200_x_200_px___1_;
             this.EnchanteMemberHeaderLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EnchanteMemberHeaderLogo.Location = new System.Drawing.Point(107, 25);
             this.EnchanteMemberHeaderLogo.Name = "EnchanteMemberHeaderLogo";
@@ -2143,7 +2225,7 @@
             // 
             // EnchanteHeaderLogo
             // 
-            this.EnchanteHeaderLogo.Image = global::Enchante_Membership.Properties.Resources.Enchante_Logo_275x100;
+            this.EnchanteHeaderLogo.Image = global::EnchanteMembership.Properties.Resources.Enchante_Logo_275x100;
             this.EnchanteHeaderLogo.Location = new System.Drawing.Point(104, 35);
             this.EnchanteHeaderLogo.Name = "EnchanteHeaderLogo";
             this.EnchanteHeaderLogo.Size = new System.Drawing.Size(275, 100);
@@ -2215,7 +2297,7 @@
             // 
             // AbtUsPictureBox
             // 
-            this.AbtUsPictureBox.Image = global::Enchante_Membership.Properties.Resources.Lobby;
+            this.AbtUsPictureBox.Image = global::EnchanteMembership.Properties.Resources.Lobby;
             this.AbtUsPictureBox.Location = new System.Drawing.Point(198, 4002);
             this.AbtUsPictureBox.Name = "AbtUsPictureBox";
             this.AbtUsPictureBox.Size = new System.Drawing.Size(625, 625);
@@ -2275,7 +2357,7 @@
             // 
             // TeamHS1
             // 
-            this.TeamHS1.BackgroundImage = global::Enchante_Membership.Properties.Resources.Angela_Cruz___HS;
+            this.TeamHS1.BackgroundImage = global::EnchanteMembership.Properties.Resources.Angela_Cruz___HS;
             this.TeamHS1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamHS1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamHS1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2296,7 +2378,7 @@
             // 
             // TeamHS2
             // 
-            this.TeamHS2.BackgroundImage = global::Enchante_Membership.Properties.Resources.Maria_Santos___HS;
+            this.TeamHS2.BackgroundImage = global::EnchanteMembership.Properties.Resources.Maria_Santos___HS;
             this.TeamHS2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamHS2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamHS2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2317,7 +2399,7 @@
             // 
             // TeamHS3
             // 
-            this.TeamHS3.BackgroundImage = global::Enchante_Membership.Properties.Resources.Rhydel_Estrada___HS;
+            this.TeamHS3.BackgroundImage = global::EnchanteMembership.Properties.Resources.Rhydel_Estrada___HS;
             this.TeamHS3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamHS3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamHS3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2338,7 +2420,7 @@
             // 
             // TeamFS1
             // 
-            this.TeamFS1.BackgroundImage = global::Enchante_Membership.Properties.Resources.Juan_Dela_Cruz___FS;
+            this.TeamFS1.BackgroundImage = global::EnchanteMembership.Properties.Resources.Juan_Dela_Cruz___FS;
             this.TeamFS1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamFS1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamFS1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2359,7 +2441,7 @@
             // 
             // TeamFS2
             // 
-            this.TeamFS2.BackgroundImage = global::Enchante_Membership.Properties.Resources.Katrina_Reyes___FS;
+            this.TeamFS2.BackgroundImage = global::EnchanteMembership.Properties.Resources.Katrina_Reyes___FS;
             this.TeamFS2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamFS2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamFS2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2380,7 +2462,7 @@
             // 
             // TeamFS3
             // 
-            this.TeamFS3.BackgroundImage = global::Enchante_Membership.Properties.Resources.Miguel_Fernandez___FS;
+            this.TeamFS3.BackgroundImage = global::EnchanteMembership.Properties.Resources.Miguel_Fernandez___FS;
             this.TeamFS3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamFS3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamFS3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2401,7 +2483,7 @@
             // 
             // TeamNC1
             // 
-            this.TeamNC1.BackgroundImage = global::Enchante_Membership.Properties.Resources.Carlos_Gonzales___NC;
+            this.TeamNC1.BackgroundImage = global::EnchanteMembership.Properties.Resources.Carlos_Gonzales___NC;
             this.TeamNC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamNC1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamNC1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2422,7 +2504,7 @@
             // 
             // TeamNC2
             // 
-            this.TeamNC2.BackgroundImage = global::Enchante_Membership.Properties.Resources.Andrea_Villanueva___NC;
+            this.TeamNC2.BackgroundImage = global::EnchanteMembership.Properties.Resources.Andrea_Villanueva___NC;
             this.TeamNC2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamNC2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamNC2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2443,7 +2525,7 @@
             // 
             // TeamNC3
             // 
-            this.TeamNC3.BackgroundImage = global::Enchante_Membership.Properties.Resources.Sarah_Lim___NC;
+            this.TeamNC3.BackgroundImage = global::EnchanteMembership.Properties.Resources.Sarah_Lim___NC;
             this.TeamNC3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamNC3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamNC3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2464,7 +2546,7 @@
             // 
             // TeamSPA1
             // 
-            this.TeamSPA1.BackgroundImage = global::Enchante_Membership.Properties.Resources.Luis_Cruz___Spa;
+            this.TeamSPA1.BackgroundImage = global::EnchanteMembership.Properties.Resources.Luis_Cruz___Spa;
             this.TeamSPA1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamSPA1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamSPA1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2485,7 +2567,7 @@
             // 
             // TeamSPA2
             // 
-            this.TeamSPA2.BackgroundImage = global::Enchante_Membership.Properties.Resources.Maricel_Santos___Spa;
+            this.TeamSPA2.BackgroundImage = global::EnchanteMembership.Properties.Resources.Maricel_Santos___Spa;
             this.TeamSPA2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamSPA2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamSPA2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2506,7 +2588,7 @@
             // 
             // TeamSPA3
             // 
-            this.TeamSPA3.BackgroundImage = global::Enchante_Membership.Properties.Resources.Rafael_Garcia____Spa;
+            this.TeamSPA3.BackgroundImage = global::EnchanteMembership.Properties.Resources.Rafael_Garcia____Spa;
             this.TeamSPA3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamSPA3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamSPA3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2527,7 +2609,7 @@
             // 
             // TeamMSG1
             // 
-            this.TeamMSG1.BackgroundImage = global::Enchante_Membership.Properties.Resources.Antonio_Reyes___Massage;
+            this.TeamMSG1.BackgroundImage = global::EnchanteMembership.Properties.Resources.Antonio_Reyes___Massage;
             this.TeamMSG1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamMSG1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamMSG1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2548,7 +2630,7 @@
             // 
             // TeamMSG2
             // 
-            this.TeamMSG2.BackgroundImage = global::Enchante_Membership.Properties.Resources.Jasmine_Castro___Massage;
+            this.TeamMSG2.BackgroundImage = global::EnchanteMembership.Properties.Resources.Jasmine_Castro___Massage;
             this.TeamMSG2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamMSG2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamMSG2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2569,7 +2651,7 @@
             // 
             // TeamMSG3
             // 
-            this.TeamMSG3.BackgroundImage = global::Enchante_Membership.Properties.Resources.Sofia_Ramirez___Massage;
+            this.TeamMSG3.BackgroundImage = global::EnchanteMembership.Properties.Resources.Sofia_Ramirez___Massage;
             this.TeamMSG3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TeamMSG3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeamMSG3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2750,7 +2832,7 @@
             // 
             // ServiceHSBtn
             // 
-            this.ServiceHSBtn.BackgroundImage = global::Enchante_Membership.Properties.Resources._30_People_Are_Sharing_Seemingly_Innocent_Questions_That_Broke_Their_Heart_A_;
+            this.ServiceHSBtn.BackgroundImage = global::EnchanteMembership.Properties.Resources._30_People_Are_Sharing_Seemingly_Innocent_Questions_That_Broke_Their_Heart_A_;
             this.ServiceHSBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ServiceHSBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ServiceHSBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2782,7 +2864,7 @@
             // 
             // ServiceFSBtn
             // 
-            this.ServiceFSBtn.BackgroundImage = global::Enchante_Membership.Properties.Resources.cabernetqween;
+            this.ServiceFSBtn.BackgroundImage = global::EnchanteMembership.Properties.Resources.cabernetqween;
             this.ServiceFSBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ServiceFSBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ServiceFSBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2803,7 +2885,7 @@
             // 
             // ServiceNCBtn
             // 
-            this.ServiceNCBtn.BackgroundImage = global::Enchante_Membership.Properties.Resources.Nail_Tech_Career;
+            this.ServiceNCBtn.BackgroundImage = global::EnchanteMembership.Properties.Resources.Nail_Tech_Career;
             this.ServiceNCBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ServiceNCBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ServiceNCBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -2845,7 +2927,7 @@
             // 
             // ServiceMBtn
             // 
-            this.ServiceMBtn.BackgroundImage = global::Enchante_Membership.Properties.Resources.guia_para_personalizar_tu_masaje;
+            this.ServiceMBtn.BackgroundImage = global::EnchanteMembership.Properties.Resources.guia_para_personalizar_tu_masaje;
             this.ServiceMBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ServiceMBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ServiceMBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(101)))), ((int)(((byte)(42)))));
@@ -6785,8 +6867,8 @@
             // 
             // EnchanteFooterLogo
             // 
-            this.EnchanteFooterLogo.BackgroundImage = global::Enchante_Membership.Properties.Resources.Enchante_Logo__200_x_200_px__Green;
-            this.EnchanteFooterLogo.Image = global::Enchante_Membership.Properties.Resources.Enchante_Logo__200_x_200_px__Green;
+            this.EnchanteFooterLogo.BackgroundImage = global::EnchanteMembership.Properties.Resources.Enchante_Logo__200_x_200_px__Green;
+            this.EnchanteFooterLogo.Image = global::EnchanteMembership.Properties.Resources.Enchante_Logo__200_x_200_px__Green;
             this.EnchanteFooterLogo.Location = new System.Drawing.Point(254, 11);
             this.EnchanteFooterLogo.Name = "EnchanteFooterLogo";
             this.EnchanteFooterLogo.Size = new System.Drawing.Size(200, 200);
@@ -6852,7 +6934,7 @@
             // 
             // EDP1
             // 
-            this.EDP1.Image = global::Enchante_Membership.Properties.Resources.Lobby;
+            this.EDP1.Image = global::EnchanteMembership.Properties.Resources.Lobby;
             this.EDP1.Location = new System.Drawing.Point(1169, 288);
             this.EDP1.Name = "EDP1";
             this.EDP1.Size = new System.Drawing.Size(625, 625);
@@ -6895,80 +6977,38 @@
             // 
             this.MemberAccParentCard.ContainerControl = this.MemberParentContainer;
             this.MemberAccParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.MemberAccParentCard.SelectedCard = "Appt";
+            this.MemberAccParentCard.SelectedCard = "Home";
             // 
-            // TestPrint
+            // ServiceTotalPrice
             // 
-            this.TestPrint.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.TestPrint.BorderRadius = 20;
-            this.TestPrint.BorderThickness = 2;
-            this.TestPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.TestPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.TestPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.TestPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.TestPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.TestPrint.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.TestPrint.Location = new System.Drawing.Point(1206, 1656);
-            this.TestPrint.Name = "TestPrint";
-            this.TestPrint.Size = new System.Drawing.Size(100, 47);
-            this.TestPrint.TabIndex = 198;
-            this.TestPrint.Text = "print pdf";
-            this.TestPrint.Click += new System.EventHandler(this.TestPrint_Click);
+            this.ServiceTotalPrice.AutoEllipsis = true;
+            this.ServiceTotalPrice.AutoSize = true;
+            this.ServiceTotalPrice.Font = new System.Drawing.Font("TechnicBold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceTotalPrice.Location = new System.Drawing.Point(1365, 1130);
+            this.ServiceTotalPrice.Name = "ServiceTotalPrice";
+            this.ServiceTotalPrice.Size = new System.Drawing.Size(152, 18);
+            this.ServiceTotalPrice.TabIndex = 10;
+            this.ServiceTotalPrice.Text = "Service Total Price";
+            this.ServiceTotalPrice.Visible = false;
             // 
-            // RecApptSelectedService
+            // DateTimePickerTimer
             // 
-            this.RecApptSelectedService.HeaderText = "Selected Service";
-            this.RecApptSelectedService.Name = "RecApptSelectedService";
-            this.RecApptSelectedService.ReadOnly = true;
+            this.DateTimePickerTimer.Enabled = true;
+            this.DateTimePickerTimer.Interval = 1000;
+            this.DateTimePickerTimer.Tick += new System.EventHandler(this.DateTimePickerTimer_Tick);
             // 
-            // RecApptServicePrice
+            // label1
             // 
-            this.RecApptServicePrice.HeaderText = "Service Price";
-            this.RecApptServicePrice.Name = "RecApptServicePrice";
-            this.RecApptServicePrice.ReadOnly = true;
-            // 
-            // RecApptServiceCategory
-            // 
-            this.RecApptServiceCategory.HeaderText = "Service Category";
-            this.RecApptServiceCategory.Name = "RecApptServiceCategory";
-            this.RecApptServiceCategory.ReadOnly = true;
-            this.RecApptServiceCategory.Visible = false;
-            // 
-            // RecApptServiceID
-            // 
-            this.RecApptServiceID.HeaderText = "Service ID";
-            this.RecApptServiceID.Name = "RecApptServiceID";
-            this.RecApptServiceID.ReadOnly = true;
-            this.RecApptServiceID.Visible = false;
-            // 
-            // RecApptStaffSelected
-            // 
-            this.RecApptStaffSelected.HeaderText = "Staff Selected";
-            this.RecApptStaffSelected.Name = "RecApptStaffSelected";
-            this.RecApptStaffSelected.ReadOnly = true;
-            this.RecApptStaffSelected.Visible = false;
-            // 
-            // RecApptPriorityNumber
-            // 
-            this.RecApptPriorityNumber.HeaderText = "Priority Number";
-            this.RecApptPriorityNumber.Name = "RecApptPriorityNumber";
-            this.RecApptPriorityNumber.ReadOnly = true;
-            this.RecApptPriorityNumber.Visible = false;
-            // 
-            // RecApptTimeSelected
-            // 
-            this.RecApptTimeSelected.HeaderText = "Time Selected";
-            this.RecApptTimeSelected.Name = "RecApptTimeSelected";
-            this.RecApptTimeSelected.ReadOnly = true;
-            this.RecApptTimeSelected.Visible = false;
-            // 
-            // RecApptQueType
-            // 
-            this.RecApptQueType.HeaderText = "Que Type";
-            this.RecApptQueType.Name = "RecApptQueType";
-            this.RecApptQueType.ReadOnly = true;
-            this.RecApptQueType.Visible = false;
+            this.label1.AutoEllipsis = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("TechnicBold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label1.Location = new System.Drawing.Point(24, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 18);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Member ID Number";
             // 
             // EnchanteMembership
             // 
@@ -7566,6 +7606,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptPriorityNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptTimeSelected;
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptQueType;
+        private System.Windows.Forms.Label ServiceTotalPrice;
+        private System.Windows.Forms.Timer DateTimePickerTimer;
+        private System.Windows.Forms.Label label1;
     }
 }
 

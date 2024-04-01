@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Enchante_Membership.Properties {
+namespace EnchanteMembership.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Enchante_Membership.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Enchante_Membership.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EnchanteMembership.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -173,16 +173,6 @@ namespace Enchante_Membership.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Enchante_Logo__200_x_200_px___1_1 {
-            get {
-                object obj = ResourceManager.GetObject("Enchante Logo (200 x 200 px) (1)1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Enchante_Logo__200_x_200_px__Green {
             get {
                 object obj = ResourceManager.GetObject("Enchante Logo (200 x 200 px) Green", resourceCulture);
@@ -193,9 +183,29 @@ namespace Enchante_Membership.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Enchante_Logo__200_x_200_px__Green_without_text {
+            get {
+                object obj = ResourceManager.GetObject("Enchante_Logo__200_x_200_px__Green_without_text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Enchante_Logo_275x100 {
             get {
                 object obj = ResourceManager.GetObject("Enchante Logo 275x100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Enchante_Logo_275x100_Green {
+            get {
+                object obj = ResourceManager.GetObject("Enchante_Logo_275x100_Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

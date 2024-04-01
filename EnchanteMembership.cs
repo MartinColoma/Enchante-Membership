@@ -16,8 +16,10 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
+using System.Security.Policy;
+using System.Xml.Linq;
 
-namespace Enchante_Membership
+namespace EnchanteMembership
 {
     
     public partial class EnchanteMembership : Form
@@ -78,16 +80,16 @@ namespace Enchante_Membership
             PremGenderComboText.Items.AddRange(genders);
             PremGenderComboText.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            // Initialize the timer
-            ScrollTimer.Start();
-            PictureSlideTimer.Start();
-
         }
 
         private void EnchanteMembership_Load(object sender, EventArgs e)
         {
             HomePanelReset();
 
+            // Initialize the timer
+            ScrollTimer.Start();
+            PictureSlideTimer.Start();
+            DateTimePickerTimer.Start();
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -723,6 +725,9 @@ namespace Enchante_Membership
                                         MemberNameLbl.Text = $"{name} {lastname}";
                                         MemberIDNumLbl.Text = ID;
 
+                                        //Welcome Home msg
+                                        MemAccHomeLbl.Text = $"Welcome back, {name}";
+
                                         //personal info
                                         MemberAccInfoPersonalNameText.Text = $"{name} {lastname}";
                                         MemberAccInfoPersonalCPNumText.Text = CPNum;
@@ -762,7 +767,8 @@ namespace Enchante_Membership
                                         MemberNameLbl.Text = name + " " + lastname;
                                         MemberIDNumLbl.Text = ID;
 
-
+                                        //Welcome Home msg
+                                        MemAccHomeLbl.Text = $"Welcome back, {name}";
                                         //personal info
                                         MemberAccInfoPersonalNameText.Text = $"{name} {lastname}";
                                         MemberAccInfoPersonalCPNumText.Text = CPNum;
@@ -802,7 +808,8 @@ namespace Enchante_Membership
                                         MemberNameLbl.Text = name + " " + lastname;
                                         MemberIDNumLbl.Text = ID;
 
-
+                                        //Welcome Home msg
+                                        MemAccHomeLbl.Text = $"Welcome back, {name}";
                                         //personal info
                                         MemberAccInfoPersonalNameText.Text = $"{name} {lastname}";
                                         MemberAccInfoPersonalCPNumText.Text = CPNum;
@@ -2669,8 +2676,7 @@ namespace Enchante_Membership
                 // Check if positions have been set already
                 if (!positionsSetForPremiumBtn)
                 {
-                    RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(533, 885);
-                    RecApptAnyStaffLbl.Location = new System.Drawing.Point(590, 885);
+
                     RecApptAnyStaffToggleSwitch.Visible = true;
                     RecApptAnyStaffLbl.Visible = true;
                     RecApptPreferredStaffLbl.Visible = true;
@@ -2690,8 +2696,6 @@ namespace Enchante_Membership
                 // Check if positions have been set already
                 if (!positionsSetForSVIPBtn)
                 {
-                    RecApptAnyStaffToggleSwitch.Location = new System.Drawing.Point(533, 885);
-                    RecApptAnyStaffLbl.Location = new System.Drawing.Point(590, 885);
                     RecApptAnyStaffToggleSwitch.Visible = true;
                     RecApptAnyStaffLbl.Visible = true;
                     RecApptPreferredStaffLbl.Visible = true;
@@ -3422,6 +3426,7 @@ namespace Enchante_Membership
                 NewSelectedServiceRow.Cells["RecApptPriorityNumber"].Value = latestprioritynumber;
                 NewSelectedServiceRow.Cells["RecApptStaffSelected"].Value = selectedStaffID;
                 QueTypeIdentifier(NewSelectedServiceRow.Cells["RecApptQueType"]);
+                MemApptCalculateTotalPrice();
 
                 RecApptServiceTypeDGV.ClearSelection();
 
@@ -3460,8 +3465,10 @@ namespace Enchante_Membership
             {
                 RecApptServiceHistoryDB(RecApptSelectedServiceDGV); //service history db
                 ReceptionistAppointmentDB(); //appointment transaction db
+                MemApptFormGenerator();
                 RecApptTransactNumRefresh();
-                MemApptTransactionClear();            }
+                MemApptTransactionClear();            
+            }
         }
 
         //ApptMember
@@ -3469,7 +3476,7 @@ namespace Enchante_Membership
         {
             DateTime pickedDate = RecApptBookingDatePicker.Value;
             string transactionNum = RecApptTransNumText.Text;
-            string transactionType = "Walk-in Appointment Transaction";
+            string transactionType = "Appointment Transaction";
             string serviceStatus = "Pending";
 
             //booked values
@@ -3563,7 +3570,7 @@ namespace Enchante_Membership
             string transactionNum = RecApptTransNumText.Text;
             DateTime currentDate = DateTime.Today;
             string serviceStatus = "Pending";
-            string transactType = "Walk-in Appointment";
+            string transactType = "Online Appointment";
             string appointmentStatus = "Unconfirmed";
 
             //basic info
@@ -3994,7 +4001,8 @@ namespace Enchante_Membership
         }
         #endregion
 
-        
+
+        // Method to get image bytes from resource
         private byte[] GetImageBytesFromResource(string resourceName)
         {
             try
@@ -4011,17 +4019,19 @@ namespace Enchante_Membership
                     }
                     else
                     {
-                        MessageBox.Show($"Resource stream for '{resourceName}' is null.", "Member Appointment Form Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Resource stream for '{resourceName}' is null.", "Manager Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return null;
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Member Appointment Form Receipt Generator Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Manager Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
+
+
         private void MemApptFormGenerator()
         {
             DateTime currentDate = RecDateTimePicker.Value;
@@ -4030,9 +4040,13 @@ namespace Enchante_Membership
             string timePrintedFile = currentDate.ToString("hh-mm-ss");
             string transactNum = RecApptTransNumText.Text;
             string clientName = MemberAccInfoPersonalNameText.Text;
-            string legal = "Thank you for trusting Enchanté Salon for your beauty needs." +
-                " This receipt will serve as your sales invoice of any services done in Enchanté Salon." +
-                " Any concerns about your services please ask and show this receipt in the frontdesk of Enchanté Salon.";
+            string apptNote = "This form will serves as your proof appointment with Enchanté Salon. " +
+                                "Kindly present this form and one (1) Valid ID in our frontdesk and our " +
+                                "receptionist shall attend to your needs.";
+            string total = ServiceTotalPrice.Text.ToString();
+            string apptDate = RecApptBookingDatePicker.Value.ToString();
+            string apptTime = RecApptBookingTimeComboBox.Text;
+
             // Increment the file name
 
             // Generate a unique filename for the PDF
@@ -4048,7 +4062,7 @@ namespace Enchante_Membership
                 string filePath = saveFileDialog.FileName;
 
                 // Create a new document with custom page size (8.5"x4.25" in landscape mode)
-                Document doc = new Document(new iTextSharp.text.Rectangle(Utilities.MillimetersToPoints(133f), Utilities.MillimetersToPoints(203f)));
+                Document doc = new Document(new iTextSharp.text.Rectangle(Utilities.MillimetersToPoints(133.35f), Utilities.MillimetersToPoints(215.9f)));
 
                 try
                 {
@@ -4058,27 +4072,12 @@ namespace Enchante_Membership
                     // Open the document for writing
                     doc.Open();
 
-                    //string imagePath = "C:\\Users\\Pepper\\source\\repos\\Enchante\\Resources\\Enchante Logo (200 x 200 px) (1).png"; // Replace with the path to your logo image
-                    // Load the image from project resources
-                    //if (File.Exists(imagePath))
-                    //{
-                    //    //iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(imagePath);
-                    //}
-
-                    // Load the image from project resources
-                    byte[] imageBytes = GetImageBytesFromResource("EnchanteMembership.Resources.Enchante Logo (200 x 200 px) (1).png");
-
-                    if (imageBytes != null)
-                    {
-                        iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(imageBytes);
-                        logo.ScaleAbsolute(50f, 50f);
-                        logo.Alignment = Element.ALIGN_CENTER;
-                        doc.Add(logo);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error loading image from resources.", "Appointment Form Image Loading Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    };
+                    Bitmap imagepath = Properties.Resources.Enchante_Logo__200_x_200_px__Green;
+                    iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(imagepath, System.Drawing.Imaging.ImageFormat.Png);
+                    logo.Alignment = Element.ALIGN_CENTER;
+                    logo.ScaleAbsolute(100f, 100f);
+                    logo.Alignment = Element.ALIGN_CENTER;
+                    doc.Add(logo);
 
                     iTextSharp.text.Font headerFont = FontFactory.GetFont("Courier", 16, iTextSharp.text.Font.BOLD);
                     iTextSharp.text.Font boldfont = FontFactory.GetFont("Courier", 10, iTextSharp.text.Font.BOLD);
@@ -4090,29 +4089,54 @@ namespace Enchante_Membership
                     centerAligned.Alignment = Element.ALIGN_CENTER;
 
                     // Add centered content to the centerAligned Paragraph
-                    centerAligned.Add(new Chunk("Enchanté Salon", headerFont));
-                    centerAligned.Add(new Chunk("\n69th flr. Enchanté Bldg. Ortigas Extension Ave. \nManggahan, Pasig City 1611 Philippines", font));
+                    //centerAligned.Add(new Chunk("Enchanté Salon", headerFont));
+                    centerAligned.Add(new Chunk("69th flr. Enchanté Bldg. Ortigas Extension Ave. \nManggahan, Pasig City 1611 Philippines", font));
                     centerAligned.Add(new Chunk("\nTel. No.: (1101) 111-1010", font));
-                    centerAligned.Add(new Chunk($"\nDate: {datetoday} Time: {timePrinted}", font));
 
                     // Add the centered content to the document
                     doc.Add(centerAligned);
+
+                    int totalRowCount = RecApptSelectedServiceDGV.Rows.Count;
                     doc.Add(new Chunk("\n")); // New line
 
-                    doc.Add(new Paragraph($"Transaction No.: {transactNum}", font));
+                    // Create INFO table
+                    PdfPTable TransInfo = new PdfPTable(2);
+
+                    TransInfo.HorizontalAlignment = Element.ALIGN_CENTER; // Center the table
+
+                    TransInfo.SetWidths(new float[] { 20f, 30f }); // Column widths
+                    TransInfo.DefaultCell.Border = PdfPCell.NO_BORDER;
+                    TransInfo.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
+                    TransInfo.DefaultCell.HorizontalAlignment = Element.ALIGN_LEFT; // Align cells to left
+
+                    // Add cells to the table
+                    TransInfo.AddCell(new Phrase($"Transaction No.: ", font));
+                    TransInfo.AddCell(new Phrase($"{transactNum}", font));
+                    TransInfo.AddCell(new Phrase($"Booked By: ", font));
+                    TransInfo.AddCell(new Phrase($"{clientName}", font));
+                    TransInfo.AddCell(new Phrase($"Booked Date: ", font));
+                    TransInfo.AddCell(new Phrase($"{datetoday}", font));
+                    TransInfo.AddCell(new Phrase($"Booked Time: ", font));
+                    TransInfo.AddCell(new Phrase($"{timePrinted}", font));
+
+                    // Add the table to the document
+                    doc.Add(TransInfo);
+
+
                     //doc.Add(new Paragraph($"Order Date: {today}", font));
+                    doc.Add(new Chunk("\n")); // New line
                     doc.Add(new Chunk("\n")); // New line
 
                     doc.Add(new LineSeparator()); // Dotted line
 
                     PdfPTable columnHeaderTable = new PdfPTable(4);
-                    columnHeaderTable.SetWidths(new float[] { 10f, 10f, 5f, 5f }); // Column widths
+                    columnHeaderTable.SetWidths(new float[] { 30f, 40f, 20f, 20f }); // Column widths
                     columnHeaderTable.DefaultCell.Border = PdfPCell.NO_BORDER;
                     columnHeaderTable.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
                     columnHeaderTable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
 
                     columnHeaderTable.AddCell(new Phrase("Attending\nStaff ID", boldfont));
-                    columnHeaderTable.AddCell(new Phrase("Service(s)", boldfont));
+                    columnHeaderTable.AddCell(new Phrase("Services", boldfont));
                     columnHeaderTable.AddCell(new Phrase("Qty.", boldfont));
                     columnHeaderTable.AddCell(new Phrase("Total Price", boldfont));
                     doc.Add(columnHeaderTable);
@@ -4135,7 +4159,7 @@ namespace Enchante_Membership
 
                             // Add cells to the item table
                             PdfPTable serviceTable = new PdfPTable(4);
-                            serviceTable.SetWidths(new float[] { 5f, 5f, 3f, 3f }); // Column widths
+                            serviceTable.SetWidths(new float[] { 30f, 40f, 20f, 20f }); // Column widths
                             serviceTable.DefaultCell.Border = PdfPCell.NO_BORDER;
                             serviceTable.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
                             serviceTable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -4150,7 +4174,7 @@ namespace Enchante_Membership
                         catch (Exception ex)
                         {
                             // Handle or log any exceptions that occur while processing DataGridView data
-                            MessageBox.Show("An error occurred: " + ex.Message, "Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("An error occurred: " + ex.Message, "Appoint Form Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
 
@@ -4158,28 +4182,42 @@ namespace Enchante_Membership
                     doc.Add(new LineSeparator()); // Dotted line
                     doc.Add(new Chunk("\n")); // New line
 
+                    // Add cells to the INFO table
+                    PdfPTable amount = new PdfPTable(2);
 
+                    amount.HorizontalAlignment = Element.ALIGN_CENTER; // Center the table
 
+                    amount.SetWidths(new float[] { 30f, 20f }); // Column widths as percentage of the total width
 
+                    amount.DefaultCell.Border = PdfPCell.NO_BORDER;
+                    amount.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
+                    amount.DefaultCell.HorizontalAlignment = Element.ALIGN_LEFT; // Align cell content justified
+                    amount.AddCell(new Phrase($"Appointment Date: ", font));
+                    amount.AddCell(new Phrase($"{apptDate}", font));
+                    amount.AddCell(new Phrase($"Appointment Time:", font));
+                    amount.AddCell(new Phrase($"{apptTime}", font));
+                    amount.AddCell(new Phrase($"Amount to be Paid: ", font));
+                    amount.AddCell(new Phrase($"{total}", font));
+                    amount.AddCell(new Phrase($"Total # of Service(s):", font));
+                    amount.AddCell(new Phrase($"{totalRowCount}", font));
 
-                    // Add the "Served To" section
+                    doc.Add(amount); // Add the table to the document
+
                     doc.Add(new Chunk("\n")); // New line
-                    doc.Add(new Paragraph($"Served To: {clientName}", italic));
-                    doc.Add(new Paragraph("Address:_______________________________", italic));
-                    doc.Add(new Paragraph("TIN No.:_______________________________", italic));
+
 
                     // Add the legal string with center alignment
-                    Paragraph paragraph_footer = new Paragraph($"\n\n{legal}", italic);
+                    Paragraph paragraph_footer = new Paragraph($"\n{apptNote}", italic);
                     paragraph_footer.Alignment = Element.ALIGN_CENTER;
                     doc.Add(paragraph_footer);
                 }
                 catch (DocumentException de)
                 {
-                    MessageBox.Show("An error occurred: " + de.Message, "Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred: " + de.Message, "Appoint Form Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (IOException ioe)
                 {
-                    MessageBox.Show("An error occurred: " + ioe.Message, "Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred: " + ioe.Message, "Appoint Form Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -4229,6 +4267,125 @@ namespace Enchante_Membership
         private void TestPrint_Click(object sender, EventArgs e)
         {
             MemApptFormGenerator();
+        }
+        private void MemApptCalculateTotalPrice()
+        {
+            decimal total1 = 0;
+
+            int servicepriceColumnIndex = RecApptSelectedServiceDGV.Columns["RecApptServicePrice"].Index;
+
+            foreach (DataGridViewRow row in RecApptSelectedServiceDGV.Rows)
+            {
+                if (row.Cells[servicepriceColumnIndex].Value != null)
+                {
+                    decimal price = decimal.Parse(row.Cells[servicepriceColumnIndex].Value.ToString());
+                    total1 += price;
+                }
+            }
+            ServiceTotalPrice.Text = total1.ToString("F2");
+
+
+        }
+        private void RecApptSearchServiceTypeText_TextChanged(object sender, EventArgs e)
+        {
+            RecApptSearchServicePerCat();
+        }
+
+        private void RecApptSearchServicePerCat()
+        {
+            string searchText = RecApptSearchServiceTypeText.Text;
+            if (RecApptCatHSRB.Checked)
+            {
+                SearchApptAcrossCategories(searchText, "Hair Styling");
+                return;
+            }
+            else if (RecApptCatFSRB.Checked)
+            {
+                SearchApptAcrossCategories(searchText, "Face & Skin");
+                return;
+            }
+            else if (RecApptCatNCRB.Checked)
+            {
+                SearchApptAcrossCategories(searchText, "Nail Care");
+                return;
+            }
+            else if (RecApptCatSpaRB.Checked)
+            {
+                SearchApptAcrossCategories(searchText, "Spa");
+                return;
+            }
+            else if (RecApptCatMassRB.Checked)
+            {
+                SearchApptAcrossCategories(searchText, "Massage");
+                return;
+            }
+        }
+
+        private void RecApptSearchServiceTypeBtn_Click(object sender, EventArgs e)
+        {
+            RecApptSearchServicePerCat();
+        }
+
+        private void SearchApptAcrossCategories(string searchText, string category)
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlconn))
+                {
+                    connection.Open();
+
+                    // Modify the query to search for the specified text in a specific category
+                    string sql = "SELECT * FROM `services` WHERE Category = @category AND " +
+                                 "(Name LIKE @searchText OR " +
+                                 "Description LIKE @searchText OR " +
+                                 "Duration LIKE @searchText OR " +
+                                 "Price LIKE @searchText)";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                    cmd.Parameters.AddWithValue("@category", category);
+
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable);
+
+                        RecApptServiceTypeDGV.Columns.Clear();
+
+                        RecApptServiceTypeDGV.DataSource = dataTable;
+
+                        // Adjust column visibility and sizing as needed
+                        RecApptServiceTypeDGV.Columns[0].Visible = false;
+                        RecApptServiceTypeDGV.Columns[1].Visible = false;
+                        RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        RecApptServiceTypeDGV.ClearSelection();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error occurred: " + e.Message, "Error");
+            }
+            finally
+            {
+                // Ensure the connection is closed even in case of an exception
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        private void DateTimePickerTimer_Tick(object sender, EventArgs e)
+        {
+            RecDateTimePicker.Value = DateTime.Now;
+            DateTime cashierrcurrentDate = RecDateTimePicker.Value;
+            string Cashiertoday = cashierrcurrentDate.ToString("MM-dd-yyyy dddd hh:mm tt");
+
+            label1.Text = Cashiertoday;
+
         }
     }
 }
