@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 
 
-namespace Enchante_Membership
+namespace EnchanteMembership
 {
     internal class ServiceCard
     {

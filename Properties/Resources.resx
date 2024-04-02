@@ -118,7 +118,106 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Sofia_Ramirez___Massage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sofia Ramirez - Massage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outofstock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outofstock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jasmine_Castro___Massage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jasmine Castro - Massage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Enchante Logo (200 x 200 px) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Enchante Logo (200 x 200 px) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Enchante Logo 275x100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Enchante Logo 275x100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Enchante_Bldg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Enchante Bldg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Green___Gold_Collection___Salon_Equipment_Centre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Green &amp; Gold Collection _ Salon Equipment Centre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Miguel_Fernandez___FS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Miguel Fernandez - FS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Olga_Collection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Olga Collection.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carlos_Gonzales___NC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carlos Gonzales - NC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maricel_Santos___Spa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maricel Santos - Spa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Antonio_Reyes___Massage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Antonio Reyes - Massage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Katrina_Reyes___FS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Katrina Reyes - FS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="30 People Are Sharing Seemingly Innocent Questions That Broke Their Heart A " type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\30 People Are Sharing Seemingly Innocent Questions That Broke Their Heart A .jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Angela_Cruz___HS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Angela Cruz - HS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guia-para-personalizar-tu-masaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guia-para-personalizar-tu-masaje.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Das Dark Naturalist Salon Design von Comfortel Check more at https___mac.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cabernetqween" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cabernetqween.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maria_Santos___HS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maria Santos - HS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (1)1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luis_Cruz___Spa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luis Cruz - Spa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Andrea_Villanueva___NC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Andrea Villanueva - NC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sarah_Lim___NC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sarah Lim - NC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Juan_Dela_Cruz___FS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Juan Dela Cruz - FS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rafael_Garcia____Spa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rafael Garcia  - Spa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rhydel_Estrada___HS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rhydel Estrada - HS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lobby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lobby.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Green_manicure_nail_table_with_gold_frame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Green manicure nail table with gold frame.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nail Tech Career" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nail Tech Career.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Enchante Logo (200 x 200 px) Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Enchante Logo (200 x 200 px) Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Enchante_Logo_275x100_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Enchante Logo 275x100 Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Enchante_Logo__200_x_200_px__Green_without_text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Enchante Logo (200 x 200 px) Green without text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
