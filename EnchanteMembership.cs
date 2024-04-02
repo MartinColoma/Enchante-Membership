@@ -741,7 +741,8 @@ namespace EnchanteMembership
                                         MemberAccInfoPersonalCreatedText.Text = accountCreated;
                                         MemberAccInfoPersonalTypeText.Text = type;
 
-                                        ispremorsvip = false;
+                                        isprem = false;
+                                        issvip = false;
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -783,7 +784,8 @@ namespace EnchanteMembership
                                         MemberAccInfoPersonalCreatedText.Text = accountCreated;
                                         MemberAccInfoPersonalTypeText.Text = type;
 
-                                        ispremorsvip = true;
+                                        isprem = true;
+                                        issvip = false;
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -825,7 +827,8 @@ namespace EnchanteMembership
                                         MemberAccInfoPersonalCreatedText.Text = accountCreated;
                                         MemberAccInfoPersonalTypeText.Text = type;
 
-                                        ispremorsvip = true;
+                                        issvip = true;
+                                        isprem = false;
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -3913,18 +3916,27 @@ namespace EnchanteMembership
             RecApptAvailableAttendingStaffSelectedComboBox.SelectedIndex = 0;
         }
 
-        public bool ispremorsvip;
+        public bool isprem;
+        public bool issvip;
         public void QueTypeIdentifier(DataGridViewCell QueType)
         {
 
 
-            if (ispremorsvip == true && RecApptAnyStaffToggleSwitch.Checked)
+            if (isprem == true && RecApptAnyStaffToggleSwitch.Checked)
             {
                 QueType.Value = "AnyonePriority";
             }
-            else if (ispremorsvip == true && RecApptPreferredStaffToggleSwitch.Checked)
+            else if (isprem == true && RecApptPreferredStaffToggleSwitch.Checked)
             {
                 QueType.Value = "PreferredPriority";
+            }
+            else if (issvip == true && RecApptPreferredStaffToggleSwitch.Checked)
+            {
+                QueType.Value = "AnyoneSPriority";
+            }
+            else if (issvip == true && RecApptPreferredStaffToggleSwitch.Checked)
+            {
+                QueType.Value = "PreferredSPriority";
             }
             else if (selectedStaffID == "Anyone")
             {
