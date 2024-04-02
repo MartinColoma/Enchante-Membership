@@ -741,6 +741,7 @@ namespace EnchanteMembership
                                         MemberAccInfoPersonalCreatedText.Text = accountCreated;
                                         MemberAccInfoPersonalTypeText.Text = type;
 
+                                        ispremorsvip = false;
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -782,6 +783,7 @@ namespace EnchanteMembership
                                         MemberAccInfoPersonalCreatedText.Text = accountCreated;
                                         MemberAccInfoPersonalTypeText.Text = type;
 
+                                        ispremorsvip = true;
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -823,7 +825,7 @@ namespace EnchanteMembership
                                         MemberAccInfoPersonalCreatedText.Text = accountCreated;
                                         MemberAccInfoPersonalTypeText.Text = type;
 
-
+                                        ispremorsvip = true;
                                         MemberHomePanelReset();
                                         logincredclear();
 
@@ -2646,7 +2648,6 @@ namespace EnchanteMembership
             MemApptTransactionClear();
             LoadBookingTimes();
             RecApptBookingDatePicker.MinDate = DateTime.Today;
-            isappointment = true;
 
             
 
@@ -3756,21 +3757,7 @@ namespace EnchanteMembership
                 return ordersessionNumber;
             }
         }
-        //ApptMember
-        private void RecApptTransactionClear()
-        {
-            RecApptCatHSRB.Checked = false;
-            RecApptCatFSRB.Checked = false;
-            RecApptCatNCRB.Checked = false;
-            RecApptCatSpaRB.Checked = false;
-            RecApptCatMassRB.Checked = false;
-            RecApptSelectedServiceDGV.Rows.Clear();
-            RecApptBookingTimeComboBox.Items.Clear();
-            RecApptBookingDatePicker.Value = DateTime.Today;
-            RecApptPreferredStaffToggleSwitch.Checked = false;
-            RecApptAnyStaffToggleSwitch.Checked = false;
-            isappointment = false;
-        }
+
 
         //ApptMember
         private void RecApptBookingDatePicker_ValueChanged(object sender, EventArgs e)
@@ -3926,16 +3913,16 @@ namespace EnchanteMembership
             RecApptAvailableAttendingStaffSelectedComboBox.SelectedIndex = 0;
         }
 
-        public bool isappointment;
+        public bool ispremorsvip;
         public void QueTypeIdentifier(DataGridViewCell QueType)
         {
 
 
-            if (isappointment == true && RecApptAnyStaffToggleSwitch.Checked)
+            if (ispremorsvip == true && RecApptAnyStaffToggleSwitch.Checked)
             {
                 QueType.Value = "AnyonePriority";
             }
-            else if (isappointment == true && RecApptPreferredStaffToggleSwitch.Checked)
+            else if (ispremorsvip == true && RecApptPreferredStaffToggleSwitch.Checked)
             {
                 QueType.Value = "PreferredPriority";
             }
@@ -4258,7 +4245,6 @@ namespace EnchanteMembership
             RecApptBookingDatePicker.Value = DateTime.Today;
             RecApptPreferredStaffToggleSwitch.Checked = false;
             RecApptAnyStaffToggleSwitch.Checked = false;
-            isappointment = false;
 
             RecApptAnyStaffToggleSwitch.Checked = false;
             RecApptPreferredStaffToggleSwitch.Checked = false;
