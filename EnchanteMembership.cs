@@ -2308,15 +2308,18 @@ namespace EnchanteMembership
         #region Customer Member Dashboard Starts Here
         private void MemberAccUserBtn_Click(object sender, EventArgs e)
         {
-            if (MemberUserAccPanel.Visible == false)
-            {
-                MemberUserAccPanel.Visible = true;
+            Member.PanelShow(MemAccInfoPanel);
+            MemberUserAccPanel.Visible = false;
+            MemberAccInfoPersonalPassText.PasswordChar = '*';
+            //if (MemberUserAccPanel.Visible == false)
+            //{
+            //    MemberUserAccPanel.Visible = true;
 
-            }
-            else
-            {
-                MemberUserAccPanel.Visible = false;
-            }
+            //}
+            //else
+            //{
+            //    MemberUserAccPanel.Visible = false;
+            //}
         }
         private void MemberSignOut_Click(object sender, EventArgs e)
         {
@@ -2630,8 +2633,6 @@ namespace EnchanteMembership
 
         #region Member Panel Starts Here
 
-        #endregion
-
         private void MemberNameLbl_Click(object sender, EventArgs e)
         {
             Member.PanelShow(MemAccInfoPanel);
@@ -2642,19 +2643,38 @@ namespace EnchanteMembership
         private void MemberHomeBtn_Click(object sender, EventArgs e)
         {
             Member.PanelShow(MemAccHomePanel);
-            
+            MemHomeColor();
         }
+
+        private void MemHomeColor()
+        {
+            //Change color once clicked
+            MemberHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+
+            //Change back to original
+            MemberAppointBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+        }
+        private void MemHApptColor()
+        {
+            //Change color once clicked
+            MemberAppointBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+
+            //Change back to original
+            MemberHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+        }
+
         private bool positionsSetForRegularBtn = false;
         private bool positionsSetForPremiumBtn = false;
         private bool positionsSetForSVIPBtn = false;
         private void MemberAppointBtn_Click(object sender, EventArgs e)
         {
             Member.PanelShow(MemAccApptPanel);
+            MemHApptColor();
             MemApptTransactionClear();
             LoadBookingTimes();
             RecApptBookingDatePicker.MinDate = DateTime.Today;
 
-            
+
 
             if (MemberAccInfoPersonalTypeText.Text == "Regular")
             {
@@ -2716,12 +2736,8 @@ namespace EnchanteMembership
                 }
             }
         }
-        private void ToggleBtnLocatory()
-        {
-            // Define boolean flags to track if positions have been set
-            
-        }
-        #region Receptionsit Walk-in Appointment
+
+        #region Member Appointment
 
         //ApptMember
         private void RecApptPanelExitBtn_Click(object sender, EventArgs e)
@@ -2966,9 +2982,11 @@ namespace EnchanteMembership
 
                         RecApptServiceTypeDGV.DataSource = dataTable;
 
-                        RecApptServiceTypeDGV.Columns[0].Visible = false; //service category
-                        RecApptServiceTypeDGV.Columns[1].Visible = false; // service type
-                        RecApptServiceTypeDGV.Columns[2].Visible = false; // service ID
+                        RecApptServiceTypeDGV.Columns[0].Visible = false;
+                        RecApptServiceTypeDGV.Columns[1].Visible = false;
+                        RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3008,6 +3026,8 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3049,6 +3069,8 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3090,6 +3112,8 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3131,6 +3155,8 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3174,7 +3200,7 @@ namespace EnchanteMembership
         }
 
         //ApptMember
-        
+
 
         private void RecApptServiceTypeDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -3190,38 +3216,7 @@ namespace EnchanteMembership
         //ApptMember
         private void RecApptAnyStaffToggleSwitch_CheckedChanged(object sender, EventArgs e)
         {
-            
-            //if (MemberAccInfoPersonalTypeText.Text == "Regular")
-            //{
 
-            //    if (haschosenacategory == false)
-            //    {
-            //        ShowNoServiceCategoryChosenWarningMessage();
-            //        RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitch_CheckedChanged;
-            //        RecApptAnyStaffToggleSwitch.Checked = false;
-            //        RecApptAttendingStaffLbl.Visible = false;
-            //        RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
-            //        RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitch_CheckedChanged;
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        if (RecApptAnyStaffToggleSwitch.Checked)
-            //        {
-            //            RecApptPreferredStaffToggleSwitch.Checked = false;
-            //            RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
-            //            RecApptAttendingStaffLbl.Visible = false;
-            //            RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
-            //            selectedStaffID = "Anyone";
-            //            RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
-            //            RecApptPreferredStaffLbl.Visible = false;
-            //            RecApptPreferredStaffToggleSwitch.Visible = false;
-            //        }
-            //    }
-
-            //    return;
-            //}
-            //else
             if (MemberAccInfoPersonalTypeText.Text == "PREMIUM")
             {
                 if (haschosenacategory == false)
@@ -3280,33 +3275,33 @@ namespace EnchanteMembership
         }
         private void RecApptAnyStaffToggleSwitchRegular_CheckedChanged(object sender, EventArgs e)
         {
-            
 
-                if (haschosenacategory == false)
+
+            if (haschosenacategory == false)
+            {
+                ShowNoServiceCategoryChosenWarningMessage();
+                RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
+                RecApptAnyStaffToggleSwitch.Checked = false;
+                RecApptAttendingStaffLbl.Visible = false;
+                RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
+                return;
+            }
+            else
+            {
+                if (RecApptAnyStaffToggleSwitchRegular.Checked)
                 {
-                    ShowNoServiceCategoryChosenWarningMessage();
-                    RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
-                    RecApptAnyStaffToggleSwitch.Checked = false;
+                    RecApptPreferredStaffToggleSwitch.Checked = false;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
                     RecApptAttendingStaffLbl.Visible = false;
                     RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
-                    RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
-                    return;
+                    selectedStaffID = "Anyone";
+                    RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
                 }
-                else
-                {
-                    if (RecApptAnyStaffToggleSwitchRegular.Checked)
-                    {
-                        RecApptPreferredStaffToggleSwitch.Checked = false;
-                        RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
-                        RecApptAttendingStaffLbl.Visible = false;
-                        RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
-                        selectedStaffID = "Anyone";
-                        RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
-                    }
-                }
+            }
 
-                return;
-            
+            return;
+
 
         }
         //ApptMember
@@ -3473,7 +3468,7 @@ namespace EnchanteMembership
                 ReceptionistAppointmentDB(); //appointment transaction db
                 MemApptFormGenerator();
                 RecApptTransactNumRefresh();
-                MemApptTransactionClear();            
+                MemApptTransactionClear();
             }
         }
 
@@ -3918,7 +3913,7 @@ namespace EnchanteMembership
             RecApptAvailableAttendingStaffSelectedComboBox.SelectedIndex = 0;
         }
 
-        
+
         public void QueTypeIdentifier(DataGridViewCell QueType)
         {
 
@@ -4367,6 +4362,9 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
+
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -4395,5 +4393,7 @@ namespace EnchanteMembership
             label1.Text = Cashiertoday;
 
         }
+        #endregion
+
     }
 }
