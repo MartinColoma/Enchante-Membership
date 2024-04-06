@@ -747,7 +747,7 @@ namespace EnchanteMembership
                                         isprem = false;
                                         issvip = false;
                                         MemberHomePanelReset();
-                                        MemAccHomeUpgradeAccPanel.Visible = true;
+                                        //MemAccHomeUpgradeAccPanel.Visible = true;
                                         logincredclear();
 
                                     }
@@ -2789,7 +2789,7 @@ namespace EnchanteMembership
 
         private void MemberAccUserBtn_MouseHover(object sender, EventArgs e)
         {
-            iconToolTip.SetToolTip(MemberAccUserBtn, "View Your Profile");
+            iconToolTip.SetToolTip(MemberAccUserBtn, "View My Profile");
 
         }
 
@@ -4546,6 +4546,14 @@ namespace EnchanteMembership
         {
             MemApptBtnClick();
 
+        }
+
+        private void MemAccHomeUpgradeAccBtn_Click(object sender, EventArgs e)
+        {
+            Member.PanelShow(MemAccBillingPanel);
+            MemHBillColor();
+            Billing.PanelShow(MemAccBillingSubPanel);
+            BillingSubColor();
         }
     }
 }
