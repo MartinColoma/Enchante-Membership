@@ -747,6 +747,7 @@ namespace EnchanteMembership
                                         isprem = false;
                                         issvip = false;
                                         MemberHomePanelReset();
+                                        MemAccHomeUpgradeAccPanel.Visible = true;
                                         logincredclear();
 
                                     }
@@ -790,6 +791,7 @@ namespace EnchanteMembership
                                         isprem = true;
                                         issvip = false;
                                         MemberHomePanelReset();
+                                        MemAccHomeUpgradeAccPanel.Visible = false; 
                                         logincredclear();
 
                                     }
@@ -833,6 +835,7 @@ namespace EnchanteMembership
                                         issvip = true;
                                         isprem = false;
                                         MemberHomePanelReset();
+                                        MemAccHomeUpgradeAccPanel.Visible = false;
                                         logincredclear();
 
                                     }
@@ -2679,6 +2682,10 @@ namespace EnchanteMembership
 
         private void MemHeaderBtnColorReset()
         {
+            //Change color once clicked
+            MemberAccUserBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+
+            //Change back to original
             MemberHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             MemberBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             MemberAppointBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
@@ -2688,6 +2695,11 @@ namespace EnchanteMembership
         private bool positionsSetForPremiumBtn = false;
         private bool positionsSetForSVIPBtn = false;
         private void MemberAppointBtn_Click(object sender, EventArgs e)
+        {
+            MemApptBtnClick();
+        }
+
+        private void MemApptBtnClick()
         {
             Member.PanelShow(MemAccApptPanel);
             MemHApptColor();
@@ -3642,7 +3654,7 @@ namespace EnchanteMembership
             string bookedDate = currentDate.ToString("MM-dd-yyyy dddd"); //bookedDate
             string bookedTime = currentDate.ToString("hh:mm tt"); //bookedTime
             string bookedBy = MemberAccInfoPersonalNameText.Text; //booked by
-
+            string clientID = MemberAccInfoPersonalIDNumText.Text;
 
             try
             {
@@ -4459,18 +4471,8 @@ namespace EnchanteMembership
             Member.PanelShow(MemAccBillingPanel);
             MemHBillColor();
             Billing.PanelShow(MemAccBillingSubPanel);
-            MemAccBillingSubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            MemAccBillingSubBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            MemAccBillingSubBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            BillingSubColor();
 
-            //Change back to original
-            MemAccBillingPayHistoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            MemAccBillingPayHistoryBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            MemAccBillingPayHistoryBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-
-            MemAccBillingPayMethodBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            MemAccBillingPayMethodBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            MemAccBillingPayMethodBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
 
         }
 
@@ -4538,6 +4540,12 @@ namespace EnchanteMembership
             MemAccBillingPayHistoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             MemAccBillingPayHistoryBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
             MemAccBillingPayHistoryBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+        }
+
+        private void MemAccHomeBookApptBtn_Click(object sender, EventArgs e)
+        {
+            MemApptBtnClick();
+
         }
     }
 }

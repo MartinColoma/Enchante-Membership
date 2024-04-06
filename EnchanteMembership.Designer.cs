@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnchanteMembership));
             this.EnchanteMemParentCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.EnchanteMemberParentContainer = new System.Windows.Forms.Panel();
@@ -109,6 +109,7 @@
             this.MemAccBillingPayHistoryBtn = new FontAwesome.Sharp.IconButton();
             this.MemAccBillingPayMethodBtn = new FontAwesome.Sharp.IconButton();
             this.MemAccHomePanel = new System.Windows.Forms.Panel();
+            this.MemAccHomeUpgradeAccPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.MemAccHomeLbl = new System.Windows.Forms.Label();
             this.MemAccInfoPanel = new System.Windows.Forms.Panel();
             this.MemAccInfoPersonalPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -493,7 +494,16 @@
             this.MemberAccParentCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.DateTimePickerTimer = new System.Windows.Forms.Timer(this.components);
             this.MemberAccBillingCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.MemAccHomeUpgradeAccBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.MemAccHomeBookApptPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.MemAccHomeBookApptLbl = new System.Windows.Forms.TextBox();
+            this.MemAccHomeBookApptBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.MemAccHomeUpgradeAccLbl = new System.Windows.Forms.TextBox();
+            this.MemAccHomeUpgradeAccRegPanel = new System.Windows.Forms.Panel();
+            this.MemAccHomeUpgradeAccRegLbl3 = new System.Windows.Forms.Label();
+            this.MemAccHomeUpgradeAccRegLbl2 = new System.Windows.Forms.TextBox();
+            this.MemAccHomeUpgradeAccRegLbl1 = new System.Windows.Forms.TextBox();
+            this.MemAccHomeUpgradeAccRegLbl4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemParentCard)).BeginInit();
             this.EnchanteMemberParentContainer.SuspendLayout();
             this.EnchanteMemberPage.SuspendLayout();
@@ -515,6 +525,7 @@
             this.MemAccBillingSubPanel.SuspendLayout();
             this.MemAccBillingTypePanel.SuspendLayout();
             this.MemAccHomePanel.SuspendLayout();
+            this.MemAccHomeUpgradeAccPanel.SuspendLayout();
             this.MemAccInfoPanel.SuspendLayout();
             this.MemAccInfoPersonalPanel.SuspendLayout();
             this.MemAccInfoAccSettingsPanel.SuspendLayout();
@@ -578,13 +589,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeMembershipCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccParentCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccBillingCard)).BeginInit();
+            this.MemAccHomeBookApptPanel.SuspendLayout();
+            this.MemAccHomeUpgradeAccRegPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // EnchanteMemParentCard
             // 
             this.EnchanteMemParentCard.ContainerControl = this.EnchanteMemberParentContainer;
             this.EnchanteMemParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.EnchanteMemParentCard.SelectedCard = "LandingPage";
+            this.EnchanteMemParentCard.SelectedCard = "Member";
             // 
             // EnchanteMemberParentContainer
             // 
@@ -956,14 +969,14 @@
             this.RecApptSelectedServiceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RecApptSelectedServiceDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.RecApptSelectedServiceDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecApptSelectedServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecApptSelectedServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.RecApptSelectedServiceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RecApptSelectedServiceDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RecApptSelectedService,
@@ -975,14 +988,14 @@
             this.RecApptTimeSelected,
             this.RecApptQueType});
             this.RecApptSelectedServiceDGV.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecApptSelectedServiceDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecApptSelectedServiceDGV.DefaultCellStyle = dataGridViewCellStyle18;
             this.RecApptSelectedServiceDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptSelectedServiceDGV.Location = new System.Drawing.Point(970, 1151);
             this.RecApptSelectedServiceDGV.Name = "RecApptSelectedServiceDGV";
@@ -1122,24 +1135,24 @@
             this.RecApptServiceTypeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RecApptServiceTypeDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.RecApptServiceTypeDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecApptServiceTypeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecApptServiceTypeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.RecApptServiceTypeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RecApptServiceTypeDGV.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecApptServiceTypeDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecApptServiceTypeDGV.DefaultCellStyle = dataGridViewCellStyle20;
             this.RecApptServiceTypeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptServiceTypeDGV.Location = new System.Drawing.Point(236, 1151);
             this.RecApptServiceTypeDGV.Name = "RecApptServiceTypeDGV";
@@ -1697,7 +1710,8 @@
             // MemAccHomePanel
             // 
             this.MemberAccParentCard.SetCardName(this.MemAccHomePanel, "Home");
-            this.MemAccHomePanel.Controls.Add(this.guna2Panel1);
+            this.MemAccHomePanel.Controls.Add(this.MemAccHomeBookApptPanel);
+            this.MemAccHomePanel.Controls.Add(this.MemAccHomeUpgradeAccPanel);
             this.MemAccHomePanel.Controls.Add(this.MemAccHomeLbl);
             this.MemAccHomePanel.Location = new System.Drawing.Point(0, 0);
             this.MemberAccParentCard.SetMinimumSize(this.MemAccHomePanel, new System.Drawing.Size(200, 100));
@@ -1706,13 +1720,27 @@
             this.MemAccHomePanel.Size = new System.Drawing.Size(1904, 891);
             this.MemAccHomePanel.TabIndex = 23;
             // 
+            // MemAccHomeUpgradeAccPanel
+            // 
+            this.MemAccHomeUpgradeAccPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeUpgradeAccPanel.BorderRadius = 20;
+            this.MemAccHomeUpgradeAccPanel.BorderThickness = 3;
+            this.MemAccHomeUpgradeAccPanel.Controls.Add(this.MemAccHomeUpgradeAccRegPanel);
+            this.MemAccHomeUpgradeAccPanel.Controls.Add(this.MemAccHomeUpgradeAccBtn);
+            this.MemAccHomeUpgradeAccPanel.Controls.Add(this.MemAccHomeUpgradeAccLbl);
+            this.MemAccHomeUpgradeAccPanel.Location = new System.Drawing.Point(328, 265);
+            this.MemAccHomeUpgradeAccPanel.Name = "MemAccHomeUpgradeAccPanel";
+            this.MemAccHomeUpgradeAccPanel.Size = new System.Drawing.Size(1248, 423);
+            this.MemAccHomeUpgradeAccPanel.TabIndex = 10;
+            this.MemAccHomeUpgradeAccPanel.Visible = false;
+            // 
             // MemAccHomeLbl
             // 
             this.MemAccHomeLbl.AutoEllipsis = true;
             this.MemAccHomeLbl.AutoSize = true;
             this.MemAccHomeLbl.Font = new System.Drawing.Font("TechnicBold", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.MemAccHomeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemAccHomeLbl.Location = new System.Drawing.Point(99, 54);
+            this.MemAccHomeLbl.Location = new System.Drawing.Point(320, 47);
             this.MemAccHomeLbl.Name = "MemAccHomeLbl";
             this.MemAccHomeLbl.Size = new System.Drawing.Size(131, 47);
             this.MemAccHomeLbl.TabIndex = 9;
@@ -6761,7 +6789,7 @@
             this.LoginPassReqBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.LoginPassReqBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LoginPassReqBtn.IconSize = 20;
-            this.LoginPassReqBtn.Location = new System.Drawing.Point(233, 307);
+            this.LoginPassReqBtn.Location = new System.Drawing.Point(234, 307);
             this.LoginPassReqBtn.Name = "LoginPassReqBtn";
             this.LoginPassReqBtn.Size = new System.Drawing.Size(36, 36);
             this.LoginPassReqBtn.TabIndex = 77;
@@ -6774,7 +6802,7 @@
             this.LoginRegisterHereLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginRegisterHereLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.LoginRegisterHereLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.LoginRegisterHereLbl.Location = new System.Drawing.Point(150, 522);
+            this.LoginRegisterHereLbl.Location = new System.Drawing.Point(156, 522);
             this.LoginRegisterHereLbl.Name = "LoginRegisterHereLbl";
             this.LoginRegisterHereLbl.Size = new System.Drawing.Size(312, 14);
             this.LoginRegisterHereLbl.TabIndex = 33;
@@ -6785,7 +6813,7 @@
             // 
             this.LoginPassPanel.Controls.Add(this.ShowHidePassBtn);
             this.LoginPassPanel.Controls.Add(this.LoginPassText);
-            this.LoginPassPanel.Location = new System.Drawing.Point(67, 345);
+            this.LoginPassPanel.Location = new System.Drawing.Point(68, 345);
             this.LoginPassPanel.Name = "LoginPassPanel";
             this.LoginPassPanel.Size = new System.Drawing.Size(497, 49);
             this.LoginPassPanel.TabIndex = 32;
@@ -6839,7 +6867,7 @@
             this.LoginBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.LoginBtn.IconColor = System.Drawing.Color.Black;
             this.LoginBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.LoginBtn.Location = new System.Drawing.Point(206, 423);
+            this.LoginBtn.Location = new System.Drawing.Point(212, 423);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(200, 63);
             this.LoginBtn.TabIndex = 30;
@@ -6852,7 +6880,7 @@
             this.LoginPassErrorLbl.AutoSize = true;
             this.LoginPassErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.LoginPassErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.LoginPassErrorLbl.Location = new System.Drawing.Point(419, 317);
+            this.LoginPassErrorLbl.Location = new System.Drawing.Point(420, 317);
             this.LoginPassErrorLbl.Name = "LoginPassErrorLbl";
             this.LoginPassErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.LoginPassErrorLbl.Size = new System.Drawing.Size(145, 14);
@@ -6866,7 +6894,7 @@
             this.LoginEmailAddErrorLbl.AutoSize = true;
             this.LoginEmailAddErrorLbl.Font = new System.Drawing.Font("TechnicBold", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.LoginEmailAddErrorLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.LoginEmailAddErrorLbl.Location = new System.Drawing.Point(356, 216);
+            this.LoginEmailAddErrorLbl.Location = new System.Drawing.Point(354, 216);
             this.LoginEmailAddErrorLbl.Name = "LoginEmailAddErrorLbl";
             this.LoginEmailAddErrorLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.LoginEmailAddErrorLbl.Size = new System.Drawing.Size(211, 14);
@@ -6880,7 +6908,7 @@
             this.LoginPassLbl.AutoSize = true;
             this.LoginPassLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.LoginPassLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.LoginPassLbl.Location = new System.Drawing.Point(59, 307);
+            this.LoginPassLbl.Location = new System.Drawing.Point(60, 307);
             this.LoginPassLbl.Name = "LoginPassLbl";
             this.LoginPassLbl.Size = new System.Drawing.Size(183, 35);
             this.LoginPassLbl.TabIndex = 27;
@@ -6892,7 +6920,7 @@
             this.LoginEmailAddText.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginEmailAddText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.LoginEmailAddText.FormattingEnabled = true;
-            this.LoginEmailAddText.Location = new System.Drawing.Point(67, 244);
+            this.LoginEmailAddText.Location = new System.Drawing.Point(65, 244);
             this.LoginEmailAddText.Name = "LoginEmailAddText";
             this.LoginEmailAddText.Size = new System.Drawing.Size(497, 46);
             this.LoginEmailAddText.TabIndex = 26;
@@ -6903,7 +6931,7 @@
             this.LoginEmailAddLbl.AutoSize = true;
             this.LoginEmailAddLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.LoginEmailAddLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.LoginEmailAddLbl.Location = new System.Drawing.Point(61, 206);
+            this.LoginEmailAddLbl.Location = new System.Drawing.Point(59, 206);
             this.LoginEmailAddLbl.Name = "LoginEmailAddLbl";
             this.LoginEmailAddLbl.Size = new System.Drawing.Size(261, 35);
             this.LoginEmailAddLbl.TabIndex = 23;
@@ -6914,7 +6942,7 @@
             this.LoginWCLbl.AutoSize = true;
             this.LoginWCLbl.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.LoginWCLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.LoginWCLbl.Location = new System.Drawing.Point(57, 88);
+            this.LoginWCLbl.Location = new System.Drawing.Point(63, 88);
             this.LoginWCLbl.Name = "LoginWCLbl";
             this.LoginWCLbl.Size = new System.Drawing.Size(499, 69);
             this.LoginWCLbl.TabIndex = 22;
@@ -7228,7 +7256,7 @@
             // 
             this.HomeMembershipCard.ContainerControl = this.MembershipPanel;
             this.HomeMembershipCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.HomeMembershipCard.SelectedCard = "SVIP";
+            this.HomeMembershipCard.SelectedCard = "Type";
             // 
             // ScrollTimer
             // 
@@ -7257,15 +7285,149 @@
             this.MemberAccBillingCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
             this.MemberAccBillingCard.SelectedCard = "PayHistory";
             // 
-            // guna2Panel1
+            // MemAccHomeUpgradeAccBtn
             // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.guna2Panel1.BorderRadius = 20;
-            this.guna2Panel1.BorderThickness = 3;
-            this.guna2Panel1.Location = new System.Drawing.Point(107, 134);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(674, 272);
-            this.guna2Panel1.TabIndex = 10;
+            this.MemAccHomeUpgradeAccBtn.AutoRoundedCorners = true;
+            this.MemAccHomeUpgradeAccBtn.BackColor = System.Drawing.Color.Transparent;
+            this.MemAccHomeUpgradeAccBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.MemAccHomeUpgradeAccBtn.BorderRadius = 31;
+            this.MemAccHomeUpgradeAccBtn.BorderThickness = 2;
+            this.MemAccHomeUpgradeAccBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeUpgradeAccBtn.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemAccHomeUpgradeAccBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeUpgradeAccBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeUpgradeAccBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeUpgradeAccBtn.Location = new System.Drawing.Point(823, 258);
+            this.MemAccHomeUpgradeAccBtn.Name = "MemAccHomeUpgradeAccBtn";
+            this.MemAccHomeUpgradeAccBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeUpgradeAccBtn.Size = new System.Drawing.Size(359, 65);
+            this.MemAccHomeUpgradeAccBtn.TabIndex = 176;
+            this.MemAccHomeUpgradeAccBtn.Text = "UPGRADE YOUR ACCOUNT NOW";
+            // 
+            // MemAccHomeBookApptPanel
+            // 
+            this.MemAccHomeBookApptPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeBookApptPanel.BorderRadius = 20;
+            this.MemAccHomeBookApptPanel.BorderThickness = 3;
+            this.MemAccHomeBookApptPanel.Controls.Add(this.MemAccHomeBookApptBtn);
+            this.MemAccHomeBookApptPanel.Controls.Add(this.MemAccHomeBookApptLbl);
+            this.MemAccHomeBookApptPanel.Location = new System.Drawing.Point(328, 128);
+            this.MemAccHomeBookApptPanel.Name = "MemAccHomeBookApptPanel";
+            this.MemAccHomeBookApptPanel.Size = new System.Drawing.Size(1248, 112);
+            this.MemAccHomeBookApptPanel.TabIndex = 179;
+            // 
+            // MemAccHomeBookApptLbl
+            // 
+            this.MemAccHomeBookApptLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.MemAccHomeBookApptLbl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MemAccHomeBookApptLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccHomeBookApptLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeBookApptLbl.Location = new System.Drawing.Point(24, 38);
+            this.MemAccHomeBookApptLbl.Name = "MemAccHomeBookApptLbl";
+            this.MemAccHomeBookApptLbl.ReadOnly = true;
+            this.MemAccHomeBookApptLbl.Size = new System.Drawing.Size(428, 36);
+            this.MemAccHomeBookApptLbl.TabIndex = 1;
+            this.MemAccHomeBookApptLbl.Text = "Book Your Appointment Now.";
+            // 
+            // MemAccHomeBookApptBtn
+            // 
+            this.MemAccHomeBookApptBtn.AutoRoundedCorners = true;
+            this.MemAccHomeBookApptBtn.BackColor = System.Drawing.Color.Transparent;
+            this.MemAccHomeBookApptBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.MemAccHomeBookApptBtn.BorderRadius = 31;
+            this.MemAccHomeBookApptBtn.BorderThickness = 2;
+            this.MemAccHomeBookApptBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeBookApptBtn.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemAccHomeBookApptBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeBookApptBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeBookApptBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeBookApptBtn.Location = new System.Drawing.Point(1067, 22);
+            this.MemAccHomeBookApptBtn.Name = "MemAccHomeBookApptBtn";
+            this.MemAccHomeBookApptBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeBookApptBtn.Size = new System.Drawing.Size(156, 65);
+            this.MemAccHomeBookApptBtn.TabIndex = 177;
+            this.MemAccHomeBookApptBtn.Text = "BOOK HERE";
+            this.MemAccHomeBookApptBtn.Click += new System.EventHandler(this.MemAccHomeBookApptBtn_Click);
+            // 
+            // MemAccHomeUpgradeAccLbl
+            // 
+            this.MemAccHomeUpgradeAccLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.MemAccHomeUpgradeAccLbl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MemAccHomeUpgradeAccLbl.Font = new System.Drawing.Font("TechnicBold", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccHomeUpgradeAccLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeUpgradeAccLbl.Location = new System.Drawing.Point(503, 106);
+            this.MemAccHomeUpgradeAccLbl.Multiline = true;
+            this.MemAccHomeUpgradeAccLbl.Name = "MemAccHomeUpgradeAccLbl";
+            this.MemAccHomeUpgradeAccLbl.ReadOnly = true;
+            this.MemAccHomeUpgradeAccLbl.Size = new System.Drawing.Size(697, 157);
+            this.MemAccHomeUpgradeAccLbl.TabIndex = 177;
+            this.MemAccHomeUpgradeAccLbl.Text = "Want more exciting perks?\r\nUpgrade your account now.\r\n";
+            // 
+            // MemAccHomeUpgradeAccRegPanel
+            // 
+            this.MemAccHomeUpgradeAccRegPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.MemAccHomeUpgradeAccRegPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeUpgradeAccRegPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MemAccHomeUpgradeAccRegPanel.Controls.Add(this.MemAccHomeUpgradeAccRegLbl4);
+            this.MemAccHomeUpgradeAccRegPanel.Controls.Add(this.MemAccHomeUpgradeAccRegLbl3);
+            this.MemAccHomeUpgradeAccRegPanel.Controls.Add(this.MemAccHomeUpgradeAccRegLbl2);
+            this.MemAccHomeUpgradeAccRegPanel.Controls.Add(this.MemAccHomeUpgradeAccRegLbl1);
+            this.MemAccHomeUpgradeAccRegPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemAccHomeUpgradeAccRegPanel.Location = new System.Drawing.Point(52, 23);
+            this.MemAccHomeUpgradeAccRegPanel.Name = "MemAccHomeUpgradeAccRegPanel";
+            this.MemAccHomeUpgradeAccRegPanel.Size = new System.Drawing.Size(410, 372);
+            this.MemAccHomeUpgradeAccRegPanel.TabIndex = 178;
+            // 
+            // MemAccHomeUpgradeAccRegLbl3
+            // 
+            this.MemAccHomeUpgradeAccRegLbl3.AutoSize = true;
+            this.MemAccHomeUpgradeAccRegLbl3.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccHomeUpgradeAccRegLbl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeUpgradeAccRegLbl3.Location = new System.Drawing.Point(48, 126);
+            this.MemAccHomeUpgradeAccRegLbl3.Name = "MemAccHomeUpgradeAccRegLbl3";
+            this.MemAccHomeUpgradeAccRegLbl3.Size = new System.Drawing.Size(313, 140);
+            this.MemAccHomeUpgradeAccRegLbl3.TabIndex = 2;
+            this.MemAccHomeUpgradeAccRegLbl3.Text = "* FREE ACCOUNT CREATION\r\n* BOOK YOUR SALON APPOINMENT\r\nCONVENIENTLY\r\n* MAX OF THR" +
+    "EE (3) GUESTS PER \r\nAPPOINTMENT\r\n* APPOINTMENT CANCELLATION\r\nCHARGES MAY OCCUR\r\n" +
+    "";
+            // 
+            // MemAccHomeUpgradeAccRegLbl2
+            // 
+            this.MemAccHomeUpgradeAccRegLbl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeUpgradeAccRegLbl2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MemAccHomeUpgradeAccRegLbl2.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccHomeUpgradeAccRegLbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeUpgradeAccRegLbl2.Location = new System.Drawing.Point(52, 80);
+            this.MemAccHomeUpgradeAccRegLbl2.Name = "MemAccHomeUpgradeAccRegLbl2";
+            this.MemAccHomeUpgradeAccRegLbl2.ReadOnly = true;
+            this.MemAccHomeUpgradeAccRegLbl2.Size = new System.Drawing.Size(287, 22);
+            this.MemAccHomeUpgradeAccRegLbl2.TabIndex = 1;
+            this.MemAccHomeUpgradeAccRegLbl2.Text = "FREE ACCOUNT";
+            // 
+            // MemAccHomeUpgradeAccRegLbl1
+            // 
+            this.MemAccHomeUpgradeAccRegLbl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.MemAccHomeUpgradeAccRegLbl1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MemAccHomeUpgradeAccRegLbl1.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccHomeUpgradeAccRegLbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeUpgradeAccRegLbl1.Location = new System.Drawing.Point(54, 38);
+            this.MemAccHomeUpgradeAccRegLbl1.Name = "MemAccHomeUpgradeAccRegLbl1";
+            this.MemAccHomeUpgradeAccRegLbl1.ReadOnly = true;
+            this.MemAccHomeUpgradeAccRegLbl1.Size = new System.Drawing.Size(287, 36);
+            this.MemAccHomeUpgradeAccRegLbl1.TabIndex = 0;
+            this.MemAccHomeUpgradeAccRegLbl1.Text = "REGULAR";
+            // 
+            // MemAccHomeUpgradeAccRegLbl4
+            // 
+            this.MemAccHomeUpgradeAccRegLbl4.AutoSize = true;
+            this.MemAccHomeUpgradeAccRegLbl4.Font = new System.Drawing.Font("TechnicBold", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccHomeUpgradeAccRegLbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.MemAccHomeUpgradeAccRegLbl4.Location = new System.Drawing.Point(72, 311);
+            this.MemAccHomeUpgradeAccRegLbl4.Name = "MemAccHomeUpgradeAccRegLbl4";
+            this.MemAccHomeUpgradeAccRegLbl4.Size = new System.Drawing.Size(264, 29);
+            this.MemAccHomeUpgradeAccRegLbl4.TabIndex = 3;
+            this.MemAccHomeUpgradeAccRegLbl4.Text = "Your Current Plan";
+            this.MemAccHomeUpgradeAccRegLbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EnchanteMembership
             // 
@@ -7312,6 +7474,8 @@
             this.MemAccBillingTypePanel.PerformLayout();
             this.MemAccHomePanel.ResumeLayout(false);
             this.MemAccHomePanel.PerformLayout();
+            this.MemAccHomeUpgradeAccPanel.ResumeLayout(false);
+            this.MemAccHomeUpgradeAccPanel.PerformLayout();
             this.MemAccInfoPanel.ResumeLayout(false);
             this.MemAccInfoPanel.PerformLayout();
             this.MemAccInfoPersonalPanel.ResumeLayout(false);
@@ -7425,6 +7589,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeMembershipCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccParentCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccBillingCard)).EndInit();
+            this.MemAccHomeBookApptPanel.ResumeLayout(false);
+            this.MemAccHomeBookApptPanel.PerformLayout();
+            this.MemAccHomeUpgradeAccRegPanel.ResumeLayout(false);
+            this.MemAccHomeUpgradeAccRegPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -7889,7 +8057,17 @@
         private FontAwesome.Sharp.IconButton MemAccBillingPayMethodLbl;
         private FontAwesome.Sharp.IconButton MemAccBillingPayHistoryLbl;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel MemAccHomeUpgradeAccPanel;
+        private Guna.UI2.WinForms.Guna2Button MemAccHomeUpgradeAccBtn;
+        private Guna.UI2.WinForms.Guna2Panel MemAccHomeBookApptPanel;
+        private System.Windows.Forms.TextBox MemAccHomeBookApptLbl;
+        private Guna.UI2.WinForms.Guna2Button MemAccHomeBookApptBtn;
+        private System.Windows.Forms.TextBox MemAccHomeUpgradeAccLbl;
+        private System.Windows.Forms.Panel MemAccHomeUpgradeAccRegPanel;
+        private System.Windows.Forms.Label MemAccHomeUpgradeAccRegLbl3;
+        private System.Windows.Forms.TextBox MemAccHomeUpgradeAccRegLbl2;
+        private System.Windows.Forms.TextBox MemAccHomeUpgradeAccRegLbl1;
+        private System.Windows.Forms.Label MemAccHomeUpgradeAccRegLbl4;
     }
 }
 
