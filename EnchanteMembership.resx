@@ -147,11 +147,14 @@
   <metadata name="RecApptQueType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="MemberAccBillingCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>713, 17</value>
+  </metadata>
   <data name="AbtUsOurGoalEssay.Text" xml:space="preserve">
-    <value>At Enchante Group of Salons, our goal is straightforward yet profound: to inspire confidence and radiance in every individual who walks through our doors. We strive to create a welcoming haven where beauty meets expertise, providing top-notch services tailored to your unique preferences. Whether it's a fresh haircut, a soothing massage, or a rejuvenating facial, our aim is to exceed your expectations and leave you feeling empowered and enchanted. Join us on this journey to embrace your true beauty and discover the magic within at Enchante Group of Salons.</value>
+    <value>          At Enchante Group of Salons, our goal is straightforward yet profound: to inspire confidence and radiance in every individual who walks through our doors. We strive to create a welcoming haven where beauty meets expertise, providing top-notch services tailored to your unique preferences. Whether it's a fresh haircut, a soothing massage, or a rejuvenating facial, our aim is to exceed your expectations and leave you feeling empowered and enchanted. Join us on this journey to embrace your true beauty and discover the magic within at Enchante Group of Salons.</value>
   </data>
   <data name="AbtUsEssay.Text" xml:space="preserve">
-    <value>Welcome to Enchante Group of Salons, where beauty meets expertise in a harmonious blend. Our journey began with a simple vision: to redefine beauty standards and empower individuals through confidence. With a team of passionate stylists and therapists, we've crafted a sanctuary where every client is celebrated for their unique essence. From luxurious hair treatments to rejuvenating spa experiences, each visit promises personalized care tailored to your desires. Step into our world, where every appointment is an opportunity to indulge in self-care and emerge feeling enchanted. Join us at Enchante Group of Salons, where beauty is not just a look, but a feeling.</value>
+    <value>          Welcome to Enchante Group of Salons, where beauty meets expertise in a harmonious blend. Our journey began with a simple vision: to redefine beauty standards and empower individuals through confidence. With a team of passionate stylists and therapists, we've crafted a sanctuary where every client is celebrated for their unique essence. From luxurious hair treatments to rejuvenating spa experiences, each visit promises personalized care tailored to your desires. Step into our world, where every appointment is an opportunity to indulge in self-care and emerge feeling enchanted. Join us at Enchante Group of Salons, where beauty is not just a look, but a feeling.</value>
   </data>
   <metadata name="HomeServiceCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>207, 17</value>
@@ -1308,16 +1311,16 @@ DRINKS)
 </value>
   </data>
   <metadata name="ScrollTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>713, 17</value>
+    <value>890, 17</value>
   </metadata>
   <metadata name="PictureSlideTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>826, 17</value>
+    <value>1003, 17</value>
   </metadata>
   <metadata name="DateTimePickerTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>972, 17</value>
+    <value>1149, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>62</value>
+    <value>57</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

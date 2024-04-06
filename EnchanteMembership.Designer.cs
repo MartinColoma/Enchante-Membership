@@ -38,11 +38,6 @@
             this.EnchanteMemberParentContainer = new System.Windows.Forms.Panel();
             this.EnchanteMemberPage = new System.Windows.Forms.Panel();
             this.MemberScrollPanel = new System.Windows.Forms.Panel();
-            this.MemberUserAccPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.MemberIDNumLbl = new System.Windows.Forms.Label();
-            this.MemberNameLbl = new System.Windows.Forms.Label();
-            this.MemberSignOut = new FontAwesome.Sharp.IconButton();
             this.MemberParentContainer = new System.Windows.Forms.Panel();
             this.MemAccApptPanel = new System.Windows.Forms.Panel();
             this.ServiceTotalPrice = new System.Windows.Forms.Label();
@@ -102,6 +97,17 @@
             this.RecApptPanelExitBtn = new FontAwesome.Sharp.IconButton();
             this.MemAccReviewPanel = new System.Windows.Forms.Panel();
             this.MemAccBillingPanel = new System.Windows.Forms.Panel();
+            this.MemAccBillingContainerPanel = new System.Windows.Forms.Panel();
+            this.MemAccBillingPayMethodPanel = new System.Windows.Forms.Panel();
+            this.MemAccBillingPayMethodLbl = new FontAwesome.Sharp.IconButton();
+            this.MemAccBillingPayHistoryPanel = new System.Windows.Forms.Panel();
+            this.MemAccBillingPayHistoryLbl = new FontAwesome.Sharp.IconButton();
+            this.MemAccBillingSubPanel = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.MemAccBillingTypePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.MemAccBillingSubBtn = new FontAwesome.Sharp.IconButton();
+            this.MemAccBillingPayHistoryBtn = new FontAwesome.Sharp.IconButton();
+            this.MemAccBillingPayMethodBtn = new FontAwesome.Sharp.IconButton();
             this.MemAccHomePanel = new System.Windows.Forms.Panel();
             this.MemAccHomeLbl = new System.Windows.Forms.Label();
             this.MemAccInfoPanel = new System.Windows.Forms.Panel();
@@ -128,6 +134,13 @@
             this.MemberAccInfoPersonalCreatedText = new System.Windows.Forms.Label();
             this.MemberAccInfoPersonalTypeLbl = new System.Windows.Forms.Label();
             this.MemberAccInfoPersonalTypeText = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.MemberUserAccPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MemberIDNumLbl = new System.Windows.Forms.Label();
+            this.MemberNameLbl = new System.Windows.Forms.Label();
+            this.MemberSignOut = new FontAwesome.Sharp.IconButton();
             this.MemberNavBarPanel = new System.Windows.Forms.Panel();
             this.RecDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.MemberAccUserBtn = new FontAwesome.Sharp.IconButton();
@@ -479,13 +492,12 @@
             this.PictureSlideTimer = new System.Windows.Forms.Timer(this.components);
             this.MemberAccParentCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.DateTimePickerTimer = new System.Windows.Forms.Timer(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.MemberAccBillingCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemParentCard)).BeginInit();
             this.EnchanteMemberParentContainer.SuspendLayout();
             this.EnchanteMemberPage.SuspendLayout();
             this.MemberScrollPanel.SuspendLayout();
-            this.MemberUserAccPanel.SuspendLayout();
             this.MemberParentContainer.SuspendLayout();
             this.MemAccApptPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecApptSelectedServiceDGV)).BeginInit();
@@ -496,10 +508,18 @@
             this.RecApptCatFSPanel.SuspendLayout();
             this.RecApptCatHSPanel.SuspendLayout();
             this.RecApptFooterStopperPanel.SuspendLayout();
+            this.MemAccBillingPanel.SuspendLayout();
+            this.MemAccBillingContainerPanel.SuspendLayout();
+            this.MemAccBillingPayMethodPanel.SuspendLayout();
+            this.MemAccBillingPayHistoryPanel.SuspendLayout();
+            this.MemAccBillingSubPanel.SuspendLayout();
+            this.MemAccBillingTypePanel.SuspendLayout();
             this.MemAccHomePanel.SuspendLayout();
             this.MemAccInfoPanel.SuspendLayout();
             this.MemAccInfoPersonalPanel.SuspendLayout();
             this.MemAccInfoAccSettingsPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.MemberUserAccPanel.SuspendLayout();
             this.MemberNavBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemberHeaderLogo)).BeginInit();
             this.EnchanteHomePage.SuspendLayout();
@@ -557,14 +577,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeServiceCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeMembershipCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccParentCard)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberAccBillingCard)).BeginInit();
             this.SuspendLayout();
             // 
             // EnchanteMemParentCard
             // 
             this.EnchanteMemParentCard.ContainerControl = this.EnchanteMemberParentContainer;
             this.EnchanteMemParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.EnchanteMemParentCard.SelectedCard = "Member";
+            this.EnchanteMemParentCard.SelectedCard = "LandingPage";
             // 
             // EnchanteMemberParentContainer
             // 
@@ -601,82 +621,6 @@
             this.MemberScrollPanel.Name = "MemberScrollPanel";
             this.MemberScrollPanel.Size = new System.Drawing.Size(1904, 891);
             this.MemberScrollPanel.TabIndex = 19;
-            // 
-            // MemberUserAccPanel
-            // 
-            this.MemberUserAccPanel.AutoScroll = true;
-            this.MemberUserAccPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            this.MemberUserAccPanel.Controls.Add(this.label1);
-            this.MemberUserAccPanel.Controls.Add(this.MemberIDNumLbl);
-            this.MemberUserAccPanel.Controls.Add(this.MemberNameLbl);
-            this.MemberUserAccPanel.Location = new System.Drawing.Point(3, 69);
-            this.MemberUserAccPanel.Name = "MemberUserAccPanel";
-            this.MemberUserAccPanel.Size = new System.Drawing.Size(250, 736);
-            this.MemberUserAccPanel.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoEllipsis = true;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("TechnicBold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(24, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 18);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Member ID Number";
-            this.label1.Visible = false;
-            // 
-            // MemberIDNumLbl
-            // 
-            this.MemberIDNumLbl.AutoEllipsis = true;
-            this.MemberIDNumLbl.AutoSize = true;
-            this.MemberIDNumLbl.Font = new System.Drawing.Font("TechnicBold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.MemberIDNumLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemberIDNumLbl.Location = new System.Drawing.Point(24, 63);
-            this.MemberIDNumLbl.Name = "MemberIDNumLbl";
-            this.MemberIDNumLbl.Size = new System.Drawing.Size(138, 18);
-            this.MemberIDNumLbl.TabIndex = 9;
-            this.MemberIDNumLbl.Text = "Member ID Number";
-            this.MemberIDNumLbl.Visible = false;
-            // 
-            // MemberNameLbl
-            // 
-            this.MemberNameLbl.AutoEllipsis = true;
-            this.MemberNameLbl.AutoSize = true;
-            this.MemberNameLbl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MemberNameLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.MemberNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemberNameLbl.Location = new System.Drawing.Point(22, 23);
-            this.MemberNameLbl.Name = "MemberNameLbl";
-            this.MemberNameLbl.Size = new System.Drawing.Size(173, 29);
-            this.MemberNameLbl.TabIndex = 8;
-            this.MemberNameLbl.Text = "Member Name";
-            this.MemberNameLbl.Visible = false;
-            this.MemberNameLbl.Click += new System.EventHandler(this.MemberNameLbl_Click);
-            // 
-            // MemberSignOut
-            // 
-            this.MemberSignOut.AutoSize = true;
-            this.MemberSignOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MemberSignOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.MemberSignOut.FlatAppearance.BorderSize = 0;
-            this.MemberSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MemberSignOut.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.MemberSignOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemberSignOut.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
-            this.MemberSignOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemberSignOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MemberSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MemberSignOut.Location = new System.Drawing.Point(3, 811);
-            this.MemberSignOut.Name = "MemberSignOut";
-            this.MemberSignOut.Size = new System.Drawing.Size(250, 54);
-            this.MemberSignOut.TabIndex = 7;
-            this.MemberSignOut.Text = "LOGOUT";
-            this.MemberSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MemberSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.MemberSignOut.UseVisualStyleBackColor = true;
-            this.MemberSignOut.Click += new System.EventHandler(this.MemberSignOut_Click);
             // 
             // MemberParentContainer
             // 
@@ -1235,6 +1179,7 @@
             this.RecApptCatMassRB.FlatAppearance.BorderSize = 5;
             this.RecApptCatMassRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecApptCatMassRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecApptCatMassRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptCatMassRB.Location = new System.Drawing.Point(211, 42);
             this.RecApptCatMassRB.Name = "RecApptCatMassRB";
             this.RecApptCatMassRB.Size = new System.Drawing.Size(13, 12);
@@ -1275,6 +1220,7 @@
             this.RecApptCatSpaRB.FlatAppearance.BorderSize = 5;
             this.RecApptCatSpaRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecApptCatSpaRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecApptCatSpaRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptCatSpaRB.Location = new System.Drawing.Point(207, 42);
             this.RecApptCatSpaRB.Name = "RecApptCatSpaRB";
             this.RecApptCatSpaRB.Size = new System.Drawing.Size(13, 12);
@@ -1311,10 +1257,12 @@
             // 
             this.RecApptCatNCRB.AutoSize = true;
             this.RecApptCatNCRB.BackColor = System.Drawing.Color.Transparent;
+            this.RecApptCatNCRB.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RecApptCatNCRB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
             this.RecApptCatNCRB.FlatAppearance.BorderSize = 5;
             this.RecApptCatNCRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecApptCatNCRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecApptCatNCRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptCatNCRB.Location = new System.Drawing.Point(211, 42);
             this.RecApptCatNCRB.Name = "RecApptCatNCRB";
             this.RecApptCatNCRB.Size = new System.Drawing.Size(13, 12);
@@ -1355,6 +1303,7 @@
             this.RecApptCatFSRB.FlatAppearance.BorderSize = 5;
             this.RecApptCatFSRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecApptCatFSRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecApptCatFSRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptCatFSRB.Location = new System.Drawing.Point(207, 42);
             this.RecApptCatFSRB.Name = "RecApptCatFSRB";
             this.RecApptCatFSRB.Size = new System.Drawing.Size(13, 12);
@@ -1395,6 +1344,7 @@
             this.RecApptCatHSRB.FlatAppearance.BorderSize = 5;
             this.RecApptCatHSRB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecApptCatHSRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecApptCatHSRB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptCatHSRB.Location = new System.Drawing.Point(202, 46);
             this.RecApptCatHSRB.Name = "RecApptCatHSRB";
             this.RecApptCatHSRB.Size = new System.Drawing.Size(13, 12);
@@ -1547,6 +1497,8 @@
             // MemAccBillingPanel
             // 
             this.MemberAccParentCard.SetCardName(this.MemAccBillingPanel, "Bill");
+            this.MemAccBillingPanel.Controls.Add(this.MemAccBillingContainerPanel);
+            this.MemAccBillingPanel.Controls.Add(this.MemAccBillingTypePanel);
             this.MemAccBillingPanel.Location = new System.Drawing.Point(0, 0);
             this.MemberAccParentCard.SetMinimumSize(this.MemAccBillingPanel, new System.Drawing.Size(200, 100));
             this.MemAccBillingPanel.Name = "MemAccBillingPanel";
@@ -1554,9 +1506,198 @@
             this.MemAccBillingPanel.Size = new System.Drawing.Size(1904, 891);
             this.MemAccBillingPanel.TabIndex = 25;
             // 
+            // MemAccBillingContainerPanel
+            // 
+            this.MemAccBillingContainerPanel.Controls.Add(this.MemAccBillingPayMethodPanel);
+            this.MemAccBillingContainerPanel.Controls.Add(this.MemAccBillingPayHistoryPanel);
+            this.MemAccBillingContainerPanel.Controls.Add(this.MemAccBillingSubPanel);
+            this.MemAccBillingContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MemAccBillingContainerPanel.Location = new System.Drawing.Point(255, 0);
+            this.MemAccBillingContainerPanel.Name = "MemAccBillingContainerPanel";
+            this.MemAccBillingContainerPanel.Size = new System.Drawing.Size(1649, 891);
+            this.MemAccBillingContainerPanel.TabIndex = 31;
+            // 
+            // MemAccBillingPayMethodPanel
+            // 
+            this.MemberAccBillingCard.SetCardName(this.MemAccBillingPayMethodPanel, "PayMethod");
+            this.MemAccBillingPayMethodPanel.Controls.Add(this.MemAccBillingPayMethodLbl);
+            this.MemAccBillingPayMethodPanel.Location = new System.Drawing.Point(0, 0);
+            this.MemberAccBillingCard.SetMinimumSize(this.MemAccBillingPayMethodPanel, new System.Drawing.Size(200, 100));
+            this.MemAccBillingPayMethodPanel.Name = "MemAccBillingPayMethodPanel";
+            this.MemberAccBillingCard.SetPreferredSize(this.MemAccBillingPayMethodPanel, new System.Drawing.Size(200, 100));
+            this.MemAccBillingPayMethodPanel.Size = new System.Drawing.Size(1649, 891);
+            this.MemAccBillingPayMethodPanel.TabIndex = 2;
+            // 
+            // MemAccBillingPayMethodLbl
+            // 
+            this.MemAccBillingPayMethodLbl.AutoSize = true;
+            this.MemAccBillingPayMethodLbl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.MemAccBillingPayMethodLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MemAccBillingPayMethodLbl.FlatAppearance.BorderSize = 0;
+            this.MemAccBillingPayMethodLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemAccBillingPayMethodLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccBillingPayMethodLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemAccBillingPayMethodLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.MemAccBillingPayMethodLbl.IconColor = System.Drawing.Color.Black;
+            this.MemAccBillingPayMethodLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MemAccBillingPayMethodLbl.Location = new System.Drawing.Point(28, 10);
+            this.MemAccBillingPayMethodLbl.Name = "MemAccBillingPayMethodLbl";
+            this.MemAccBillingPayMethodLbl.Size = new System.Drawing.Size(253, 54);
+            this.MemAccBillingPayMethodLbl.TabIndex = 3;
+            this.MemAccBillingPayMethodLbl.Text = "PAYMENT METHOD";
+            this.MemAccBillingPayMethodLbl.UseVisualStyleBackColor = true;
+            // 
+            // MemAccBillingPayHistoryPanel
+            // 
+            this.MemberAccBillingCard.SetCardName(this.MemAccBillingPayHistoryPanel, "PayHistory");
+            this.MemAccBillingPayHistoryPanel.Controls.Add(this.MemAccBillingPayHistoryLbl);
+            this.MemAccBillingPayHistoryPanel.Location = new System.Drawing.Point(0, 0);
+            this.MemberAccBillingCard.SetMinimumSize(this.MemAccBillingPayHistoryPanel, new System.Drawing.Size(200, 100));
+            this.MemAccBillingPayHistoryPanel.Name = "MemAccBillingPayHistoryPanel";
+            this.MemberAccBillingCard.SetPreferredSize(this.MemAccBillingPayHistoryPanel, new System.Drawing.Size(200, 100));
+            this.MemAccBillingPayHistoryPanel.Size = new System.Drawing.Size(1649, 891);
+            this.MemAccBillingPayHistoryPanel.TabIndex = 1;
+            // 
+            // MemAccBillingPayHistoryLbl
+            // 
+            this.MemAccBillingPayHistoryLbl.AutoSize = true;
+            this.MemAccBillingPayHistoryLbl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.MemAccBillingPayHistoryLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MemAccBillingPayHistoryLbl.FlatAppearance.BorderSize = 0;
+            this.MemAccBillingPayHistoryLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemAccBillingPayHistoryLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccBillingPayHistoryLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemAccBillingPayHistoryLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.MemAccBillingPayHistoryLbl.IconColor = System.Drawing.Color.Black;
+            this.MemAccBillingPayHistoryLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MemAccBillingPayHistoryLbl.Location = new System.Drawing.Point(28, 10);
+            this.MemAccBillingPayHistoryLbl.Name = "MemAccBillingPayHistoryLbl";
+            this.MemAccBillingPayHistoryLbl.Size = new System.Drawing.Size(258, 54);
+            this.MemAccBillingPayHistoryLbl.TabIndex = 4;
+            this.MemAccBillingPayHistoryLbl.Text = "PAYMENT HISTORY";
+            this.MemAccBillingPayHistoryLbl.UseVisualStyleBackColor = true;
+            // 
+            // MemAccBillingSubPanel
+            // 
+            this.MemberAccBillingCard.SetCardName(this.MemAccBillingSubPanel, "Sub");
+            this.MemAccBillingSubPanel.Controls.Add(this.iconButton2);
+            this.MemAccBillingSubPanel.Location = new System.Drawing.Point(0, 0);
+            this.MemberAccBillingCard.SetMinimumSize(this.MemAccBillingSubPanel, new System.Drawing.Size(200, 100));
+            this.MemAccBillingSubPanel.Name = "MemAccBillingSubPanel";
+            this.MemberAccBillingCard.SetPreferredSize(this.MemAccBillingSubPanel, new System.Drawing.Size(200, 100));
+            this.MemAccBillingSubPanel.Size = new System.Drawing.Size(1649, 891);
+            this.MemAccBillingSubPanel.TabIndex = 0;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.AutoSize = true;
+            this.iconButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(28, 10);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(202, 54);
+            this.iconButton2.TabIndex = 4;
+            this.iconButton2.Text = "SUBSCRIPTION";
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // MemAccBillingTypePanel
+            // 
+            this.MemAccBillingTypePanel.AutoScroll = true;
+            this.MemAccBillingTypePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MemAccBillingTypePanel.Controls.Add(this.MemAccBillingSubBtn);
+            this.MemAccBillingTypePanel.Controls.Add(this.MemAccBillingPayHistoryBtn);
+            this.MemAccBillingTypePanel.Controls.Add(this.MemAccBillingPayMethodBtn);
+            this.MemAccBillingTypePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MemAccBillingTypePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.MemAccBillingTypePanel.Location = new System.Drawing.Point(0, 0);
+            this.MemAccBillingTypePanel.Name = "MemAccBillingTypePanel";
+            this.MemAccBillingTypePanel.Size = new System.Drawing.Size(255, 891);
+            this.MemAccBillingTypePanel.TabIndex = 30;
+            // 
+            // MemAccBillingSubBtn
+            // 
+            this.MemAccBillingSubBtn.AutoSize = true;
+            this.MemAccBillingSubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemAccBillingSubBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MemAccBillingSubBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.MemAccBillingSubBtn.FlatAppearance.BorderSize = 0;
+            this.MemAccBillingSubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemAccBillingSubBtn.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.MemAccBillingSubBtn.Font = new System.Drawing.Font("TechnicBold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccBillingSubBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.MemAccBillingSubBtn.IconChar = FontAwesome.Sharp.IconChar.ClockRotateLeft;
+            this.MemAccBillingSubBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.MemAccBillingSubBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MemAccBillingSubBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MemAccBillingSubBtn.Location = new System.Drawing.Point(3, 3);
+            this.MemAccBillingSubBtn.Name = "MemAccBillingSubBtn";
+            this.MemAccBillingSubBtn.Size = new System.Drawing.Size(245, 60);
+            this.MemAccBillingSubBtn.TabIndex = 14;
+            this.MemAccBillingSubBtn.Text = "Subscriptions";
+            this.MemAccBillingSubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MemAccBillingSubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MemAccBillingSubBtn.UseVisualStyleBackColor = false;
+            this.MemAccBillingSubBtn.Click += new System.EventHandler(this.MemAccBillingSubBtn_Click);
+            // 
+            // MemAccBillingPayHistoryBtn
+            // 
+            this.MemAccBillingPayHistoryBtn.AutoSize = true;
+            this.MemAccBillingPayHistoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.MemAccBillingPayHistoryBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MemAccBillingPayHistoryBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.MemAccBillingPayHistoryBtn.FlatAppearance.BorderSize = 0;
+            this.MemAccBillingPayHistoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemAccBillingPayHistoryBtn.Font = new System.Drawing.Font("TechnicBold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccBillingPayHistoryBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemAccBillingPayHistoryBtn.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
+            this.MemAccBillingPayHistoryBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemAccBillingPayHistoryBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MemAccBillingPayHistoryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MemAccBillingPayHistoryBtn.Location = new System.Drawing.Point(3, 69);
+            this.MemAccBillingPayHistoryBtn.Name = "MemAccBillingPayHistoryBtn";
+            this.MemAccBillingPayHistoryBtn.Size = new System.Drawing.Size(245, 80);
+            this.MemAccBillingPayHistoryBtn.TabIndex = 15;
+            this.MemAccBillingPayHistoryBtn.Text = "Payment \r\nHistory";
+            this.MemAccBillingPayHistoryBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MemAccBillingPayHistoryBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MemAccBillingPayHistoryBtn.UseVisualStyleBackColor = false;
+            this.MemAccBillingPayHistoryBtn.Click += new System.EventHandler(this.MemAccBillingPayHistoryBtn_Click);
+            // 
+            // MemAccBillingPayMethodBtn
+            // 
+            this.MemAccBillingPayMethodBtn.AutoSize = true;
+            this.MemAccBillingPayMethodBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.MemAccBillingPayMethodBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MemAccBillingPayMethodBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.MemAccBillingPayMethodBtn.FlatAppearance.BorderSize = 0;
+            this.MemAccBillingPayMethodBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemAccBillingPayMethodBtn.Font = new System.Drawing.Font("TechnicBold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemAccBillingPayMethodBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemAccBillingPayMethodBtn.IconChar = FontAwesome.Sharp.IconChar.Wallet;
+            this.MemAccBillingPayMethodBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemAccBillingPayMethodBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MemAccBillingPayMethodBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MemAccBillingPayMethodBtn.Location = new System.Drawing.Point(3, 155);
+            this.MemAccBillingPayMethodBtn.Name = "MemAccBillingPayMethodBtn";
+            this.MemAccBillingPayMethodBtn.Size = new System.Drawing.Size(245, 80);
+            this.MemAccBillingPayMethodBtn.TabIndex = 16;
+            this.MemAccBillingPayMethodBtn.Text = "Payment \r\nMethod";
+            this.MemAccBillingPayMethodBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MemAccBillingPayMethodBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MemAccBillingPayMethodBtn.UseVisualStyleBackColor = false;
+            this.MemAccBillingPayMethodBtn.Click += new System.EventHandler(this.MemAccBillingPayMethodBtn_Click);
+            // 
             // MemAccHomePanel
             // 
             this.MemberAccParentCard.SetCardName(this.MemAccHomePanel, "Home");
+            this.MemAccHomePanel.Controls.Add(this.guna2Panel1);
             this.MemAccHomePanel.Controls.Add(this.MemAccHomeLbl);
             this.MemAccHomePanel.Location = new System.Drawing.Point(0, 0);
             this.MemberAccParentCard.SetMinimumSize(this.MemAccHomePanel, new System.Drawing.Size(200, 100));
@@ -1571,7 +1712,7 @@
             this.MemAccHomeLbl.AutoSize = true;
             this.MemAccHomeLbl.Font = new System.Drawing.Font("TechnicBold", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.MemAccHomeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.MemAccHomeLbl.Location = new System.Drawing.Point(68, 46);
+            this.MemAccHomeLbl.Location = new System.Drawing.Point(99, 54);
             this.MemAccHomeLbl.Name = "MemAccHomeLbl";
             this.MemAccHomeLbl.Size = new System.Drawing.Size(131, 47);
             this.MemAccHomeLbl.TabIndex = 9;
@@ -1903,6 +2044,118 @@
             this.MemberAccInfoPersonalTypeText.TabIndex = 28;
             this.MemberAccInfoPersonalTypeText.Text = "Account Type";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Controls.Add(this.iconButton1);
+            this.flowLayoutPanel1.Controls.Add(this.MemberUserAccPanel);
+            this.flowLayoutPanel1.Controls.Add(this.MemberSignOut);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(255, 889);
+            this.flowLayoutPanel1.TabIndex = 29;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.AutoSize = true;
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("TechnicBold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(3, 3);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(250, 60);
+            this.iconButton1.TabIndex = 13;
+            this.iconButton1.Text = "Account \r\nInformation";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // MemberUserAccPanel
+            // 
+            this.MemberUserAccPanel.AutoScroll = true;
+            this.MemberUserAccPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            this.MemberUserAccPanel.Controls.Add(this.label1);
+            this.MemberUserAccPanel.Controls.Add(this.MemberIDNumLbl);
+            this.MemberUserAccPanel.Controls.Add(this.MemberNameLbl);
+            this.MemberUserAccPanel.Location = new System.Drawing.Point(3, 69);
+            this.MemberUserAccPanel.Name = "MemberUserAccPanel";
+            this.MemberUserAccPanel.Size = new System.Drawing.Size(250, 736);
+            this.MemberUserAccPanel.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoEllipsis = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("TechnicBold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.label1.Location = new System.Drawing.Point(24, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 18);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Member ID Number";
+            this.label1.Visible = false;
+            // 
+            // MemberIDNumLbl
+            // 
+            this.MemberIDNumLbl.AutoEllipsis = true;
+            this.MemberIDNumLbl.AutoSize = true;
+            this.MemberIDNumLbl.Font = new System.Drawing.Font("TechnicBold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemberIDNumLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemberIDNumLbl.Location = new System.Drawing.Point(24, 63);
+            this.MemberIDNumLbl.Name = "MemberIDNumLbl";
+            this.MemberIDNumLbl.Size = new System.Drawing.Size(138, 18);
+            this.MemberIDNumLbl.TabIndex = 9;
+            this.MemberIDNumLbl.Text = "Member ID Number";
+            this.MemberIDNumLbl.Visible = false;
+            // 
+            // MemberNameLbl
+            // 
+            this.MemberNameLbl.AutoEllipsis = true;
+            this.MemberNameLbl.AutoSize = true;
+            this.MemberNameLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MemberNameLbl.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemberNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemberNameLbl.Location = new System.Drawing.Point(22, 23);
+            this.MemberNameLbl.Name = "MemberNameLbl";
+            this.MemberNameLbl.Size = new System.Drawing.Size(173, 29);
+            this.MemberNameLbl.TabIndex = 8;
+            this.MemberNameLbl.Text = "Member Name";
+            this.MemberNameLbl.Visible = false;
+            this.MemberNameLbl.Click += new System.EventHandler(this.MemberNameLbl_Click);
+            // 
+            // MemberSignOut
+            // 
+            this.MemberSignOut.AutoSize = true;
+            this.MemberSignOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MemberSignOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+            this.MemberSignOut.FlatAppearance.BorderSize = 0;
+            this.MemberSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemberSignOut.Font = new System.Drawing.Font("TechnicBold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MemberSignOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemberSignOut.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.MemberSignOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.MemberSignOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MemberSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemberSignOut.Location = new System.Drawing.Point(3, 811);
+            this.MemberSignOut.Name = "MemberSignOut";
+            this.MemberSignOut.Size = new System.Drawing.Size(250, 54);
+            this.MemberSignOut.TabIndex = 7;
+            this.MemberSignOut.Text = "LOGOUT";
+            this.MemberSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MemberSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.MemberSignOut.UseVisualStyleBackColor = true;
+            this.MemberSignOut.Click += new System.EventHandler(this.MemberSignOut_Click);
+            // 
             // MemberNavBarPanel
             // 
             this.MemberNavBarPanel.AutoScroll = true;
@@ -1953,6 +2206,7 @@
             this.MemberAccUserBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.MemberAccUserBtn.UseVisualStyleBackColor = false;
             this.MemberAccUserBtn.Click += new System.EventHandler(this.MemberAccUserBtn_Click);
+            this.MemberAccUserBtn.MouseHover += new System.EventHandler(this.MemberAccUserBtn_MouseHover);
             // 
             // MemberSubAccUserBtn
             // 
@@ -1974,6 +2228,7 @@
             this.MemberSubAccUserBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.MemberSubAccUserBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.MemberSubAccUserBtn.UseVisualStyleBackColor = false;
+            this.MemberSubAccUserBtn.MouseHover += new System.EventHandler(this.MemberSubAccUserBtn_MouseHover);
             // 
             // MemberReviewBtn
             // 
@@ -2014,6 +2269,8 @@
             this.MemberBillBtn.Text = "BILLING";
             this.MemberBillBtn.UseVisualStyleBackColor = true;
             this.MemberBillBtn.Visible = false;
+            this.MemberBillBtn.Click += new System.EventHandler(this.MemberBillBtn_Click);
+            this.MemberBillBtn.MouseHover += new System.EventHandler(this.MemberBillBtn_MouseHover);
             // 
             // MemberAppointBtn
             // 
@@ -2034,6 +2291,7 @@
             this.MemberAppointBtn.Text = "APPOINTMENT";
             this.MemberAppointBtn.UseVisualStyleBackColor = true;
             this.MemberAppointBtn.Click += new System.EventHandler(this.MemberAppointBtn_Click);
+            this.MemberAppointBtn.MouseHover += new System.EventHandler(this.MemberAppointBtn_MouseHover);
             // 
             // MemberHomeBtn
             // 
@@ -2054,6 +2312,7 @@
             this.MemberHomeBtn.Text = "HOME";
             this.MemberHomeBtn.UseVisualStyleBackColor = true;
             this.MemberHomeBtn.Click += new System.EventHandler(this.MemberHomeBtn_Click);
+            this.MemberHomeBtn.MouseHover += new System.EventHandler(this.MemberHomeBtn_MouseHover);
             // 
             // EnchanteMemberHeaderLogo
             // 
@@ -2268,7 +2527,7 @@
             this.AbtUsOurGoalLbl.AutoSize = true;
             this.AbtUsOurGoalLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.AbtUsOurGoalLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.AbtUsOurGoalLbl.Location = new System.Drawing.Point(901, 4333);
+            this.AbtUsOurGoalLbl.Location = new System.Drawing.Point(901, 4403);
             this.AbtUsOurGoalLbl.Name = "AbtUsOurGoalLbl";
             this.AbtUsOurGoalLbl.Size = new System.Drawing.Size(150, 35);
             this.AbtUsOurGoalLbl.TabIndex = 36;
@@ -2280,11 +2539,13 @@
             this.AbtUsOurGoalEssay.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AbtUsOurGoalEssay.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AbtUsOurGoalEssay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.AbtUsOurGoalEssay.Location = new System.Drawing.Point(908, 4378);
+            this.AbtUsOurGoalEssay.Location = new System.Drawing.Point(908, 4448);
             this.AbtUsOurGoalEssay.Name = "AbtUsOurGoalEssay";
             this.AbtUsOurGoalEssay.Size = new System.Drawing.Size(781, 238);
             this.AbtUsOurGoalEssay.TabIndex = 29;
             this.AbtUsOurGoalEssay.Text = resources.GetString("AbtUsOurGoalEssay.Text");
+            this.AbtUsOurGoalEssay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AbtUsOurGoalEssay.UseCompatibleTextRendering = true;
             // 
             // AbtUsEssay
             // 
@@ -2292,16 +2553,18 @@
             this.AbtUsEssay.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AbtUsEssay.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AbtUsEssay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.AbtUsEssay.Location = new System.Drawing.Point(908, 4083);
+            this.AbtUsEssay.Location = new System.Drawing.Point(908, 4153);
             this.AbtUsEssay.Name = "AbtUsEssay";
             this.AbtUsEssay.Size = new System.Drawing.Size(781, 238);
             this.AbtUsEssay.TabIndex = 28;
             this.AbtUsEssay.Text = resources.GetString("AbtUsEssay.Text");
+            this.AbtUsEssay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AbtUsEssay.UseCompatibleTextRendering = true;
             // 
             // AbtUsPictureBox
             // 
             this.AbtUsPictureBox.Image = global::EnchanteMembership.Properties.Resources.Lobby;
-            this.AbtUsPictureBox.Location = new System.Drawing.Point(198, 4002);
+            this.AbtUsPictureBox.Location = new System.Drawing.Point(198, 4072);
             this.AbtUsPictureBox.Name = "AbtUsPictureBox";
             this.AbtUsPictureBox.Size = new System.Drawing.Size(625, 625);
             this.AbtUsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2315,7 +2578,7 @@
             this.AbtUsTagline.AutoSize = true;
             this.AbtUsTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.AbtUsTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.AbtUsTagline.Location = new System.Drawing.Point(900, 4002);
+            this.AbtUsTagline.Location = new System.Drawing.Point(900, 4072);
             this.AbtUsTagline.Name = "AbtUsTagline";
             this.AbtUsTagline.Size = new System.Drawing.Size(789, 69);
             this.AbtUsTagline.TabIndex = 26;
@@ -6532,7 +6795,6 @@
             this.ShowHidePassBtn.AutoSize = true;
             this.ShowHidePassBtn.BackColor = System.Drawing.Color.Transparent;
             this.ShowHidePassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ShowHidePassBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.ShowHidePassBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
             this.ShowHidePassBtn.FlatAppearance.BorderSize = 0;
             this.ShowHidePassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -6542,23 +6804,24 @@
             this.ShowHidePassBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.ShowHidePassBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ShowHidePassBtn.IconSize = 30;
-            this.ShowHidePassBtn.Location = new System.Drawing.Point(461, 0);
+            this.ShowHidePassBtn.Location = new System.Drawing.Point(453, 3);
             this.ShowHidePassBtn.Name = "ShowHidePassBtn";
-            this.ShowHidePassBtn.Size = new System.Drawing.Size(36, 49);
+            this.ShowHidePassBtn.Size = new System.Drawing.Size(36, 36);
             this.ShowHidePassBtn.TabIndex = 31;
             this.ShowHidePassBtn.UseVisualStyleBackColor = false;
             this.ShowHidePassBtn.Click += new System.EventHandler(this.ShowHidePassBtn_Click);
+            this.ShowHidePassBtn.MouseHover += new System.EventHandler(this.ShowHidePassBtn_MouseHover);
             // 
             // LoginPassText
             // 
             this.LoginPassText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.LoginPassText.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LoginPassText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginPassText.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginPassText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.LoginPassText.Location = new System.Drawing.Point(0, 0);
             this.LoginPassText.Margin = new System.Windows.Forms.Padding(50, 10, 10, 10);
             this.LoginPassText.Name = "LoginPassText";
-            this.LoginPassText.Size = new System.Drawing.Size(458, 46);
+            this.LoginPassText.Size = new System.Drawing.Size(497, 46);
             this.LoginPassText.TabIndex = 25;
             this.LoginPassText.UseSystemPasswordChar = true;
             this.LoginPassText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginPassText_KeyDown);
@@ -6980,7 +7243,7 @@
             // 
             this.MemberAccParentCard.ContainerControl = this.MemberParentContainer;
             this.MemberAccParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.MemberAccParentCard.SelectedCard = "Appt";
+            this.MemberAccParentCard.SelectedCard = "Home";
             // 
             // DateTimePickerTimer
             // 
@@ -6988,41 +7251,21 @@
             this.DateTimePickerTimer.Interval = 1000;
             this.DateTimePickerTimer.Tick += new System.EventHandler(this.DateTimePickerTimer_Tick);
             // 
-            // flowLayoutPanel1
+            // MemberAccBillingCard
             // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.iconButton1);
-            this.flowLayoutPanel1.Controls.Add(this.MemberUserAccPanel);
-            this.flowLayoutPanel1.Controls.Add(this.MemberSignOut);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(255, 889);
-            this.flowLayoutPanel1.TabIndex = 29;
+            this.MemberAccBillingCard.ContainerControl = this.MemAccBillingContainerPanel;
+            this.MemberAccBillingCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
+            this.MemberAccBillingCard.SelectedCard = "PayHistory";
             // 
-            // iconButton1
+            // guna2Panel1
             // 
-            this.iconButton1.AutoSize = true;
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("TechnicBold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserGear;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(3, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(250, 60);
-            this.iconButton1.TabIndex = 13;
-            this.iconButton1.Text = "Account \r\nInformation";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.guna2Panel1.BorderRadius = 20;
+            this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.Location = new System.Drawing.Point(107, 134);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(674, 272);
+            this.guna2Panel1.TabIndex = 10;
             // 
             // EnchanteMembership
             // 
@@ -7040,8 +7283,6 @@
             this.EnchanteMemberParentContainer.ResumeLayout(false);
             this.EnchanteMemberPage.ResumeLayout(false);
             this.MemberScrollPanel.ResumeLayout(false);
-            this.MemberUserAccPanel.ResumeLayout(false);
-            this.MemberUserAccPanel.PerformLayout();
             this.MemberParentContainer.ResumeLayout(false);
             this.MemAccApptPanel.ResumeLayout(false);
             this.MemAccApptPanel.PerformLayout();
@@ -7059,6 +7300,16 @@
             this.RecApptCatHSPanel.PerformLayout();
             this.RecApptFooterStopperPanel.ResumeLayout(false);
             this.RecApptFooterStopperPanel.PerformLayout();
+            this.MemAccBillingPanel.ResumeLayout(false);
+            this.MemAccBillingContainerPanel.ResumeLayout(false);
+            this.MemAccBillingPayMethodPanel.ResumeLayout(false);
+            this.MemAccBillingPayMethodPanel.PerformLayout();
+            this.MemAccBillingPayHistoryPanel.ResumeLayout(false);
+            this.MemAccBillingPayHistoryPanel.PerformLayout();
+            this.MemAccBillingSubPanel.ResumeLayout(false);
+            this.MemAccBillingSubPanel.PerformLayout();
+            this.MemAccBillingTypePanel.ResumeLayout(false);
+            this.MemAccBillingTypePanel.PerformLayout();
             this.MemAccHomePanel.ResumeLayout(false);
             this.MemAccHomePanel.PerformLayout();
             this.MemAccInfoPanel.ResumeLayout(false);
@@ -7067,6 +7318,10 @@
             this.MemAccInfoPersonalPanel.PerformLayout();
             this.MemAccInfoAccSettingsPanel.ResumeLayout(false);
             this.MemAccInfoAccSettingsPanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.MemberUserAccPanel.ResumeLayout(false);
+            this.MemberUserAccPanel.PerformLayout();
             this.MemberNavBarPanel.ResumeLayout(false);
             this.MemberNavBarPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemberHeaderLogo)).EndInit();
@@ -7169,8 +7424,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeServiceCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeMembershipCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccParentCard)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberAccBillingCard)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7623,6 +7877,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RecApptQueType;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.FlowLayoutPanel MemAccBillingTypePanel;
+        private FontAwesome.Sharp.IconButton MemAccBillingSubBtn;
+        private FontAwesome.Sharp.IconButton MemAccBillingPayHistoryBtn;
+        private System.Windows.Forms.Panel MemAccBillingContainerPanel;
+        private Syncfusion.Windows.Forms.Tools.CardLayout MemberAccBillingCard;
+        private FontAwesome.Sharp.IconButton MemAccBillingPayMethodBtn;
+        private System.Windows.Forms.Panel MemAccBillingSubPanel;
+        private System.Windows.Forms.Panel MemAccBillingPayMethodPanel;
+        private System.Windows.Forms.Panel MemAccBillingPayHistoryPanel;
+        private FontAwesome.Sharp.IconButton MemAccBillingPayMethodLbl;
+        private FontAwesome.Sharp.IconButton MemAccBillingPayHistoryLbl;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
 
