@@ -6,12 +6,27 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9166385A-57B5-40AC-9E8B-ED8E9780E6CC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Enchante_Membership</RootNamespace>
-    <AssemblyName>Enchante Membership</AssemblyName>
+    <RootNamespace>EnchanteMembership</RootNamespace>
+    <AssemblyName>EnchanteMembership</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
@@ -44,6 +62,9 @@
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -119,12 +140,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Billing.cs" />
     <Compile Include="EnchanteMembership.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EnchanteMembership.Designer.cs">
       <DependentUpon>EnchanteMembership.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberAccountParentCard.cs" />
     <Compile Include="ParentCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,6 +182,144 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Enchante Logo 275x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lobby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30 People Are Sharing Seemingly Innocent Questions That Broke Their Heart A .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabernetqween.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Das Dark Naturalist Salon Design von Comfortel Check more at https___mac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Enchante Logo %28200 x 200 px%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30 People Are Sharing Seemingly Innocent Questions That Broke Their Heart A 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabernetqween1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Das Dark Naturalist Salon Design von Comfortel Check more at https___mac1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo %28200 x 200 px%29 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo 275x1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guia-para-personalizar-tu-masaje.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lobby1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nail Tech Career.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outofstock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Young man having facial mask in beauty parlour.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maria Santos - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maricel Santos - Spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Miguel Fernandez - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rafael Garcia  - Spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rhydel Estrada - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sarah Lim - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sofia Ramirez - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Andrea Villanueva - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Angela Cruz - HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antonio Reyes - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carlos Gonzales - NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jasmine Castro - Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Juan Dela Cruz - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Katrina Reyes - FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luis Cruz - Spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Bldg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Olga Collection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green manicure nail table with gold frame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green &amp; Gold Collection _ Salon Equipment Centre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo %28200 x 200 px%29 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Enchante Logo %28200 x 200 px%29 Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Enchante Logo %28200 x 200 px%29 Green without text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchante Logo 275x100 Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
