@@ -21,14 +21,14 @@ using System.Xml.Linq;
 
 namespace EnchanteMembership
 {
-    
+
     public partial class EnchanteMembership : Form
     {
         //local db connection
         public static string mysqlconn = "server=localhost;user=root;database=enchante;password=";
-        public MySqlConnection connection = new MySqlConnection(mysqlconn); 
-        
-        
+        public MySqlConnection connection = new MySqlConnection(mysqlconn);
+
+
         private ParentCard ParentPanelShow;
         private Registration Registration; //Membership Type Card
         private ServiceCard Service; //Service Card
@@ -45,7 +45,7 @@ namespace EnchanteMembership
 
         private Timer timer;
         private int currentIndex = 0;
-        private System.Drawing.Image[] images = { Properties.Resources.Enchante_Bldg,  Properties.Resources.Hair, 
+        private System.Drawing.Image[] images = { Properties.Resources.Enchante_Bldg,  Properties.Resources.Hair,
                                     Properties.Resources.Olga_Collection, Properties.Resources.download,
                                     Properties.Resources.Green___Gold_Collection___Salon_Equipment_Centre}; // Replace with your resource names
 
@@ -324,7 +324,7 @@ namespace EnchanteMembership
             Registration.PanelShow(MembershipPlanPanel);
 
         }
-       
+
         private void MemberHomePanelReset()
         {
             ParentPanelShow.PanelShow(EnchanteMemberPage);
@@ -601,6 +601,7 @@ namespace EnchanteMembership
         }
         private void loginchecker()
         {
+
             if (LoginEmailAddText.Text == "Member" && LoginPassText.Text == "Member123")
             {
                 //Test Member
@@ -661,7 +662,7 @@ namespace EnchanteMembership
                 //db connection query
                 string email = LoginEmailAddText.Text;
                 string password = LoginPassText.Text;
-                string passchecker = HashHelper.HashString(password); 
+                string passchecker = HashHelper.HashString(password);
                 string membertype;
 
                 try //user member login
@@ -791,7 +792,7 @@ namespace EnchanteMembership
                                         isprem = true;
                                         issvip = false;
                                         MemberHomePanelReset();
-                                        MemAccHomeUpgradeAccPanel.Visible = false; 
+                                        MemAccHomeUpgradeAccPanel.Visible = false;
                                         logincredclear();
 
                                     }
@@ -1110,45 +1111,83 @@ namespace EnchanteMembership
                 age--; // Subtract 1 if the birthday hasn't occurred yet this year
             }
 
-            if (string.IsNullOrEmpty(rFirstname) || string.IsNullOrEmpty(rLastname) || string.IsNullOrEmpty(rAge) ||
-                string.IsNullOrEmpty(rGender) || string.IsNullOrEmpty(rNumber) || string.IsNullOrEmpty(rEmailAdd) ||
-                string.IsNullOrEmpty(rNumber) || string.IsNullOrEmpty(rPass) || string.IsNullOrEmpty(rConfirmPass))
+            // Check if the first name is empty or null
+            if (string.IsNullOrEmpty(rFirstname))
             {
                 RegularFirstNameErrorLbl.Visible = true;
-                RegularGenderErrorLbl.Visible = true;
-                RegularMobileNumErrorLbl.Visible = true;
-                RegularEmailErrorLbl.Visible = true;
-                RegularPassErrorLbl.Visible = true;
-                RegularConfirmPassErrorLbl.Visible = true;
-                RegularLastNameErrorLbl.Visible = true;
-                RegularAgeErrorLbl.Visible = true;
-
                 RegularFirstNameErrorLbl.Text = "Missing Field";
-                RegularGenderErrorLbl.Text = "Missing Field";
-                RegularMobileNumErrorLbl.Text = "Missing Field";
-                RegularEmailErrorLbl.Text = "Missing Field";
-                RegularPassErrorLbl.Text = "Missing Field";
-                RegularConfirmPassErrorLbl.Text = "Missing Field";
-                RegularLastNameErrorLbl.Text = "Missing Field";
-                RegularAgeErrorLbl.Text = "Missing Field";
-
             }
+
+            // Check if the last name is empty or null
+            if (string.IsNullOrEmpty(rLastname))
+            {
+                RegularLastNameErrorLbl.Visible = true;
+                RegularLastNameErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the age is empty or null
+            if (string.IsNullOrEmpty(rAge))
+            {
+                RegularAgeErrorLbl.Visible = true;
+                RegularAgeErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the gender is empty or null
+            if (string.IsNullOrEmpty(rGender))
+            {
+                RegularGenderErrorLbl.Visible = true;
+                RegularGenderErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the mobile number is empty or null
+            if (string.IsNullOrEmpty(rNumber))
+            {
+                RegularMobileNumErrorLbl.Visible = true;
+                RegularMobileNumErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the email address is empty or null
+            if (string.IsNullOrEmpty(rEmailAdd))
+            {
+                RegularEmailErrorLbl.Visible = true;
+                RegularEmailErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the password is empty or null
+            if (string.IsNullOrEmpty(rPass))
+            {
+                RegularPassErrorLbl.Visible = true;
+                RegularPassErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the confirm password is empty or null
+            if (string.IsNullOrEmpty(rConfirmPass))
+            {
+                RegularConfirmPassErrorLbl.Visible = true;
+                RegularConfirmPassErrorLbl.Text = "Missing Field";
+            }
+            if (!nameRegex.IsMatch(rFirstname))
+            {
+                RegularFirstNameErrorLbl.Visible = true;
+                RegularFirstNameErrorLbl.Text = "First Letter\nMust Be Capital";
+                return;
+            }
+
+            if (!nameRegex.IsMatch(rLastname))
+            {
+                RegularLastNameErrorLbl.Visible = true;
+                RegularLastNameErrorLbl.Text = "First Letter\nMust Be Capital";
+                return;
+            }
+
             else if (age < 18)
             {
                 RegularAgeErrorLbl.Visible = true;
                 RegularAgeErrorLbl.Text = "Must be 18 years old and above";
                 return;
             }
-            else if (!nameRegex.IsMatch(rFirstname) && !nameRegex.IsMatch(rLastname))
-            {
-                RegularFirstNameErrorLbl.Visible = true;
-                RegularLastNameErrorLbl.Visible = true;
 
-                RegularFirstNameErrorLbl.Text = "First Letter Must Be Capital";
-                RegularLastNameErrorLbl.Text = "First Letter Must Be Capital";
 
-                return;
-            }
             else if (!gmailRegex.IsMatch(rEmailAdd))
             {
                 RegularEmailErrorLbl.Visible = true;
@@ -1244,6 +1283,16 @@ namespace EnchanteMembership
             RegularConfirmPassText.Text = "";
             RegularPassText.UseSystemPasswordChar = true;
             RegularConfirmPassText.UseSystemPasswordChar = true;
+            RegularFirstNameErrorLbl.Visible = false;
+            RegularGenderErrorLbl.Visible = false;
+            RegularMobileNumErrorLbl.Visible = false;
+            RegularEmailErrorLbl.Visible = false;
+            RegularPassErrorLbl.Visible = false;
+            RegularConfirmPassErrorLbl.Visible = false;
+            RegularLastNameErrorLbl.Visible = false;
+            RegularAgeErrorLbl.Visible = false;
+            RegularShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            RegularConfirmShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
 
         }
 
@@ -4073,36 +4122,6 @@ namespace EnchanteMembership
         #endregion
 
 
-        // Method to get image bytes from resource
-        private byte[] GetImageBytesFromResource(string resourceName)
-        {
-            try
-            {
-                using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
-                {
-                    if (stream != null)
-                    {
-                        using (MemoryStream memoryStream = new MemoryStream())
-                        {
-                            stream.CopyTo(memoryStream);
-                            return memoryStream.ToArray();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Resource stream for '{resourceName}' is null.", "Manager Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return null;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Manager Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-        }
-
-
         private void MemApptFormGenerator()
         {
             DateTime currentDate = RecDateTimePicker.Value;
@@ -4554,6 +4573,485 @@ namespace EnchanteMembership
             MemHBillColor();
             Billing.PanelShow(MemAccBillingSubPanel);
             BillingSubColor();
+        }
+
+        #region  text limiter
+        private void LoginEmailAddText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (LoginEmailAddText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(LoginEmailAddText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void LoginPassText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (LoginPassText.Text.Length >= 100 && e.KeyChar != '\b') // Allow backspace ('\b') to delete characters
+            {
+                e.Handled = true; // Discard the key press event
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(LoginPassText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox32_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox32.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(textBox32.Text))
+            {
+                e.Handled = true;
+            }
+        }
+        private void textBox33_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox33.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(textBox33.Text))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
+
+        private void textBox34_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox34.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(textBox34.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox35_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox35.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(textBox35.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox31_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox31.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(textBox31.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void RegularLastNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '\'' && e.KeyChar != ' ' && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (RegularLastNameText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(RegularLastNameText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void RegularFirstNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '\'' && e.KeyChar != ' ' && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (RegularFirstNameText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(RegularFirstNameText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void RegularMobileNumText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '+' && e.KeyChar != '\b' || (RegularMobileNumText.Text.Contains("+") && RegularMobileNumText.Text.Length >= 13 && e.KeyChar != '\b') || (!RegularMobileNumText.Text.Contains("+") && RegularMobileNumText.Text.Length >= 11 && e.KeyChar != '\b'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void RegularEmailText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (RegularEmailText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(RegularEmailText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void RegularPassText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (RegularPassText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(RegularPassText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void RegularConfirmPassText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (RegularConfirmPassText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(RegularConfirmPassText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPPaymentTypeText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SVIPPaymentTypeText.Text.Length >= 16 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPPaymentTypeText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPCardExpireText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SVIPCardExpireText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPCardExpireText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPCardCVCText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SVIPCardCVCText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPCardCVCText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPCardNumText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SVIPCardNumText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPCardNumText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPCardNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SVIPCardNameText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPCardNameText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPCPNumText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '+' && e.KeyChar != '\b' || (SVIPCPNumText.Text.Contains("+") && SVIPCPNumText.Text.Length >= 13 && e.KeyChar != '\b') || (!SVIPCPNumText.Text.Contains("+") && SVIPCPNumText.Text.Length >= 11 && e.KeyChar != '\b'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPFirstNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '\'' && e.KeyChar != ' ' && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (SVIPFirstNameText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPFirstNameText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPLastNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '\'' && e.KeyChar != ' ' && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (SVIPLastNameText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPLastNameText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPConfirmPassText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SVIPConfirmPassText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPConfirmPassText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPPassText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SVIPPassText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPPassText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SVIPEmailText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SVIPEmailText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPEmailText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremEmailText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PremEmailText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremEmailText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremPassText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PremPassText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremPassText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremConfirmPassText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PremConfirmPassText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremConfirmPassText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremLastNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '\'' && e.KeyChar != ' ' && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (PremLastNameText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremLastNameText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremFirstNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '\'' && e.KeyChar != ' ' && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (PremFirstNameText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremFirstNameText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremCPNumText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '+' && e.KeyChar != '\b' || (PremCPNumText.Text.Contains("+") && PremCPNumText.Text.Length >= 13 && e.KeyChar != '\b') || (!PremCPNumText.Text.Contains("+") && PremCPNumText.Text.Length >= 11 && e.KeyChar != '\b'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremCardNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PremCardNameText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremCardNameText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremCardNumText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PremCardNumText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremCardNumText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremCardExpireText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PremCardExpireText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremCardExpireText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremCardCVCText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PremCardCVCText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremCardCVCText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PremPaymentTypeText_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void PremPaymentTypeText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PremPaymentTypeText.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremPaymentTypeText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void RecApptSearchServiceTypeText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (RecApptSearchServiceTypeText.Text.Length >= 50 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ' ' && string.IsNullOrEmpty(RecApptSearchServiceTypeText.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ServiceMassageExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+
+        }
+
+        private void ServiceHairExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+        }
+
+        private void ServiceSpaExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+
+        }
+
+        private void ServiceNailExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+
+        }
+
+        private void ServiceFaceSkinExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+
         }
     }
 }

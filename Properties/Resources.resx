@@ -220,4 +220,94 @@
   <data name="Enchante_Logo__200_x_200_px__Green_without_text" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Enchante Logo (200 x 200 px) Green without text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Acne_Treatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Acne Treatment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Anti_Aging_Treatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Anti Aging Treatment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chemical_Peels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chemical Peels.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\color.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cupping_therapy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cupping therapy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dry_sauna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dry sauna.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exfoliation_Treatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exfoliation Treatment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grace_Mykonos___Luxury_Hotel_Mykonos__Greece___View" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grace Mykonos - Luxury Hotel Mykonos, Greece - View.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hair_Cut_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hair Cut 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hair_extension" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hair extension.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hair_Language___Jenny_Cipoletti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hair Language - Jenny Cipoletti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Herbal_Infused_Pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Herbal Infused Pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hot_Mineral_Pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hot Mineral Pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hydrating_Treatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hydrating Treatment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hydrotherapy_Pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hydrotherapy Pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jacuzzi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jacuzzi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Layered_Toning__Add_Depth_To_Platinum_Blondes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Layered Toning_ Add Depth To Platinum Blondes .jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luxe_salon_experience" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luxe salon experience.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Manicure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Manicure.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="massage_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\massage 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nail_Art" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nail Art.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nail_Extension" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nail Extension.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nail_Repair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nail Repair.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nail_Treatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nail Treatment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pedicure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pedicure.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sauna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sauna.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skin_Whitening" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skin Whitening.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="YinjiSpace___Design_XIN_x_LUSPACE_SPA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YinjiSpace - Design XIN x LUSPACE SPA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Yukie_Massage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Yukie-Massage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_8_Precautions_to_Take_When_Coloring_Your_Hair_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8 Precautions to Take When Coloring Your Hair,.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

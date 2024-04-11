@@ -289,9 +289,6 @@
     <None Include="Resources\Olga Collection.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\download.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Green manicure nail table with gold frame.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +317,99 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nail Extension.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nail Repair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nail Treatment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pedicure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manicure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nail Art.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exfoliation Treatment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hydrating Treatment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skin Whitening.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acne Treatment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anti Aging Treatment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chemical Peels.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\massage 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YinjiSpace - Design XIN x LUSPACE SPA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yukie-Massage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cupping therapy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grace Mykonos - Luxury Hotel Mykonos, Greece - View.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hot Mineral Pool.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hydrotherapy Pool.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jacuzzi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sauna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dry sauna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Herbal Infused Pool.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hair Cut 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hair extension.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hair Language - Jenny Cipoletti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layered Toning_ Add Depth To Platinum Blondes .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luxe salon experience.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8 Precautions to Take When Coloring Your Hair,.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
