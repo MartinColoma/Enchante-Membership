@@ -33,6 +33,7 @@ namespace EnchanteMembership
         private Registration Registration; //Membership Type Card
         private ServiceCard Service; //Service Card
         private MemberAccountParentCard Member;
+        private Billing Billing;
 
         //tool tip
         private System.Windows.Forms.ToolTip iconToolTip;
@@ -73,6 +74,7 @@ namespace EnchanteMembership
             Registration = new Registration(MembershipPlanPanel, RegularPlanPanel, PremiumPlanPanel, SVIPPlanPanel);
             Service = new ServiceCard(ServiceType, ServiceHairStyling, ServiceFaceSkin, ServiceNailCare, ServiceSpa, ServiceMassage);
             Member = new MemberAccountParentCard(MemAccInfoPanel, MemAccApptPanel, MemAccHomePanel, MemAccReviewPanel, MemAccBillingPanel);
+            Billing = new Billing(MemAccBillingSubPanel, MemAccBillingPayHistoryPanel, MemAccBillingPayMethodPanel);
 
             //gender combobox
             RegularGenderComboText.Items.AddRange(genders);
@@ -386,7 +388,6 @@ namespace EnchanteMembership
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
 
-            PictureSlideTimer.Stop();
 
         }
 
@@ -410,7 +411,6 @@ namespace EnchanteMembership
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
 
-            PictureSlideTimer.Stop();
 
         }
 
@@ -435,7 +435,6 @@ namespace EnchanteMembership
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            PictureSlideTimer.Stop();
         }
         private void EnchanteTeamBtn_Click(object sender, EventArgs e)
         {
@@ -455,7 +454,6 @@ namespace EnchanteMembership
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteAbtUsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            PictureSlideTimer.Stop();
         }
         private void EnchanteAbtUsBtn_Click(object sender, EventArgs e)
         {
@@ -476,7 +474,6 @@ namespace EnchanteMembership
             EnchanteServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteMemberBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             EnchanteTeamBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            PictureSlideTimer.Stop();
         }
         private void EnchanteHomeBtn_MouseHover(object sender, EventArgs e)
         {
@@ -547,21 +544,25 @@ namespace EnchanteMembership
             {
                 LoginPassText.UseSystemPasswordChar = false;
                 ShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+
             }
             else if (LoginPassText.UseSystemPasswordChar == false)
             {
                 LoginPassText.UseSystemPasswordChar = true;
                 ShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.Eye;
 
-
-
-
-
             }
         }
         private void ShowHidePassBtn_MouseHover(object sender, EventArgs e)
         {
-
+            if (LoginPassText.UseSystemPasswordChar == true)
+            {
+                iconToolTip.SetToolTip(ShowHidePassBtn, "Show Password");
+            }
+            else if (LoginPassText.UseSystemPasswordChar == false)
+            {
+                iconToolTip.SetToolTip(ShowHidePassBtn, "Hide Password");
+            }
         }
         private void LoginPassReqBtn_MouseHover(object sender, EventArgs e)
         {
@@ -722,7 +723,7 @@ namespace EnchanteMembership
 
                                     if (passwordMatches)
                                     {
-                                        MessageBox.Show($"Welcome back, Regular Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        //MessageBox.Show($"Welcome back, Regular Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         MemberSubAccUserBtn.Visible = false;
                                         MemberNameLbl.Text = $"{name} {lastname}";
                                         MemberIDNumLbl.Text = ID;
@@ -746,6 +747,7 @@ namespace EnchanteMembership
                                         isprem = false;
                                         issvip = false;
                                         MemberHomePanelReset();
+                                        //MemAccHomeUpgradeAccPanel.Visible = true;
                                         logincredclear();
 
                                     }
@@ -767,7 +769,7 @@ namespace EnchanteMembership
 
                                     if (passwordMatches)
                                     {
-                                        MessageBox.Show($"Welcome back, Premium Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        //MessageBox.Show($"Welcome back, Premium Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         MemberNameLbl.Text = name + " " + lastname;
                                         MemberIDNumLbl.Text = ID;
 
@@ -789,6 +791,7 @@ namespace EnchanteMembership
                                         isprem = true;
                                         issvip = false;
                                         MemberHomePanelReset();
+                                        MemAccHomeUpgradeAccPanel.Visible = false; 
                                         logincredclear();
 
                                     }
@@ -810,7 +813,7 @@ namespace EnchanteMembership
 
                                     if (passwordMatches)
                                     {
-                                        MessageBox.Show($"Welcome back, SVIP Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        //MessageBox.Show($"Welcome back, SVIP Client {name}.", "Account Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         MemberNameLbl.Text = name + " " + lastname;
                                         MemberIDNumLbl.Text = ID;
 
@@ -832,6 +835,7 @@ namespace EnchanteMembership
                                         issvip = true;
                                         isprem = false;
                                         MemberHomePanelReset();
+                                        MemAccHomeUpgradeAccPanel.Visible = false;
                                         logincredclear();
 
                                     }
@@ -876,6 +880,7 @@ namespace EnchanteMembership
             LoginEmailAddErrorLbl.Visible = false;
             LoginPassErrorLbl.Visible = false;
             LoginPassText.UseSystemPasswordChar = true;
+            ShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.Eye;
 
         }
 
@@ -2308,15 +2313,19 @@ namespace EnchanteMembership
         #region Customer Member Dashboard Starts Here
         private void MemberAccUserBtn_Click(object sender, EventArgs e)
         {
-            if (MemberUserAccPanel.Visible == false)
-            {
-                MemberUserAccPanel.Visible = true;
+            Member.PanelShow(MemAccInfoPanel);
+            MemberUserAccPanel.Visible = false;
+            MemberAccInfoPersonalPassText.PasswordChar = '*';
+            MemHeaderBtnColorReset();
+            //if (MemberUserAccPanel.Visible == false)
+            //{
+            //    MemberUserAccPanel.Visible = true;
 
-            }
-            else
-            {
-                MemberUserAccPanel.Visible = false;
-            }
+            //}
+            //else
+            //{
+            //    MemberUserAccPanel.Visible = false;
+            //}
         }
         private void MemberSignOut_Click(object sender, EventArgs e)
         {
@@ -2630,8 +2639,6 @@ namespace EnchanteMembership
 
         #region Member Panel Starts Here
 
-        #endregion
-
         private void MemberNameLbl_Click(object sender, EventArgs e)
         {
             Member.PanelShow(MemAccInfoPanel);
@@ -2642,19 +2649,65 @@ namespace EnchanteMembership
         private void MemberHomeBtn_Click(object sender, EventArgs e)
         {
             Member.PanelShow(MemAccHomePanel);
-            
+            MemHomeColor();
         }
+
+        private void MemHomeColor()
+        {
+            //Change color once clicked
+            MemberHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+
+            //Change back to original
+            MemberAppointBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            MemberBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+        }
+        private void MemHApptColor()
+        {
+            //Change color once clicked
+            MemberAppointBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+
+            //Change back to original
+            MemberHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            MemberBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+        }
+        private void MemHBillColor()
+        {
+            //Change color once clicked
+            MemberBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+
+            //Change back to original
+            MemberHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            MemberAppointBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+        }
+
+        private void MemHeaderBtnColorReset()
+        {
+            //Change color once clicked
+            MemberAccUserBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(183)))), ((int)(((byte)(97)))));
+
+            //Change back to original
+            MemberHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            MemberBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            MemberAppointBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+        }
+
         private bool positionsSetForRegularBtn = false;
         private bool positionsSetForPremiumBtn = false;
         private bool positionsSetForSVIPBtn = false;
         private void MemberAppointBtn_Click(object sender, EventArgs e)
         {
+            MemApptBtnClick();
+        }
+
+        private void MemApptBtnClick()
+        {
             Member.PanelShow(MemAccApptPanel);
+            MemHApptColor();
             MemApptTransactionClear();
             LoadBookingTimes();
             RecApptBookingDatePicker.MinDate = DateTime.Today;
 
-            
+
 
             if (MemberAccInfoPersonalTypeText.Text == "Regular")
             {
@@ -2716,12 +2769,45 @@ namespace EnchanteMembership
                 }
             }
         }
-        private void ToggleBtnLocatory()
+        private void MemberHomeBtn_MouseHover(object sender, EventArgs e)
         {
-            // Define boolean flags to track if positions have been set
-            
+            iconToolTip.SetToolTip(MemberHomeBtn, "Home");
+
         }
-        #region Receptionsit Walk-in Appointment
+
+        private void MemberAppointBtn_MouseHover(object sender, EventArgs e)
+        {
+            iconToolTip.SetToolTip(MemberAppointBtn, "Book a New Appointment");
+
+        }
+
+        private void MemberBillBtn_MouseHover(object sender, EventArgs e)
+        {
+            iconToolTip.SetToolTip(MemberBillBtn, "Billing");
+
+        }
+
+        private void MemberAccUserBtn_MouseHover(object sender, EventArgs e)
+        {
+            iconToolTip.SetToolTip(MemberAccUserBtn, "View My Profile");
+
+        }
+
+        private void MemberSubAccUserBtn_MouseHover(object sender, EventArgs e)
+        {
+            iconToolTip.SetToolTip(MemberSubAccUserBtn, "Billing");
+            if (MemberAccInfoPersonalTypeText.Text == "PREMIUM")
+            {
+                iconToolTip.SetToolTip(MemberSubAccUserBtn, "Preimum Account User");
+            }
+            else if (MemberAccInfoPersonalTypeText.Text == "SVIP")
+            {
+                iconToolTip.SetToolTip(MemberSubAccUserBtn, "SVIP Account User");
+            }
+
+        }
+
+        #region Member Appointment
 
         //ApptMember
         private void RecApptPanelExitBtn_Click(object sender, EventArgs e)
@@ -2966,9 +3052,11 @@ namespace EnchanteMembership
 
                         RecApptServiceTypeDGV.DataSource = dataTable;
 
-                        RecApptServiceTypeDGV.Columns[0].Visible = false; //service category
-                        RecApptServiceTypeDGV.Columns[1].Visible = false; // service type
-                        RecApptServiceTypeDGV.Columns[2].Visible = false; // service ID
+                        RecApptServiceTypeDGV.Columns[0].Visible = false;
+                        RecApptServiceTypeDGV.Columns[1].Visible = false;
+                        RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3008,6 +3096,8 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3049,6 +3139,8 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3090,6 +3182,8 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3131,6 +3225,8 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -3174,7 +3270,7 @@ namespace EnchanteMembership
         }
 
         //ApptMember
-        
+
 
         private void RecApptServiceTypeDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -3190,38 +3286,7 @@ namespace EnchanteMembership
         //ApptMember
         private void RecApptAnyStaffToggleSwitch_CheckedChanged(object sender, EventArgs e)
         {
-            
-            //if (MemberAccInfoPersonalTypeText.Text == "Regular")
-            //{
 
-            //    if (haschosenacategory == false)
-            //    {
-            //        ShowNoServiceCategoryChosenWarningMessage();
-            //        RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitch_CheckedChanged;
-            //        RecApptAnyStaffToggleSwitch.Checked = false;
-            //        RecApptAttendingStaffLbl.Visible = false;
-            //        RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
-            //        RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitch_CheckedChanged;
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        if (RecApptAnyStaffToggleSwitch.Checked)
-            //        {
-            //            RecApptPreferredStaffToggleSwitch.Checked = false;
-            //            RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
-            //            RecApptAttendingStaffLbl.Visible = false;
-            //            RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
-            //            selectedStaffID = "Anyone";
-            //            RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
-            //            RecApptPreferredStaffLbl.Visible = false;
-            //            RecApptPreferredStaffToggleSwitch.Visible = false;
-            //        }
-            //    }
-
-            //    return;
-            //}
-            //else
             if (MemberAccInfoPersonalTypeText.Text == "PREMIUM")
             {
                 if (haschosenacategory == false)
@@ -3280,33 +3345,33 @@ namespace EnchanteMembership
         }
         private void RecApptAnyStaffToggleSwitchRegular_CheckedChanged(object sender, EventArgs e)
         {
-            
 
-                if (haschosenacategory == false)
+
+            if (haschosenacategory == false)
+            {
+                ShowNoServiceCategoryChosenWarningMessage();
+                RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
+                RecApptAnyStaffToggleSwitch.Checked = false;
+                RecApptAttendingStaffLbl.Visible = false;
+                RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
+                RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
+                return;
+            }
+            else
+            {
+                if (RecApptAnyStaffToggleSwitchRegular.Checked)
                 {
-                    ShowNoServiceCategoryChosenWarningMessage();
-                    RecApptAnyStaffToggleSwitch.CheckedChanged -= RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
-                    RecApptAnyStaffToggleSwitch.Checked = false;
+                    RecApptPreferredStaffToggleSwitch.Checked = false;
+                    RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
                     RecApptAttendingStaffLbl.Visible = false;
                     RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
-                    RecApptAnyStaffToggleSwitch.CheckedChanged += RecApptAnyStaffToggleSwitchRegular_CheckedChanged;
-                    return;
+                    selectedStaffID = "Anyone";
+                    RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
                 }
-                else
-                {
-                    if (RecApptAnyStaffToggleSwitchRegular.Checked)
-                    {
-                        RecApptPreferredStaffToggleSwitch.Checked = false;
-                        RecApptAvailableAttendingStaffSelectedComboBox.Enabled = false;
-                        RecApptAttendingStaffLbl.Visible = false;
-                        RecApptAvailableAttendingStaffSelectedComboBox.Visible = false;
-                        selectedStaffID = "Anyone";
-                        RecApptAvailableAttendingStaffSelectedComboBox.Items.Clear();
-                    }
-                }
+            }
 
-                return;
-            
+            return;
+
 
         }
         //ApptMember
@@ -3473,7 +3538,7 @@ namespace EnchanteMembership
                 ReceptionistAppointmentDB(); //appointment transaction db
                 MemApptFormGenerator();
                 RecApptTransactNumRefresh();
-                MemApptTransactionClear();            
+                MemApptTransactionClear();
             }
         }
 
@@ -3589,7 +3654,7 @@ namespace EnchanteMembership
             string bookedDate = currentDate.ToString("MM-dd-yyyy dddd"); //bookedDate
             string bookedTime = currentDate.ToString("hh:mm tt"); //bookedTime
             string bookedBy = MemberAccInfoPersonalNameText.Text; //booked by
-
+            string clientID = MemberAccInfoPersonalIDNumText.Text;
 
             try
             {
@@ -3918,7 +3983,7 @@ namespace EnchanteMembership
             RecApptAvailableAttendingStaffSelectedComboBox.SelectedIndex = 0;
         }
 
-        
+
         public void QueTypeIdentifier(DataGridViewCell QueType)
         {
 
@@ -4367,6 +4432,9 @@ namespace EnchanteMembership
                         RecApptServiceTypeDGV.Columns[0].Visible = false;
                         RecApptServiceTypeDGV.Columns[1].Visible = false;
                         RecApptServiceTypeDGV.Columns[2].Visible = false;
+                        RecApptServiceTypeDGV.Columns[7].Visible = false;
+                        RecApptServiceTypeDGV.Columns[8].Visible = false;
+
                         RecApptServiceTypeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         RecApptServiceTypeDGV.ClearSelection();
                     }
@@ -4394,6 +4462,98 @@ namespace EnchanteMembership
 
             label1.Text = Cashiertoday;
 
+        }
+        #endregion
+
+        #region Member Billing
+        private void MemberBillBtn_Click(object sender, EventArgs e)
+        {
+            Member.PanelShow(MemAccBillingPanel);
+            MemHBillColor();
+            Billing.PanelShow(MemAccBillingSubPanel);
+            BillingSubColor();
+
+
+        }
+
+        #endregion
+
+        private void MemAccBillingSubBtn_Click(object sender, EventArgs e)
+        {
+            Billing.PanelShow(MemAccBillingSubPanel);
+            BillingSubColor();
+        }
+        private void BillingSubColor()
+        {
+            MemAccBillingSubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingSubBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingSubBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+
+            //Change back to original
+            MemAccBillingPayHistoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingPayHistoryBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingPayHistoryBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+
+            MemAccBillingPayMethodBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingPayMethodBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingPayMethodBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+
+        }
+        private void MemAccBillingPayHistoryBtn_Click(object sender, EventArgs e)
+        {
+            Billing.PanelShow(MemAccBillingPayHistoryPanel);
+            BillinPayHistoryColor();
+        }
+
+        private void BillinPayHistoryColor()
+        {
+            MemAccBillingPayHistoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingPayHistoryBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingPayHistoryBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+
+            //Change back to original
+            MemAccBillingSubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingSubBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingSubBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+
+            MemAccBillingPayMethodBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingPayMethodBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingPayMethodBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+        }
+        private void MemAccBillingPayMethodBtn_Click(object sender, EventArgs e)
+        {
+            Billing.PanelShow(MemAccBillingPayMethodPanel);
+            BillingPayMethodColor();
+        }
+
+        private void BillingPayMethodColor()
+        {
+            MemAccBillingPayMethodBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingPayMethodBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingPayMethodBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+
+            //Change back to original
+            MemAccBillingSubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingSubBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingSubBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+
+            MemAccBillingPayHistoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            MemAccBillingPayHistoryBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            MemAccBillingPayHistoryBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+        }
+
+        private void MemAccHomeBookApptBtn_Click(object sender, EventArgs e)
+        {
+            MemApptBtnClick();
+
+        }
+
+        private void MemAccHomeUpgradeAccBtn_Click(object sender, EventArgs e)
+        {
+            Member.PanelShow(MemAccBillingPanel);
+            MemHBillColor();
+            Billing.PanelShow(MemAccBillingSubPanel);
+            BillingSubColor();
         }
     }
 }
