@@ -1111,45 +1111,83 @@ namespace EnchanteMembership
                 age--; // Subtract 1 if the birthday hasn't occurred yet this year
             }
 
-            if (string.IsNullOrEmpty(rFirstname) || string.IsNullOrEmpty(rLastname) || string.IsNullOrEmpty(rAge) ||
-                string.IsNullOrEmpty(rGender) || string.IsNullOrEmpty(rNumber) || string.IsNullOrEmpty(rEmailAdd) ||
-                string.IsNullOrEmpty(rNumber) || string.IsNullOrEmpty(rPass) || string.IsNullOrEmpty(rConfirmPass))
+            // Check if the first name is empty or null
+            if (string.IsNullOrEmpty(rFirstname))
             {
                 RegularFirstNameErrorLbl.Visible = true;
-                RegularGenderErrorLbl.Visible = true;
-                RegularMobileNumErrorLbl.Visible = true;
-                RegularEmailErrorLbl.Visible = true;
-                RegularPassErrorLbl.Visible = true;
-                RegularConfirmPassErrorLbl.Visible = true;
-                RegularLastNameErrorLbl.Visible = true;
-                RegularAgeErrorLbl.Visible = true;
-
                 RegularFirstNameErrorLbl.Text = "Missing Field";
-                RegularGenderErrorLbl.Text = "Missing Field";
-                RegularMobileNumErrorLbl.Text = "Missing Field";
-                RegularEmailErrorLbl.Text = "Missing Field";
-                RegularPassErrorLbl.Text = "Missing Field";
-                RegularConfirmPassErrorLbl.Text = "Missing Field";
-                RegularLastNameErrorLbl.Text = "Missing Field";
-                RegularAgeErrorLbl.Text = "Missing Field";
-
             }
+
+            // Check if the last name is empty or null
+            if (string.IsNullOrEmpty(rLastname))
+            {
+                RegularLastNameErrorLbl.Visible = true;
+                RegularLastNameErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the age is empty or null
+            if (string.IsNullOrEmpty(rAge))
+            {
+                RegularAgeErrorLbl.Visible = true;
+                RegularAgeErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the gender is empty or null
+            if (string.IsNullOrEmpty(rGender))
+            {
+                RegularGenderErrorLbl.Visible = true;
+                RegularGenderErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the mobile number is empty or null
+            if (string.IsNullOrEmpty(rNumber))
+            {
+                RegularMobileNumErrorLbl.Visible = true;
+                RegularMobileNumErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the email address is empty or null
+            if (string.IsNullOrEmpty(rEmailAdd))
+            {
+                RegularEmailErrorLbl.Visible = true;
+                RegularEmailErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the password is empty or null
+            if (string.IsNullOrEmpty(rPass))
+            {
+                RegularPassErrorLbl.Visible = true;
+                RegularPassErrorLbl.Text = "Missing Field";
+            }
+
+            // Check if the confirm password is empty or null
+            if (string.IsNullOrEmpty(rConfirmPass))
+            {
+                RegularConfirmPassErrorLbl.Visible = true;
+                RegularConfirmPassErrorLbl.Text = "Missing Field";
+            }
+            if (!nameRegex.IsMatch(rFirstname))
+            {
+                RegularFirstNameErrorLbl.Visible = true;
+                RegularFirstNameErrorLbl.Text = "First Letter\nMust Be Capital";
+                return;
+            }
+
+            if (!nameRegex.IsMatch(rLastname))
+            {
+                RegularLastNameErrorLbl.Visible = true;
+                RegularLastNameErrorLbl.Text = "First Letter\nMust Be Capital";
+                return;
+            }
+
             else if (age < 18)
             {
                 RegularAgeErrorLbl.Visible = true;
                 RegularAgeErrorLbl.Text = "Must be 18 years old and above";
                 return;
             }
-            else if (!nameRegex.IsMatch(rFirstname) && !nameRegex.IsMatch(rLastname))
-            {
-                RegularFirstNameErrorLbl.Visible = true;
-                RegularLastNameErrorLbl.Visible = true;
 
-                RegularFirstNameErrorLbl.Text = "First Letter Must Be Capital";
-                RegularLastNameErrorLbl.Text = "First Letter Must Be Capital";
 
-                return;
-            }
             else if (!gmailRegex.IsMatch(rEmailAdd))
             {
                 RegularEmailErrorLbl.Visible = true;
@@ -1245,6 +1283,16 @@ namespace EnchanteMembership
             RegularConfirmPassText.Text = "";
             RegularPassText.UseSystemPasswordChar = true;
             RegularConfirmPassText.UseSystemPasswordChar = true;
+            RegularFirstNameErrorLbl.Visible = false;
+            RegularGenderErrorLbl.Visible = false;
+            RegularMobileNumErrorLbl.Visible = false;
+            RegularEmailErrorLbl.Visible = false;
+            RegularPassErrorLbl.Visible = false;
+            RegularConfirmPassErrorLbl.Visible = false;
+            RegularLastNameErrorLbl.Visible = false;
+            RegularAgeErrorLbl.Visible = false;
+            RegularShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            RegularConfirmShowHidePassBtn.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
 
         }
 
@@ -4074,36 +4122,6 @@ namespace EnchanteMembership
         #endregion
 
 
-        // Method to get image bytes from resource
-        private byte[] GetImageBytesFromResource(string resourceName)
-        {
-            try
-            {
-                using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
-                {
-                    if (stream != null)
-                    {
-                        using (MemoryStream memoryStream = new MemoryStream())
-                        {
-                            stream.CopyTo(memoryStream);
-                            return memoryStream.ToArray();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Resource stream for '{resourceName}' is null.", "Manager Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return null;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Manager Receipt Generator Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-        }
-
-
         private void MemApptFormGenerator()
         {
             DateTime currentDate = RecDateTimePicker.Value;
@@ -5005,6 +5023,35 @@ namespace EnchanteMembership
             {
                 e.Handled = true;
             }
+        }
+
+        private void ServiceMassageExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+
+        }
+
+        private void ServiceHairExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+        }
+
+        private void ServiceSpaExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+
+        }
+
+        private void ServiceNailExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+
+        }
+
+        private void ServiceFaceSkinExitBtn_Click(object sender, EventArgs e)
+        {
+            Service.PanelShow(ServiceType);
+
         }
     }
 }

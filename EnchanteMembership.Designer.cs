@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnchanteMembership));
             this.EnchanteMemParentCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.EnchanteMemberParentContainer = new System.Windows.Forms.Panel();
@@ -329,14 +329,58 @@
             this.TeamMSG3 = new FontAwesome.Sharp.IconButton();
             this.ServicePanel = new System.Windows.Forms.Panel();
             this.ServiceFaceSkin = new System.Windows.Forms.Panel();
+            this.ServiceFaceSkinExitBtn = new FontAwesome.Sharp.IconButton();
             this.ServiceFaceSkinLbl = new System.Windows.Forms.Label();
             this.ServiceNailCare = new System.Windows.Forms.Panel();
+            this.ServiceNailExitBtn = new FontAwesome.Sharp.IconButton();
             this.ServiceNailLbl = new System.Windows.Forms.Label();
             this.ServiceSpa = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.ServiceSpaExitBtn = new FontAwesome.Sharp.IconButton();
             this.ServiceSpaLbl = new System.Windows.Forms.Label();
             this.ServiceMassage = new System.Windows.Forms.Panel();
+            this.ServiceMassagePB4 = new System.Windows.Forms.PictureBox();
+            this.ServiceMassagePB3 = new System.Windows.Forms.PictureBox();
+            this.ServiceMassageLbl6 = new System.Windows.Forms.Label();
+            this.ServiceMassageLbl4 = new System.Windows.Forms.Label();
+            this.ServiceMassageLbl2 = new System.Windows.Forms.Label();
+            this.ServiceMassagePB2 = new System.Windows.Forms.PictureBox();
+            this.ServiceMassageLbl7 = new System.Windows.Forms.Label();
+            this.ServiceMassageLbl5 = new System.Windows.Forms.Label();
+            this.ServiceMassageLbl3 = new System.Windows.Forms.Label();
+            this.ServiceMassageFooterStopperPanel = new System.Windows.Forms.Panel();
+            this.ServiceMassageFooterStopperLbl = new System.Windows.Forms.Label();
+            this.ServiceMassageLbl1 = new System.Windows.Forms.Label();
+            this.ServiceMassagePB1 = new System.Windows.Forms.PictureBox();
+            this.ServiceMassageExitBtn = new FontAwesome.Sharp.IconButton();
             this.ServiceMassageLbl = new System.Windows.Forms.Label();
             this.ServiceHairStyling = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ServiceHairExitBtn = new FontAwesome.Sharp.IconButton();
             this.ServiceHairLbl = new System.Windows.Forms.Label();
             this.ServiceType = new System.Windows.Forms.Panel();
             this.ServiceHSBtn = new FontAwesome.Sharp.IconButton();
@@ -551,6 +595,7 @@
             this.PremPassReqBtn = new FontAwesome.Sharp.IconButton();
             this.PremCreateAccBtn = new FontAwesome.Sharp.IconButton();
             this.PremiumExitBtn = new FontAwesome.Sharp.IconButton();
+            this.HomeMembershipTester = new System.Windows.Forms.Panel();
             this.RegularPlanPanel = new System.Windows.Forms.Panel();
             this.RegularMemberIDCopyLbl = new System.Windows.Forms.Label();
             this.RegularMemberIDLbl = new System.Windows.Forms.Label();
@@ -596,7 +641,6 @@
             this.RegularPassReqBtn = new FontAwesome.Sharp.IconButton();
             this.RegularCreateAccBtn = new FontAwesome.Sharp.IconButton();
             this.RegularExitBtn = new FontAwesome.Sharp.IconButton();
-            this.HomeMembershipTester = new System.Windows.Forms.Panel();
             this.EnchanteLoginForm = new System.Windows.Forms.Panel();
             this.LoginPassReqBtn = new FontAwesome.Sharp.IconButton();
             this.LoginRegisterHereLbl = new System.Windows.Forms.Label();
@@ -639,6 +683,28 @@
             this.DateTimePickerTimer = new System.Windows.Forms.Timer(this.components);
             this.MemberAccBillingCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
             this.MemberAccBillingSubCard = new Syncfusion.Windows.Forms.Tools.CardLayout(this.components);
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EnchanteMemParentCard)).BeginInit();
             this.EnchanteMemberParentContainer.SuspendLayout();
             this.EnchanteMemberPage.SuspendLayout();
@@ -707,8 +773,23 @@
             this.ServiceFaceSkin.SuspendLayout();
             this.ServiceNailCare.SuspendLayout();
             this.ServiceSpa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.ServiceMassage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceMassagePB4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceMassagePB3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceMassagePB2)).BeginInit();
+            this.ServiceMassageFooterStopperPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceMassagePB1)).BeginInit();
             this.ServiceHairStyling.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ServiceType.SuspendLayout();
             this.MembershipPanel.SuspendLayout();
             this.SVIPPlanPanel.SuspendLayout();
@@ -754,13 +835,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccParentCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccBillingCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccBillingSubCard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // EnchanteMemParentCard
             // 
             this.EnchanteMemParentCard.ContainerControl = this.EnchanteMemberParentContainer;
             this.EnchanteMemParentCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.EnchanteMemParentCard.SelectedCard = "Member";
+            this.EnchanteMemParentCard.SelectedCard = "LandingPage";
             // 
             // EnchanteMemberParentContainer
             // 
@@ -771,7 +860,7 @@
             this.EnchanteMemberParentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EnchanteMemberParentContainer.Location = new System.Drawing.Point(0, 0);
             this.EnchanteMemberParentContainer.Name = "EnchanteMemberParentContainer";
-            this.EnchanteMemberParentContainer.Size = new System.Drawing.Size(1370, 749);
+            this.EnchanteMemberParentContainer.Size = new System.Drawing.Size(1904, 1041);
             this.EnchanteMemberParentContainer.TabIndex = 0;
             // 
             // EnchanteMemberPage
@@ -784,7 +873,7 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.EnchanteMemberPage, new System.Drawing.Size(1904, 1041));
             this.EnchanteMemberPage.Name = "EnchanteMemberPage";
             this.EnchanteMemParentCard.SetPreferredSize(this.EnchanteMemberPage, new System.Drawing.Size(1904, 1041));
-            this.EnchanteMemberPage.Size = new System.Drawing.Size(1370, 749);
+            this.EnchanteMemberPage.Size = new System.Drawing.Size(1904, 1041);
             this.EnchanteMemberPage.TabIndex = 8;
             // 
             // MemberScrollPanel
@@ -795,7 +884,7 @@
             this.MemberScrollPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberScrollPanel.Location = new System.Drawing.Point(0, 150);
             this.MemberScrollPanel.Name = "MemberScrollPanel";
-            this.MemberScrollPanel.Size = new System.Drawing.Size(1370, 599);
+            this.MemberScrollPanel.Size = new System.Drawing.Size(1904, 891);
             this.MemberScrollPanel.TabIndex = 19;
             // 
             // MemberParentContainer
@@ -808,7 +897,7 @@
             this.MemberParentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemberParentContainer.Location = new System.Drawing.Point(0, 0);
             this.MemberParentContainer.Name = "MemberParentContainer";
-            this.MemberParentContainer.Size = new System.Drawing.Size(1370, 599);
+            this.MemberParentContainer.Size = new System.Drawing.Size(1904, 891);
             this.MemberParentContainer.TabIndex = 21;
             // 
             // MemAccApptPanel
@@ -858,7 +947,7 @@
             this.MemberAccParentCard.SetMinimumSize(this.MemAccApptPanel, new System.Drawing.Size(1633, 728));
             this.MemAccApptPanel.Name = "MemAccApptPanel";
             this.MemberAccParentCard.SetPreferredSize(this.MemAccApptPanel, new System.Drawing.Size(1633, 728));
-            this.MemAccApptPanel.Size = new System.Drawing.Size(1370, 599);
+            this.MemAccApptPanel.Size = new System.Drawing.Size(1904, 891);
             this.MemAccApptPanel.TabIndex = 30;
             // 
             // ServiceTotalPrice
@@ -1133,14 +1222,14 @@
             this.RecApptSelectedServiceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RecApptSelectedServiceDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.RecApptSelectedServiceDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecApptSelectedServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecApptSelectedServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.RecApptSelectedServiceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RecApptSelectedServiceDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RecApptSelectedService,
@@ -1152,14 +1241,14 @@
             this.RecApptTimeSelected,
             this.RecApptQueType});
             this.RecApptSelectedServiceDGV.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecApptSelectedServiceDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecApptSelectedServiceDGV.DefaultCellStyle = dataGridViewCellStyle14;
             this.RecApptSelectedServiceDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptSelectedServiceDGV.Location = new System.Drawing.Point(970, 1151);
             this.RecApptSelectedServiceDGV.Name = "RecApptSelectedServiceDGV";
@@ -1299,24 +1388,24 @@
             this.RecApptServiceTypeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RecApptServiceTypeDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.RecApptServiceTypeDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecApptServiceTypeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecApptServiceTypeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.RecApptServiceTypeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RecApptServiceTypeDGV.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecApptServiceTypeDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecApptServiceTypeDGV.DefaultCellStyle = dataGridViewCellStyle16;
             this.RecApptServiceTypeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.RecApptServiceTypeDGV.Location = new System.Drawing.Point(236, 1151);
             this.RecApptServiceTypeDGV.Name = "RecApptServiceTypeDGV";
@@ -1668,7 +1757,7 @@
             this.MemberAccParentCard.SetMinimumSize(this.MemAccReviewPanel, new System.Drawing.Size(200, 100));
             this.MemAccReviewPanel.Name = "MemAccReviewPanel";
             this.MemberAccParentCard.SetPreferredSize(this.MemAccReviewPanel, new System.Drawing.Size(200, 100));
-            this.MemAccReviewPanel.Size = new System.Drawing.Size(1370, 599);
+            this.MemAccReviewPanel.Size = new System.Drawing.Size(1904, 891);
             this.MemAccReviewPanel.TabIndex = 26;
             // 
             // MemAccBillingPanel
@@ -1680,7 +1769,7 @@
             this.MemberAccParentCard.SetMinimumSize(this.MemAccBillingPanel, new System.Drawing.Size(200, 100));
             this.MemAccBillingPanel.Name = "MemAccBillingPanel";
             this.MemberAccParentCard.SetPreferredSize(this.MemAccBillingPanel, new System.Drawing.Size(200, 100));
-            this.MemAccBillingPanel.Size = new System.Drawing.Size(1370, 599);
+            this.MemAccBillingPanel.Size = new System.Drawing.Size(1904, 891);
             this.MemAccBillingPanel.TabIndex = 25;
             // 
             // MemAccBillingContainerPanel
@@ -1691,7 +1780,7 @@
             this.MemAccBillingContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemAccBillingContainerPanel.Location = new System.Drawing.Point(255, 0);
             this.MemAccBillingContainerPanel.Name = "MemAccBillingContainerPanel";
-            this.MemAccBillingContainerPanel.Size = new System.Drawing.Size(1115, 599);
+            this.MemAccBillingContainerPanel.Size = new System.Drawing.Size(1649, 891);
             this.MemAccBillingContainerPanel.TabIndex = 31;
             // 
             // MemAccBillingPayMethodPanel
@@ -1702,7 +1791,7 @@
             this.MemberAccBillingCard.SetMinimumSize(this.MemAccBillingPayMethodPanel, new System.Drawing.Size(200, 100));
             this.MemAccBillingPayMethodPanel.Name = "MemAccBillingPayMethodPanel";
             this.MemberAccBillingCard.SetPreferredSize(this.MemAccBillingPayMethodPanel, new System.Drawing.Size(200, 100));
-            this.MemAccBillingPayMethodPanel.Size = new System.Drawing.Size(1115, 599);
+            this.MemAccBillingPayMethodPanel.Size = new System.Drawing.Size(1649, 891);
             this.MemAccBillingPayMethodPanel.TabIndex = 2;
             // 
             // MemAccBillingPayMethodLbl
@@ -1732,7 +1821,7 @@
             this.MemberAccBillingCard.SetMinimumSize(this.MemAccBillingPayHistoryPanel, new System.Drawing.Size(200, 100));
             this.MemAccBillingPayHistoryPanel.Name = "MemAccBillingPayHistoryPanel";
             this.MemberAccBillingCard.SetPreferredSize(this.MemAccBillingPayHistoryPanel, new System.Drawing.Size(200, 100));
-            this.MemAccBillingPayHistoryPanel.Size = new System.Drawing.Size(1115, 599);
+            this.MemAccBillingPayHistoryPanel.Size = new System.Drawing.Size(1649, 891);
             this.MemAccBillingPayHistoryPanel.TabIndex = 1;
             // 
             // MemAccBillingPayHistoryLbl
@@ -1762,7 +1851,7 @@
             this.MemberAccBillingCard.SetMinimumSize(this.MemAccBillingSubPanel, new System.Drawing.Size(200, 100));
             this.MemAccBillingSubPanel.Name = "MemAccBillingSubPanel";
             this.MemberAccBillingCard.SetPreferredSize(this.MemAccBillingSubPanel, new System.Drawing.Size(200, 100));
-            this.MemAccBillingSubPanel.Size = new System.Drawing.Size(1115, 599);
+            this.MemAccBillingSubPanel.Size = new System.Drawing.Size(1649, 891);
             this.MemAccBillingSubPanel.TabIndex = 0;
             // 
             // MemAccBillingSubTypeContainerPanel
@@ -1774,7 +1863,7 @@
             this.MemAccBillingSubTypeContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MemAccBillingSubTypeContainerPanel.Location = new System.Drawing.Point(0, 0);
             this.MemAccBillingSubTypeContainerPanel.Name = "MemAccBillingSubTypeContainerPanel";
-            this.MemAccBillingSubTypeContainerPanel.Size = new System.Drawing.Size(1115, 599);
+            this.MemAccBillingSubTypeContainerPanel.Size = new System.Drawing.Size(1649, 891);
             this.MemAccBillingSubTypeContainerPanel.TabIndex = 23;
             // 
             // panel2
@@ -1803,7 +1892,7 @@
             this.MemberAccBillingSubCard.SetMinimumSize(this.panel2, new System.Drawing.Size(1371, 807));
             this.panel2.Name = "panel2";
             this.MemberAccBillingSubCard.SetPreferredSize(this.panel2, new System.Drawing.Size(1371, 807));
-            this.panel2.Size = new System.Drawing.Size(1115, 599);
+            this.panel2.Size = new System.Drawing.Size(1649, 891);
             this.panel2.TabIndex = 5;
             // 
             // textBox1
@@ -2664,7 +2753,7 @@
             this.MemberAccBillingSubCard.SetMinimumSize(this.MemAccBillingSubTypePanel, new System.Drawing.Size(1371, 807));
             this.MemAccBillingSubTypePanel.Name = "MemAccBillingSubTypePanel";
             this.MemberAccBillingSubCard.SetPreferredSize(this.MemAccBillingSubTypePanel, new System.Drawing.Size(1371, 807));
-            this.MemAccBillingSubTypePanel.Size = new System.Drawing.Size(1115, 599);
+            this.MemAccBillingSubTypePanel.Size = new System.Drawing.Size(1649, 891);
             this.MemAccBillingSubTypePanel.TabIndex = 0;
             // 
             // panel16
@@ -2896,7 +2985,7 @@
             this.MemberAccBillingSubCard.SetMinimumSize(this.panel19, new System.Drawing.Size(1371, 807));
             this.panel19.Name = "panel19";
             this.MemberAccBillingSubCard.SetPreferredSize(this.panel19, new System.Drawing.Size(1371, 807));
-            this.panel19.Size = new System.Drawing.Size(1115, 599);
+            this.panel19.Size = new System.Drawing.Size(1649, 891);
             this.panel19.TabIndex = 6;
             // 
             // textBox28
@@ -3672,7 +3761,7 @@
             this.MemAccBillingTypePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.MemAccBillingTypePanel.Location = new System.Drawing.Point(0, 0);
             this.MemAccBillingTypePanel.Name = "MemAccBillingTypePanel";
-            this.MemAccBillingTypePanel.Size = new System.Drawing.Size(255, 599);
+            this.MemAccBillingTypePanel.Size = new System.Drawing.Size(255, 891);
             this.MemAccBillingTypePanel.TabIndex = 30;
             // 
             // MemAccBillingSubBtn
@@ -3758,7 +3847,7 @@
             this.MemberAccParentCard.SetMinimumSize(this.MemAccHomePanel, new System.Drawing.Size(200, 100));
             this.MemAccHomePanel.Name = "MemAccHomePanel";
             this.MemberAccParentCard.SetPreferredSize(this.MemAccHomePanel, new System.Drawing.Size(200, 100));
-            this.MemAccHomePanel.Size = new System.Drawing.Size(1370, 599);
+            this.MemAccHomePanel.Size = new System.Drawing.Size(1904, 891);
             this.MemAccHomePanel.TabIndex = 23;
             // 
             // MemAccHomeBookApptPanel
@@ -3945,7 +4034,7 @@
             this.MemberAccParentCard.SetMinimumSize(this.MemAccInfoPanel, new System.Drawing.Size(353, 198));
             this.MemAccInfoPanel.Name = "MemAccInfoPanel";
             this.MemberAccParentCard.SetPreferredSize(this.MemAccInfoPanel, new System.Drawing.Size(353, 198));
-            this.MemAccInfoPanel.Size = new System.Drawing.Size(1370, 599);
+            this.MemAccInfoPanel.Size = new System.Drawing.Size(1904, 891);
             this.MemAccInfoPanel.TabIndex = 22;
             this.MemAccInfoPanel.Visible = false;
             // 
@@ -4268,7 +4357,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(255, 597);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(255, 889);
             this.flowLayoutPanel1.TabIndex = 29;
             // 
             // iconButton1
@@ -4301,7 +4390,7 @@
             this.MemberUserAccPanel.Controls.Add(this.label1);
             this.MemberUserAccPanel.Controls.Add(this.MemberIDNumLbl);
             this.MemberUserAccPanel.Controls.Add(this.MemberNameLbl);
-            this.MemberUserAccPanel.Location = new System.Drawing.Point(259, 3);
+            this.MemberUserAccPanel.Location = new System.Drawing.Point(3, 69);
             this.MemberUserAccPanel.Name = "MemberUserAccPanel";
             this.MemberUserAccPanel.Size = new System.Drawing.Size(250, 736);
             this.MemberUserAccPanel.TabIndex = 2;
@@ -4360,7 +4449,7 @@
             this.MemberSignOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
             this.MemberSignOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MemberSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MemberSignOut.Location = new System.Drawing.Point(515, 3);
+            this.MemberSignOut.Location = new System.Drawing.Point(3, 811);
             this.MemberSignOut.Name = "MemberSignOut";
             this.MemberSignOut.Size = new System.Drawing.Size(250, 54);
             this.MemberSignOut.TabIndex = 7;
@@ -4385,7 +4474,7 @@
             this.MemberNavBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MemberNavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.MemberNavBarPanel.Name = "MemberNavBarPanel";
-            this.MemberNavBarPanel.Size = new System.Drawing.Size(1370, 150);
+            this.MemberNavBarPanel.Size = new System.Drawing.Size(1904, 150);
             this.MemberNavBarPanel.TabIndex = 1;
             // 
             // RecDateTimePicker
@@ -4553,7 +4642,7 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.EnchanteHomePage, new System.Drawing.Size(1904, 1041));
             this.EnchanteHomePage.Name = "EnchanteHomePage";
             this.EnchanteMemParentCard.SetPreferredSize(this.EnchanteHomePage, new System.Drawing.Size(1904, 1041));
-            this.EnchanteHomePage.Size = new System.Drawing.Size(1370, 749);
+            this.EnchanteHomePage.Size = new System.Drawing.Size(1904, 1041);
             this.EnchanteHomePage.TabIndex = 7;
             // 
             // EnchanteHomeNavBar
@@ -4570,7 +4659,7 @@
             this.EnchanteHomeNavBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.EnchanteHomeNavBar.Location = new System.Drawing.Point(0, 0);
             this.EnchanteHomeNavBar.Name = "EnchanteHomeNavBar";
-            this.EnchanteHomeNavBar.Size = new System.Drawing.Size(1370, 170);
+            this.EnchanteHomeNavBar.Size = new System.Drawing.Size(1904, 170);
             this.EnchanteHomeNavBar.TabIndex = 0;
             // 
             // EnchanteHLoginBtn
@@ -4731,7 +4820,7 @@
             this.EnchanteHomeScrollPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EnchanteHomeScrollPanel.Location = new System.Drawing.Point(0, 0);
             this.EnchanteHomeScrollPanel.Name = "EnchanteHomeScrollPanel";
-            this.EnchanteHomeScrollPanel.Size = new System.Drawing.Size(1370, 749);
+            this.EnchanteHomeScrollPanel.Size = new System.Drawing.Size(1904, 1041);
             this.EnchanteHomeScrollPanel.TabIndex = 18;
             this.EnchanteHomeScrollPanel.Scroll += new System.Windows.Forms.ScrollEventHandler(this.EnchanteHomeScrollPanel_Scroll);
             this.EnchanteHomeScrollPanel.Click += new System.EventHandler(this.EnchanteHeaderLogo_Click);
@@ -4741,7 +4830,7 @@
             this.AbtUsOurGoalLbl.AutoSize = true;
             this.AbtUsOurGoalLbl.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.AbtUsOurGoalLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.AbtUsOurGoalLbl.Location = new System.Drawing.Point(901, 4403);
+            this.AbtUsOurGoalLbl.Location = new System.Drawing.Point(886, 4408);
             this.AbtUsOurGoalLbl.Name = "AbtUsOurGoalLbl";
             this.AbtUsOurGoalLbl.Size = new System.Drawing.Size(150, 35);
             this.AbtUsOurGoalLbl.TabIndex = 36;
@@ -4753,7 +4842,7 @@
             this.AbtUsOurGoalEssay.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AbtUsOurGoalEssay.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AbtUsOurGoalEssay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.AbtUsOurGoalEssay.Location = new System.Drawing.Point(908, 4448);
+            this.AbtUsOurGoalEssay.Location = new System.Drawing.Point(893, 4453);
             this.AbtUsOurGoalEssay.Name = "AbtUsOurGoalEssay";
             this.AbtUsOurGoalEssay.Size = new System.Drawing.Size(781, 238);
             this.AbtUsOurGoalEssay.TabIndex = 29;
@@ -4767,7 +4856,7 @@
             this.AbtUsEssay.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AbtUsEssay.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AbtUsEssay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.AbtUsEssay.Location = new System.Drawing.Point(908, 4153);
+            this.AbtUsEssay.Location = new System.Drawing.Point(893, 4158);
             this.AbtUsEssay.Name = "AbtUsEssay";
             this.AbtUsEssay.Size = new System.Drawing.Size(781, 238);
             this.AbtUsEssay.TabIndex = 28;
@@ -4778,7 +4867,7 @@
             // AbtUsPictureBox
             // 
             this.AbtUsPictureBox.Image = global::EnchanteMembership.Properties.Resources.Lobby;
-            this.AbtUsPictureBox.Location = new System.Drawing.Point(198, 4072);
+            this.AbtUsPictureBox.Location = new System.Drawing.Point(183, 4077);
             this.AbtUsPictureBox.Name = "AbtUsPictureBox";
             this.AbtUsPictureBox.Size = new System.Drawing.Size(625, 625);
             this.AbtUsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -4792,7 +4881,7 @@
             this.AbtUsTagline.AutoSize = true;
             this.AbtUsTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.AbtUsTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.AbtUsTagline.Location = new System.Drawing.Point(900, 4072);
+            this.AbtUsTagline.Location = new System.Drawing.Point(885, 4077);
             this.AbtUsTagline.Name = "AbtUsTagline";
             this.AbtUsTagline.Size = new System.Drawing.Size(789, 69);
             this.AbtUsTagline.TabIndex = 26;
@@ -4805,7 +4894,7 @@
             this.TeamTagline.AutoSize = true;
             this.TeamTagline.Font = new System.Drawing.Font("TechnicBold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.TeamTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.TeamTagline.Location = new System.Drawing.Point(363, 3083);
+            this.TeamTagline.Location = new System.Drawing.Point(348, 3088);
             this.TeamTagline.Name = "TeamTagline";
             this.TeamTagline.Size = new System.Drawing.Size(1161, 69);
             this.TeamTagline.TabIndex = 17;
@@ -4830,7 +4919,7 @@
             this.TeamPanel.Controls.Add(this.TeamMSG1);
             this.TeamPanel.Controls.Add(this.TeamMSG2);
             this.TeamPanel.Controls.Add(this.TeamMSG3);
-            this.TeamPanel.Location = new System.Drawing.Point(291, 3194);
+            this.TeamPanel.Location = new System.Drawing.Point(276, 3199);
             this.TeamPanel.Name = "TeamPanel";
             this.TeamPanel.Size = new System.Drawing.Size(1304, 533);
             this.TeamPanel.TabIndex = 25;
@@ -5159,15 +5248,28 @@
             this.ServicePanel.Controls.Add(this.ServiceMassage);
             this.ServicePanel.Controls.Add(this.ServiceHairStyling);
             this.ServicePanel.Controls.Add(this.ServiceType);
-            this.ServicePanel.Location = new System.Drawing.Point(221, 1212);
+            this.ServicePanel.Location = new System.Drawing.Point(221, 1217);
             this.ServicePanel.Name = "ServicePanel";
             this.ServicePanel.Size = new System.Drawing.Size(1444, 751);
             this.ServicePanel.TabIndex = 23;
             // 
             // ServiceFaceSkin
             // 
+            this.ServiceFaceSkin.AutoScroll = true;
             this.ServiceFaceSkin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.HomeServiceCard.SetCardName(this.ServiceFaceSkin, "Card1");
+            this.HomeServiceCard.SetCardName(this.ServiceFaceSkin, "FaceSkin");
+            this.ServiceFaceSkin.Controls.Add(this.pictureBox13);
+            this.ServiceFaceSkin.Controls.Add(this.pictureBox14);
+            this.ServiceFaceSkin.Controls.Add(this.label31);
+            this.ServiceFaceSkin.Controls.Add(this.label32);
+            this.ServiceFaceSkin.Controls.Add(this.label45);
+            this.ServiceFaceSkin.Controls.Add(this.label60);
+            this.ServiceFaceSkin.Controls.Add(this.pictureBox15);
+            this.ServiceFaceSkin.Controls.Add(this.pictureBox16);
+            this.ServiceFaceSkin.Controls.Add(this.label61);
+            this.ServiceFaceSkin.Controls.Add(this.label62);
+            this.ServiceFaceSkin.Controls.Add(this.label63);
+            this.ServiceFaceSkin.Controls.Add(this.ServiceFaceSkinExitBtn);
             this.ServiceFaceSkin.Controls.Add(this.ServiceFaceSkinLbl);
             this.ServiceFaceSkin.Location = new System.Drawing.Point(0, 0);
             this.HomeServiceCard.SetMinimumSize(this.ServiceFaceSkin, new System.Drawing.Size(1444, 751));
@@ -5175,6 +5277,23 @@
             this.HomeServiceCard.SetPreferredSize(this.ServiceFaceSkin, new System.Drawing.Size(1444, 751));
             this.ServiceFaceSkin.Size = new System.Drawing.Size(1444, 751);
             this.ServiceFaceSkin.TabIndex = 2;
+            // 
+            // ServiceFaceSkinExitBtn
+            // 
+            this.ServiceFaceSkinExitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ServiceFaceSkinExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceFaceSkinExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.ServiceFaceSkinExitBtn.FlatAppearance.BorderSize = 0;
+            this.ServiceFaceSkinExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceFaceSkinExitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.ServiceFaceSkinExitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceFaceSkinExitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceFaceSkinExitBtn.Location = new System.Drawing.Point(1378, 14);
+            this.ServiceFaceSkinExitBtn.Name = "ServiceFaceSkinExitBtn";
+            this.ServiceFaceSkinExitBtn.Size = new System.Drawing.Size(48, 48);
+            this.ServiceFaceSkinExitBtn.TabIndex = 46;
+            this.ServiceFaceSkinExitBtn.UseVisualStyleBackColor = false;
+            this.ServiceFaceSkinExitBtn.Click += new System.EventHandler(this.ServiceFaceSkinExitBtn_Click);
             // 
             // ServiceFaceSkinLbl
             // 
@@ -5184,23 +5303,53 @@
             this.ServiceFaceSkinLbl.AutoSize = true;
             this.ServiceFaceSkinLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.ServiceFaceSkinLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceFaceSkinLbl.Location = new System.Drawing.Point(107, 118);
+            this.ServiceFaceSkinLbl.Location = new System.Drawing.Point(128, 86);
             this.ServiceFaceSkinLbl.Name = "ServiceFaceSkinLbl";
-            this.ServiceFaceSkinLbl.Size = new System.Drawing.Size(972, 51);
+            this.ServiceFaceSkinLbl.Size = new System.Drawing.Size(612, 102);
             this.ServiceFaceSkinLbl.TabIndex = 4;
-            this.ServiceFaceSkinLbl.Text = "Rejuvenate Your Skin and Make it Younger";
+            this.ServiceFaceSkinLbl.Text = "Rejuvenate Your Skin and \r\nMake it Younger";
             // 
             // ServiceNailCare
             // 
+            this.ServiceNailCare.AutoScroll = true;
             this.ServiceNailCare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.HomeServiceCard.SetCardName(this.ServiceNailCare, "Card2");
+            this.HomeServiceCard.SetCardName(this.ServiceNailCare, "Nails");
+            this.ServiceNailCare.Controls.Add(this.pictureBox5);
+            this.ServiceNailCare.Controls.Add(this.pictureBox7);
+            this.ServiceNailCare.Controls.Add(this.ServiceNailExitBtn);
+            this.ServiceNailCare.Controls.Add(this.label24);
             this.ServiceNailCare.Controls.Add(this.ServiceNailLbl);
+            this.ServiceNailCare.Controls.Add(this.label25);
+            this.ServiceNailCare.Controls.Add(this.label29);
+            this.ServiceNailCare.Controls.Add(this.label26);
+            this.ServiceNailCare.Controls.Add(this.pictureBox6);
+            this.ServiceNailCare.Controls.Add(this.pictureBox8);
+            this.ServiceNailCare.Controls.Add(this.label27);
+            this.ServiceNailCare.Controls.Add(this.label28);
+            this.ServiceNailCare.Controls.Add(this.label30);
             this.ServiceNailCare.Location = new System.Drawing.Point(0, 0);
             this.HomeServiceCard.SetMinimumSize(this.ServiceNailCare, new System.Drawing.Size(1444, 751));
             this.ServiceNailCare.Name = "ServiceNailCare";
             this.HomeServiceCard.SetPreferredSize(this.ServiceNailCare, new System.Drawing.Size(1444, 751));
             this.ServiceNailCare.Size = new System.Drawing.Size(1444, 751);
             this.ServiceNailCare.TabIndex = 3;
+            // 
+            // ServiceNailExitBtn
+            // 
+            this.ServiceNailExitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ServiceNailExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceNailExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.ServiceNailExitBtn.FlatAppearance.BorderSize = 0;
+            this.ServiceNailExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceNailExitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.ServiceNailExitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceNailExitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceNailExitBtn.Location = new System.Drawing.Point(1378, 15);
+            this.ServiceNailExitBtn.Name = "ServiceNailExitBtn";
+            this.ServiceNailExitBtn.Size = new System.Drawing.Size(48, 48);
+            this.ServiceNailExitBtn.TabIndex = 46;
+            this.ServiceNailExitBtn.UseVisualStyleBackColor = false;
+            this.ServiceNailExitBtn.Click += new System.EventHandler(this.ServiceNailExitBtn_Click);
             // 
             // ServiceNailLbl
             // 
@@ -5218,8 +5367,22 @@
             // 
             // ServiceSpa
             // 
+            this.ServiceSpa.AutoScroll = true;
             this.ServiceSpa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.HomeServiceCard.SetCardName(this.ServiceSpa, "Card3");
+            this.HomeServiceCard.SetCardName(this.ServiceSpa, "Spa");
+            this.ServiceSpa.Controls.Add(this.pictureBox9);
+            this.ServiceSpa.Controls.Add(this.pictureBox10);
+            this.ServiceSpa.Controls.Add(this.label34);
+            this.ServiceSpa.Controls.Add(this.label35);
+            this.ServiceSpa.Controls.Add(this.label36);
+            this.ServiceSpa.Controls.Add(this.pictureBox11);
+            this.ServiceSpa.Controls.Add(this.label37);
+            this.ServiceSpa.Controls.Add(this.label41);
+            this.ServiceSpa.Controls.Add(this.label42);
+            this.ServiceSpa.Controls.Add(this.panel29);
+            this.ServiceSpa.Controls.Add(this.label44);
+            this.ServiceSpa.Controls.Add(this.pictureBox12);
+            this.ServiceSpa.Controls.Add(this.ServiceSpaExitBtn);
             this.ServiceSpa.Controls.Add(this.ServiceSpaLbl);
             this.ServiceSpa.Location = new System.Drawing.Point(0, 0);
             this.HomeServiceCard.SetMinimumSize(this.ServiceSpa, new System.Drawing.Size(1444, 751));
@@ -5227,6 +5390,167 @@
             this.HomeServiceCard.SetPreferredSize(this.ServiceSpa, new System.Drawing.Size(1444, 751));
             this.ServiceSpa.Size = new System.Drawing.Size(1444, 751);
             this.ServiceSpa.TabIndex = 4;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::EnchanteMembership.Properties.Resources.Herbal_Infused_Pool;
+            this.pictureBox9.Location = new System.Drawing.Point(108, 1615);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(532, 419);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 65;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::EnchanteMembership.Properties.Resources.Jacuzzi;
+            this.pictureBox10.Location = new System.Drawing.Point(796, 1185);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(493, 318);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 64;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label34
+            // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label34.Location = new System.Drawing.Point(700, 1678);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(311, 35);
+            this.label34.TabIndex = 61;
+            this.label34.Text = "Herbal Infused Pool";
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label35.Location = new System.Drawing.Point(98, 1203);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(243, 35);
+            this.label35.TabIndex = 62;
+            this.label35.Text = "Private Jacuzzi";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label36.Location = new System.Drawing.Point(674, 705);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(103, 35);
+            this.label36.TabIndex = 63;
+            this.label36.Text = "Sauna";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::EnchanteMembership.Properties.Resources.sauna;
+            this.pictureBox11.Location = new System.Drawing.Point(111, 643);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(503, 477);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 60;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label37
+            // 
+            this.label37.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label37.Location = new System.Drawing.Point(705, 1736);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(614, 252);
+            this.label37.TabIndex = 57;
+            this.label37.Text = resources.GetString("label37.Text");
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label41.Location = new System.Drawing.Point(103, 1261);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(614, 252);
+            this.label41.TabIndex = 58;
+            this.label41.Text = resources.GetString("label41.Text");
+            // 
+            // label42
+            // 
+            this.label42.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label42.Location = new System.Drawing.Point(679, 763);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(614, 252);
+            this.label42.TabIndex = 59;
+            this.label42.Text = resources.GetString("label42.Text");
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.panel29.Controls.Add(this.label43);
+            this.panel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.panel29.Location = new System.Drawing.Point(283, 1991);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(804, 52);
+            this.panel29.TabIndex = 56;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.label43.Location = new System.Drawing.Point(221, 29);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(362, 51);
+            this.label43.TabIndex = 20;
+            this.label43.Text = "Footer Stopper";
+            this.label43.Visible = false;
+            // 
+            // label44
+            // 
+            this.label44.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label44.Location = new System.Drawing.Point(124, 150);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(724, 379);
+            this.label44.TabIndex = 55;
+            this.label44.Text = resources.GetString("label44.Text");
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::EnchanteMembership.Properties.Resources.YinjiSpace___Design_XIN_x_LUSPACE_SPA;
+            this.pictureBox12.Location = new System.Drawing.Point(882, 76);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(443, 518);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 54;
+            this.pictureBox12.TabStop = false;
+            // 
+            // ServiceSpaExitBtn
+            // 
+            this.ServiceSpaExitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ServiceSpaExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceSpaExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.ServiceSpaExitBtn.FlatAppearance.BorderSize = 0;
+            this.ServiceSpaExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceSpaExitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.ServiceSpaExitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceSpaExitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceSpaExitBtn.Location = new System.Drawing.Point(1363, 18);
+            this.ServiceSpaExitBtn.Name = "ServiceSpaExitBtn";
+            this.ServiceSpaExitBtn.Size = new System.Drawing.Size(48, 48);
+            this.ServiceSpaExitBtn.TabIndex = 46;
+            this.ServiceSpaExitBtn.UseVisualStyleBackColor = false;
+            this.ServiceSpaExitBtn.Click += new System.EventHandler(this.ServiceSpaExitBtn_Click);
             // 
             // ServiceSpaLbl
             // 
@@ -5236,7 +5560,7 @@
             this.ServiceSpaLbl.AutoSize = true;
             this.ServiceSpaLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.ServiceSpaLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceSpaLbl.Location = new System.Drawing.Point(107, 118);
+            this.ServiceSpaLbl.Location = new System.Drawing.Point(120, 76);
             this.ServiceSpaLbl.Name = "ServiceSpaLbl";
             this.ServiceSpaLbl.Size = new System.Drawing.Size(558, 51);
             this.ServiceSpaLbl.TabIndex = 6;
@@ -5244,8 +5568,22 @@
             // 
             // ServiceMassage
             // 
+            this.ServiceMassage.AutoScroll = true;
             this.ServiceMassage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.HomeServiceCard.SetCardName(this.ServiceMassage, "Card4");
+            this.HomeServiceCard.SetCardName(this.ServiceMassage, "Massage");
+            this.ServiceMassage.Controls.Add(this.ServiceMassagePB4);
+            this.ServiceMassage.Controls.Add(this.ServiceMassagePB3);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageLbl6);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageLbl4);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageLbl2);
+            this.ServiceMassage.Controls.Add(this.ServiceMassagePB2);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageLbl7);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageLbl5);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageLbl3);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageFooterStopperPanel);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageLbl1);
+            this.ServiceMassage.Controls.Add(this.ServiceMassagePB1);
+            this.ServiceMassage.Controls.Add(this.ServiceMassageExitBtn);
             this.ServiceMassage.Controls.Add(this.ServiceMassageLbl);
             this.ServiceMassage.Location = new System.Drawing.Point(0, 0);
             this.HomeServiceCard.SetMinimumSize(this.ServiceMassage, new System.Drawing.Size(1444, 751));
@@ -5253,6 +5591,167 @@
             this.HomeServiceCard.SetPreferredSize(this.ServiceMassage, new System.Drawing.Size(1444, 751));
             this.ServiceMassage.Size = new System.Drawing.Size(1444, 751);
             this.ServiceMassage.TabIndex = 5;
+            // 
+            // ServiceMassagePB4
+            // 
+            this.ServiceMassagePB4.Image = global::EnchanteMembership.Properties.Resources.cupping_therapy;
+            this.ServiceMassagePB4.Location = new System.Drawing.Point(108, 1552);
+            this.ServiceMassagePB4.Name = "ServiceMassagePB4";
+            this.ServiceMassagePB4.Size = new System.Drawing.Size(532, 419);
+            this.ServiceMassagePB4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ServiceMassagePB4.TabIndex = 52;
+            this.ServiceMassagePB4.TabStop = false;
+            // 
+            // ServiceMassagePB3
+            // 
+            this.ServiceMassagePB3.Image = global::EnchanteMembership.Properties.Resources.download__1_;
+            this.ServiceMassagePB3.Location = new System.Drawing.Point(899, 1079);
+            this.ServiceMassagePB3.Name = "ServiceMassagePB3";
+            this.ServiceMassagePB3.Size = new System.Drawing.Size(429, 477);
+            this.ServiceMassagePB3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ServiceMassagePB3.TabIndex = 51;
+            this.ServiceMassagePB3.TabStop = false;
+            // 
+            // ServiceMassageLbl6
+            // 
+            this.ServiceMassageLbl6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ServiceMassageLbl6.AutoSize = true;
+            this.ServiceMassageLbl6.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMassageLbl6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMassageLbl6.Location = new System.Drawing.Point(700, 1615);
+            this.ServiceMassageLbl6.Name = "ServiceMassageLbl6";
+            this.ServiceMassageLbl6.Size = new System.Drawing.Size(389, 35);
+            this.ServiceMassageLbl6.TabIndex = 50;
+            this.ServiceMassageLbl6.Text = "Cupping Massage Therapy";
+            // 
+            // ServiceMassageLbl4
+            // 
+            this.ServiceMassageLbl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ServiceMassageLbl4.AutoSize = true;
+            this.ServiceMassageLbl4.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMassageLbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMassageLbl4.Location = new System.Drawing.Point(98, 1140);
+            this.ServiceMassageLbl4.Name = "ServiceMassageLbl4";
+            this.ServiceMassageLbl4.Size = new System.Drawing.Size(357, 35);
+            this.ServiceMassageLbl4.TabIndex = 50;
+            this.ServiceMassageLbl4.Text = "Deep Pressure Massage";
+            // 
+            // ServiceMassageLbl2
+            // 
+            this.ServiceMassageLbl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ServiceMassageLbl2.AutoSize = true;
+            this.ServiceMassageLbl2.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMassageLbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMassageLbl2.Location = new System.Drawing.Point(685, 642);
+            this.ServiceMassageLbl2.Name = "ServiceMassageLbl2";
+            this.ServiceMassageLbl2.Size = new System.Drawing.Size(309, 35);
+            this.ServiceMassageLbl2.TabIndex = 50;
+            this.ServiceMassageLbl2.Text = "Relaxation Massage";
+            // 
+            // ServiceMassagePB2
+            // 
+            this.ServiceMassagePB2.Image = global::EnchanteMembership.Properties.Resources.massage_1;
+            this.ServiceMassagePB2.Location = new System.Drawing.Point(122, 580);
+            this.ServiceMassagePB2.Name = "ServiceMassagePB2";
+            this.ServiceMassagePB2.Size = new System.Drawing.Size(503, 477);
+            this.ServiceMassagePB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ServiceMassagePB2.TabIndex = 49;
+            this.ServiceMassagePB2.TabStop = false;
+            // 
+            // ServiceMassageLbl7
+            // 
+            this.ServiceMassageLbl7.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMassageLbl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMassageLbl7.Location = new System.Drawing.Point(705, 1673);
+            this.ServiceMassageLbl7.Name = "ServiceMassageLbl7";
+            this.ServiceMassageLbl7.Size = new System.Drawing.Size(614, 252);
+            this.ServiceMassageLbl7.TabIndex = 48;
+            this.ServiceMassageLbl7.Text = resources.GetString("ServiceMassageLbl7.Text");
+            // 
+            // ServiceMassageLbl5
+            // 
+            this.ServiceMassageLbl5.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMassageLbl5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMassageLbl5.Location = new System.Drawing.Point(103, 1198);
+            this.ServiceMassageLbl5.Name = "ServiceMassageLbl5";
+            this.ServiceMassageLbl5.Size = new System.Drawing.Size(614, 252);
+            this.ServiceMassageLbl5.TabIndex = 48;
+            this.ServiceMassageLbl5.Text = resources.GetString("ServiceMassageLbl5.Text");
+            // 
+            // ServiceMassageLbl3
+            // 
+            this.ServiceMassageLbl3.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMassageLbl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMassageLbl3.Location = new System.Drawing.Point(690, 700);
+            this.ServiceMassageLbl3.Name = "ServiceMassageLbl3";
+            this.ServiceMassageLbl3.Size = new System.Drawing.Size(614, 252);
+            this.ServiceMassageLbl3.TabIndex = 48;
+            this.ServiceMassageLbl3.Text = resources.GetString("ServiceMassageLbl3.Text");
+            // 
+            // ServiceMassageFooterStopperPanel
+            // 
+            this.ServiceMassageFooterStopperPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.ServiceMassageFooterStopperPanel.Controls.Add(this.ServiceMassageFooterStopperLbl);
+            this.ServiceMassageFooterStopperPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.ServiceMassageFooterStopperPanel.Location = new System.Drawing.Point(311, 2000);
+            this.ServiceMassageFooterStopperPanel.Name = "ServiceMassageFooterStopperPanel";
+            this.ServiceMassageFooterStopperPanel.Size = new System.Drawing.Size(804, 52);
+            this.ServiceMassageFooterStopperPanel.TabIndex = 47;
+            // 
+            // ServiceMassageFooterStopperLbl
+            // 
+            this.ServiceMassageFooterStopperLbl.AutoSize = true;
+            this.ServiceMassageFooterStopperLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMassageFooterStopperLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.ServiceMassageFooterStopperLbl.Location = new System.Drawing.Point(221, 29);
+            this.ServiceMassageFooterStopperLbl.Name = "ServiceMassageFooterStopperLbl";
+            this.ServiceMassageFooterStopperLbl.Size = new System.Drawing.Size(362, 51);
+            this.ServiceMassageFooterStopperLbl.TabIndex = 20;
+            this.ServiceMassageFooterStopperLbl.Text = "Footer Stopper";
+            this.ServiceMassageFooterStopperLbl.Visible = false;
+            // 
+            // ServiceMassageLbl1
+            // 
+            this.ServiceMassageLbl1.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ServiceMassageLbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMassageLbl1.Location = new System.Drawing.Point(113, 162);
+            this.ServiceMassageLbl1.Name = "ServiceMassageLbl1";
+            this.ServiceMassageLbl1.Size = new System.Drawing.Size(724, 538);
+            this.ServiceMassageLbl1.TabIndex = 46;
+            this.ServiceMassageLbl1.Text = resources.GetString("ServiceMassageLbl1.Text");
+            // 
+            // ServiceMassagePB1
+            // 
+            this.ServiceMassagePB1.Image = global::EnchanteMembership.Properties.Resources.Grace_Mykonos___Luxury_Hotel_Mykonos__Greece___View;
+            this.ServiceMassagePB1.Location = new System.Drawing.Point(874, 85);
+            this.ServiceMassagePB1.Name = "ServiceMassagePB1";
+            this.ServiceMassagePB1.Size = new System.Drawing.Size(443, 453);
+            this.ServiceMassagePB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ServiceMassagePB1.TabIndex = 45;
+            this.ServiceMassagePB1.TabStop = false;
+            // 
+            // ServiceMassageExitBtn
+            // 
+            this.ServiceMassageExitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ServiceMassageExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceMassageExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.ServiceMassageExitBtn.FlatAppearance.BorderSize = 0;
+            this.ServiceMassageExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceMassageExitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.ServiceMassageExitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceMassageExitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceMassageExitBtn.Location = new System.Drawing.Point(1363, 15);
+            this.ServiceMassageExitBtn.Name = "ServiceMassageExitBtn";
+            this.ServiceMassageExitBtn.Size = new System.Drawing.Size(48, 48);
+            this.ServiceMassageExitBtn.TabIndex = 44;
+            this.ServiceMassageExitBtn.UseVisualStyleBackColor = false;
+            this.ServiceMassageExitBtn.Click += new System.EventHandler(this.ServiceMassageExitBtn_Click);
             // 
             // ServiceMassageLbl
             // 
@@ -5262,7 +5761,7 @@
             this.ServiceMassageLbl.AutoSize = true;
             this.ServiceMassageLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.ServiceMassageLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceMassageLbl.Location = new System.Drawing.Point(107, 118);
+            this.ServiceMassageLbl.Location = new System.Drawing.Point(109, 85);
             this.ServiceMassageLbl.Name = "ServiceMassageLbl";
             this.ServiceMassageLbl.Size = new System.Drawing.Size(655, 51);
             this.ServiceMassageLbl.TabIndex = 7;
@@ -5270,8 +5769,22 @@
             // 
             // ServiceHairStyling
             // 
+            this.ServiceHairStyling.AutoScroll = true;
             this.ServiceHairStyling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
-            this.HomeServiceCard.SetCardName(this.ServiceHairStyling, "Card5");
+            this.HomeServiceCard.SetCardName(this.ServiceHairStyling, "Hair");
+            this.ServiceHairStyling.Controls.Add(this.pictureBox2);
+            this.ServiceHairStyling.Controls.Add(this.pictureBox3);
+            this.ServiceHairStyling.Controls.Add(this.label18);
+            this.ServiceHairStyling.Controls.Add(this.label19);
+            this.ServiceHairStyling.Controls.Add(this.label20);
+            this.ServiceHairStyling.Controls.Add(this.pictureBox4);
+            this.ServiceHairStyling.Controls.Add(this.label21);
+            this.ServiceHairStyling.Controls.Add(this.label22);
+            this.ServiceHairStyling.Controls.Add(this.label23);
+            this.ServiceHairStyling.Controls.Add(this.panel13);
+            this.ServiceHairStyling.Controls.Add(this.label2);
+            this.ServiceHairStyling.Controls.Add(this.pictureBox1);
+            this.ServiceHairStyling.Controls.Add(this.ServiceHairExitBtn);
             this.ServiceHairStyling.Controls.Add(this.ServiceHairLbl);
             this.ServiceHairStyling.Location = new System.Drawing.Point(0, 0);
             this.HomeServiceCard.SetMinimumSize(this.ServiceHairStyling, new System.Drawing.Size(1444, 751));
@@ -5279,6 +5792,167 @@
             this.HomeServiceCard.SetPreferredSize(this.ServiceHairStyling, new System.Drawing.Size(1444, 751));
             this.ServiceHairStyling.Size = new System.Drawing.Size(1444, 751);
             this.ServiceHairStyling.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::EnchanteMembership.Properties.Resources.color;
+            this.pictureBox2.Location = new System.Drawing.Point(110, 1546);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(532, 419);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::EnchanteMembership.Properties.Resources._8_Precautions_to_Take_When_Coloring_Your_Hair_;
+            this.pictureBox3.Location = new System.Drawing.Point(901, 1073);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(429, 477);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 60;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label18.Location = new System.Drawing.Point(702, 1609);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(173, 35);
+            this.label18.TabIndex = 57;
+            this.label18.Text = "Hair Color";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label19.Location = new System.Drawing.Point(100, 1134);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(224, 35);
+            this.label19.TabIndex = 58;
+            this.label19.Text = "Hiar Blowouts";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label20.Location = new System.Drawing.Point(687, 636);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(265, 35);
+            this.label20.TabIndex = 59;
+            this.label20.Text = "Hair Cut/Styling";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::EnchanteMembership.Properties.Resources.Hair_Cut_1;
+            this.pictureBox4.Location = new System.Drawing.Point(124, 574);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(503, 477);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 56;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label21.Location = new System.Drawing.Point(707, 1667);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(614, 252);
+            this.label21.TabIndex = 53;
+            this.label21.Text = resources.GetString("label21.Text");
+            // 
+            // label22
+            // 
+            this.label22.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label22.Location = new System.Drawing.Point(105, 1192);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(614, 252);
+            this.label22.TabIndex = 54;
+            this.label22.Text = resources.GetString("label22.Text");
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label23.Location = new System.Drawing.Point(692, 694);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(614, 252);
+            this.label23.TabIndex = 55;
+            this.label23.Text = resources.GetString("label23.Text");
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
+            this.panel13.Controls.Add(this.label17);
+            this.panel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.panel13.Location = new System.Drawing.Point(571, 1940);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(804, 55);
+            this.panel13.TabIndex = 49;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
+            this.label17.Location = new System.Drawing.Point(221, 29);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(362, 51);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "Footer Stopper";
+            this.label17.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label2.Location = new System.Drawing.Point(127, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(724, 573);
+            this.label2.TabIndex = 48;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EnchanteMembership.Properties.Resources.Luxe_salon_experience;
+            this.pictureBox1.Location = new System.Drawing.Point(888, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(443, 453);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ServiceHairExitBtn
+            // 
+            this.ServiceHairExitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ServiceHairExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ServiceHairExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.ServiceHairExitBtn.FlatAppearance.BorderSize = 0;
+            this.ServiceHairExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServiceHairExitBtn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.ServiceHairExitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ServiceHairExitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ServiceHairExitBtn.Location = new System.Drawing.Point(1378, 16);
+            this.ServiceHairExitBtn.Name = "ServiceHairExitBtn";
+            this.ServiceHairExitBtn.Size = new System.Drawing.Size(48, 48);
+            this.ServiceHairExitBtn.TabIndex = 45;
+            this.ServiceHairExitBtn.UseVisualStyleBackColor = false;
+            this.ServiceHairExitBtn.Click += new System.EventHandler(this.ServiceHairExitBtn_Click);
             // 
             // ServiceHairLbl
             // 
@@ -5288,7 +5962,7 @@
             this.ServiceHairLbl.AutoSize = true;
             this.ServiceHairLbl.Font = new System.Drawing.Font("TechnicBold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.ServiceHairLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ServiceHairLbl.Location = new System.Drawing.Point(107, 118);
+            this.ServiceHairLbl.Location = new System.Drawing.Point(123, 73);
             this.ServiceHairLbl.Name = "ServiceHairLbl";
             this.ServiceHairLbl.Size = new System.Drawing.Size(689, 51);
             this.ServiceHairLbl.TabIndex = 3;
@@ -5434,7 +6108,7 @@
             this.MembershipPanel.Controls.Add(this.PremiumPlanPanel);
             this.MembershipPanel.Controls.Add(this.HomeMembershipTester);
             this.MembershipPanel.Controls.Add(this.RegularPlanPanel);
-            this.MembershipPanel.Location = new System.Drawing.Point(258, 2036);
+            this.MembershipPanel.Location = new System.Drawing.Point(258, 2041);
             this.MembershipPanel.Name = "MembershipPanel";
             this.MembershipPanel.Size = new System.Drawing.Size(1371, 807);
             this.MembershipPanel.TabIndex = 22;
@@ -8330,6 +9004,16 @@
             this.PremiumExitBtn.UseVisualStyleBackColor = false;
             this.PremiumExitBtn.Click += new System.EventHandler(this.PremiumExitBtn_Click);
             // 
+            // HomeMembershipTester
+            // 
+            this.HomeMembershipCard.SetCardName(this.HomeMembershipTester, "Card1");
+            this.HomeMembershipTester.Location = new System.Drawing.Point(0, 0);
+            this.HomeMembershipCard.SetMinimumSize(this.HomeMembershipTester, new System.Drawing.Size(200, 100));
+            this.HomeMembershipTester.Name = "HomeMembershipTester";
+            this.HomeMembershipCard.SetPreferredSize(this.HomeMembershipTester, new System.Drawing.Size(200, 100));
+            this.HomeMembershipTester.Size = new System.Drawing.Size(1371, 807);
+            this.HomeMembershipTester.TabIndex = 0;
+            // 
             // RegularPlanPanel
             // 
             this.RegularPlanPanel.AutoScroll = true;
@@ -8962,16 +9646,6 @@
             this.RegularExitBtn.UseVisualStyleBackColor = false;
             this.RegularExitBtn.Click += new System.EventHandler(this.RegularExitBtn_Click);
             // 
-            // HomeMembershipTester
-            // 
-            this.HomeMembershipCard.SetCardName(this.HomeMembershipTester, "Card1");
-            this.HomeMembershipTester.Location = new System.Drawing.Point(0, 0);
-            this.HomeMembershipCard.SetMinimumSize(this.HomeMembershipTester, new System.Drawing.Size(200, 100));
-            this.HomeMembershipTester.Name = "HomeMembershipTester";
-            this.HomeMembershipCard.SetPreferredSize(this.HomeMembershipTester, new System.Drawing.Size(200, 100));
-            this.HomeMembershipTester.Size = new System.Drawing.Size(1371, 807);
-            this.HomeMembershipTester.TabIndex = 0;
-            // 
             // EnchanteLoginForm
             // 
             this.EnchanteLoginForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(136)))), ((int)(((byte)(82)))));
@@ -8985,7 +9659,7 @@
             this.EnchanteLoginForm.Controls.Add(this.LoginEmailAddText);
             this.EnchanteLoginForm.Controls.Add(this.LoginEmailAddLbl);
             this.EnchanteLoginForm.Controls.Add(this.LoginWCLbl);
-            this.EnchanteLoginForm.Location = new System.Drawing.Point(1169, 288);
+            this.EnchanteLoginForm.Location = new System.Drawing.Point(1154, 293);
             this.EnchanteLoginForm.Name = "EnchanteLoginForm";
             this.EnchanteLoginForm.Size = new System.Drawing.Size(625, 625);
             this.EnchanteLoginForm.TabIndex = 21;
@@ -9170,7 +9844,7 @@
             this.HomeFooterStopper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
             this.HomeFooterStopper.Controls.Add(this.HomeFooterStopperLbl);
             this.HomeFooterStopper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.HomeFooterStopper.Location = new System.Drawing.Point(541, 4788);
+            this.HomeFooterStopper.Location = new System.Drawing.Point(526, 4793);
             this.HomeFooterStopper.Name = "HomeFooterStopper";
             this.HomeFooterStopper.Size = new System.Drawing.Size(804, 100);
             this.HomeFooterStopper.TabIndex = 20;
@@ -9208,9 +9882,9 @@
             this.EnchanteFooterBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.EnchanteFooterBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnchanteFooterBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.EnchanteFooterBar.Location = new System.Drawing.Point(0, 4888);
+            this.EnchanteFooterBar.Location = new System.Drawing.Point(0, 4893);
             this.EnchanteFooterBar.Name = "EnchanteFooterBar";
-            this.EnchanteFooterBar.Size = new System.Drawing.Size(1794, 244);
+            this.EnchanteFooterBar.Size = new System.Drawing.Size(1887, 244);
             this.EnchanteFooterBar.TabIndex = 20;
             // 
             // EnchanteFooterCreateAcc
@@ -9416,7 +10090,7 @@
             this.EnchanteTagline.AutoSize = true;
             this.EnchanteTagline.Font = new System.Drawing.Font("TechnicBold", 65F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.EnchanteTagline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(105)))), ((int)(((byte)(44)))));
-            this.EnchanteTagline.Location = new System.Drawing.Point(99, 422);
+            this.EnchanteTagline.Location = new System.Drawing.Point(84, 427);
             this.EnchanteTagline.Name = "EnchanteTagline";
             this.EnchanteTagline.Size = new System.Drawing.Size(1012, 188);
             this.EnchanteTagline.TabIndex = 3;
@@ -9435,7 +10109,7 @@
             this.EnchanteAppointBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.EnchanteAppointBtn.IconColor = System.Drawing.Color.Black;
             this.EnchanteAppointBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EnchanteAppointBtn.Location = new System.Drawing.Point(115, 653);
+            this.EnchanteAppointBtn.Location = new System.Drawing.Point(100, 658);
             this.EnchanteAppointBtn.Name = "EnchanteAppointBtn";
             this.EnchanteAppointBtn.Size = new System.Drawing.Size(442, 77);
             this.EnchanteAppointBtn.TabIndex = 0;
@@ -9446,7 +10120,7 @@
             // EDP1
             // 
             this.EDP1.Image = global::EnchanteMembership.Properties.Resources.Lobby;
-            this.EDP1.Location = new System.Drawing.Point(1169, 288);
+            this.EDP1.Location = new System.Drawing.Point(1154, 293);
             this.EDP1.Name = "EDP1";
             this.EDP1.Size = new System.Drawing.Size(625, 625);
             this.EDP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -9460,20 +10134,20 @@
             this.EnchanteMemParentCard.SetMinimumSize(this.SecretPanel, new System.Drawing.Size(200, 100));
             this.SecretPanel.Name = "SecretPanel";
             this.EnchanteMemParentCard.SetPreferredSize(this.SecretPanel, new System.Drawing.Size(200, 100));
-            this.SecretPanel.Size = new System.Drawing.Size(1370, 749);
+            this.SecretPanel.Size = new System.Drawing.Size(1904, 1041);
             this.SecretPanel.TabIndex = 0;
             // 
             // HomeServiceCard
             // 
             this.HomeServiceCard.ContainerControl = this.ServicePanel;
             this.HomeServiceCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.HomeServiceCard.SelectedCard = "Card4";
+            this.HomeServiceCard.SelectedCard = "FaceSkin";
             // 
             // HomeMembershipCard
             // 
             this.HomeMembershipCard.ContainerControl = this.MembershipPanel;
             this.HomeMembershipCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
-            this.HomeMembershipCard.SelectedCard = "SVIP";
+            this.HomeMembershipCard.SelectedCard = "Regular";
             // 
             // ScrollTimer
             // 
@@ -9508,11 +10182,255 @@
             this.MemberAccBillingSubCard.LayoutMode = Syncfusion.Windows.Forms.Tools.CardLayoutMode.Fill;
             this.MemberAccBillingSubCard.SelectedCard = "Card3";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::EnchanteMembership.Properties.Resources.Nail_Repair;
+            this.pictureBox5.Location = new System.Drawing.Point(106, 1499);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(532, 419);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 65;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label24.Location = new System.Drawing.Point(698, 1562);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(182, 35);
+            this.label24.TabIndex = 61;
+            this.label24.Text = "Nail Repair";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label25.Location = new System.Drawing.Point(110, 1154);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(142, 35);
+            this.label25.TabIndex = 62;
+            this.label25.Text = "Nail Art";
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label26.Location = new System.Drawing.Point(686, 656);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(245, 35);
+            this.label26.TabIndex = 63;
+            this.label26.Text = "Nail Extensions";
+            // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label27.Location = new System.Drawing.Point(703, 1620);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(614, 252);
+            this.label27.TabIndex = 57;
+            this.label27.Text = resources.GetString("label27.Text");
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label28.Location = new System.Drawing.Point(691, 714);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(614, 252);
+            this.label28.TabIndex = 59;
+            this.label28.Text = resources.GetString("label28.Text");
+            // 
+            // label29
+            // 
+            this.label29.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label29.Location = new System.Drawing.Point(118, 190);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(724, 379);
+            this.label29.TabIndex = 55;
+            this.label29.Text = resources.GetString("label29.Text");
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::EnchanteMembership.Properties.Resources.Nail_Treatment;
+            this.pictureBox6.Location = new System.Drawing.Point(887, 118);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(443, 451);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 54;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::EnchanteMembership.Properties.Resources.Nail_Art;
+            this.pictureBox7.Location = new System.Drawing.Point(808, 1136);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(493, 318);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 64;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::EnchanteMembership.Properties.Resources.Nail_Extension;
+            this.pictureBox8.Location = new System.Drawing.Point(123, 594);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(503, 477);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 60;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label30
+            // 
+            this.label30.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label30.Location = new System.Drawing.Point(115, 1212);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(614, 252);
+            this.label30.TabIndex = 58;
+            this.label30.Text = resources.GetString("label30.Text");
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::EnchanteMembership.Properties.Resources.Hydrating_Treatment;
+            this.pictureBox13.Location = new System.Drawing.Point(109, 1497);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(532, 419);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 76;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::EnchanteMembership.Properties.Resources.Acne_Treatment;
+            this.pictureBox14.Location = new System.Drawing.Point(811, 1134);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(493, 318);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 75;
+            this.pictureBox14.TabStop = false;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label31.Location = new System.Drawing.Point(701, 1560);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(327, 35);
+            this.label31.TabIndex = 72;
+            this.label31.Text = "Hydrating Treatment";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label32.Location = new System.Drawing.Point(113, 1152);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(251, 35);
+            this.label32.TabIndex = 73;
+            this.label32.Text = "Acne Treatment";
+            // 
+            // label45
+            // 
+            this.label45.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label45.Location = new System.Drawing.Point(132, 223);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(724, 379);
+            this.label45.TabIndex = 67;
+            this.label45.Text = resources.GetString("label45.Text");
+            // 
+            // label60
+            // 
+            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("TechnicBold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label60.Location = new System.Drawing.Point(689, 654);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(335, 35);
+            this.label60.TabIndex = 74;
+            this.label60.Text = "Anti-Aging Treatment";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::EnchanteMembership.Properties.Resources.Skin_Whitening;
+            this.pictureBox15.Location = new System.Drawing.Point(890, 86);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(443, 485);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 66;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::EnchanteMembership.Properties.Resources.Anti_Aging_Treatment;
+            this.pictureBox16.Location = new System.Drawing.Point(126, 592);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(503, 477);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 71;
+            this.pictureBox16.TabStop = false;
+            // 
+            // label61
+            // 
+            this.label61.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label61.Location = new System.Drawing.Point(706, 1618);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(614, 252);
+            this.label61.TabIndex = 68;
+            this.label61.Text = resources.GetString("label61.Text");
+            // 
+            // label62
+            // 
+            this.label62.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label62.Location = new System.Drawing.Point(694, 712);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(614, 252);
+            this.label62.TabIndex = 70;
+            this.label62.Text = resources.GetString("label62.Text");
+            // 
+            // label63
+            // 
+            this.label63.Font = new System.Drawing.Font("TechnicBold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.label63.Location = new System.Drawing.Point(118, 1210);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(614, 252);
+            this.label63.TabIndex = 69;
+            this.label63.Text = resources.GetString("label63.Text");
+            // 
             // EnchanteMembership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.EnchanteMemberParentContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EnchanteMembership";
@@ -9639,10 +10557,28 @@
             this.ServiceNailCare.PerformLayout();
             this.ServiceSpa.ResumeLayout(false);
             this.ServiceSpa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ServiceMassage.ResumeLayout(false);
             this.ServiceMassage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceMassagePB4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceMassagePB3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceMassagePB2)).EndInit();
+            this.ServiceMassageFooterStopperPanel.ResumeLayout(false);
+            this.ServiceMassageFooterStopperPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceMassagePB1)).EndInit();
             this.ServiceHairStyling.ResumeLayout(false);
             this.ServiceHairStyling.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ServiceType.ResumeLayout(false);
             this.ServiceType.PerformLayout();
             this.MembershipPanel.ResumeLayout(false);
@@ -9725,6 +10661,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccParentCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccBillingCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberAccBillingSubCard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -10335,6 +11279,72 @@
         private System.Windows.Forms.Label label83;
         private FontAwesome.Sharp.IconButton iconButton30;
         private FontAwesome.Sharp.IconButton iconButton31;
+        private FontAwesome.Sharp.IconButton ServiceMassageExitBtn;
+        private System.Windows.Forms.PictureBox ServiceMassagePB1;
+        private System.Windows.Forms.Label ServiceMassageLbl1;
+        private System.Windows.Forms.Panel ServiceMassageFooterStopperPanel;
+        private System.Windows.Forms.Label ServiceMassageFooterStopperLbl;
+        private System.Windows.Forms.PictureBox ServiceMassagePB2;
+        private System.Windows.Forms.Label ServiceMassageLbl3;
+        private System.Windows.Forms.PictureBox ServiceMassagePB3;
+        private System.Windows.Forms.Label ServiceMassageLbl2;
+        private System.Windows.Forms.PictureBox ServiceMassagePB4;
+        private System.Windows.Forms.Label ServiceMassageLbl6;
+        private System.Windows.Forms.Label ServiceMassageLbl4;
+        private System.Windows.Forms.Label ServiceMassageLbl7;
+        private System.Windows.Forms.Label ServiceMassageLbl5;
+        private FontAwesome.Sharp.IconButton ServiceFaceSkinExitBtn;
+        private FontAwesome.Sharp.IconButton ServiceNailExitBtn;
+        private FontAwesome.Sharp.IconButton ServiceSpaExitBtn;
+        private FontAwesome.Sharp.IconButton ServiceHairExitBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
     }
 }
 
