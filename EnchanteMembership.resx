@@ -120,27 +120,6 @@
   <metadata name="EnchanteMemParentCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="AbtUsOurGoalEssay.Text" xml:space="preserve">
-    <value>          At Enchante Group of Salons, our goal is straightforward yet profound: to inspire confidence and radiance in every individual who walks through our doors. We strive to create a welcoming haven where beauty meets expertise, providing top-notch services tailored to your unique preferences. Whether it's a fresh haircut, a soothing massage, or a rejuvenating facial, our aim is to exceed your expectations and leave you feeling empowered and enchanted. Join us on this journey to embrace your true beauty and discover the magic within at Enchante Group of Salons.</value>
-  </data>
-  <data name="AbtUsEssay.Text" xml:space="preserve">
-    <value>          Welcome to Enchante Group of Salons, where beauty meets expertise in a harmonious blend. Our journey began with a simple vision: to redefine beauty standards and empower individuals through confidence. With a team of passionate stylists and therapists, we've crafted a sanctuary where every client is celebrated for their unique essence. From luxurious hair treatments to rejuvenating spa experiences, each visit promises personalized care tailored to your desires. Step into our world, where every appointment is an opportunity to indulge in self-care and emerge feeling enchanted. Join us at Enchante Group of Salons, where beauty is not just a look, but a feeling.</value>
-  </data>
-  <metadata name="HomeServiceCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>207, 17</value>
-  </metadata>
-  <data name="label45.Text" xml:space="preserve">
-    <value>Unveil your most radiant complexion yet with our transformative face and skin treatments, designed to nourish, rejuvenate, and revitalize your skin from the inside out. Our experienced estheticians will work with you to create a personalized skincare regimen tailored to your unique needs and concerns. Experience the ultimate in relaxation with our luxurious facials, where expert hands and potent skincare products come together to create a truly indulgent experience. From deep-cleansing treatments that purify and detoxify the skin to hydrating masks that replenish moisture and restore vitality, we offer a range of options to suit every skin type and concern.</value>
-  </data>
-  <data name="label61.Text" xml:space="preserve">
-    <value>Quench thirsty skin and unveil a dewy, luminous complexion with our luxurious hydrating treatment. Formulated with nourishing ingredients and cutting-edge hydration technology, our treatment replenishes moisture levels, restoring suppleness and vitality to your skin. From dryness and dullness to tightness and rough texture, our hydrating treatment addresses a myriad of concerns, leaving your skin soft, smooth, and radiant. Indulge in a moment of self-care as our skilled estheticians pamper your skin with a customized regimen tailored to your unique needs, delivering deep hydration and lasting comfort. Say hello to a fresh, hydrated complexion and embrace the beauty of healthy, glowing skin with our indulgent hydrating treatment.</value>
-  </data>
-  <data name="label62.Text" xml:space="preserve">
-    <value>Reclaim youthful radiance with our transformative anti-aging treatment. Our advanced techniques and premium products are meticulously curated to target fine lines, wrinkles, and other signs of aging, revealing a firmer, smoother, and more youthful complexion. By stimulating collagen production and promoting cellular renewal, our treatment restores elasticity and vitality to your skin, helping you turn back the hands of time. Experience the confidence that comes with rejuvenated skin as our skilled estheticians customize a regimen tailored to your specific concerns and goals. Say hello to a more youthful-looking you and embrace the beauty of aging gracefully with our indulgent anti-aging treatment.</value>
-  </data>
-  <data name="label63.Text" xml:space="preserve">
-    <value>Bid farewell to breakouts and blemishes with our comprehensive acne treatment. Our expert estheticians employ a multi-faceted approach to combat acne, targeting inflammation, excess oil production, and bacterial overgrowth for clearer, smoother skin. With a blend of potent ingredients and gentle techniques, our treatment not only addresses existing acne but also prevents future flare-ups, restoring balance to your complexion. Say goodbye to the frustration of stubborn acne and hello to newfound confidence as our tailored regimen delivers visible results you can see and feel. Reclaim control over your skin and embrace a clearer, healthier complexion with our effective acne treatment.</value>
-  </data>
   <metadata name="MemberAccParentCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>535, 17</value>
   </metadata>
@@ -174,6 +153,39 @@
   <metadata name="MemberAccBillingSubCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>896, 23</value>
   </metadata>
+  <data name="AbtUsOurGoalEssay.Text" xml:space="preserve">
+    <value>          At Enchante Group of Salons, our goal is straightforward yet profound: to inspire confidence and radiance in every individual who walks through our doors. We strive to create a welcoming haven where beauty meets expertise, providing top-notch services tailored to your unique preferences. Whether it's a fresh haircut, a soothing massage, or a rejuvenating facial, our aim is to exceed your expectations and leave you feeling empowered and enchanted. Join us on this journey to embrace your true beauty and discover the magic within at Enchante Group of Salons.</value>
+  </data>
+  <data name="AbtUsEssay.Text" xml:space="preserve">
+    <value>          Welcome to Enchante Group of Salons, where beauty meets expertise in a harmonious blend. Our journey began with a simple vision: to redefine beauty standards and empower individuals through confidence. With a team of passionate stylists and therapists, we've crafted a sanctuary where every client is celebrated for their unique essence. From luxurious hair treatments to rejuvenating spa experiences, each visit promises personalized care tailored to your desires. Step into our world, where every appointment is an opportunity to indulge in self-care and emerge feeling enchanted. Join us at Enchante Group of Salons, where beauty is not just a look, but a feeling.</value>
+  </data>
+  <metadata name="HomeServiceCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>207, 17</value>
+  </metadata>
+  <data name="label45.Text" xml:space="preserve">
+    <value>Unveil your most radiant complexion yet with our transformative face and skin treatments, designed to nourish, rejuvenate, and revitalize your skin from the inside out. Our experienced estheticians will work with you to create a personalized skincare regimen tailored to your unique needs and concerns. Experience the ultimate in relaxation with our luxurious facials, where expert hands and potent skincare products come together to create a truly indulgent experience. From deep-cleansing treatments that purify and detoxify the skin to hydrating masks that replenish moisture and restore vitality, we offer a range of options to suit every skin type and concern.</value>
+  </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>Quench thirsty skin and unveil a dewy, luminous complexion with our luxurious hydrating treatment. Formulated with nourishing ingredients and cutting-edge hydration technology, our treatment replenishes moisture levels, restoring suppleness and vitality to your skin. From dryness and dullness to tightness and rough texture, our hydrating treatment addresses a myriad of concerns, leaving your skin soft, smooth, and radiant. Indulge in a moment of self-care as our skilled estheticians pamper your skin with a customized regimen tailored to your unique needs, delivering deep hydration and lasting comfort. Say hello to a fresh, hydrated complexion and embrace the beauty of healthy, glowing skin with our indulgent hydrating treatment.</value>
+  </data>
+  <data name="label62.Text" xml:space="preserve">
+    <value>Reclaim youthful radiance with our transformative anti-aging treatment. Our advanced techniques and premium products are meticulously curated to target fine lines, wrinkles, and other signs of aging, revealing a firmer, smoother, and more youthful complexion. By stimulating collagen production and promoting cellular renewal, our treatment restores elasticity and vitality to your skin, helping you turn back the hands of time. Experience the confidence that comes with rejuvenated skin as our skilled estheticians customize a regimen tailored to your specific concerns and goals. Say hello to a more youthful-looking you and embrace the beauty of aging gracefully with our indulgent anti-aging treatment.</value>
+  </data>
+  <data name="label63.Text" xml:space="preserve">
+    <value>Bid farewell to breakouts and blemishes with our comprehensive acne treatment. Our expert estheticians employ a multi-faceted approach to combat acne, targeting inflammation, excess oil production, and bacterial overgrowth for clearer, smoother skin. With a blend of potent ingredients and gentle techniques, our treatment not only addresses existing acne but also prevents future flare-ups, restoring balance to your complexion. Say goodbye to the frustration of stubborn acne and hello to newfound confidence as our tailored regimen delivers visible results you can see and feel. Reclaim control over your skin and embrace a clearer, healthier complexion with our effective acne treatment.</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Pamper your hands and feet with our indulgent nail care services, where beauty meets relaxation in perfect harmony. Our skilled technicians are dedicated to providing you with a luxurious experience from start to finish, ensuring your nails look and feel their absolute best. Treat yourself to a classic manicure or pedicure, where meticulous attention to detail and the highest quality products come together to create a flawless finish. Or indulge in one of our specialty treatments, from hydrating paraffin dips to dazzling nail art, designed to elevate your nail care routine to new heights of luxury.</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Say goodbye to nail mishaps with our efficient nail repair services, restoring strength and beauty to your nails. Our skilled technicians utilize top-quality products and techniques to seamlessly mend chips and cracks, leaving your nails looking flawless and pristine once again. Experience the relief of flawless nails and step out with confidence and grace.</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Transform your nails with our expert nail extension services, delivering instant length and glamour. Using premium materials and precise techniques, our skilled technicians craft flawless extensions tailored to your preferences, ensuring durability and beauty that lasts. Elevate your manicure game and flaunt flawless nails with confidence.</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>Express your unique style with our captivating nail art services, offering a spectrum of designs and colors to suit your personality. From intricate patterns to eye-catching embellishments, our talented artists will transform your nails into stunning masterpieces, leaving you feeling empowered and stylish. Let your nails be a canvas for creativity and self-expression.</value>
+  </data>
   <data name="label37.Text" xml:space="preserve">
     <value>Discover the ancient healing art of cupping with our revitalizing Cupping Massage. This unique therapy involves placing special cups on the skin to create suction, which helps to increase blood flow, release toxins, and relieve muscle tension. Our skilled therapists combine cupping with massage techniques to target specific areas of tension, promoting deep relaxation and pain relief. Experience the rejuvenating benefits of cupping and feel your body restore its natural balance.</value>
   </data>
@@ -1361,39 +1373,15 @@ DRINKS)
 * CANCEL ANY TIME
 </value>
   </data>
-  <metadata name="HomeMembershipCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>356, 17</value>
-  </metadata>
   <metadata name="ScrollTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1093, 23</value>
   </metadata>
   <metadata name="PictureSlideTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1206, 23</value>
   </metadata>
-  <metadata name="MemberAccParentCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>535, 17</value>
-  </metadata>
   <metadata name="DateTimePickerTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 60</value>
   </metadata>
-  <metadata name="MemberAccBillingCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>713, 17</value>
-  </metadata>
-  <metadata name="MemberAccBillingSubCard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>896, 23</value>
-  </metadata>
-  <data name="label27.Text" xml:space="preserve">
-    <value>Say goodbye to nail mishaps with our efficient nail repair services, restoring strength and beauty to your nails. Our skilled technicians utilize top-quality products and techniques to seamlessly mend chips and cracks, leaving your nails looking flawless and pristine once again. Experience the relief of flawless nails and step out with confidence and grace.</value>
-  </data>
-  <data name="label28.Text" xml:space="preserve">
-    <value>Transform your nails with our expert nail extension services, delivering instant length and glamour. Using premium materials and precise techniques, our skilled technicians craft flawless extensions tailored to your preferences, ensuring durability and beauty that lasts. Elevate your manicure game and flaunt flawless nails with confidence.</value>
-  </data>
-  <data name="label29.Text" xml:space="preserve">
-    <value>Pamper your hands and feet with our indulgent nail care services, where beauty meets relaxation in perfect harmony. Our skilled technicians are dedicated to providing you with a luxurious experience from start to finish, ensuring your nails look and feel their absolute best. Treat yourself to a classic manicure or pedicure, where meticulous attention to detail and the highest quality products come together to create a flawless finish. Or indulge in one of our specialty treatments, from hydrating paraffin dips to dazzling nail art, designed to elevate your nail care routine to new heights of luxury.</value>
-  </data>
-  <data name="label30.Text" xml:space="preserve">
-    <value>Express your unique style with our captivating nail art services, offering a spectrum of designs and colors to suit your personality. From intricate patterns to eye-catching embellishments, our talented artists will transform your nails into stunning masterpieces, leaving you feeling empowered and stylish. Let your nails be a canvas for creativity and self-expression.</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>42</value>
   </metadata>

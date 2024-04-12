@@ -18,6 +18,8 @@ using System.Transactions;
 using System.Windows.Forms;
 using System.Security.Policy;
 using System.Xml.Linq;
+using System.Runtime.InteropServices;
+using Mysqlx.Expr;
 
 namespace EnchanteMembership
 {
@@ -1688,8 +1690,7 @@ namespace EnchanteMembership
             if (string.IsNullOrEmpty(SVFirstname) || string.IsNullOrEmpty(SVLastname) || string.IsNullOrEmpty(SVAge) ||
                 string.IsNullOrEmpty(SVGender) || string.IsNullOrEmpty(SVNumber) || string.IsNullOrEmpty(SVEmailAdd) ||
                 string.IsNullOrEmpty(SVNumber) || string.IsNullOrEmpty(SVPass) || string.IsNullOrEmpty(SVConfirmPass) ||
-                string.IsNullOrEmpty(SVPeriod) || string.IsNullOrEmpty(SVPayment) || string.IsNullOrEmpty(SVCardName) ||
-                string.IsNullOrEmpty(SVCardNum) || string.IsNullOrEmpty(SVCardExpire) || string.IsNullOrEmpty(SVcvc) || string.IsNullOrEmpty(SVAmount))
+                string.IsNullOrEmpty(SVPeriod) || string.IsNullOrEmpty(SVAmount))
             {
                 SVIPFirstNameErrorLbl.Visible = true;
                 SVIPGenderErrorLbl.Visible = true;
@@ -1709,7 +1710,39 @@ namespace EnchanteMembership
                 SVIPConfirmPassErrorLbl.Text = "Missing Field";
                 SVIPLastNameErrorLbl.Text = "Missing Field";
                 SVIPAgeErrorLbl.Text = "Missing Field";
+                return;
 
+            }
+            if (!SVIPCCPaymentRB.Checked && !SVIPPayPPaymentRB.Checked && !SVIPGCPaymentRB.Checked && !SVIPPayMPaymentRB.Checked)
+            {
+                MessageBox.Show("Please select a payment method.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(SVCardName) || string.IsNullOrEmpty(SVCardNum) || string.IsNullOrEmpty(SVCardExpire) || string.IsNullOrEmpty(SVcvc) || string.IsNullOrEmpty(SVPayment))
+            {
+                MessageBox.Show("Please fill up all payment fields.", "Missing Payment Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (SVCardNum.Length != 16)
+            {
+                MessageBox.Show("Please enter a valid 16-digit card number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (SVcvc.Length != 3)
+            {
+                MessageBox.Show("Please enter a valid 3-digit CVC code.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!Regex.IsMatch(SVCardExpire, @"^(0[1-9]|1[0-2])\/\d{2}$"))
+            {
+                MessageBox.Show("Invalid expiration date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (age < 18)
+            {
+                PremAgeErrorLbl.Visible = true;
+                PremAgeErrorLbl.Text = "Must be 18 years old and above";
+                return;
             }
             else if (age < 18)
             {
@@ -1745,6 +1778,7 @@ namespace EnchanteMembership
                 SVIPPassErrorLbl.Text = "PASSWORD DOES NOT MATCH";
                 return;
             }
+            
             else
             {
                 try
@@ -2189,7 +2223,7 @@ namespace EnchanteMembership
 
             string hashedPassword = HashHelper.HashString(PremPass);    // Password hashed
             string fixedSalt = HashHelper_Salt.HashString_Salt("Enchante" + PremPass + "2024");    //Fixed Salt
-            string perUserSalt = HashHelper_SaltperUser.HashString_SaltperUser(PremPass + PremMemberID);    //Per User salt
+            string perUserSalt = HashHelper_SaltperUser.HashString_SaltperUser(PremPass + PremMemberID);    //Per User salt           
 
             int age = DateTime.Now.Year - selectedDate.Year;
             if (DateTime.Now < selectedDate.AddYears(age))
@@ -2200,8 +2234,7 @@ namespace EnchanteMembership
             if (string.IsNullOrEmpty(PremFirstname) || string.IsNullOrEmpty(PremLastname) || string.IsNullOrEmpty(PremAge) ||
                 string.IsNullOrEmpty(PremGender) || string.IsNullOrEmpty(PremNumber) || string.IsNullOrEmpty(PremEmailAdd) ||
                 string.IsNullOrEmpty(PremNumber) || string.IsNullOrEmpty(PremPass) || string.IsNullOrEmpty(PremConfirmPass) ||
-                string.IsNullOrEmpty(PremPeriod) || string.IsNullOrEmpty(PremPayment) || string.IsNullOrEmpty(PremCardName) ||
-                string.IsNullOrEmpty(PremCardNum) || string.IsNullOrEmpty(PremCardExpire) || string.IsNullOrEmpty(Premcvc) || string.IsNullOrEmpty(PremAmount))
+                string.IsNullOrEmpty(PremPeriod) ||  string.IsNullOrEmpty(PremAmount))
             {
                 PremFirstNameErrorLbl.Visible = true;
                 PremGenderErrorLbl.Visible = true;
@@ -2221,7 +2254,33 @@ namespace EnchanteMembership
                 PremConfirmPassErrorLbl.Text = "Missing Field";
                 PremLastNameErrorLbl.Text = "Missing Field";
                 PremAgeErrorLbl.Text = "Missing Field";
+                return;
 
+            }
+            if (!PremCCPaymentRB.Checked && !PremPayPPaymentRB.Checked && !PremGCPaymentRB.Checked && !PremPayMPaymentRB.Checked)
+            {
+                MessageBox.Show("Please select a payment method.", "Payment Method Not Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(PremCardName) || string.IsNullOrEmpty(PremCardNum) || string.IsNullOrEmpty(PremCardExpire) || string.IsNullOrEmpty(Premcvc) || string.IsNullOrEmpty(PremPayment))
+            {
+                MessageBox.Show("Please fill up all payment fields.", "Missing Payment Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (PremCardNum.Length != 16)
+            {
+                MessageBox.Show("Please enter a valid 16-digit card number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (Premcvc.Length != 3)
+            {
+                MessageBox.Show("Please enter a valid 3-digit CVC code.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!Regex.IsMatch(PremCardExpire, @"^(0[1-9]|1[0-2])\/\d{2}$"))
+            {
+                MessageBox.Show("Invalid expiration date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else if (age < 18)
             {
@@ -2257,6 +2316,7 @@ namespace EnchanteMembership
                 PremConfirmPassErrorLbl.Text = "PASSWORD DOES NOT MATCH";
                 return;
             }
+            
             else
             {
                 try
@@ -2328,11 +2388,9 @@ namespace EnchanteMembership
                 {
                     // No need to close the connection here as it is in a using statement
                 }
-
-
-
             }
         }
+
         private void PremMembershipBoxClear()
         {
             PremFirstNameText.Text = "";
@@ -4750,22 +4808,41 @@ namespace EnchanteMembership
 
         private void SVIPCardExpireText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (SVIPCardExpireText.Text.Length >= 100 && e.KeyChar != '\b')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '/')
             {
                 e.Handled = true;
             }
+
+            if (SVIPCardExpireText.Text.Length >= 5 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+
             if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPCardExpireText.Text))
             {
+                e.Handled = true;
+            }
+
+            if (SVIPCardExpireText.SelectionStart == 2 && e.KeyChar != '\b')
+            {
+                SVIPCardExpireText.Text += '/';
+                SVIPCardExpireText.SelectionStart = SVIPCardExpireText.Text.Length;
                 e.Handled = true;
             }
         }
 
         private void SVIPCardCVCText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (SVIPCardCVCText.Text.Length >= 100 && e.KeyChar != '\b')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
             {
                 e.Handled = true;
             }
+
+            if (SVIPCardCVCText.Text.Length >= 3 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+
             if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPCardCVCText.Text))
             {
                 e.Handled = true;
@@ -4774,10 +4851,16 @@ namespace EnchanteMembership
 
         private void SVIPCardNumText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (SVIPCardNumText.Text.Length >= 100 && e.KeyChar != '\b')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
             {
                 e.Handled = true;
             }
+
+            if (SVIPCardNumText.Text.Length >= 16 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+
             if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPCardNumText.Text))
             {
                 e.Handled = true;
@@ -4786,10 +4869,16 @@ namespace EnchanteMembership
 
         private void SVIPCardNameText_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+
             if (SVIPCardNameText.Text.Length >= 100 && e.KeyChar != '\b')
             {
                 e.Handled = true;
             }
+
             if (e.KeyChar == ' ' && string.IsNullOrEmpty(SVIPCardNameText.Text))
             {
                 e.Handled = true;
@@ -4950,10 +5039,16 @@ namespace EnchanteMembership
 
         private void PremCardNameText_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+
             if (PremCardNameText.Text.Length >= 100 && e.KeyChar != '\b')
             {
                 e.Handled = true;
             }
+
             if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremCardNameText.Text))
             {
                 e.Handled = true;
@@ -4962,10 +5057,16 @@ namespace EnchanteMembership
 
         private void PremCardNumText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (PremCardNumText.Text.Length >= 100 && e.KeyChar != '\b')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
             {
                 e.Handled = true;
             }
+
+            if (PremCardNumText.Text.Length >= 16 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+
             if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremCardNumText.Text))
             {
                 e.Handled = true;
@@ -4974,10 +5075,27 @@ namespace EnchanteMembership
 
         private void PremCardExpireText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (PremCardExpireText.Text.Length >= 100 && e.KeyChar != '\b')
+            // Allow only numbers, backspace, and forward slash
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '/')
             {
                 e.Handled = true;
             }
+
+            // If the user types the second digit of the month, ensure it's in MM/ format
+            if (PremCardExpireText.Text.Length == 2 && e.KeyChar != '\b' && e.KeyChar != '/')
+            {
+                PremCardExpireText.Text += "/";
+                PremCardExpireText.SelectionStart = PremCardExpireText.Text.Length;
+                e.Handled = true;
+            }
+
+            // Prevent typing more than 5 characters
+            if (PremCardExpireText.Text.Length >= 5 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+
+            // Prevent typing a space if the field is empty
             if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremCardExpireText.Text))
             {
                 e.Handled = true;
@@ -4986,10 +5104,16 @@ namespace EnchanteMembership
 
         private void PremCardCVCText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (PremCardCVCText.Text.Length >= 100 && e.KeyChar != '\b')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
             {
                 e.Handled = true;
             }
+
+            if (PremCardCVCText.Text.Length >= 3 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+
             if (e.KeyChar == ' ' && string.IsNullOrEmpty(PremCardCVCText.Text))
             {
                 e.Handled = true;
